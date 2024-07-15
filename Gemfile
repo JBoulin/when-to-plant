@@ -76,3 +76,7 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+group :development do
+  gem 'rails_real_favicon'
+end
