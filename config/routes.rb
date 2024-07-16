@@ -11,8 +11,8 @@ Rails.application.routes.draw do
   resources :comments, only: [:index, :show,:update, :destroy]
 
   # Routes for Plants
-  resources :plants , only: [:index, :show] do
-    resources :tips , only: [:create]
+  resources :plants, only: [:index, :show] do
+    resources :tips, only: [:create]
     resources :neighbours, only: [:create]
   end
 
@@ -32,4 +32,9 @@ Rails.application.routes.draw do
   resources :neighbours, only: [:index, :show, :update, :destroy]
   root to: "pages#home"
 
+  get 'a-propos', to: 'pages#about'
+  get 'contact', to: 'pages#contact'
+  get 'recrutement', to: 'pages#recrutement'
+  get 'calendrier', to: 'pages#calendrier'
+  get 'mentions-legales', to: 'pages#mentions_legales'
 end
