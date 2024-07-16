@@ -1,15 +1,16 @@
 <h2>Log in</h2>
 
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name),html: {
+<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: {
   data: {
-        controller: "alert",
-        alert_icon_value: "success",
-        alert_title_value: "Are your sure?",
-        alert_html_value: "Create new post.",
-        confirm_button_text: "All good!",
-        action: "submit->alert#initSweetalert",
-        turbo:false
-}}) do |f| %>
+    controller: "alert",
+    alert_icon_value: "success",
+    alert_title_value: "Are you sure?",
+    alert_html_value: "Create new post.",
+    confirm_button_text_value: "All good!",
+    action: "submit->alert#initSweetalert",
+    turbo: false
+  }
+}) do |f| %>
   <div class="form-inputs">
     <%= f.input :email,
                 required: false,
