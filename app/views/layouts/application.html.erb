@@ -18,7 +18,10 @@
 
   <body><%= render "shared/navbar" %>
 <%= render "shared/flashes" %>
-
+<div class="container" style="height:100vh; position:sticky;">
     <%= yield %>
+</div>
+  <%= render "shared/footer" %>
+
   </body>
 </html>
