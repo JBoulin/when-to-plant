@@ -16,3 +16,43 @@ User.create!(
   password: "test123",
   role: "user"
 )
+
+User.create!(
+  nom: "Boulin",
+  prenom: "Jeremy",
+  email: "jeremy@test.fr",
+  password: "123456",
+  role: "user"
+)
+
+User.create!(
+  nom: "Gambotti",
+  prenom: "Gabriel",
+  email: "gabriel@test.fr",
+  password: "123456",
+  role: "user"
+)
+
+User.create!(
+  nom: "Smolyakova",
+  prenom: "Olena",
+  email: "olena@test.fr",
+  password: "123456",
+  role: "user"
+)
+
+User.create!(
+  nom: "Cano",
+  prenom: "Louis",
+  email: "louis@test.fr",
+  password: "123456",
+  role: "user"
+)
+
+User.create!(
+  nom: "Norris",
+  prenom: "Chuck",
+  email: "admin@test.fr",
+  password: "123456",
+  role: "admin"
+)
