@@ -4,5 +4,6 @@
 //= link_tree ../../../vendor/javascript .js
 //= link popper.js
 //= link bootstrap.min.js
+//= link favicon/site.webmanifest
 //= link favicon/browserconfig.xml
-//= link favicon/site.webmanifest.erb
+//= link favicon/site.webmanifest
