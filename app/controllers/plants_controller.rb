@@ -2,6 +2,7 @@ class PlantsController < ApplicationController
   before_action :set_plant, only: [:show]
 
   def index
+    @plants = Plant.all
     if params[:query].present?
       @plants = Plant.search_by_name_and_description(params[:query])
     else

@@ -3,6 +3,11 @@ class CommentsController < ApplicationController
 
   def index
     @comments = Comment.all
+    if params[:query].present?
+      @comments = Comment.search_by_titre_and_contenu(params[:query])
+    else
+      @comments = Comment.all
+    end
   end
 
   def show

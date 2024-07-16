@@ -9,6 +9,6 @@ class Plant < ApplicationRecord
   pg_search_scope :search_by_name_and_description,
                   against: [:name, :description],
                   using: {
-                    tsearch: { prefix: true } # Utilise les préfixes pour la recherche partielle
+                    tsearch: { prefix: true }
                   }
 end
