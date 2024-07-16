@@ -12,3 +12,6 @@ Rails.application.config.assets.version = "1.0"
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
 Rails.application.config.assets.precompile += %w(bootstrap.min.js popper.js)
 Rails.application.config.assets.precompile += %w( favicon/site.webmanifest )
+Rails.application.config.assets.precompile += %w( controllers/hello_controller.js )
+Rails.application.config.assets.precompile += %w( controllers/index.js )
+Rails.application.config.assets.precompile += %w( controllers/search_controller.js )
