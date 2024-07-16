@@ -53,7 +53,7 @@ gem "simple_form", github: "heartcombo/simple_form"
 gem "sassc-rails"
 gem "sprockets", "< 4.0.0"
 gem 'pg_search'
-gem 'sweet-alert2-rails'
+
 
 group :development, :test do
   gem "dotenv-rails"
