@@ -22,6 +22,11 @@
   margin-right: 40px;
 }
 
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
 .card-trip {
   overflow: hidden;
   background: white;
@@ -81,8 +86,8 @@
 }
 
 .card-btn {
-    margin-top: 30px;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
   }
