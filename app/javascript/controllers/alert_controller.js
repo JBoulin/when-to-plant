@@ -2,40 +2,53 @@ import { Controller } from "@hotwired/stimulus";
 import Swal from 'sweetalert2';
 
 export default class extends Controller {
-  static targets = ["form"]
+  static targets = ["form"];
 
   connect() {
-    this.element.addEventListener('click', (event) => {
-      event.preventDefault(); // Empêche l'envoi du formulaire immédiat
-      this.showAlert();
-    });
-  }
-
-  showAlert() {
-    Swal.fire({
-      title: 'Are you sure?',
-      text: 'Do you want to submit this form?',
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonText: 'Yes, submit it!',
-      cancelButtonText: 'No, cancel!',
-    }).then((result) => {
-      if (result.isConfirmed) {
-        this.formTarget.submit(); // Soumet le formulaire si l'utilisateur confirme
+    const toastMixin = Swal.mixin({
+      toast: true,
+      icon: 'success',
+      title: 'General Title',
+      animation: false,
+      position: 'top-right',
+      showConfirmButton: false,
+      timer: 3000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer);
+        toast.addEventListener('mouseleave', Swal.resumeTimer);
       }
     });
-  }
-  showError(event) {
-    event.preventDefault(); // Empêche l'envoi du formulaire immédiat
-    const errors = event.detail[0].errors; // Récupère les erreurs de validation
-    this.displayErrors(errors);
-  }
 
-  displayErrors(errors) {
-    Swal.fire({
-      title: 'Error!',
-      text: errors.join(', '),
-      icon: 'error'
+    this.formTarget.querySelector(".first").addEventListener('click', () => {
+      Swal.fire({
+        toast: true,
+        icon: 'success',
+        title: 'Commentaire ajouter avec succès',
+        animation: false,
+        position: 'bottom',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer);
+          toast.addEventListener('mouseleave', Swal.resumeTimer);
+        }
+      });
+    });
+
+    this.formTarget.querySelector(".second").addEventListener('click', () => {
+      toastMixin.fire({
+        animation: true,
+        title: 'Connextion établis avec succès'
+      });
+    });
+
+    this.formTarget.querySelector(".third").addEventListener('click', () => {
+      toastMixin.fire({
+        title: 'Mauvais mot de passe',
+        icon: 'error'
+      });
     });
   }
 }
