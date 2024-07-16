@@ -18,5 +18,4 @@ Rails.application.config.assets.precompile += %w( controllers/hello_controller.j
 Rails.application.config.assets.precompile += %w( controllers/index.js )
 Rails.application.config.assets.precompile += %w( controllers/search_controller.js )
 Rails.application.config.assets.precompile += %w( sweetalert2.js )
-Rails.application.config.assets.precompile += %w( delete_confirmation_dialog.js )
 Rails.application.config.assets.precompile += %w( controllers/alert_controller.js )
