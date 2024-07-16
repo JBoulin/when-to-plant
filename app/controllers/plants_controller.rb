@@ -3,6 +3,11 @@ class PlantsController < ApplicationController
 
   def index
     @plants = Plant.all
+    if params[:query].present?
+      @plants = Plant.search_by_name_and_description(params[:query])
+    else
+      @plants = Plant.all
+    end
   end
 
   def show
