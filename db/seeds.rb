@@ -7,6 +7,10 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+require "open-uri"
+
+List.destroy_all
+
 User.destroy_all
 
 User.create!(
@@ -57,7 +61,7 @@ User.create!(
   role: "admin"
 )
 
-Plant.create(
+artichaut = Plant.new(
   name: "Artichaut",
   nom_scientifique: "Cynara scolymus",
   description: "Cette variété, vivace dans les régions tempérées, produit une tige presque sans épines. Elle offre 7 à 8
@@ -81,6 +85,7 @@ Plant.create(
   difficulte: "Facile",
   maladie: "Le mildiou, l’oïdium, les chenilles, les pucerons, la ramulariose"
 )
+artichaut.save
 
 Plant.create(
   name: "Abricot",
@@ -136,7 +141,7 @@ Plant.create(
   maladie: "Rouille, Mildiou, Nématodes"
 )
 
-post = Post.create(
+Post.create(
   titre: "Les légumes faciles pour bien débuter",
   categorie: "Tuto",
   date_publication: "15/07/2024",
@@ -163,3 +168,8 @@ List.create(
   nom: "Légumes",
   user: User.fifth
 )
+
+# artichaut = Plant.new(name: "Artichaut", body: "un super légume") # on garde
+file = URI.open("https://produits.bienmanger.com/35241-0w470h470_Artichaut_Blanc_France_Bio.jpg") # on garde
+artichaut.photos.attach(io: file, filename: "artichaud.jpg", content_type: "image/jpg") # on garde
+artichaut.save # on garde
