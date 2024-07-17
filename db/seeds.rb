@@ -8,6 +8,7 @@ require "open-uri"
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
 List.destroy_all
 Plant.destroy_all
 User.destroy_all
@@ -63,7 +64,7 @@ User.create!(
 file_1 = URI.open("https://kokopelli-semences.fr/media/cache/resolve/shop_product_large_thumbnail/l0171-1.jpg")
 file_2 = URI.open("https://www.jardiner-malin.fr/wp-content/uploads/2014/04/1314777481artichaut.jpg")
 file_3 = URI.open("https://www.jardiner-malin.fr/wp-content/uploads/2020/01/Artichaut-culture.jpg")
-artichaut = Plant.create(
+artichaut = Plant.new(
   name: "Artichaut",
   nom_scientifique: "Cynara scolymus",
   description: "Cette variété, vivace dans les régions tempérées, produit une tige presque sans épines. Elle offre 7 à 8
@@ -187,3 +188,7 @@ List.create(
   nom: "Légumes",
   user: User.fifth
 )
+
+# artichaut = Plant.new(name: "Artichaut", body: "un super légume") # on garde
+# file = URI.open("https://produits.bienmanger.com/35241-0w470h470_Artichaut_Blanc_France_Bio.jpg") # on garde
+# artichaut.photos.attach(io: file, filename: "artichaud.jpg", content_type: "image/jpg") # on garde
