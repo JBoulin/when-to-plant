@@ -1,0 +1,14 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="card mb-5" style="background-color: #f0fff4;">
+        <div class="card-body">
+          <h1 class="card-title"><%= @post.titre %></h1>
+          <%# <h5 class="card-subtitle mb-2 text-muted"><%= @post.categorie %></h5>
+          <p class="card-text"><%= @post.contenu %></p>
+          <%= link_to 'Retour', posts_path, class: 'btn btn-primary' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

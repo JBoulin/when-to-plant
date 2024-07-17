@@ -13,4 +13,8 @@ class Post < ApplicationRecord
   def slug
     titre.to_s
   end
+
+  def should_generate_new_friendly_id?
+    titre_changed?
+  end
 end
