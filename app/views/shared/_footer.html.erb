@@ -1,35 +1,34 @@
-<footer>
-  <div class="d-flex border-bottom pb-3 mb-3">
-    <div class="footer-copyright text-center text-dark mr-5">
-      Inscrivez-vous à notre lettre d'information pour ne rien rater des dernières nouveautés et actualités When To Plant !
+<footer class="">
+  <div class="d-flex justify-content-center py-2 mb-3" style="background-color: #DAF1DF; max-width:70%; margin: auto; border-radius: 10px 10px 10px 10px;">
+    <div class="d-flex align-items-center text-center text-dark">
+      Inscrivez-vous à notre lettre d'information
     </div>
 
-    <div class="d-flex flex-column flex-sm-row w-100 gap-2 m-2">
-      <label for="newsletter" class="visually-hidden">Votre email</label>
+    <div class="d-flex gap-2 m-2">
       <input id="newsletter" type="text" class="form-control" placeholder="Votre email" style="border-radius:20px;">
       <button class="btn btn-success text-white" type="button" style="border-radius:20px;">S'inscrire</button>
     </div>
 
-      <div class="d-flex text-center justify-content-center align-items-center social-links">
+      <div class="d-flex justify-content-center align-items-center">
         <a href="https://www.instagram.com/when_toplant/" class="mx-2"><i class="fab fa-instagram"></i></a>
         <a href="https://www.facebook.com/profile.php?id=61562363171250" class="mx-2"><i class="fab fa-facebook"></i></a>
-        <a href="https://www.youtube.com/@WhenToPlant" class="mx-2"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.youtube.com/@WhenToPlant" class="mx-2"><i class="fab fa-youtube succcess"></i></a>
         <a href="https://twitter.com/whentoplant" class="mx-2"><i class="fab fa-twitter"></i></a>
       </div>
     </div>
   </div>
 
-  <div class="container text-center logo-container">
-    <%= image_tag "whentoplantfull.png", class: "image-center", style: "width:189px; height:50px;" %>
+  <div class="d-flex justify-content-center py-3 bg-success">
+    <%= image_tag "whentoplantfull.png", style: "width:189px; height:50px;" %>
   </div>
 
-  <div class="py-0 my-1">
-    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+  <div class="d-flex justify-content-center bg-success">
+    <ul class="nav pb-1 mb-1">
       <li class="nav-item">
-        <%= link_to "Recrutement", recrutement_path, class: "nav-link px-2 text-muted" %>
+        <%= link_to "Recrutement", recrutement_path, class: "nav-link text-white" %>
       </li>
       <li class="nav-item">
-        <%= link_to "Mentions légales", mentions_legales_path, class: "nav-link px-2 text-muted" %>
+        <%= link_to "Mentions légales", mentions_legales_path, class: "nav-link text-white" %>
       </li>
     </ul>
   </div>
