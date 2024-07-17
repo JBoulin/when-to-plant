@@ -31,6 +31,10 @@ h1 {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 360px;
+  height: 400px;
+  margin: auto;
+  border-radius: 5px;
 }
 
 .card-trip-infos > img {
@@ -54,11 +58,8 @@ h1 {
 
 .card-trip .card-trip-infos {
   padding: 16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   position: relative;
+  height: 310px;
 }
 
 .card-trip-infos .card-trip-user {
