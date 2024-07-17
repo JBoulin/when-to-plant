@@ -1,4 +1,4 @@
-<body>
+
   <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://36vine.com/wp-content/uploads/2023/12/aa83f2ab7561ac20f6a4b07ac336eaa8.webp);">
     <div class="container">
       <h1 style="text-align: center;">When To Plant 🌱</h1>
@@ -10,8 +10,9 @@
       </p>
     </div>
   </div>
+<div class="w-75 d-flex flex-column m-auto">
+  <h1 class="pt-5">Les plantes du mois</h1>
 
-  <h1>Les plantes du mois</h1>
   <div class="cards">
    <% @plants.each do |plant| %>
     <div class="card-trip">
@@ -19,6 +20,9 @@
         <%= cl_image_tag plant.photos.first.key %>
         <div class="cards-title">
           <h2><%= plant.name %></h2>
+          <p>
+            <%= plant.categorie%>
+          </p>
           <p>
             <%= plant.description.truncate(127, separator: ' ') %>
           </p>
@@ -31,6 +35,72 @@
     <% end %>
   </div>
 
+  <h1 class="pt-5">Le calendrier</h1>
 
-  <h1>Le calendrier</h1>
+  <div class="cards">
+    <div class="card-trip d-flex flex-column align-items-center justify-content-center">
+          <h2 class="fs-2 pb-3">Mercredi 17 Juillet</h2>
+          <p class="fs-5 pb-3">Hier</p>
+      <div class="btn btn-success w-25">
+        Lune
+      </div>
+    </div>
+
+
+    <div class="card-trip d-flex flex-column align-items-center justify-content-center">
+          <h2 class="fs-2 pb-3">Jeudi 18 Juillet</h2>
+          <p class="fs-5 pb-3">Aujourd'hui</p>
+      <div class="btn btn-success w-25">
+        Lune
+      </div>
+    </div>
+
+
+    <div class="card-trip d-flex flex-column align-items-center justify-content-center">
+          <h2 class="fs-2 pb-3">Vendredi 19 Juillet</h2>
+          <p class="fs-5 pb-3">Demain</p>
+      <div class="btn btn-success w-25">
+        Lune
+      </div>
+    </div>
+  </div>
 </body>
+
+  <h1 class="pt-5">Les dernières informations et tuto When To Plant</h1>
+
+<div class="d-flex justify-content-center">
+<div class="col-5 m-3">
+   <%#<% @posts.each do |post| %>
+      <div class="card mb-3 rounded-3">
+        <%# image à changer quand ca sera possible %>
+        <img src="https://images.ctfassets.net/b85ozb2q358o/f5004387e9df45449f551fc8304decd3935884ec0b1fab511011db081908e541/4d745112ed48aea797e8ccd81a33ab87/image.png" class="card-img-top" style= "height: 250px; width: 100%; object-fit: cover;" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"> <%# <%= post.titre %> Titre du post</h5>
+          <p class="card-text"><%#<%= post.contenu.truncate(300) %> Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio placeat error id maiores eum eveniet, repellendus vitae nobis natus labore cum alias sed, sequi autem assumenda aut officiis reprehenderit in! </p>
+          <div class="d-flex flex-row align-items-center justify-content-between">
+            <p class="card-text"><small class="text-muted"><%#<%= post.date_publication %>Jeudi 18 Juillet 2024</small></p>
+            <%= link_to "Lire l'article", posts_path, class: "btn btn-success" %>
+          </div>
+        </div>
+      </div>
+   <%# <% end %>
+  </div>
+
+  <div class="col-5 m-3">
+   <%#<% @posts.each do |post| %>
+      <div class="card mb-3 rounded-3">
+        <%# image à changer quand ca sera possible %>
+        <img src="https://images.ctfassets.net/b85ozb2q358o/f5004387e9df45449f551fc8304decd3935884ec0b1fab511011db081908e541/4d745112ed48aea797e8ccd81a33ab87/image.png" class="card-img-top" style= "height: 250px; width: 100%; object-fit: cover;" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"> <%# <%= post.titre %> Titre du post</h5>
+          <p class="card-text"><%#<%= post.contenu.truncate(300) %> Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio placeat error id maiores eum eveniet, repellendus vitae nobis natus labore cum alias sed, sequi autem assumenda aut officiis reprehenderit in! </p>
+          <div class="d-flex flex-row align-items-center justify-content-between">
+            <p class="card-text"><small class="text-muted"><%#<%= post.date_publication %>Jeudi 18 Juillet 2024</small></p>
+            <%= link_to "Lire l'article", posts_path, class: "btn btn-success" %>
+          </div>
+        </div>
+      </div>
+   <%# <% end %>
+  </div>
+</div>
+</div>
