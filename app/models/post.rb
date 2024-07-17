@@ -2,11 +2,15 @@ class Post < ApplicationRecord
   has_many :comments
   has_many_attached :photos
 
-  validates :title, presence: true
-  validates :content, presence: true
-  validates :title, length: { maximum: 255 }
-  validates :content, length: { maximum: 100000 }
+  validates :titre, presence: true
+  validates :contenu, presence: true
+  validates :titre, length: { maximum: 255 }
+  validates :contenu, length: { maximum: 100000 }
 
   extend FriendlyId
-  friendly_id :nom, use: :slugged
+  friendly_id :slug, use: :slugged
+
+  def slug
+    titre.to_s
+  end
 end
