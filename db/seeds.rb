@@ -92,7 +92,6 @@ artichaut.photos.attach(io: file_1, filename: "artichaut-1.jpg", content_type: "
 artichaut.photos.attach(io: file_2, filename: "artichaut-2.jpg", content_type: "image/jpg")
 artichaut.photos.attach(io: file_3, filename: "artichaut-3.jpg", content_type: "image/jpg")
 artichaut.save!
-artichaut.save
 
 file_4 = URI.open("https://www.jardiner-malin.fr/wp-content/uploads/2021/05/Abricotier-1024x911.jpg")
 file_5 = URI.open("https://images.ctfassets.net/b85ozb2q358o/b54e0b14fb8245aae00bdc0a3994b144348beea773ae4017ca32e6e215422f81/828bedd235093c349f91da76d2aaa3ab/image.png")
@@ -191,6 +190,5 @@ List.create(
 )
 
 # artichaut = Plant.new(name: "Artichaut", body: "un super légume") # on garde
-file = URI.open("https://produits.bienmanger.com/35241-0w470h470_Artichaut_Blanc_France_Bio.jpg") # on garde
-artichaut.photos.attach(io: file, filename: "artichaud.jpg", content_type: "image/jpg") # on garde
-artichaut.save # on garde
+# file = URI.open("https://produits.bienmanger.com/35241-0w470h470_Artichaut_Blanc_France_Bio.jpg") # on garde
+# artichaut.photos.attach(io: file, filename: "artichaud.jpg", content_type: "image/jpg") # on garde
