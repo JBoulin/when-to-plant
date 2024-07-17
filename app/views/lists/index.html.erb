@@ -16,8 +16,8 @@
     <div id="collapseFruits" class="collapse show" aria-labelledby="headingFruits" data-parent="#accordionExample">
       <div class="card-body d-flex justify-content-around">
         <!-- Replace with your actual content -->
-        <div class="card">
-          <img src="image_path.jpg" class="card-img-top" alt="Fruit Image">
+        <div class="card" style="max-width: 250px;">
+          <%= image_tag "fraisedesbois.jpeg", class: "card-img-top", alt: "Fruit Image" %>
           <div class="card-body">
             <h5 class="card-title">Fraise des bois</h5>
             <p class="card-text">Description de la fraise des bois.</p>
@@ -25,7 +25,7 @@
           </div>
         </div>
         <div class="card">
-          <img src="image_path.jpg" class="card-img-top" alt="Fruit Image">
+          <%= image_tag "fraisegari.jpeg", class: "card-img-top", alt: "Fruit Image" %>
           <div class="card-body">
             <h5 class="card-title">Fraise Gariguette</h5>
             <p class="card-text">Description de la fraise Gariguette.</p>
