@@ -1,28 +1,31 @@
-<div class="mb-5 w-75 mx-auto">
+<div class="w-50 mx-auto">
   <%= link_to "< Retour", plants_path, class:"text-decoration-none text-black mb-3 mt-2" %>
-  <%= cl_image_tag @plant.photo.key, class: "rounded mt-3 mb-3 img-fluid mx-auto d-block" %>
-
-    <div class="row">
-      <div class="col-8">
-        <div class="card card-body mb-3">
-          <h2><%= @plant.name %></h2>
-          <p><small><%= @plant.description %></small></p>
-          <p><small>En location par : <%= @plant.user.username %></small></p>
+  <div class="card mb-3">
+    <%= cl_image_tag @plant.photos.first.key, :cloud_name => "dzhzzutmq", class: "rounded mb-3 img-fluid" %>
+      <div class="card-body mb-3">
+        <h2><%= @plant.name %></h2>
+        <p><%= @plant.categorie %></p>
+        <div class="lh-sm">
+          <p><strong>Nom scientifique:</strong> <%= @plant.nom_scientifique %> <br>
+          <strong>Famille:</strong> <%= @plant.famille %> <br>
+          <strong>Difficulté:</strong> <%= @plant.difficulte %></p>
         </div>
+        <p><%= @plant.description %></p>
+        <p><strong>Conseils de semis:</strong> <%= @plant.conseil_semis %></p>
+        <p><strong>Conseils de culture:</strong> <%= @plant.conseil_culture %></p>
       </div>
-
-          <div class="border p-3 rounded col-4" data-controller="booking" data-booking-price-value="<%= @plant.price %>">
-            <p class='fw-bold fs-3'><%= @plant.price %>€ <small class='fw-light'>jour</small></p>
-            <%= simple_form_for([@plant, @booking], html: { class: 'confirmation-form' }) do |f| %>
-              <div class="d-flex flex-column">
-                <%= f.input :start_date, label: "Début", as: :string, input_html: { data: { controller: "datepicker", action: "change->booking#update", booking_target: "start_date" } }, id: 'booking_form_start_date' %>
-                <%= f.input :end_date, label: "Fin", as: :string, input_html: { data: { controller: "datepicker", action: "change->booking#update", booking_target: "end_date" } }, id: 'booking_form_end_date' %>
-                <p data-booking-target='info'></p>
-                <p><strong>Frais de réservation: 2 €</strong></p>
-                <p><strong>Entretien: 5 €</strong></p>
-                <p class='fw-bold' data-booking-target='total_price'></p>
-                <%= f.submit 'Réserver', class: 'btn btn-success w-100 text-white' %>
-              </div>
-            <% end %>
-        </div>
+  </div>
+  <div>
+  <h5>Conseils des jardiniers :</h5>
+  <p class="fw-light">Pas de conseils sur cette plante.. Soyez le premier à donner vos trucs et astuces pour aider les jardiniers de When To Plant !</p>
+  </div>
+  <div class="mb-5">
+    <%= simple_form_for([@plant, @tip]) do |f| %>
+      <div class="d-flex flex-column justify-content-center w-50">
+        <%= f.input :titre %>
+        <%= f.input :contenu %>
+        <%= f.submit "Publier", class: "btn btn-success mb-3", class:"btn btn-success text-white" %>
       </div>
+    <% end %>
+  </div>
+</div>
