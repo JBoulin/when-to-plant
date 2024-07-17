@@ -1,0 +1,17 @@
+<div class="w-75 main-container m-auto">
+    <div class="cards mt-3">
+      <% @plants.each do | plant | %>
+        <div class="card rounded-3">
+          <%= cl_image_tag plant.photos.first.key, :cloud_name => "dzhzzutmq", style: 'height: 250px; width: 100%; object-fit: cover;' %>
+          <div class="card-body ">
+            <h5 class="card-title"><%= plant.name %></h5>
+            <h6 class="card-title"><%= plant.categorie %></h6>
+            <p class="card-text fw-lighter text-muted fs-6"><%= plant.description.truncate(200) %></p>
+            <div class="">
+              <%= link_to "Voir détails", plant_path(plant), class:"btn btn-success text-white" %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+</div>

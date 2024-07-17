@@ -1,3 +1,4 @@
+require "open-uri"
 # This file should ensure the existence of records required to run the application in every environment (production,
 # development, test). The code here should be idempotent so that it can be executed at any point in every environment.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
@@ -7,10 +8,9 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
-require "open-uri"
 
 List.destroy_all
-
+Plant.destroy_all
 User.destroy_all
 
 User.create!(
@@ -61,6 +61,9 @@ User.create!(
   role: "admin"
 )
 
+file_1 = URI.open("https://kokopelli-semences.fr/media/cache/resolve/shop_product_large_thumbnail/l0171-1.jpg")
+file_2 = URI.open("https://www.jardiner-malin.fr/wp-content/uploads/2014/04/1314777481artichaut.jpg")
+file_3 = URI.open("https://www.jardiner-malin.fr/wp-content/uploads/2020/01/Artichaut-culture.jpg")
 artichaut = Plant.new(
   name: "Artichaut",
   nom_scientifique: "Cynara scolymus",
@@ -85,9 +88,16 @@ artichaut = Plant.new(
   difficulte: "Facile",
   maladie: "Le mildiou, l’oïdium, les chenilles, les pucerons, la ramulariose"
 )
+artichaut.photos.attach(io: file_1, filename: "artichaut-1.jpg", content_type: "image/jpg")
+artichaut.photos.attach(io: file_2, filename: "artichaut-2.jpg", content_type: "image/jpg")
+artichaut.photos.attach(io: file_3, filename: "artichaut-3.jpg", content_type: "image/jpg")
+artichaut.save!
 artichaut.save
 
-Plant.create(
+file_4 = URI.open("https://www.jardiner-malin.fr/wp-content/uploads/2021/05/Abricotier-1024x911.jpg")
+file_5 = URI.open("https://images.ctfassets.net/b85ozb2q358o/b54e0b14fb8245aae00bdc0a3994b144348beea773ae4017ca32e6e215422f81/828bedd235093c349f91da76d2aaa3ab/image.png")
+file_6 = URI.open("https://www.rustica.fr/images/abricotier-l790-h526.jpg.webp")
+abricot = Plant.create(
   name: "Abricot",
   nom_scientifique: "Prunus armeniaca",
   description: "Arbre fruitier du soleil par excellence, l’abricotier offre dès le début de l’été ses fruits délicieux
@@ -113,16 +123,23 @@ Plant.create(
   difficulte: "Facile",
   maladie: "Moniliose, tavelure, oïdium, pucerons, cochenilles, chancre bactérien"
 )
+abricot.photos.attach(io: file_4, filename: "abricot-1.jpg", content_type: "image/jpg")
+abricot.photos.attach(io: file_5, filename: "abricot-2.jpg", content_type: "image/jpg")
+abricot.photos.attach(io: file_6, filename: "abricot-3.jpg", content_type: "image/jpg")
+abricot.save!
 
-Plant.create(
+file_7 = URI.open("https://static.cotemaison.fr/medias_11272/w_2048,h_1146,c_crop,x_0,y_328/w_640,h_360,c_fill,g_north/v1482857843/ail_5771291.jpg")
+file_8 = URI.open("https://pause-maison.ouest-france.fr/wp-content/uploads/2024/01/planter-de-lail.jpg")
+file_9 = URI.open("https://lepotagerpermacole.fr/wp-content/uploads/2022/10/portr-3.jpg")
+ail = Plant.create(
   name: "Ail",
   nom_scientifique: "Allium sativum",
   description: "L’ail est une culture assez simple à réaliser. La plantation est facile, et l’ail en soi ne nécessite
    que très peu d’entretien. Dans un sol qui retient un minimum l’eau et qui est vivant, vous n’aurez pas grand-chose à
     faire : planter à l’automne ou au printemps, et venir récolter en été. Les têtes se conservent bien, et sont faciles
      à stocker. Il est donc très facile de devenir autonome en ail.",
-  famille: "Aromates",
-  categorie: "Fruit",
+  famille: "Alliacées",
+  categorie: "Aromates",
   type_semis: "Pleine terre",
   conseil_semis: "Arroser modérément. Biner et désherber régulièrement. Pailler pour maintenir l'humidité.",
   conseil_culture: "Planter en plein soleil, à l'abri des vents forts. Tailler régulièrement pour aérer la couronne.
@@ -140,6 +157,10 @@ Plant.create(
   difficulte: "Facile",
   maladie: "Rouille, Mildiou, Nématodes"
 )
+ail.photos.attach(io: file_7, filename: "ail-1.jpg", content_type: "image/jpg")
+ail.photos.attach(io: file_8, filename: "ail-2.jpg", content_type: "image/jpg")
+ail.photos.attach(io: file_9, filename: "ail-3.jpg", content_type: "image/jpg")
+ail.save!
 
 Post.create(
   titre: "Les légumes faciles pour bien débuter",
