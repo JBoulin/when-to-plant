@@ -10,23 +10,24 @@
       <button class="btn btn-success text-white" type="button" style="border-radius:20px;">S'inscrire</button>
     </div>
 
-    <div class="footer-links">
-      <a href="https://www.instagram.com/when_toplant/ "><i class="fab fa-instagram"></i></a>
-      <a href="https://www.facebook.com/profile.php?id=61562363171250 "><i class="fab fa-facebook"></i></a>
-      <a href="https://www.youtube.com/@WhenToPlant"><i class="fab fa-youtube"></i></a>
-      <a href="https://twitter.com/whentoplant"><i class="fab fa-twitter"></i></a>
+      <div class="d-flex text-center justify-content-center align-items-center social-links">
+        <a href="https://www.instagram.com/when_toplant/" class="mx-2"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=61562363171250" class="mx-2"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.youtube.com/@WhenToPlant" class="mx-2"><i class="fab fa-youtube"></i></a>
+        <a href="https://twitter.com/whentoplant" class="mx-2"><i class="fab fa-twitter"></i></a>
+      </div>
     </div>
   </div>
 
-  <div class="container text-center">
+  <div class="container text-center logo-container">
     <%= image_tag "whentoplantfull.png", class: "image-center", style: "width:189px; height:50px;" %>
   </div>
 
   <div class="py-0 my-1">
     <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-        <li class="nav-item">
-      <%= link_to "Recrutement", recrutement_path, class: "nav-link px-2 text-muted" %>
-    </li>
+      <li class="nav-item">
+        <%= link_to "Recrutement", recrutement_path, class: "nav-link px-2 text-muted" %>
+      </li>
       <li class="nav-item">
         <%= link_to "Mentions légales", mentions_legales_path, class: "nav-link px-2 text-muted" %>
       </li>

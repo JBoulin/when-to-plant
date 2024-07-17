@@ -1,7 +1,7 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon sticky-top">
   <div class="container-fluid">
-    <%= link_to root_path, class: "navbar-brand", style:"margin-right: 500px !important;" do %>
-      <%= image_tag "whentoplantfull.png", style: "width:169px; height:40px;" %>
+    <%= link_to root_path, class: "navbar-brand", style:"margin-right: 400px !important;" do %>
+      <%= image_tag "whentoplantfull.png", style: "width:169px; height:40px; margin-bottom:25px;" %>
     <% end %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,13 +12,12 @@
       <ul class="navbar-nav me-auto me">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Plantes
+            Catégories
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <a class="dropdown-item" href="#">Fruits</a>
+            <a class="dropdown-item" href="#">Légumes</a>
+            <a class="dropdown-item" href="#">Aromates</a>
           </div>
         </li>
         <li class="nav-item dropdown">
@@ -26,10 +25,18 @@
            |  Calendriers
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <a class="dropdown-item" href="#">Janvier</a>
+            <a class="dropdown-item" href="#">Février</a>
+            <a class="dropdown-item" href="#">Mars</a>
+            <a class="dropdown-item" href="#">Avril</a>
+            <a class="dropdown-item" href="#">Mai</a>
+            <a class="dropdown-item" href="#">Juin</a>
+            <a class="dropdown-item" href="#">Juillet</a>
+            <a class="dropdown-item" href="#">Aoùt</a>
+            <a class="dropdown-item" href="#">Septembre</a>
+            <a class="dropdown-item" href="#">Octobre</a>
+            <a class="dropdown-item" href="#">Novembre</a>
+            <a class="dropdown-item" href="#">Décembre</a>
           </div>
         </li>
         <li class="nav-item active">
@@ -57,8 +64,8 @@
               <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar", alt: "dropdown menu" %>
             </a>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Action", "#", class: "dropdown-item" %>
-              <%= link_to "Another action", "#", class: "dropdown-item" %>
+              <%= link_to "Mes listes", lists_path, class: "dropdown-item" %>
+              <%= link_to "Mon profil", edit_user_registration_path, class: "dropdown-item" %>
               <%= link_to "Déconnexion", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
             </div>
           </li>
