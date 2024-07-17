@@ -28,6 +28,6 @@ class PlantsController < ApplicationController
     params.require(:plant).permit(:name, :description, :nom_scientifique, :famille, :categorie, :type_semis,
                                   :conseil_semis, :conseil_culture, :periode_semis, :periode_recoltes, :culture,
                                   :exposition, :besoin_eau, :nature_sol, :qualite_sol, :hauteur, :maladie, :ecart_rang,
-                                  :temperature, :difficulte, :photos, :query)
+                                  :temperature, :difficulte, :categorie, :query, photos: [])
   end
 end
