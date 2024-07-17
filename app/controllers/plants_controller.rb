@@ -11,6 +11,7 @@ class PlantsController < ApplicationController
   end
 
   def show
+    @tip = Tip.new
   end
 
   def create
