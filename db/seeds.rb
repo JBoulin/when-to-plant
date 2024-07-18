@@ -9,6 +9,9 @@ require "open-uri"
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 Post.destroy_all
+Neighbour.destroy_all
+PlantList.destroy_all
+Tip.destroy_all
 List.destroy_all
 Plant.destroy_all
 User.destroy_all
@@ -282,8 +285,8 @@ List.create(
 
 Neighbour.create(
   voisin: "Bon voisin",
-  plant_1: Plant.where(nom: "Ail"),
-  plant_2: Plant.where(nom: "Artichaut")
+  plant_1: Plant.where(name: "Ail").first,
+  plant_2: Plant.where(name: "Artichaut").first
 )
 
 Neighbour.create(
