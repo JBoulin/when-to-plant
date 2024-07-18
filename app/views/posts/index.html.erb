@@ -1,52 +1,60 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://36vine.com/wp-content/uploads/2023/12/aa83f2ab7561ac20f6a4b07ac336eaa8.webp);">
-    <div class="container">
-      <h1 style="text-align: center;">When To Plant 🌱</h1>
-      <h3 style="text-align: center;">Le Blog</h3>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, vitae, harum soluta, illum voluptatibus
-        minus assumenda necessitatibus asperiores ratione vero quos. Voluptas iure provident doloremque fuga harum autem
-        a ut.
-      </p>
-    </div>
+  <div class="container">
+    <h1 style="text-align: center;">When To Plant 🌱</h1>
+    <h3 style="text-align: center;">Le Blog</h3>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, vitae, harum soluta, illum voluptatibus
+      minus assumenda necessitatibus asperiores ratione vero quos. Voluptas iure provident doloremque fuga harum autem
+      a ut.
+    </p>
   </div>
+</div>
 
 <div class="container">
   <div class="row justify-content-center">
-</div>
-<div class="row">
-  <!-- Articles Column -->
-  <div class="col-md-12">
-    <h2 class="mb-4 text-center">Articles récents</h2>
+    <div class="col-md-12">
+      <h2 class="mb-4 text-center">Articles récents</h2>
 
-    <!-- Search Bar -->
-    <div class="mb-4">
-  <input type="text" id="searchBar" class="form-control" placeholder="Rechercher des articles par titre...">
-</div>
-
-<div id="articles">
-  <% @posts.each_slice(2) do |post_pair| %>
-    <div class="d-flex flex-wrap justify-content-between mb-3">
-      <% post_pair.each do |post| %>
-        <div class="card mb-3 article-card" style="background-color: #f0fff4; width: 48%;">
-          <div class="card-body">
-            <% if post.photos.any? %>
-              <%= cl_image_tag post.photos.first.key, alt: post.titre, style: "height: 200px; width: 100%; object-fit: cover; border-radius:10px;" %>
-            <% end %>
-            <h3 class="card-title"><%= post.titre %></h3>
-            <h5 class="card-subtitle mb-2 text-muted"><%= post.categorie %></h5>
-            <p class="card-text"><%= post.contenu.truncate(200) %></p>
-            <div class="d-flex justify-content-end">
-              <%= link_to "Lire l'article", post_path(post), class: 'btn btn-success text-white rounded-pill', style: 'background-color: #0C4B36;' %>
+      <!-- Search Bar -->
+      <div class="mb-4">
+        <div class="container mt-4 py-3">
+          <div class="row justify-content-center">
+            <div class="col-6">
+              <%= form_with url: posts_path, method: :get, class: "d-flex" do %>
+                <%= text_field_tag :query,
+                  params[:query],
+                  class: "form-control me-1 rounded-pill",
+                  placeholder: "Recherche un article"
+                %>
+                <%= submit_tag "Rechercher", class: "btn btn-success text-white rounded-pill" %>
+              <% end %>
             </div>
           </div>
         </div>
-      <% end %>
+      </div>
+
+      <!-- Articles show -->
+      <div id="articles">
+        <% @posts.each_slice(2) do |post_pair| %>
+          <div class="d-flex flex-wrap justify-content-between mb-3">
+            <% post_pair.each do |post| %>
+              <div class="card mb-3 article-card" style="background-color: #f0fff4; width: 48%;">
+                <div class="card-body">
+                  <% if post.photos.any? %>
+                    <%= cl_image_tag post.photos.first.key, alt: post.titre, style: "height: 200px; width: 100%; object-fit: cover; border-radius:10px;" %>
+                  <% end %>
+                  <h3 class="card-title"><%= post.titre %></h3>
+                  <h5 class="card-subtitle mb-2 text-muted"><%= post.categorie %></h5>
+                  <p class="card-text"><%= post.contenu.truncate(200) %></p>
+                  <div class="d-flex justify-content-end">
+                    <%= link_to "Lire l'article", post_path(post), class: 'btn btn-success text-white rounded-pill', style: 'background-color: #0C4B36;' %>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
     </div>
-  <% end %>
-</div>
-
-
-<!-- Article 1 -->
   </div>
-</div>
 </div>
