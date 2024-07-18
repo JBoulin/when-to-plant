@@ -1,5 +1,5 @@
 class PlantListsController < ApplicationController
-  before_action :set_plant_list, only: [:show, :edit, :update, :destroy]
+  before_action :set_plant_list, only: [:show, :update, :destroy]
 
   def index
     @plant_lists = PlantList.all
@@ -9,12 +9,15 @@ class PlantListsController < ApplicationController
   end
 
   def create
+    @plant = Plant.find(params[:plant_id])
     @list = List.find(params[:list_id])
-    @plant_list = @list.plant_lists.build(plant_list_params)
+    @plant_list = PlantList.new
+    @plant_list.plant = @plant
+    @plant_list.list = @list
     if @plant_list.save
-      redirect_to @list, notice: 'Plant was successfully added to the list.'
+      redirect_to @plant, notice: 'La plante a été ajoutée à votre liste'
     else
-      render 'lists/show'
+      render 'plants/show'
     end
   end
 
@@ -35,9 +38,5 @@ class PlantListsController < ApplicationController
 
   def set_plant_list
     @plant_list = PlantList.find(params[:id])
-  end
-
-  def plant_list_params
-    params.require(:plant_list).permit(:plant_id, :list_id)
   end
 end
