@@ -1,19 +1,41 @@
 <div class="container mt-5">
   <div class="row justify-content-center">
-    <div class="col-md-10">
+    <div class="col-md-8">
       <div class="card mb-5" style="background-color: #f0fff4;">
         <div class="card-body">
           <% if @post.photos.any? %>
-            <%= cl_image_tag @post.photos.first.key, alt: @post.titre, style: "height: 200px; width: 100%; object-fit: cover;" %>
+            <%= cl_image_tag @post.photos.first.key, alt: @post.titre, style: "height: 200px; width: 100%; object-fit: cover; border-radius:10px;" %>
           <% end %>
           <h1 class="card-title"><%= @post.titre %></h1>
           <h5 class="card-subtitle mb-2 text-muted"><%= @post.categorie %></h5>
           <p class="card-text"><%= @post.contenu %></p>
           <div class="d-flex justify-content-end">
-          <%= link_to 'Retour', posts_path, class: 'btn btn-success text-white rounded-pill' %>
+            <%= link_to 'Retour', posts_path, class: 'btn btn-success text-white rounded-pill' %>
           </div>
         </div>
       </div>
     </div>
+    <% if user_signed_in? %>
+      <div class="col-md-4">
+        <div class="card mb-5" style="background-color: #f0fff4;">
+          <div class="card-body">
+            <h2>Ajouter un Commentaire</h2>
+            <%= form_with url: post_comments_path(@post), method: :post do |f| %>
+              <div class="form-group">
+                <%= f.label :titre, "Titre" %>
+                <%= f.text_field :titre, class: 'form-control', required: true %>
+              </div>
+              <div class="form-group mt-3">
+                <%= f.label :contenu, "Contenu" %>
+                <%= f.text_area :contenu, class: 'form-control', rows: 5, required: true %>
+              </div>
+              <div class="d-flex justify-content-end mt-3">
+                <%= f.submit "Soumettre", class: 'btn btn-success text-white rounded-pill' %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>

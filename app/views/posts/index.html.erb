@@ -30,7 +30,7 @@
         <div class="card mb-3 article-card" style="background-color: #f0fff4; width: 48%;">
           <div class="card-body">
             <% if post.photos.any? %>
-              <%= cl_image_tag post.photos.first.key, alt: post.titre, style: "height: 200px; width: 100%; object-fit: cover;" %>
+              <%= cl_image_tag post.photos.first.key, alt: post.titre, style: "height: 200px; width: 100%; object-fit: cover; border-radius:10px;" %>
             <% end %>
             <h3 class="card-title"><%= post.titre %></h3>
             <h5 class="card-subtitle mb-2 text-muted"><%= post.categorie %></h5>
