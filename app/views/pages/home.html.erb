@@ -72,17 +72,17 @@
 
       <% @posts.each do |post| %>
         <div class="col-5 m-3">
-        <div class="card mb-3 rounded-3">
-        <%= cl_image_tag post.photos.first.key, :cloud_name => "dzhzzutmq", style:"height: 250px; width: 100%; object-fit: cover;" %>
-          <div class="card-body">
-            <h5 class="card-title"><%= post.titre %></h5>
-            <p class="card-text"><%= post.contenu.truncate(300) %></p>
-            <div class="d-flex flex-row align-items-center justify-content-between">
-              <p class="card-text"><small class="text-muted"><%= post.date_publication %></small></p>
-              <%= link_to "Lire l'article", post_path(post), class: "btn btn-success" %>
+          <div class="card mb-3 rounded-3">
+           <%= cl_image_tag post.photos.first.key, :cloud_name => "dzhzzutmq", style:"height: 250px; width: 100%; object-fit: cover;" %>
+            <div class="card-body">
+              <h5 class="card-title"><%= post.titre %></h5>
+              <p class="card-text"><%= post.contenu.truncate(300) %></p>
+              <div class="d-flex flex-row align-items-center justify-content-between">
+                <p class="card-text"><small class="text-muted"><%= post.date_publication %></small></p>
+                <%= link_to "Lire l'article", post_path(post), class: "btn btn-success" %>
+              </div>
             </div>
           </div>
-        </div>
         </div>
       <% end %>
   </div>
