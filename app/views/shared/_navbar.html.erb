@@ -86,3 +86,37 @@
       </ul>
     </div>
 </div>
+
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon sticky-top">
+<nav class="navbar navbar-inverse">
+    <ul class="nav navbar-nav">
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Catégories<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><span><a href="#">Fruits</a></span>|
+          <span><a href="#">Légumes</a></span>|
+          <span><a href="#">Aromates</a></span></li>
+          <li><span><a href="#">Voir tout</a></span>|
+        </ul>
+      </li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Calendriers <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><span><a href="#">Janvier</a></span>|
+          <span><a href="#">Février</a></span>|
+          <span><a href="#">Mars</a></span></li>
+          <li><span><a href="#">Avril</a></span>|
+          <span><a href="#">Mai</a></span>|
+          <span><a href="#">Juin</a></span></li>
+          <li><span><a href="#">Juillet</a></span>|
+          <span><a href="#">Aoùt</a></span>|
+          <span><a href="#">Septembre</a></span></li>
+          <li><span><a href="#">Octobre</a></span>|
+          <span><a href="#">Novembre</a></span>|
+          <span><a href="#">Décembre</a></span></li>
+        </ul>
+      </li>
+      <li><%= link_to "A propos <span class=\"sr-only\">(current)</span>".html_safe, a_propos_path, class: 'nav-link' %></li>
+      <li><%= link_to "Blog".html_safe, posts_path, class: 'nav-link' %></li>
+    </ul>
+  </div>
+</nav>
+</div>
