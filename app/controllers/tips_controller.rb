@@ -11,7 +11,7 @@ class TipsController < ApplicationController
   def create
     @plant = Plant.find(params[:plant_id])
     @tip = @plant.tips.build(tip_params)
-    if @tip.save
+    if @tip.save!
       redirect_to @plant, notice: 'Tip was successfully created.'
     else
       render 'plants/show'
