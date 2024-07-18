@@ -14,14 +14,14 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @post = Post.find(params[:post_id])
+    @post = Post.friendly.find(params[:post_id])
     @comment = @post.comments.build(comment_params)
     @comment.user = current_user
     @comment.status = "En attente"
     if @comment.save
       redirect_to @post, notice: 'Votre commentaire à bien été envoyé ! Il sera validé par un jardinier confirmé dans les prochaines heures.'
     else
-      render 'posts/show'
+      render 'posts/show', status: :unprocessable_entity
     end
   end
 
@@ -45,6 +45,6 @@ class CommentsController < ApplicationController
   end
 
   def comment_params
-    params.require(:comment).permit(:titre, :contenu, :user_id, :post_id, :status)
+    params.require(:comment).permit(:titre, :contenu, :status)
   end
 end

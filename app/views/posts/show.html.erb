@@ -21,17 +21,10 @@
     <div class="card mb-5" style="background-color: #f0fff4;">
       <div class="card-body">
         <h2>Ajouter un Commentaire</h2>
-        <%= form_with url: post_comments_path(@post), method: :post do |f| %>
-          <div class="form-group">
-            <%= f.label :titre, "Titre" %>
-            <%= f.text_field :titre, class: 'form-control', required: true %>
-          </div>
-          <div class="form-group mt-3">
-            <%= f.label :contenu, "Contenu" %>
-            <%= f.text_area :contenu, class: 'form-control', rows: 5, required: true %>
-          </div>
-
-          <div class="d-flex justify-content-end mt-3">
+        <%= simple_form_for [@post, Comment.new] do |f| %>
+          <%= f.input :titre, placeholder: "Votre titre" %>
+          <%= f.input :contenu, placeholder: "Votre commentaire" %>
+          <div class="d-flex justify-content-end">
             <%= f.submit "Soumettre", class: 'btn btn-success text-white rounded-pill' %>
           </div>
         <% end %>
