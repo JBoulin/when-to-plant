@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon sticky-top">
   <div class="container-fluid">
-    <%= link_to root_path, class: "navbar-brand", style:"margin-right: 400px !important;" do %>
+    <%= link_to root_path, class: "navbar-brand" do %>
       <%= image_tag "when to plant blanc.png", style: "width:169px; height:40px; margin-bottom:25px;" %>
     <% end %>
 
@@ -8,8 +8,8 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
+    <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+      <ul class="navbar-nav">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Catégories
@@ -47,17 +47,15 @@
         </li>
       </ul>
 
-      <div class="d-flex justify-content-center w-100">
-        <div class="search-bar" style="max-width: 400px; width: 100%;">
-          <%= form_with url: plants_path, method: :get, class: "d-flex" do %>
-            <%= text_field_tag :query,
-              params[:query],
-              class: "form-control me-1 rounded-pill",
-              placeholder: "Recherche une plant"
-            %>
-            <%= submit_tag "Rechercher", class: "btn btn-success text-white rounded-pill" %>
-          <% end %>
-        </div>
+      <div class="search-bar d-flex justify-content-center ms-auto" style="max-width: 400px;">
+        <%= form_with url: plants_path, method: :get, class: "d-flex" do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control me-1 rounded-pill",
+            placeholder: "Recherche une plantes"
+          %>
+          <%= submit_tag "Rechercher", class: "btn btn-success text-white rounded-pill" %>
+        <% end %>
       </div>
 
       <ul class="navbar-nav ms-auto">
