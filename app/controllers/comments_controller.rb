@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  before_action :set_comment, only: [:show, :edit, :update, :destroy]
+  before_action :set_comment, only: [:show, :update, :destroy]
 
   def index
     @comments = Comment.all
@@ -16,8 +16,10 @@ class CommentsController < ApplicationController
   def create
     @post = Post.find(params[:post_id])
     @comment = @post.comments.build(comment_params)
+    @comment.user = current_user
+    @comment.status = "En attente"
     if @comment.save
-      redirect_to @post, notice: 'Comment was successfully created.'
+      redirect_to @post, notice: 'Votre commentaire à bien été envoyé ! Il sera validé par un jardinier confirmé dans les prochaines heures.'
     else
       render 'posts/show'
     end
