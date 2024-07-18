@@ -8,10 +8,10 @@ class Post < ApplicationRecord
   validates :contenu, length: { maximum: 100000 }
 
   extend FriendlyId
-  friendly_id :slug, use: :slugged
+  friendly_id :titre, use: :slugged
 
   def slug
-    titre.to_s
+    titre.to_s.parameterize
   end
 
   def should_generate_new_friendly_id?

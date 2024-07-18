@@ -40,7 +40,7 @@ class PostsController < ApplicationController
   private
 
   def set_post
-    @post = Post.find(params[:id])
+    @post = Post.friendly.find(params[:id])
   rescue ActiveRecord::RecordNotFound
     redirect_to posts_url, alert: 'Post not found.' # Gérer le cas où le post n'existe pas
   rescue ArgumentError
