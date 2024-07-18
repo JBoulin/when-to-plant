@@ -15,6 +15,7 @@
         </div>
       </div>
     </div>
+
     <% if user_signed_in? %>
       <div class="col-md-4">
         <div class="card mb-5" style="background-color: #f0fff4;">
@@ -32,6 +33,19 @@
               <div class="d-flex justify-content-end mt-3">
                 <%= f.submit "Soumettre", class: 'btn btn-success text-white rounded-pill' %>
               </div>
+            <% end %>
+
+            <% if @comment %>
+              <div class="col-md-8">
+                <div class="card mb-3">
+                  <div class="card-body">
+                    <h3><%= @comment.titre %></h3>
+                    <p><strong>Contenu</strong>: <%= @comment.contenu %></p>
+                  </div>
+                </div>
+              </div>
+            <% else %>
+              <p class="col-md-8">Aucun commentaire pour le moment.</p>
             <% end %>
           </div>
         </div>
