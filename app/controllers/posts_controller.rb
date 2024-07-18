@@ -45,6 +45,6 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:titre, :contenu, :categorie, :date_publication)
+    params.require(:post).permit(:titre, :contenu, :categorie, :date_publication, :photos)
   end
 end

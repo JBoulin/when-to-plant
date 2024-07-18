@@ -3,6 +3,7 @@ class PagesController < ApplicationController
 
   def home
     @plants = Plant.all.take(3)
+    @posts = Post.all.take(2)
   end
 
   def about
