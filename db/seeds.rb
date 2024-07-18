@@ -279,7 +279,3 @@ List.create(
   nom: "Légumes",
   user: User.fifth
 )
-
-# artichaut = Plant.new(name: "Artichaut", body: "un super légume") # on garde
-# file = URI.open("https://produits.bienmanger.com/35241-0w470h470_Artichaut_Blanc_France_Bio.jpg") # on garde
-# artichaut.photos.attach(io: file, filename: "artichaud.jpg", content_type: "image/jpg") # on garde
