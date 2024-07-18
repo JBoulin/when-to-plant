@@ -1,24 +1,40 @@
-<div class="container mt-5">
-  <div class="row justify-content-center">
-    <div class="col-md-8">
+<div class="container mt-5 col-6">
+  <div class="d-flex flex-column justify-content-center">
       <div class="card mb-5" style="background-color: #f0fff4;">
         <div class="card-body">
           <% if @post.photos.any? %>
-            <%= cl_image_tag @post.photos.first.key, alt: @post.titre, style: "height: 200px; width: 100%; object-fit: cover; border-radius:10px;" %>
+            <%= cl_image_tag @post.photos.first.key, alt: @post.titre, style: "height: 300px; width: 100%; object-fit: cover; border-radius:10px;" %>
           <% end %>
-          <h1 class="card-title"><%= @post.titre %></h1>
+          <h1 class="card-title mt-1"><%= @post.titre %></h1>
           <h5 class="card-subtitle mb-2 text-muted"><%= @post.categorie %></h5>
+          <p class="card-text"><small class="text-muted"><%= @post.date_publication %></small></p>
           <p class="card-text"><%= @post.contenu %></p>
           <div class="d-flex justify-content-end">
             <%= link_to 'Retour', posts_path, class: 'btn btn-success text-white rounded-pill' %>
           </div>
         </div>
       </div>
-    </div>
 
-    <% if user_signed_in? %>
-      <div class="col-md-4">
-        <div class="card mb-5" style="background-color: #f0fff4;">
+      <% if @comments.present? %>
+            <% @comments.each do |comment| %>
+              <div class="p-3 rounded mb-5" style="background-color: #f0fff4;">
+                <div class="card mb-3">
+                  <div class="card-body">
+                     <div class="">
+                        <strong>Par <%= comment.user.prenom %> <%= comment.user.nom %> :</strong>
+                     </div>
+                    <p class="text-decoration-underline fst-italic"><%= comment.titre %></p>
+                    <p><%= comment.contenu %></p>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+        <% else %>
+              <p class="fst-italic p-3 d-flex flex-column align-items-center justify-content-center rounded mb-3" style="background-color: #f0fff4;">Aucun commentaire pour le moment.</p>
+        <% end %>
+
+      <% if user_signed_in? %>
+        <div class="card mb-5 p-3 w-75 m-auto" style="background-color: #f0fff4;">
           <div class="card-body">
             <h2>Ajouter un Commentaire</h2>
             <%= simple_form_for [@post, Comment.new] do |f| %>
@@ -28,24 +44,8 @@
                 <%= f.submit "Soumettre", class: 'btn btn-success text-white rounded-pill' %>
               </div>
             <% end %>
-
-            <% if @comment %>
-              <div class="col-md-8">
-                <div class="card mb-3">
-                  <div class="card-body">
-                    <h3><%= @comment.titre %></h3>
-                    <p><strong>Contenu</strong>: <%= @comment.contenu %></p>
-                    <p class="card-text"><small class="text-muted"><%= post.date_publication %></small></p>
-                  </div>
-                </div>
-              </div>
-            <% else %>
-              <!-- Affiche ce message uniquement s'il n'y a pas de commentaire soumis -->
-              <p class="col-md-8">Aucun commentaire pour le moment.</p>
-            <% end %>
           </div>
         </div>
-      </div> <!-- Balise fermante ajoutée ici -->
     <% end %>
   </div>
 </div>

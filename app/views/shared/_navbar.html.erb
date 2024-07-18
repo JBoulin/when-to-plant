@@ -18,11 +18,12 @@
             <a class="dropdown-item" href="#">Fruits</a>
             <a class="dropdown-item" href="#">Légumes</a>
             <a class="dropdown-item" href="#">Aromates</a>
+            <a class="dropdown-item" href="/plants">Voir tout</a>
           </div>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-           |  Calendriers
+           Calendriers
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="#">Janvier</a>
@@ -40,27 +41,18 @@
           </div>
         </li>
         <li class="nav-item active">
-          <%= link_to "|  A propos <span class=\"sr-only\">(current)</span>".html_safe, a_propos_path, class: 'nav-link text-white' %>
+          <%= link_to "À propos", a_propos_path, class: 'nav-link text-white' %>
         </li>
         <li class="nav-item">
-          <%= link_to "| Blog".html_safe, posts_path, class: 'nav-link text-white' %>
+          <%= link_to "Blog", posts_path, class: 'nav-link text-white' %>
         </li>
       </ul>
 
-      <div class="search-bar d-flex justify-content-center ms-auto" style="max-width: 400px;">
-        <%= form_with url: plants_path, method: :get, class: "d-flex" do %>
-          <%= text_field_tag :query,
-            params[:query],
-            class: "form-control me-1 rounded-pill",
-            placeholder: "Recherche une plantes"
-          %>
-          <%= submit_tag "Rechercher", class: "btn btn-success text-white rounded-pill" %>
-        <% end %>
-      </div>
+
     </div>
 
     <div>
-      <ul class="navbar-nav ms-auto">
+      <ul class="navbar-nav ms-auto d-flex flex-row-reverse" style="width: 300px;">
         <% if user_signed_in? %>
           <li class="nav-item dropdown">
             <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -74,9 +66,20 @@
           </li>
         <% else %>
           <li class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+            <%= link_to "Se connecter", new_user_session_path, class: "nav-link" %>
           </li>
         <% end %>
+            <li>
+          <div class="me-2">
+            <%= form_with url: plants_path, method: :get, class: "" do %>
+              <%= text_field_tag :query,
+                params[:query],
+                class: "search bg-white border-0",
+                placeholder: " "
+              %>
+            <% end %>
+          </div>
+        </li>
       </ul>
     </div>
   </div>
