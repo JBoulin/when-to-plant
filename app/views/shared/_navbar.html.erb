@@ -57,11 +57,11 @@
     <%# </div> %>
       <input class="search d-flex justify-content-end" placeholder=" " spellcheck="false">
 
-      <form class="form-inline my-2 my-lg-0 ms-auto" data-controller="search">
+      <%# <form class="form-inline my-2 my-lg-0 ms-auto" data-controller="search">
         <input class="mr-sm-2 d-none" type="search" placeholder="Search" aria-label="Search" data-search-target="input">
         <button class="d-none btn btn-outline-success my-2 my-sm-0" data-search-target="button" type="submit">Search</button>
         <i class="fa-solid fa-magnifying-glass" data-action="click->search#toggle" style="color: #050505;"></i>
-      </form>
+      </form> %>
 
       <ul class="navbar-nav">
         <% if user_signed_in? %>
@@ -84,4 +84,5 @@
         <% end %>
       </ul>
     </div>
+  </div>
 </div>
