@@ -3,10 +3,15 @@
     <div class="col-md-10">
       <div class="card mb-5" style="background-color: #f0fff4;">
         <div class="card-body">
+          <% if @post.photos.any? %>
+            <%= cl_image_tag @post.photos.first.key, alt: @post.titre, style: "height: 200px; width: 100%; object-fit: cover;" %>
+          <% end %>
           <h1 class="card-title"><%= @post.titre %></h1>
-          <%# <h5 class="card-subtitle mb-2 text-muted"><%= @post.categorie %></h5>
+          <h5 class="card-subtitle mb-2 text-muted"><%= @post.categorie %></h5>
           <p class="card-text"><%= @post.contenu %></p>
-          <%= link_to 'Retour', posts_path, class: 'btn btn-primary' %>
+          <div class="d-flex justify-content-end">
+          <%= link_to 'Retour', posts_path, class: 'btn btn-success text-white rounded-pill' %>
+          </div>
         </div>
       </div>
     </div>
