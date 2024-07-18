@@ -8,8 +8,8 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto me">
+    <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Catégories
@@ -32,7 +32,7 @@
             <a class="dropdown-item" href="#">Mai</a>
             <a class="dropdown-item" href="#">Juin</a>
             <a class="dropdown-item" href="#">Juillet</a>
-            <a class="dropdown-item" href="#">Aoùt</a>
+            <a class="dropdown-item" href="#">Août</a>
             <a class="dropdown-item" href="#">Septembre</a>
             <a class="dropdown-item" href="#">Octobre</a>
             <a class="dropdown-item" href="#">Novembre</a>
@@ -46,27 +46,26 @@
           <%= link_to "| Blog".html_safe, posts_path, class: 'nav-link' %>
         </li>
       </ul>
-    </div>
 
-    <%# <div class="search">
-        <%= simple_form_for url: plants_path, method: :get, local: true do %>
-          <%# <%= text_field_tag :query, params[:query], placeholder:" "%>
-          <%# <%= button_tag(type: "submit") do %>
-          <%# <% end %>
-        <%# <% end %>
-    <%# </div> %>
-      <input class="search d-flex justify-content-end" placeholder=" " spellcheck="false">
+      <div class="mb-4">
+        <div class="container mt-4 py-3", style="border-radius:10px;">
+          <div class="row justify-content-center">
+            <div class="col-6">
+              <%= form_with url: plants_path, method: :get, class: "d-flex" do %>
+                <%= text_field_tag :query,
+                  params[:query],
+                  class: "form-control me-1 rounded-pill",
+                  placeholder: "Recherche une plant"
+                %>
+                <%= submit_tag "Rechercher", class: "btn btn-success text-white rounded-pill" %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
 
-      <%# <form class="form-inline my-2 my-lg-0 ms-auto" data-controller="search">
-        <input class="mr-sm-2 d-none" type="search" placeholder="Search" aria-label="Search" data-search-target="input">
-        <button class="d-none btn btn-outline-success my-2 my-sm-0" data-search-target="button" type="submit">Search</button>
-        <i class="fa-solid fa-magnifying-glass" data-action="click->search#toggle" style="color: #050505;"></i>
-      </form> %>
-
-      <ul class="navbar-nav">
+      <ul class="navbar-nav ms-auto">
         <% if user_signed_in? %>
-          <li class="nav-item active">
-          </li>
           <li class="nav-item dropdown">
             <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar", alt: "dropdown menu" %>
@@ -74,7 +73,7 @@
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Mes listes", lists_path, class: "dropdown-item" %>
               <%= link_to "Mon profil", edit_user_registration_path, class: "dropdown-item" %>
-              <%= link_to "Déconnexion", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
+              <%= link_to "Déconnexion", destroy_user_session_path, data: { turbo_method: :delete }, class: "dropdown-item" %>
             </div>
           </li>
         <% else %>
@@ -85,38 +84,4 @@
       </ul>
     </div>
   </div>
-</div>
-
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon sticky-top">
-<nav class="navbar navbar-inverse">
-    <ul class="nav navbar-nav">
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Catégories<span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><span><a href="#">Fruits</a></span>|
-          <span><a href="#">Légumes</a></span>|
-          <span><a href="#">Aromates</a></span></li>
-          <li><span><a href="#">Voir tout</a></span>|
-        </ul>
-      </li>
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Calendriers <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><span><a href="#">Janvier</a></span>|
-          <span><a href="#">Février</a></span>|
-          <span><a href="#">Mars</a></span></li>
-          <li><span><a href="#">Avril</a></span>|
-          <span><a href="#">Mai</a></span>|
-          <span><a href="#">Juin</a></span></li>
-          <li><span><a href="#">Juillet</a></span>|
-          <span><a href="#">Aoùt</a></span>|
-          <span><a href="#">Septembre</a></span></li>
-          <li><span><a href="#">Octobre</a></span>|
-          <span><a href="#">Novembre</a></span>|
-          <span><a href="#">Décembre</a></span></li>
-        </ul>
-      </li>
-      <li><%= link_to "A propos <span class=\"sr-only\">(current)</span>".html_safe, a_propos_path, class: 'nav-link' %></li>
-      <li><%= link_to "Blog".html_safe, posts_path, class: 'nav-link' %></li>
-    </ul>
-  </div>
-</nav>
 </div>
