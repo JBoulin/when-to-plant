@@ -12,6 +12,10 @@ class PlantsController < ApplicationController
 
   def show
     @tip = Tip.new
+    @tips = Tip.where(plant: @plant)
+    @list = List.new
+    @lists = List.where(user: current_user)
+    @bon_voisin = Neighbour.where(plant_1: @plant)
   end
 
   def create

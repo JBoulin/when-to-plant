@@ -18,3 +18,4 @@ Rails.application.config.assets.precompile += %w( controllers/search_controller.
 Rails.application.config.assets.precompile += %w( sweetalert2.js )
 Rails.application.config.assets.precompile += %w( controllers/alert_controller.js )
 Rails.application.config.assets.precompile += %w( controllers/tabs_controller.js )
+Rails.application.config.assets.precompile += %w( controllers/modals_controller.js )

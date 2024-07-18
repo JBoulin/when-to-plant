@@ -1,5 +1,5 @@
 class TipsController < ApplicationController
-  before_action :set_tip, only: [:show, :edit, :update, :destroy]
+  before_action :set_tip, only: [:show, :update, :destroy]
 
   def index
     @tips = Tip.all
@@ -11,8 +11,10 @@ class TipsController < ApplicationController
   def create
     @plant = Plant.find(params[:plant_id])
     @tip = @plant.tips.build(tip_params)
+    @tip.user = current_user
+    @tip.status = "En attente"
     if @tip.save!
-      redirect_to @plant, notice: 'Tip was successfully created.'
+      redirect_to @plant, notice: 'Votre conseil a bien été envoyé ! Il sera validé par un jardinier confirmé dans les prochaines heures.'
     else
       render 'plants/show'
     end

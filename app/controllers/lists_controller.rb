@@ -14,8 +14,10 @@ class ListsController < ApplicationController
 
   def create
     @list = List.new(list_params)
+    @list.user = current_user
     if @list.save
-      redirect_to @list, notice: 'List was successfully created.'
+      redirect_to root_path, notice: 'Votre liste a été créée !'
+      # a remplacer par list show
     else
       render :new
     end
