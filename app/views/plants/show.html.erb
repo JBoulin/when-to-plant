@@ -2,8 +2,52 @@
   <div>
     <%= link_to "< Retour", plants_path, class:"text-decoration-none text-black mb-3 mt-2" %>
   </div>
-  <h2><%= @plant.name %></h2>
-  <p><%= @plant.categorie %></p>
+    <div class="d-flex justify-content-between align-items-center">
+      <div class="left-part">
+        <h2><%= @plant.name %></h2>
+        <p><%= @plant.categorie %></p>
+      </div>
+      <div class="btn-group rounded h-25">
+      <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button">
+        Ajouter à ma liste
+      </button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Mes listes</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+       <% if user_signed_in?  %>
+        <div class="modal-body">
+          <div class="d-flex justify-content-between align-items-center p-2">
+            <% @lists.each do |list|%>
+            <%= list.nom %> <%= button_to "+", list_plant_lists_url(plant_id: @plant.id, list_id: list.id), class:"fs-2 text-success border-0 bg-transparent" %>
+            <% end %>
+          </div>
+          <%= simple_form_for @list do |f| %>
+            <div class="mb-3">
+              <%= f.label :nom %>
+              <%= f.text_field :nom, class:"form-control"%>
+            </div>
+            <div class="d-flex justify-content-center">
+              <%= f.button :submit, "Créer une liste", class:"mb-2 text-decoration-none btn btn-success" %>
+            </div>
+          <% end %>
+      </div>
+      <% else %>
+        <div class="d-flex justify-content-center align-items-center flex-column py-5">
+          <p>Connectez-vous pour ajouter ou créer votre liste</p>
+          <button class="btn btn-primary"><a class="text-decoration-none  text-white" href="/users/sign_in">Se connecter</a></button>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+    </div>
+
+  </div>
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="height:400px;">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -72,24 +116,51 @@
         <div class="card-body mb-3">
             <p><strong>Maladies:</strong> <%= @plant.maladie %></p>
         </div>
+      </div>
     </div>
-  </div>
-  <div>
-  <h5 class="text-decoration-underline"><i class="fa-regular fa-pen-to-square"></i>Conseils des jardiniers :</h5>
-  <p class="fst-italic">Pas de conseils sur cette plante.. Soyez le premier à donner vos trucs et astuces pour aider les jardiniers de When To Plant !</p>
-  </div>
-  <div class="card mb-5 p-3 w-75 m-auto">
-    <%= simple_form_for([@plant, @tip]) do |f| %>
-      <%= f.input :titre %>
-      <%= f.input :contenu %>
-        <div class="d-flex justify-content-end">
-          <%= f.submit "Publier", class: "btn btn-success mb-3", class:"btn btn-success text-white w-25" %>
-        </div>
-    <% end %>
+  <div class="test-1">
+    <h5 class="text-decoration-underline"><i class="fa-regular fa-pen-to-square"></i>Conseils des jardiniers :</h5>
+      <% if @tips.present? %>
+        <% @tips.each do |tip| %>
+         <div class="p-3 rounded mb-5" style="background-color: #daf1df;">
+          <div class="">
+          <strong><%= tip.user.prenom %> <%= tip.user.nom %> :</strong>
+          </div>
+          <%= tip.contenu %>
+         </div>
+        <% end %>
+      <% else %>
+      <div class="test-2">
+        <p class="fst-italic p-3 d-flex flex-column align-items-center justify-content-center rounded mb-3" style="background-color: #daf1df;">Pas de conseils sur cette plante.. Soyez le premier à donner vos trucs et astuces pour aider les jardiniers de When To Plant !</p>
+      </div>
+      <% end %>
   </div>
 
-  <div class="mb-5 bg-success p-3 text-white">
-    <h3 class="text-center">Bon voisins</h3>
+  <% if user_signed_in?  %>
+    <div class="card mb-5 p-3 w-75 m-auto">
+      <h4 class="text-center">Ajouter votre conseil</h4>
+      <%= simple_form_for([@plant, @tip]) do |f| %>
+        <%= f.input :titre %>
+        <%= f.input :contenu %>
+          <div class="d-flex justify-content-end">
+            <%= f.submit "Publier", class:"btn btn-success text-white w-25" %>
+          </div>
+      <% end %>
+    </div>
+  <% else %>
+    <div class="p-3 d-flex flex-column align-items-center justify-content-center rounded mb-5" style="background-color: #daf1df;">
+      <p>Connectez-vous pour ajouter vos conseils !</p>
+      <button class="btn btn-primary"><a class="text-decoration-none  text-white" href="/users/sign_in">Se connecter</a></button>
+    </div>
+  <% end %>
+
+    <div class="mb-5 bg-success p-3 text-white">
+      <h3 class="text-center">Bon voisins</h3>
+    </div>
+    <div>
+      <% @bon_voisin.each do |bon_voisin| %>
+        <%= bon_voisin.plant_2.name %>
+      <% end %>
+    </div>
   </div>
-</div>
 </div>

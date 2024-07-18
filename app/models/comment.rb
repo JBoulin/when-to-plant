@@ -2,8 +2,8 @@ class Comment < ApplicationRecord
   belongs_to :user
   belongs_to :post
 
-  validates :content, presence: true
-  validates :content, length: { maximum: 255 }
+  validates :titre, presence: true
+  validates :contenu, length: { maximum: 255 }
 
   include PgSearch::Model
 

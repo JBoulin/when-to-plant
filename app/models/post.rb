@@ -10,6 +10,13 @@ class Post < ApplicationRecord
   extend FriendlyId
   friendly_id :titre, use: :slugged
 
+  include PgSearch::Model
+  pg_search_scope :search_by_titre_and_contenu_and_categorie,
+                  against: [:titre, :contenu, :categorie],
+                  using: {
+                    tsearch: { prefix: true }
+                  }
+
   def slug
     titre.to_s.parameterize
   end

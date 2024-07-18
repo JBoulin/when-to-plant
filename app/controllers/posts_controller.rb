@@ -2,7 +2,11 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   def index
-    @posts = Post.all
+    if params[:query].present?
+      @posts = Post.search_by_titre_and_contenu_and_categorie(params[:query])
+    else
+      @posts = Post.all
+    end
   end
 
   def show
@@ -48,6 +52,6 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:titre, :contenu, :categorie, :date_publication, :photos)
+    params.require(:post).permit(:titre, :contenu, :categorie, :date_publication, :photos, :note)
   end
 end
