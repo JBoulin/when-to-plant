@@ -187,6 +187,7 @@ Pour une famille « classique », il est bien entendu inutile de planter 30 plan
 article_1.photos.attach(io: file_10, filename: "article-1.jpg", content_type: "image/jpg")
 article_1.save!
 
+
 file_11 = URI.open("https://static.aujardin.info/cache/th/adb/outils-jardinage-500x375.jpg")
 article_2 = Post.new(
   titre: "Les outils pour commencer son potager",
