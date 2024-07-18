@@ -8,7 +8,7 @@ require "open-uri"
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
-
+Post.destroy_all
 List.destroy_all
 Plant.destroy_all
 User.destroy_all
@@ -162,7 +162,7 @@ ail.photos.attach(io: file_9, filename: "ail-3.jpg", content_type: "image/jpg")
 ail.save!
 
 file_10 = URI.open("https://www.graines-semences.com/img/cms/2020/201102-img-actu-10-legume-facile-cultiver-potager.jpg")
-article_1 = Post.create(
+article_1 = Post.new(
   titre: "Les légumes faciles pour bien débuter",
   categorie: "Tuto",
   date_publication: "15/07/2024",
@@ -188,7 +188,7 @@ article_1.photos.attach(io: file_10, filename: "article-1.jpg", content_type: "i
 article_1.save!
 
 file_11 = URI.open("https://static.aujardin.info/cache/th/adb/outils-jardinage-500x375.jpg")
-article_2 = Post.create(
+article_2 = Post.new(
   titre: "Les outils pour commencer son potager",
   categorie: "Matériel",
   date_publication: "16/07/2024",
@@ -214,7 +214,7 @@ article_2.photos.attach(io: file_11, filename: "article-2.jpg", content_type: "i
 article_2.save!
 
 file_12 = URI.open("https://images.ctfassets.net/b85ozb2q358o/f5004387e9df45449f551fc8304decd3935884ec0b1fab511011db081908e541/4d745112ed48aea797e8ccd81a33ab87/image.png")
-article_3 = Post.create(
+article_3 = Post.new(
   titre: "Potager - Par où commencer ?",
   categorie: "Tuto",
   date_publication: "17/07/2024",
@@ -255,7 +255,7 @@ article_3.photos.attach(io: file_12, filename: "article-2.jpg", content_type: "i
 article_3.save!
 
 file_13 = URI.open("https://www.cultiver-responsable.com/wp-content/uploads/sites/3/2020/06/zone-permaculture-connaissance.jpg")
-article_4 = Post.create(
+article_4 = Post.new(
   titre: "Tout savoir sur la permaculture",
   categorie: "Tuto",
   date_publication: "15/07/2024",

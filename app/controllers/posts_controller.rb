@@ -6,7 +6,6 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.friendly.find(params[:id])
   end
 
   def new
@@ -41,7 +40,11 @@ class PostsController < ApplicationController
   private
 
   def set_post
-    @post = Post.find(params[:id])
+    @post = Post.friendly.find(params[:id])
+  rescue ActiveRecord::RecordNotFound
+    redirect_to posts_url, alert: 'Post not found.' # Gérer le cas où le post n'existe pas
+  rescue ArgumentError
+    redirect_to posts_url, alert: 'Invalid post ID.' # Gérer le cas où l'ID est invalide
   end
 
   def post_params

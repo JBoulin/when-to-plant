@@ -1,0 +1,26 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-10 text-center mb-5">
+      <h1>Le blog</h1>
+      </div>
+  </div>
+  <div class="row">
+    <!-- Articles Column -->
+
+    <div class="col-md-8">
+      <h2 class="mb-4">Articles récents</h2>
+      <div id="articles">
+        <% @posts.each do |post| %>
+          <div class="card mb-3" style="background-color: #f0fff4;">
+            <div class="card-body">
+              <h3 class="card-title"><%= post.titre %></h3>
+              <h5 class="card-subtitle mb-2 text-muted"><%= post.categorie %></h5>
+              <p class="card-text"><%= post.contenu.truncate(200) %></p>
+              <%= link_to "Lire l'article", post_path(post), class: 'btn btn-success text-white', style: 'background-color: #0C4B36;' %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
