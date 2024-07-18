@@ -14,7 +14,7 @@ class TipsController < ApplicationController
     @tip.user = current_user
     @tip.status = "En attente"
     if @tip.save!
-      redirect_to @plant, notice: 'Votre conseil a bien été envoyé ! Il sera validé par un jardinier confirmé dans les prochaines heures.'
+      redirect_to @plant, notice: 'Votre conseil a bien été envoyé !'
     else
       render 'plants/show'
     end

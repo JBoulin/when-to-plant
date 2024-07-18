@@ -122,22 +122,23 @@
     <h5 class="text-decoration-underline"><i class="fa-regular fa-pen-to-square"></i>Conseils des jardiniers :</h5>
       <% if @tips.present? %>
         <% @tips.each do |tip| %>
-         <div class="p-3 rounded mb-5" style="background-color: #daf1df;">
+         <div class="p-3 rounded mb-5" style="background-color: #f0fff4;">
           <div class="">
-          <strong><%= tip.user.prenom %> <%= tip.user.nom %> :</strong>
+           <strong>Par <%= tip.user.prenom %> <%= tip.user.nom %> :</strong>
           </div>
-          <%= tip.contenu %>
+         <p class="text-decoration-underline fst-italic"><strong><%= tip.titre %></strong></p>
+          <p><%= tip.contenu %></p>
          </div>
         <% end %>
       <% else %>
       <div class="test-2">
-        <p class="fst-italic p-3 d-flex flex-column align-items-center justify-content-center rounded mb-3" style="background-color: #daf1df;">Pas de conseils sur cette plante.. Soyez le premier à donner vos trucs et astuces pour aider les jardiniers de When To Plant !</p>
+        <p class="fst-italic p-3 d-flex flex-column align-items-center justify-content-center rounded mb-3" style="background-color: #f0fff4;">Pas de conseils sur cette plante.. Soyez le premier à donner vos trucs et astuces pour aider les jardiniers de When To Plant !</p>
       </div>
       <% end %>
   </div>
 
   <% if user_signed_in?  %>
-    <div class="card mb-5 p-3 w-75 m-auto">
+    <div class="card mb-5 p-3 w-75 m-auto" style="background-color: #f0fff4;">
       <h4 class="text-center">Ajouter votre conseil</h4>
       <%= simple_form_for([@plant, @tip]) do |f| %>
         <%= f.input :titre %>

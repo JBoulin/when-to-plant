@@ -4,14 +4,14 @@
       <h1 style="text-align: center;">When To Plant 🌱</h1>
       <h3 style="text-align: center;">L'art de planter</h3>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, vitae, harum soluta, illum voluptatibus
-        minus assumenda necessitatibus asperiores ratione vero quos. Voluptas iure provident doloremque fuga harum autem
-        a ut.
+        Bienvenue dans le potager de When To Plant !<br>
+        Retrouvez tous les conseils et astuces pour faire votre potager avec plus de 150 variétés différentes de légumes, fruits, aromates et condiments.<br>
+        Profitez des astuces de nombreux jardiniers et faites pousser vos propres plantes grâce aux informations et au calendrier When To Plant !
       </p>
     </div>
   </div>
 <div class="w-75 d-flex flex-column m-auto">
-  <h1 class="py-5 text-center">Les plantes du mois</h1>
+  <h1 class="py-4 text-center">Les plantes du mois</h1>
 
   <div class="cards">
    <% @plants.each do |plant| %>
@@ -35,7 +35,7 @@
     <% end %>
   </div>
 
-  <h1 class="py-5 text-center">Le calendrier</h1>
+  <h1 class="py-4 text-center">Le calendrier</h1>
 
   <div class="cards">
     <div class="card-trip d-flex flex-column align-items-center justify-content-center">
@@ -66,17 +66,17 @@
   </div>
 </body>
 
-  <h1 class="py-5 text-center">Les dernières informations et tuto When To Plant</h1>
+  <h1 class="py-4 text-center">Les dernières informations et tuto When To Plant</h1>
 
-  <div class="d-flex justify-content-center">
+  <div class="cards d-flex justify-content-center">
 
       <% @posts.each do |post| %>
         <div class="col-5 m-3">
-          <div class="card mb-3 rounded-3">
-           <%= cl_image_tag post.photos.first.key, :cloud_name => "dzhzzutmq", style:"height: 250px; width: 100%; object-fit: cover;" %>
+          <div class="card mb-3 rounded-3" style="background-color: #daf1df; box-shadow: 0 0 15px rgba(0,0,0,0.2);">
+           <%= cl_image_tag post.photos.first.key, :cloud_name => "dzhzzutmq", style:"height: 250px; width: 100%; object-fit: cover; padding: 16px 16px 0 16px;" %>
             <div class="card-body">
               <h5 class="card-title"><%= post.titre %></h5>
-              <p class="card-text"><%= post.contenu.truncate(300) %></p>
+              <p class="card-text text-muted"><%= post.contenu.truncate(200) %></p>
               <div class="d-flex flex-row align-items-center justify-content-between">
                 <p class="card-text"><small class="text-muted"><%= post.date_publication %></small></p>
                 <%= link_to "Lire l'article", post_path(post), class: "btn btn-success" %>

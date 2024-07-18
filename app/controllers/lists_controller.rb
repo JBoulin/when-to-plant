@@ -28,7 +28,7 @@ class ListsController < ApplicationController
 
   def update
     if @list.update(list_params)
-      redirect_to @list, notice: 'List was successfully updated.'
+      redirect_to @list, notice: 'Votre liste a été supprimée !'
     else
       render :edit
     end
