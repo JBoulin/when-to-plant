@@ -8,6 +8,7 @@ require "open-uri"
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+Comment.destroy_all
 Post.destroy_all
 Neighbour.destroy_all
 PlantList.destroy_all
