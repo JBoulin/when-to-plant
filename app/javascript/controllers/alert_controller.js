@@ -4,8 +4,7 @@ import Swal from 'sweetalert2';
 export default class extends Controller {
   static values = {
     icon: String,
-    alertTitle: String,
-    alertHtml: String,
+    title: String,
     confirmButtonText: String
   }
 
@@ -14,11 +13,10 @@ export default class extends Controller {
 
     Swal.fire({
       icon: this.iconValue,
-      title: this.alertTitleValue,
-      html: this.alertHtmlValue,
-      // confirmButtonText: this.confirmButtonTextValue,
+      title: this.titleValue,
+      html: this.htmlValue,
+      showConfirmButton: true,
       showCancelButton: false, // Assuming you don't need a cancel button for login
-      title: 'Connexion établie avec succès',
       animation: true
     }).then((result) => {
       if (result.isConfirmed) {

@@ -19,3 +19,7 @@ Rails.application.config.assets.precompile += %w( sweetalert2.js )
 Rails.application.config.assets.precompile += %w( controllers/alert_controller.js )
 Rails.application.config.assets.precompile += %w( controllers/tabs_controller.js )
 Rails.application.config.assets.precompile += %w( controllers/modals_controller.js )
+Rails.application.config.assets.precompile += %w( @hotwired--stimulus.js )
+Rails.application.config.assets.precompile += %w( @stimulus-components--reveal.js )
+Rails.application.config.assets.precompile += %w( comments.js )
+

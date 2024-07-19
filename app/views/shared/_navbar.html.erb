@@ -71,12 +71,15 @@
         <% end %>
             <li>
           <div class="me-2">
-            <%= form_with url: plants_path, method: :get, class: "" do %>
+            <%= form_with url: plants_path, method: :get, class: "search-form" do %>
+              <div class="form-group has-feedback ">
               <%= text_field_tag :query,
                 params[:query],
-                class: "search bg-white border-0",
-                placeholder: " "
+                class: "form-control",
+                placeholder: "Rechercher"
               %>
+              <%= '<span class="form-control-feedback"><i class="fa-solid fa-magnifying-glass" style="color: #0c4b36; background-color: white;"></i></span>'.html_safe %>
+              </div>
             <% end %>
           </div>
         </li>
