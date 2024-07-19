@@ -12,44 +12,52 @@
   width: 40px;
 }
 
-.search {
+.search-form .form-group {
+  float: right !important;
+  transition: all 0.35s, border-radius 0s;
   width: 40px;
   height: 40px;
-  border-radius: 40px;
-  padding: 10px;
-  cursor: pointer;
-  background-repeat: no-repeat;
-  font-size: 16px;
-  color: rgb(9, 9, 9);
-  transition: width 300ms,
-  background-position 300ms;
-  overflow: hidden;
-  background: url(https://static-00.iconduck.com/assets.00/search-bold-icon-2048x2038-on7xw00o.png) no-repeat transparent;
-  background-size: 20px;
-  background-position: 45% 50%;
-  background-color: #FFF;
-  }
-
-  .search:hover {
-  cursor: pointer;
-  border: 2px solid ;
-  background: url(https://static-00.iconduck.com/assets.00/search-bold-icon-2048x2038-on7xw00o.png) no-repeat transparent;
-  background-size: 20px;
-  background-position: 45% 50%;
-  background-color: #FFF;
-  }
-
-  .search:focus, .search:not(:placeholder-shown) {
-  max-width: 300px;
-  width: 100%;
-  cursor: text;
-  padding-left: 40px;
-  outline: none;
-  transition: width 1000ms,
-  background-position 300ms;
-  border: 2px solid;
   background-color: #fff;
-  background: url(https://static-00.iconduck.com/assets.00/search-bold-icon-2048x2038-on7xw00o.png) no-repeat;
-  background-size: 20px;
-  background-position: 10px 50%;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+}
+.search-form .form-group input.form-control {
+  padding-right: 20px;
+  border: 0 none;
+  background: transparent;
+  box-shadow: none;
+  display:block;
+}
+.search-form .form-group input.form-control::-webkit-input-placeholder {
+  display: none;
+}
+.search-form .form-group input.form-control:-moz-placeholder {
+  /* Firefox 18- */
+  display: none;
+}
+.search-form .form-group input.form-control::-moz-placeholder {
+  /* Firefox 19+ */
+  display: none;
+}
+.search-form .form-group input.form-control:-ms-input-placeholder {
+  display: none;
+}
+.search-form .form-group:hover,
+.search-form .form-group.hover {
+  width: 100%;
+  border-radius: 25px 25px 25px 25px;
+}
+.search-form .form-group span.form-control-feedback {
+  position: absolute;
+  top: 18px;
+  right: 59px;
+  z-index: 2;
+  display: block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  left: initial;
+  font-size: 22px;
 }
