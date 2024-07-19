@@ -231,6 +231,70 @@ Aneth.photos.attach(io: file_18, filename: "Aneth-2.jpg", content_type: "image/j
 Aneth.photos.attach(io: file_19, filename: "Aneth-3.jpg", content_type: "image/jpg")
 Aneth.save!
 
+Abricot = Plant.create(
+  name: "Abricot",
+  nom_scientifique: "Prunus armeniaca",
+  description: "Arbre fruitier du soleil par excellence, l’abricotier offre dès le début de l’été ses fruits délicieux et sucrés, avec d’autant plus de générosité s’il est installé en plein soleil, dans un sol léger, bien abrité des vents froids et des gelées printanières. Les variétés à floraison tardive seront parfaites pour la moitié Nord de la France.",
+  famille: "Rosacées",
+  categorie: "Fruits",
+  type_semis: "Pleine terre",
+  conseil_semis: "Semer en automne dans un sol bien drainé. Protéger les jeunes plants du gel.",
+  conseil_culture: "Planter en plein soleil, à l'abri des vents forts. Tailler régulièrement pour aérer la couronne. Fertiliser annuellement avec du compost.",
+  periode_semis: "Octobre, Avril",
+  periode_recoltes: "Juin, Juillet, Août",
+  culture: "Pleine terre",
+  exposition: "Plein soleil",
+  besoin_eau: "Moyen",
+  nature_sol: "Bien drainé",
+  qualite_sol: "Riche, léger",
+  hauteur: "3 à 6 m",
+  ecart_rang: "5 à 6 m",
+  temperature: "15 à 25°C",
+  difficulte: "Facile",
+  maladie: "Moniliose, tavelure, oïdium, pucerons, cochenilles, chancre bactérien"
+)
+
+file_20 = URI.open("https://cdn-s-www.ledauphine.com/images/B4C72043-F282-4C7C-A842-5B301E95AC15/NW_raw/la-saison-des-abricots-est-malheureusement-tres-courte-de-debut-juin-a-la-fin-aout-photo-shutterstock-1653917350.jpg")
+file_21 = URI.open("https://static.actu.fr/uploads/2021/08/abricots1-zoyas2222-stockadobe-com.jpg")
+file_22 = URI.open("https://api.croq-kilos.com/media/cache/resolve/article_banner_webp/uploads/medias/65f1b2dd2bbea773614709.jpg")
+
+Abricot.photos.attach(io: file_20, filename: "Abricot-1.jpg", content_type: "image/jpg")
+Abricot.photos.attach(io: file_21, filename: "Abricot-2.jpg", content_type: "image/jpg")
+Abricot.photos.attach(io: file_22, filename: "Abricot-3.jpg", content_type: "image/jpg")
+Abricot.save!
+
+Cerise = Plant.create(
+  name: "Cerise",
+  nom_scientifique: "Prunus avium, Prunus cerasus",
+  description: "Arbuste fruitier à noyau, les cerisiers sont appréciés pour leurs fruits juteux et sucrés, disponibles en différentes variétés comme la cerise douce (Prunus avium) ou la cerise acide (Prunus cerasus). Ils sont cultivés principalement pour leurs fruits frais, en conserve, en confiture ou en pâtisserie.",
+  famille: "Rosacées",
+  categorie: "Fruits",
+  type_semis: "Pépinière pour jeunes plants, greffage pour les variétés cultivées",
+  conseil_semis: "Les jeunes plants doivent être protégés du gel et plantés dans un sol bien drainé. Taillez pour encourager la croissance.",
+  conseil_culture: "Plantez en plein soleil dans un sol riche et bien drainé. Les cerisiers sont auto-fertiles mais peuvent nécessiter une pollinisation croisée pour une meilleure production.",
+  periode_semis: "Novembre, Mars",
+  periode_recoltes: "Mai, Juin",
+  culture: "Arbre fruitier",
+  exposition: "Plein soleil",
+  besoin_eau: "Moyen",
+  nature_sol: "Acide à neutre",
+  qualite_sol: "Bien drainé",
+  hauteur: "4 à 10 m",
+  ecart_rang: "4 à 6 m",
+  temperature: "18 à 30°C",
+  difficulte: "Moyen",
+  maladie: "Moniliose, tavelure, oïdium, pourriture des racines"
+)
+
+file_23 = URI.open("https://res.cloudinary.com/hv9ssmzrz/image/fetch/c_fill,f_auto,h_630,q_auto,dpr_2.0,w_1200/https://images-ca-1-0-1-eu.s3-eu-west-1.amazonaws.com/photos/original/735/produit-cerises-AdobeStock_161826394.jpg")
+file_24 = URI.open("https://www.shutterstock.com/image-photo/background-filled-closeup-details-ripe-260nw-2471973715.jpg")
+file_25 = URI.open("https://www.paysanssuisses.ch/app/uploads/2023/02/schweizer-baeuerinnen-und-bauern_kirschen-1200x800.jpg")
+
+Cerise.photos.attach(io: file_20, filename: "Abricot-1.jpg", content_type: "image/jpg")
+Cerise.photos.attach(io: file_21, filename: "Abricot-2.jpg", content_type: "image/jpg")
+Cerise.photos.attach(io: file_22, filename: "Abricot-3.jpg", content_type: "image/jpg")
+Cerise.save!
+
 file_10 = URI.open("https://www.graines-semences.com/img/cms/2020/201102-img-actu-10-legume-facile-cultiver-potager.jpg")
 article_1 = Post.new(
   titre: "Les légumes faciles pour bien débuter",
