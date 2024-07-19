@@ -2,8 +2,8 @@ class PagesController < ApplicationController
   # skip_before_action :authenticate_user!, only: [:home, :about, :calendrier, :contact, :recrutement, :mentions_legales]
 
   def home
-    @plants = Plant.all.take(3)
-    @posts = Post.all.take(2)
+    @plants = Plant.all.sample(3)
+    @posts = Post.all.sample(2)
   end
 
   def about
