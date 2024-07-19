@@ -15,7 +15,7 @@ export default class extends Controller {
       icon: this.iconValue,
       title: this.titleValue,
       html: this.htmlValue,
-      showConfirmButton: false,
+      showConfirmButton: true,
       showCancelButton: false, // Assuming you don't need a cancel button for login
       animation: true
     }).then((result) => {

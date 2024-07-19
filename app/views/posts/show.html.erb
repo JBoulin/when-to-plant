@@ -1,6 +1,7 @@
 <div class="container mt-5">
   <div class="row">
-    <div class="col-md-8">
+    <!-- Colonne pour l'article -->
+    <div class="col-md-12">
       <div class="card mb-5" style="background-color: #f0fff4;">
         <div class="card-body">
           <% if @post.photos.any? %>
@@ -16,27 +17,11 @@
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="col-md-4">
-      <div class="card mb-5 p-3" style="background-color: #f0fff4;">
-        <div class="card-body">
-          <h2>Ajouter un Commentaire</h2>
-          <%= simple_form_for [@post, Comment.new], html: { id: 'new-comment-form', data: {  controller: "alert",
-        alert_icon_value: "success",
-        alert_title_value: "Commentaire ajouter avec succès",
-        confirm_button_text: "All good!",
-        show_cancel_button: true,
-        action: "submit->alert#initSweetalert",
-        turbo: false} } do |f| %>
-            <%= f.input :titre, placeholder: "Votre titre" %>
-            <%= f.input :contenu, placeholder: "Votre commentaire" %>
-            <div class="d-flex justify-content-end">
-              <%= f.submit "Soumettre", class: 'btn btn-success text-white rounded-pill' %>
-            </div>
-          <% end %>
-        </div>
-      </div>
-
+  <div class="row">
+    <!-- Section pour les commentaires -->
+    <div class="col-md-12">
       <% if @post.comments.present? %>
         <% @post.comments.each do |comment| %>
           <div class="card mb-3 p-3" style="background-color: #f0fff4;" id="comment-<%= comment.id %>">
@@ -69,6 +54,30 @@
       <% else %>
         <p class="fst-italic p-3 d-flex flex-column align-items-center justify-content-center rounded mb-3" style="background-color: #f0fff4;">Aucun commentaire pour le moment.</p>
       <% end %>
+    </div>
+  </div>
+
+  <!-- Section pour ajouter un commentaire -->
+  <div class="row mt-4">
+    <div class="col-md-12">
+      <div class="card mb-5 p-3" style="background-color: #f0fff4;">
+        <div class="card-body">
+          <h2>Ajouter un Commentaire</h2>
+          <%= simple_form_for [@post, Comment.new], html: { id: 'new-comment-form', data: { controller: "alert",
+        alert_icon_value: "success",
+        alert_title_value: "Commentaire ajouter avec succès",
+        confirm_button_text: "All good!",
+        show_cancel_button: true,
+        action: "submit->alert#initSweetalert",
+        turbo: false} } do |f| %>
+            <%= f.input :titre, placeholder: "Votre titre" %>
+            <%= f.input :contenu, placeholder: "Votre commentaire" %>
+            <div class="d-flex justify-content-end">
+              <%= f.submit "Soumettre", class: 'btn btn-success text-white rounded-pill' %>
+            </div>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
 </div>
