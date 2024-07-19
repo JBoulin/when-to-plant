@@ -196,9 +196,9 @@ Ail_des_ours.photos.attach(io: file_15, filename: "Ail_des_ours-2.jpg", content_
 Ail_des_ours.photos.attach(io: file_16, filename: "Ail_des_ours-3.jpg", content_type: "image/jpg")
 Ail_des_ours.save!
 
-file_14 = URI.open("https://img.passeportsante.net/1200x675/2021-05-03/i101962-aneth-nu.webp")
-file_15 = URI.open("https://media.gerbeaud.net/2023/03/640/anethum-graveolens-potager.jpg")
-file_16 = URI.open("https://carnoy-chanson.fr/wp-content/uploads/2019/02/Aneth.jpg")
+file_17 = URI.open("https://img.passeportsante.net/1200x675/2021-05-03/i101962-aneth-nu.webp")
+file_18 = URI.open("https://media.gerbeaud.net/2023/03/640/anethum-graveolens-potager.jpg")
+file_19 = URI.open("https://carnoy-chanson.fr/wp-content/uploads/2019/02/Aneth.jpg")
 Aneth = Plant.create(
   name: "Aneth",
   nom_scientifique: "Anethum graveolens",
@@ -225,9 +225,9 @@ Aneth = Plant.create(
   difficulte: "Facile",
   maladie: "Pourriture blanche, Teigne du poireau"
 )
-Aneth.photos.attach(io: file_14, filename: "Aneth-1.jpg", content_type: "image/jpg")
-Aneth.photos.attach(io: file_15, filename: "Aneth-2.jpg", content_type: "image/jpg")
-Aneth.photos.attach(io: file_16, filename: "Aneth-3.jpg", content_type: "image/jpg")
+Aneth.photos.attach(io: file_17, filename: "Aneth-1.jpg", content_type: "image/jpg")
+Aneth.photos.attach(io: file_18, filename: "Aneth-2.jpg", content_type: "image/jpg")
+Aneth.photos.attach(io: file_19, filename: "Aneth-3.jpg", content_type: "image/jpg")
 Aneth.save!
 
 file_10 = URI.open("https://www.graines-semences.com/img/cms/2020/201102-img-actu-10-legume-facile-cultiver-potager.jpg")
