@@ -21,7 +21,13 @@
       <div class="card mb-5 p-3" style="background-color: #f0fff4;">
         <div class="card-body">
           <h2>Ajouter un Commentaire</h2>
-          <%= simple_form_for [@post, Comment.new], html: { id: 'new-comment-form' } do |f| %>
+          <%= simple_form_for [@post, Comment.new], html: { id: 'new-comment-form', data: {  controller: "alert",
+        alert_icon_value: "success",
+        alert_title_value: "Commentaire ajouter avec succès",
+        confirm_button_text: "All good!",
+        show_cancel_button: true,
+        action: "submit->alert#initSweetalert",
+        turbo: false} } do |f| %>
             <%= f.input :titre, placeholder: "Votre titre" %>
             <%= f.input :contenu, placeholder: "Votre commentaire" %>
             <div class="d-flex justify-content-end">
@@ -44,7 +50,7 @@
                 <% if comment.user == current_user %>
                   <div class="d-flex justify-content-end">
                     <button class="btn btn-warning text-white rounded-pill mr-2 edit-comment-btn" data-comment-id="<%= comment.id %>">Modifier</button>
-                    <%= link_to 'Supprimer', post_comment_path(@post, comment), method: :delete, data: { confirm: 'Êtes-vous sûr de vouloir supprimer ce commentaire?' }, class: 'btn btn-danger text-white rounded-pill' %>
+                    <%= link_to 'Supprimer', comment_path(comment), data: { turbo_method: :delete, confirm: "Êtes vous sur ?" }, class: 'btn btn-danger text-white rounded-pill' %>
                   </div>
                 <% end %>
               </div>

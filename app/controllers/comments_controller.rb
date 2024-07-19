@@ -22,7 +22,7 @@ class CommentsController < ApplicationController
     @comment.user = current_user
     @comment.status = "En attente"
     if @comment.save
-      redirect_to @post, notice: 'Votre commentaire à bien été envoyé ! Il sera validé par un jardinier confirmé dans les prochaines heures.'
+      redirect_to @post
     else
       @comments = @post.comments # Ajouté pour s'assurer que les commentaires sont chargés en cas d'erreur
       render 'posts/show', status: :unprocessable_entity
@@ -39,7 +39,7 @@ class CommentsController < ApplicationController
 
   def destroy
     @comment.destroy
-    redirect_to comments_url, notice: 'Comment was successfully destroyed.'
+    redirect_to post_path(@comment.post), notice: 'Comment was successfully destroyed.'
   end
 
   def edit_comment
@@ -49,7 +49,7 @@ class CommentsController < ApplicationController
   end
 
   def update_comment
-    @post = Post.find(params[:post_id])
+    @post = Post.friendly.find(params[:post_id])
     if @comment.update(comment_params)
       redirect_to @post, notice: 'Comment was successfully updated.'
     else
