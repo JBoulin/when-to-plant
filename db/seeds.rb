@@ -164,6 +164,72 @@ ail.photos.attach(io: file_8, filename: "ail-2.jpg", content_type: "image/jpg")
 ail.photos.attach(io: file_9, filename: "ail-3.jpg", content_type: "image/jpg")
 ail.save!
 
+file_14 = URI.open("https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcRTRYgxLTPW7gRmilwmUexEKrqI7E9slCTfOo4w-2YluX3tKhWL2HJkIS-M-O2h-PnHjylfYbAVih3mUx4")
+file_15 = URI.open("https://stephanedecotterd.com/wp-content/uploads/2012/03/2008-05-05-aildesours04.jpg")
+file_16 = URI.open("https://www.plantes-et-sante.fr/images/istock-1249808560.jpg_720_1000_2")
+Ail_des_ours = Plant.create(
+  name: "Ail des ours",
+  nom_scientifique: "Allium ursinum",
+  description: "L'ail des ours est une plante rustique, condimentaire et aromatique qui pousse à l'état sauvage dans la
+   fraîcheur des sous-bois. Elle est très reconnaissable à son odeur d'ail.",
+  famille: "Alliacées",
+  categorie: "Aromates",
+  type_semis: "Pleine terre",
+  conseil_semis: "Semez les graines à plus ou moins 2 cm de profondeur. Arrosez et tenez le sol humide et frais.",
+  conseil_culture: "Le sol doit être régulièrement humide et meuble, et avoir de préférence une épaisse couche d'humus
+   nutritive,",
+  periode_semis: "Juillet, Août, Septembre",
+  periode_recoltes: "Mars, Avril, Mai",
+  culture: "Pleine terre",
+  exposition: "Ombre",
+  besoin_eau: "Faible",
+  nature_sol: "Humide, Meuble",
+  qualite_sol: "Lourd, Riche",
+  hauteur: "30 à 40cm",
+  ecart_rang: "10 à 15cm",
+  temperature: "15 à 20°C",
+  difficulte: "Intermédiaire",
+  maladie: "Pourriture blanche, Teigne du poireau"
+)
+Ail_des_ours.photos.attach(io: file_14, filename: "Ail_des_ours-1.jpg", content_type: "image/jpg")
+Ail_des_ours.photos.attach(io: file_15, filename: "Ail_des_ours-2.jpg", content_type: "image/jpg")
+Ail_des_ours.photos.attach(io: file_16, filename: "Ail_des_ours-3.jpg", content_type: "image/jpg")
+Ail_des_ours.save!
+
+file_14 = URI.open("https://img.passeportsante.net/1200x675/2021-05-03/i101962-aneth-nu.webp")
+file_15 = URI.open("https://media.gerbeaud.net/2023/03/640/anethum-graveolens-potager.jpg")
+file_16 = URI.open("https://carnoy-chanson.fr/wp-content/uploads/2019/02/Aneth.jpg")
+Aneth = Plant.create(
+  name: "Aneth",
+  nom_scientifique: "Anethum graveolens",
+  description: "L'aneth est une plante à tige lisse, possédant des feuilles très découpées, de couleur vert bleuté et des
+   fleurs jaunes verdâtres. Elle produit de petites graines, de couleur brune, qui se scindent en deux au séchage.
+  Elle fut produite dans la majorité des pays européens et d'Orient que ce soit en tant que plante aromatique ou médicinale.",
+  famille: "Apiacées",
+  categorie: "Aromates",
+  type_semis: "En ligne",
+  conseil_semis: "Semez dans des sillons peu profonds (espacés de 30cm), vous les éclaircirez tous les 10-15cm. Refermez
+   le sillon au râteau. Et arrosez une première fois pour assurer le démarrage.",
+  conseil_culture: "Arroser régulièrement, surtout lors de la levée des semis et en période de sécheresse. Un désherbage
+  autour du plant peut également être effectué de temps en temps,",
+  periode_semis: "Toute l'année",
+  periode_recoltes: "Toute l'année",
+  culture: "Pleine terre, Grand pot",
+  exposition: "Plein soleil",
+  besoin_eau: "Régulierement en période de sécheresse",
+  nature_sol: "Bien drainé",
+  qualite_sol: "Sec, Riche",
+  hauteur: "60 à 80 cm",
+  ecart_rang: "25 à 30cm",
+  temperature: "-5°C à 20°C",
+  difficulte: "Facile",
+  maladie: "Pourriture blanche, Teigne du poireau"
+)
+Aneth.photos.attach(io: file_14, filename: "Aneth-1.jpg", content_type: "image/jpg")
+Aneth.photos.attach(io: file_15, filename: "Aneth-2.jpg", content_type: "image/jpg")
+Aneth.photos.attach(io: file_16, filename: "Aneth-3.jpg", content_type: "image/jpg")
+Aneth.save!
+
 file_10 = URI.open("https://www.graines-semences.com/img/cms/2020/201102-img-actu-10-legume-facile-cultiver-potager.jpg")
 article_1 = Post.new(
   titre: "Les légumes faciles pour bien débuter",
