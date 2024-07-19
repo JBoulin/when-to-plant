@@ -29,7 +29,7 @@
         </div>
       </div>
       <div class="card-btn">
-        <%= link_to "Voir plus de détails", plant_path(plant), class: "btn btn-ghost" %>
+        <%= link_to "Voir plus de détails", plant_path(plant), class: "btn btn-ghost rounded-pill" %>
       </div>
     </div>
     <% end %>
@@ -41,7 +41,7 @@
     <div class="card-trip d-flex flex-column align-items-center justify-content-center">
           <h2 class="fs-2 pb-3">Mercredi 17 Juillet</h2>
           <p class="fs-5 pb-3">Hier</p>
-      <div class="btn btn-success w-25">
+      <div class="btn btn-success w-25 rounded-pill">
         Lune
       </div>
     </div>
@@ -50,7 +50,7 @@
     <div class="card-trip d-flex flex-column align-items-center justify-content-center">
           <h2 class="fs-2 pb-3">Jeudi 18 Juillet</h2>
           <p class="fs-5 pb-3">Aujourd'hui</p>
-      <div class="btn btn-success w-25">
+      <div class="btn btn-success w-25 rounded-pill">
         Lune
       </div>
     </div>
@@ -59,7 +59,7 @@
     <div class="card-trip d-flex flex-column align-items-center justify-content-center">
           <h2 class="fs-2 pb-3">Vendredi 19 Juillet</h2>
           <p class="fs-5 pb-3">Demain</p>
-      <div class="btn btn-success w-25">
+      <div class="btn btn-success w-25 rounded-pill">
         Lune
       </div>
     </div>
@@ -79,7 +79,7 @@
               <p class="card-text text-muted"><%= post.contenu.truncate(200) %></p>
               <div class="d-flex flex-row align-items-center justify-content-between">
                 <p class="card-text"><small class="text-muted"><%= post.date_publication %></small></p>
-                <%= link_to "Lire l'article", post_path(post), class: "btn btn-success" %>
+                <%= link_to "Lire l'article", post_path(post), class: "btn btn-success rounded-pill" %>
               </div>
             </div>
           </div>
