@@ -4,14 +4,14 @@ Rails.application.routes.draw do
   # Routes for Posts
   resources :posts do
     # Nested routes for Comments under Posts
-    resources :comments, only: [:create,:update,:destroy] do
+    resources :comments, only: [:create,:update] do
       member do
         get 'edit_comment'
         patch 'update_comment'
       end
     end
   end
-
+  resources :comments, only: :destroy
   # Routes for Comments (outside the nested context if needed)
   resources :comments, only: [:index,:edit, :show,:update, :destroy]
 
