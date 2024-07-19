@@ -35,7 +35,7 @@
                 <% if comment.user == current_user %>
                   <div class="d-flex justify-content-end">
                     <button class="btn btn-warning text-white rounded-pill mr-2 edit-comment-btn" data-comment-id="<%= comment.id %>">Modifier</button>
-                    <%= link_to 'Supprimer', comment_path(comment), data: { turbo_method: :delete, confirm: "Êtes vous sur ?" }, class: 'btn btn-danger text-white rounded-pill' %>
+                    <%= link_to 'Supprimer', comment_path(comment), data: { turbo_method: :delete, confirm: "Êtes vous sur ?" }, class: 'btn btn-success text-white rounded-pill' %>
                   </div>
                 <% end %>
               </div>
@@ -44,7 +44,7 @@
                   <%= f.input :titre, input_html: { value: comment.titre } %>
                   <%= f.input :contenu, input_html: { value: comment.contenu } %>
                   <div class="d-flex justify-content-end">
-                    <%= f.submit "Mettre à jour", class: 'btn btn-success text-white rounded-pill' %>
+                    <%= f.submit "Mettre à jour", class: 'btn btn-secondary text-white rounded-pill mx-auto' %>
                   </div>
                 <% end %>
               </div>
