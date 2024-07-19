@@ -162,7 +162,7 @@
     <div class="cards mt-3">
       <% @bon_voisin.each do |bon_voisin| %>
         <div class="card rounded-3" style="box-shadow: 0 0 15px rgba(0,0,0,0.2); background-color: #daf1df; border-radius:12px;">
-          <%# <%= cl_image_tag bon_voisin.photos.first.key, :cloud_name => "dzhzzutmq", style: 'height: 250px; width: 100%; object-fit: cover; padding: 16px 16px 0 16px;' %>
+          <%= cl_image_tag bon_voisin.plant_2.photos.first.key, :cloud_name => "dzhzzutmq", style: 'height: 250px; width: 100%; object-fit: cover; padding: 16px 16px 0 16px;' %>
           <div class="card-body ">
             <h5 class="card-title"><%= bon_voisin.plant_2.name %></h5>
             <h6 class="card-title"><%= bon_voisin.plant_2.categorie %></h6>
