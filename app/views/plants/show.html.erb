@@ -21,11 +21,11 @@
       </div>
        <% if user_signed_in?  %>
         <div class="modal-body">
-          <div class="d-flex justify-content-between align-items-center p-2">
-            <% @lists.each do |list|%>
-            <%= list.nom %> <%= button_to "+", list_plant_lists_url(plant_id: @plant.id, list_id: list.id), class:"fs-2 text-success border-0 bg-transparent" %>
-            <% end %>
-          </div>
+            <div class="d-flex justify-content-between align-items-center p-2">
+              <% @lists.each do |list|%>
+              <%= list.nom %> <%= button_to "+", list_plant_lists_url(plant_id: @plant.id, list_id: list.id), class:"fs-2 text-success border-0 bg-transparent" %>
+              <% end %>
+            </div>
           <%= simple_form_for @list do |f| %>
             <div class="mb-3">
               <%= f.label :nom %>
@@ -168,7 +168,7 @@
             <h6 class="card-title"><%= bon_voisin.plant_2.categorie %></h6>
             <p class="card-text text-muted fs-6"><%= bon_voisin.plant_2.description.truncate(200) %></p>
             <div class="d-flex justify-content-center">
-              <%= link_to "Voir détails", plant_path(bon_voisin), class:"btn btn-success text-white" %>
+              <%= link_to "Voir détails", plant_path(bon_voisin.plant_2), class:"btn btn-success text-white" %>
             </div>
           </div>
         </div>
