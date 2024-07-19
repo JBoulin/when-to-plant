@@ -108,7 +108,7 @@ abricot = Plant.create(
    vents froids et des gelées printanières. Les variétés à floraison tardive seront parfaites pour la moitié Nord de la
    France.",
   famille: "Rosacées",
-  categorie: "Fruit",
+  categorie: "Fruits",
   type_semis: "Pleine terre",
   conseil_semis: "Semer en automne dans un sol bien drainé. Protéger les jeunes plants du gel.",
   conseil_culture: "Planter en plein soleil, à l'abri des vents forts. Tailler régulièrement pour aérer la couronne.
@@ -168,7 +168,7 @@ ail.save!
 file_14 = URI.open("https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcRTRYgxLTPW7gRmilwmUexEKrqI7E9slCTfOo4w-2YluX3tKhWL2HJkIS-M-O2h-PnHjylfYbAVih3mUx4")
 file_15 = URI.open("https://stephanedecotterd.com/wp-content/uploads/2012/03/2008-05-05-aildesours04.jpg")
 file_16 = URI.open("https://www.plantes-et-sante.fr/images/istock-1249808560.jpg_720_1000_2")
-Ail_des_ours = Plant.create(
+ail_des_ours = Plant.create(
   name: "Ail des ours",
   nom_scientifique: "Allium ursinum",
   description: "L'ail des ours est une plante rustique, condimentaire et aromatique qui pousse à l'état sauvage dans la
@@ -192,15 +192,15 @@ Ail_des_ours = Plant.create(
   difficulte: "Intermédiaire",
   maladie: "Pourriture blanche, Teigne du poireau"
 )
-Ail_des_ours.photos.attach(io: file_14, filename: "Ail_des_ours-1.jpg", content_type: "image/jpg")
-Ail_des_ours.photos.attach(io: file_15, filename: "Ail_des_ours-2.jpg", content_type: "image/jpg")
-Ail_des_ours.photos.attach(io: file_16, filename: "Ail_des_ours-3.jpg", content_type: "image/jpg")
-Ail_des_ours.save!
+ail_des_ours.photos.attach(io: file_14, filename: "Ail_des_ours-1.jpg", content_type: "image/jpg")
+ail_des_ours.photos.attach(io: file_15, filename: "Ail_des_ours-2.jpg", content_type: "image/jpg")
+ail_des_ours.photos.attach(io: file_16, filename: "Ail_des_ours-3.jpg", content_type: "image/jpg")
+ail_des_ours.save!
 
 file_17 = URI.open("https://img.passeportsante.net/1200x675/2021-05-03/i101962-aneth-nu.webp")
 file_18 = URI.open("https://media.gerbeaud.net/2023/03/640/anethum-graveolens-potager.jpg")
 file_19 = URI.open("https://carnoy-chanson.fr/wp-content/uploads/2019/02/Aneth.jpg")
-Aneth = Plant.create(
+aneth = Plant.create(
   name: "Aneth",
   nom_scientifique: "Anethum graveolens",
   description: "L'aneth est une plante à tige lisse, possédant des feuilles très découpées, de couleur vert bleuté et des
@@ -226,43 +226,15 @@ Aneth = Plant.create(
   difficulte: "Facile",
   maladie: "Pourriture blanche, Teigne du poireau"
 )
-Aneth.photos.attach(io: file_17, filename: "Aneth-1.jpg", content_type: "image/jpg")
-Aneth.photos.attach(io: file_18, filename: "Aneth-2.jpg", content_type: "image/jpg")
-Aneth.photos.attach(io: file_19, filename: "Aneth-3.jpg", content_type: "image/jpg")
-Aneth.save!
+aneth.photos.attach(io: file_17, filename: "Aneth-1.jpg", content_type: "image/jpg")
+aneth.photos.attach(io: file_18, filename: "Aneth-2.jpg", content_type: "image/jpg")
+aneth.photos.attach(io: file_19, filename: "Aneth-3.jpg", content_type: "image/jpg")
+aneth.save!
 
-Abricot = Plant.create(
-  name: "Abricot",
-  nom_scientifique: "Prunus armeniaca",
-  description: "Arbre fruitier du soleil par excellence, l’abricotier offre dès le début de l’été ses fruits délicieux et sucrés, avec d’autant plus de générosité s’il est installé en plein soleil, dans un sol léger, bien abrité des vents froids et des gelées printanières. Les variétés à floraison tardive seront parfaites pour la moitié Nord de la France.",
-  famille: "Rosacées",
-  categorie: "Fruits",
-  type_semis: "Pleine terre",
-  conseil_semis: "Semer en automne dans un sol bien drainé. Protéger les jeunes plants du gel.",
-  conseil_culture: "Planter en plein soleil, à l'abri des vents forts. Tailler régulièrement pour aérer la couronne. Fertiliser annuellement avec du compost.",
-  periode_semis: "Octobre, Avril",
-  periode_recoltes: "Juin, Juillet, Août",
-  culture: "Pleine terre",
-  exposition: "Plein soleil",
-  besoin_eau: "Moyen",
-  nature_sol: "Bien drainé",
-  qualite_sol: "Riche, léger",
-  hauteur: "3 à 6 m",
-  ecart_rang: "5 à 6 m",
-  temperature: "15 à 25°C",
-  difficulte: "Facile",
-  maladie: "Moniliose, tavelure, oïdium, pucerons, cochenilles, chancre bactérien"
-)
 
-file_20 = URI.open("https://cdn-s-www.ledauphine.com/images/B4C72043-F282-4C7C-A842-5B301E95AC15/NW_raw/la-saison-des-abricots-est-malheureusement-tres-courte-de-debut-juin-a-la-fin-aout-photo-shutterstock-1653917350.jpg")
-file_21 = URI.open("https://static.actu.fr/uploads/2021/08/abricots1-zoyas2222-stockadobe-com.jpg")
-file_22 = URI.open("https://api.croq-kilos.com/media/cache/resolve/article_banner_webp/uploads/medias/65f1b2dd2bbea773614709.jpg")
-
-Abricot.photos.attach(io: file_20, filename: "Abricot-1.jpg", content_type: "image/jpg")
-Abricot.photos.attach(io: file_21, filename: "Abricot-2.jpg", content_type: "image/jpg")
-Abricot.photos.attach(io: file_22, filename: "Abricot-3.jpg", content_type: "image/jpg")
-Abricot.save!
-
+file_23 = URI.open("https://res.cloudinary.com/hv9ssmzrz/image/fetch/c_fill,f_auto,h_630,q_auto,dpr_2.0,w_1200/https://images-ca-1-0-1-eu.s3-eu-west-1.amazonaws.com/photos/original/735/produit-cerises-AdobeStock_161826394.jpg")
+file_24 = URI.open("https://www.shutterstock.com/image-photo/background-filled-closeup-details-ripe-260nw-2471973715.jpg")
+file_25 = URI.open("https://www.paysanssuisses.ch/app/uploads/2023/02/schweizer-baeuerinnen-und-bauern_kirschen-1200x800.jpg")
 Cerise = Plant.create(
   name: "Cerise",
   nom_scientifique: "Prunus avium, Prunus cerasus",
@@ -285,14 +257,9 @@ Cerise = Plant.create(
   difficulte: "Moyen",
   maladie: "Moniliose, tavelure, oïdium, pourriture des racines"
 )
-
-file_23 = URI.open("https://res.cloudinary.com/hv9ssmzrz/image/fetch/c_fill,f_auto,h_630,q_auto,dpr_2.0,w_1200/https://images-ca-1-0-1-eu.s3-eu-west-1.amazonaws.com/photos/original/735/produit-cerises-AdobeStock_161826394.jpg")
-file_24 = URI.open("https://www.shutterstock.com/image-photo/background-filled-closeup-details-ripe-260nw-2471973715.jpg")
-file_25 = URI.open("https://www.paysanssuisses.ch/app/uploads/2023/02/schweizer-baeuerinnen-und-bauern_kirschen-1200x800.jpg")
-
-Cerise.photos.attach(io: file_20, filename: "Abricot-1.jpg", content_type: "image/jpg")
-Cerise.photos.attach(io: file_21, filename: "Abricot-2.jpg", content_type: "image/jpg")
-Cerise.photos.attach(io: file_22, filename: "Abricot-3.jpg", content_type: "image/jpg")
+Cerise.photos.attach(io: file_23, filename: "cerise-1.jpg", content_type: "image/jpg")
+Cerise.photos.attach(io: file_24, filename: "cerise-2.jpg", content_type: "image/jpg")
+Cerise.photos.attach(io: file_25, filename: "cerise-3.jpg", content_type: "image/jpg")
 Cerise.save!
 
 file_10 = URI.open("https://www.graines-semences.com/img/cms/2020/201102-img-actu-10-legume-facile-cultiver-potager.jpg")
@@ -320,7 +287,6 @@ Pour une famille « classique », il est bien entendu inutile de planter 30 plan
 )
 article_1.photos.attach(io: file_10, filename: "article-1.jpg", content_type: "image/jpg")
 article_1.save!
-
 
 file_11 = URI.open("https://static.aujardin.info/cache/th/adb/outils-jardinage-500x375.jpg")
 article_2 = Post.new(
