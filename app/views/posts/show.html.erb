@@ -1,5 +1,6 @@
-<div class="container mt-5 col-6">
-  <div class="d-flex flex-column justify-content-center">
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-8">
       <div class="card mb-5" style="background-color: #f0fff4;">
         <div class="card-body">
           <% if @post.photos.any? %>
@@ -14,38 +15,54 @@
           </div>
         </div>
       </div>
+    </div>
 
-      <% if @comments.present? %>
-            <% @comments.each do |comment| %>
-              <div class="p-3 rounded mb-5" style="background-color: #f0fff4;">
-                <div class="card mb-3">
-                  <div class="card-body">
-                     <div class="">
-                        <strong>Par <%= comment.user.prenom %> <%= comment.user.nom %> :</strong>
-                     </div>
-                    <p class="text-decoration-underline fst-italic"><%= comment.titre %></p>
-                    <p><%= comment.contenu %></p>
-                  </div>
-                </div>
-              </div>
-            <% end %>
-        <% else %>
-              <p class="fst-italic p-3 d-flex flex-column align-items-center justify-content-center rounded mb-3" style="background-color: #f0fff4;">Aucun commentaire pour le moment.</p>
-        <% end %>
-
-      <% if user_signed_in? %>
-        <div class="card mb-5 p-3 w-75 m-auto" style="background-color: #f0fff4;">
-          <div class="card-body">
-            <h2>Ajouter un Commentaire</h2>
-            <%= simple_form_for [@post, Comment.new] do |f| %>
-              <%= f.input :titre, placeholder: "Votre titre" %>
-              <%= f.input :contenu, placeholder: "Votre commentaire" %>
-              <div class="d-flex justify-content-end">
-                <%= f.submit "Soumettre", class: 'btn btn-success text-white rounded-pill' %>
-              </div>
-            <% end %>
-          </div>
+    <div class="col-md-4">
+      <div class="card mb-5 p-3" style="background-color: #f0fff4;">
+        <div class="card-body">
+          <h2>Ajouter un Commentaire</h2>
+          <%= simple_form_for [@post, Comment.new], html: { id: 'new-comment-form' } do |f| %>
+            <%= f.input :titre, placeholder: "Votre titre" %>
+            <%= f.input :contenu, placeholder: "Votre commentaire" %>
+            <div class="d-flex justify-content-end">
+              <%= f.submit "Soumettre", class: 'btn btn-success text-white rounded-pill' %>
+            </div>
+          <% end %>
         </div>
-    <% end %>
+      </div>
+
+      <% if @post.comments.present? %>
+        <% @post.comments.each do |comment| %>
+          <div class="card mb-3 p-3" style="background-color: #f0fff4;" id="comment-<%= comment.id %>">
+            <div class="card-body">
+              <div class="comment-content">
+                <div>
+                  <strong>Par <%= comment.user.prenom %> <%= comment.user.nom %> :</strong>
+                </div>
+                <p class="text-decoration-underline fst-italic"><%= comment.titre %></p>
+                <p><%= comment.contenu %></p>
+                <% if comment.user == current_user %>
+                  <div class="d-flex justify-content-end">
+                    <button class="btn btn-warning text-white rounded-pill mr-2 edit-comment-btn" data-comment-id="<%= comment.id %>">Modifier</button>
+                    <%= link_to 'Supprimer', post_comment_path(@post, comment), method: :delete, data: { confirm: 'Êtes-vous sûr de vouloir supprimer ce commentaire?' }, class: 'btn btn-danger text-white rounded-pill' %>
+                  </div>
+                <% end %>
+              </div>
+              <div class="comment-edit-form d-none">
+                <%= simple_form_for [@post, comment], url: update_comment_post_comment_path(@post, comment), method: :patch, html: { class: 'edit-comment-form' } do |f| %>
+                  <%= f.input :titre, input_html: { value: comment.titre } %>
+                  <%= f.input :contenu, input_html: { value: comment.contenu } %>
+                  <div class="d-flex justify-content-end">
+                    <%= f.submit "Mettre à jour", class: 'btn btn-success text-white rounded-pill' %>
+                  </div>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      <% else %>
+        <p class="fst-italic p-3 d-flex flex-column align-items-center justify-content-center rounded mb-3" style="background-color: #f0fff4;">Aucun commentaire pour le moment.</p>
+      <% end %>
+    </div>
   </div>
 </div>

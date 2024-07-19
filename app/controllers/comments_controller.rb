@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  before_action :set_comment, only: [:show, :update, :destroy]
+  before_action :set_comment, only: [:show, :edit, :update, :destroy, :edit_comment, :update_comment]
 
   def index
     @comments = Comment.all
@@ -13,6 +13,9 @@ class CommentsController < ApplicationController
   def show
   end
 
+  def edit
+  end
+
   def create
     @post = Post.friendly.find(params[:post_id])
     @comment = @post.comments.build(comment_params)
@@ -21,6 +24,7 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to @post, notice: 'Votre commentaire à bien été envoyé ! Il sera validé par un jardinier confirmé dans les prochaines heures.'
     else
+      @comments = @post.comments # Ajouté pour s'assurer que les commentaires sont chargés en cas d'erreur
       render 'posts/show', status: :unprocessable_entity
     end
   end
@@ -36,6 +40,22 @@ class CommentsController < ApplicationController
   def destroy
     @comment.destroy
     redirect_to comments_url, notice: 'Comment was successfully destroyed.'
+  end
+
+  def edit_comment
+    @post = Post.friendly.find(params[:post_id])
+    @edit_comment_id = @comment.id
+    render 'posts/show'
+  end
+
+  def update_comment
+    @post = Post.find(params[:post_id])
+    if @comment.update(comment_params)
+      redirect_to @post, notice: 'Comment was successfully updated.'
+    else
+      @edit_comment_id = @comment.id
+      render 'posts/show'
+    end
   end
 
   private
