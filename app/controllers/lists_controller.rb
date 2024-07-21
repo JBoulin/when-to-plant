@@ -28,7 +28,7 @@ class ListsController < ApplicationController
 
   def update
     if @list.update(list_params)
-      redirect_to @list, notice: 'Votre liste a été supprimée !'
+      redirect_to @list, notice: 'Votre liste a été modifiée !'
     else
       render :edit
     end
@@ -36,7 +36,7 @@ class ListsController < ApplicationController
 
   def destroy
     @list.destroy
-    redirect_to lists_url, notice: 'List was successfully destroyed.'
+    redirect_to lists_url, notice: 'Votre liste a été supprimée !'
   end
 
   private

@@ -23,7 +23,7 @@ class PlantListsController < ApplicationController
 
   def update
     if @plant_list.update(plant_list_params)
-      redirect_to @plant_list, notice: 'PlantList was successfully updated.'
+      redirect_to @plant_list, notice: 'La plante a été modifiée dans votre liste'
     else
       render :edit
     end
@@ -31,7 +31,7 @@ class PlantListsController < ApplicationController
 
   def destroy
     @plant_list.destroy
-    redirect_to plant_lists_url, notice: 'PlantList was successfully removed.'
+    redirect_to plant_lists_url, notice: 'La plante a été supprimée de votre liste'
   end
 
   private

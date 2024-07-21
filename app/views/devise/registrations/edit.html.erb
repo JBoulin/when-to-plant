@@ -1,5 +1,5 @@
 <div class="container mb-3 mt-3 border rounded bg-light">
-  <h2>Edit <%= resource_name.to_s.humanize %></h2>
+  <h2>Modifier <%= resource_name.to_s.humanize %></h2>
 
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
     <%= f.error_notification %>
@@ -19,11 +19,11 @@
                   input_html: { autocomplete: "email" } %>
 
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-        <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+        <p>Email en attente de confirmation: <%= resource.unconfirmed_email %></p>
       <% end %>
 
       <%= f.input :password,
-                  hint: "leave it blank if you don't want to change it",
+                  hint: "Laisser vide si vous ne souhaitez pas le modifier",
                   required: false,
                   input_html: { autocomplete: "new-password" } %>
 
@@ -32,20 +32,20 @@
                   input_html: { autocomplete: "new-password" } %>
 
       <%= f.input :current_password,
-                  hint: "we need your current password to confirm your changes",
+                  hint: "Nous avons besoin de votre mot de passe pour confirmer les changements",
                   required: true,
                   input_html: { autocomplete: "current-password" } %>
     </div>
 
 
     <div class="form-actions btn btn-success rounded">
-      <%= f.button :submit, "Update" %>
+      <%= f.button :submit, "Modifier" %>
     </div>
   <% end %>
 <br>
-  <h3>Cancel my account</h3>
+  <h3>Supprimer mon compte</h3>
 
-  <%= button_to "Supprimer mon compte", registration_path(resource_name), data: { confirm: "Êtes vous sur?", turbo_confirm: "Êtes vous sur?" }, method: :delete %>
+  <%= button_to "Supprimer mon compte", registration_path(resource_name), data: { confirm: "Êtes-vous sûr?", turbo_confirm: "Êtes-vous sûr?" }, method: :delete %>
 <br>
   <%= link_to "Retour", :back, class: "btn btn-primary mb-3 rounded" %>
 </div>

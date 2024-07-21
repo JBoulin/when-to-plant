@@ -17,12 +17,14 @@ List.destroy_all
 Plant.destroy_all
 User.destroy_all
 
+puts "Creating users..."
+
 User.create!(
-  nom: "whentoplant",
-  prenom: "jeremy",
-  email: "test1@test.fr",
-  password: "test123",
-  role: "user"
+  nom: "Norris",
+  prenom: "Chuck",
+  email: "admin@test.fr",
+  password: "123456",
+  role: "admin"
 )
 
 User.create!(
@@ -57,13 +59,7 @@ User.create!(
   role: "user"
 )
 
-User.create!(
-  nom: "Norris",
-  prenom: "Chuck",
-  email: "admin@test.fr",
-  password: "123456",
-  role: "admin"
-)
+puts "Creating plants..."
 
 file_1 = URI.open("https://kokopelli-semences.fr/media/cache/resolve/shop_product_large_thumbnail/l0171-1.jpg")
 file_2 = URI.open("https://www.jardiner-malin.fr/wp-content/uploads/2014/04/1314777481artichaut.jpg")
@@ -262,6 +258,8 @@ Cerise.photos.attach(io: file_24, filename: "cerise-2.jpg", content_type: "image
 Cerise.photos.attach(io: file_25, filename: "cerise-3.jpg", content_type: "image/jpg")
 Cerise.save!
 
+puts "Creating posts..."
+
 file_10 = URI.open("https://www.graines-semences.com/img/cms/2020/201102-img-actu-10-legume-facile-cultiver-potager.jpg")
 article_1 = Post.new(
   titre: "Les légumes faciles pour bien débuter",
@@ -375,10 +373,14 @@ Une nouvelle conception du jardin… nourricier
 article_4.photos.attach(io: file_13, filename: "article-4.jpg", content_type: "image/jpg")
 article_4.save!
 
+puts "Creating lists..."
+
 List.create(
   nom: "Légumes",
   user: User.fifth
 )
+
+puts "Creating neighbours..."
 
 Neighbour.create(
   voisin: "Bon voisin",
@@ -391,3 +393,5 @@ Neighbour.create(
   plant_1: Plant.last,
   plant_2: Plant.second
 )
+
+puts "Done !"
