@@ -1,5 +1,6 @@
 class Post < ApplicationRecord
   has_many :comments
+  has_rich_text :rich_body
   has_many_attached :photos
 
   validates :titre, presence: true
