@@ -1,147 +1,1373 @@
 <h1 class="text-center my-3">Calendrier</h1>
 <div data-controller="tabs" data-tabs-active-class="bg-warning" data-tabs-default-tab-value="juillet" class="mt-3">
-<div class="d-flex justify-content-center">
-  <button id="janvier" data-tabs-target="btn" data-action="click->tabs#select" class="border-0 rounded-top p-3">Janvier</button>
-  <button id="fevrier" data-tabs-target="btn" data-action="click->tabs#select" class="border-0 rounded-top p-3">Février</button>
-  <button id="mars" data-tabs-target="btn" data-action="click->tabs#select" class="border-0 rounded-top p-3">Mars</button>
-  <button id="avril" data-tabs-target="btn" data-action="click->tabs#select" class="border-0 rounded-top p-3">Avril</button>
-  <button id="mai" data-tabs-target="btn" data-action="click->tabs#select" class="border-0 rounded-top p-3">Mai</button>
-  <button id="juin" data-tabs-target="btn" data-action="click->tabs#select" class="border-0 rounded-top p-3">Juin</button>
-  <button id="juillet" data-tabs-target="btn" data-action="click->tabs#select" class="border-0 rounded-top p-3">Juillet</button>
-  <button id="aout" data-tabs-target="btn" data-action="click->tabs#select" class="border-0 rounded-top p-3">Aout</button>
-  <button id="septembre" data-tabs-target="btn" data-action="click->tabs#select" class="border-0 rounded-top p-3">Septembre</button>
-  <button id="octobre" data-tabs-target="btn" data-action="click->tabs#select" class="border-0 rounded-top p-3">Octobre</button>
-  <button id="novembre" data-tabs-target="btn" data-action="click->tabs#select" class="border-0 rounded-top p-3">Novembre</button>
-  <button id="decembre" data-tabs-target="btn" data-action="click->tabs#select" class="border-0 rounded-top p-3">Décembre</button>
-</div>
-<div data-tabs-target="tab" id="janvier">
-</div>
-<div data-tabs-target="tab" id="fevrier">
-</div>
-<div data-tabs-target="tab" id="mars">
-</div>
-<div data-tabs-target="tab" id="avril">
-</div>
-<div data-tabs-target="tab" id="mai">
-</div>
-<div data-tabs-target="tab" id="juin">
-</div>
-<div data-tabs-target="tab" id="juillet">
-  <div class="calendrier-content__line">
-  <div class="calendrier-content__j">
-    <div class="calendrier-content__jn">
-      01 juillet
-    </div>
-    <div class="calendrier-content__jt">
-      <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fruits.png" width="35" height="40">
-      Jour fruits
-    </div>
-    <div class="calendrier-content__jlm">
-      <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png" width="35" height="40">
-      Lune montante
-    </div>
-    <div class="calendrier-content__jl">
-    </div>
-    <div class="calendrier-content__je">
-      Ephéméride : Thierry
-    </div>
+  <div class="m-auto d-flex justify-content-center gap-2" style="width:80%;">
+    <button id="janvier" data-tabs-target="btn" data-action="click->tabs#select"
+      class="border-0 rounded p-3">Janvier</button>
+    <button id="fevrier" data-tabs-target="btn" data-action="click->tabs#select"
+      class="border-0 rounded p-3">Février</button>
+    <button id="mars" data-tabs-target="btn" data-action="click->tabs#select"
+      class="border-0 rounded p-3">Mars</button>
+    <button id="avril" data-tabs-target="btn" data-action="click->tabs#select"
+      class="border-0 rounded p-3">Avril</button>
+    <button id="mai" data-tabs-target="btn" data-action="click->tabs#select"
+      class="border-0 rounded p-3">Mai</button>
+    <button id="juin" data-tabs-target="btn" data-action="click->tabs#select"
+      class="border-0 rounded p-3">Juin</button>
+    <button id="juillet" data-tabs-target="btn" data-action="click->tabs#select"
+      class="border-0 rounded p-3">Juillet</button>
+    <button id="aout" data-tabs-target="btn" data-action="click->tabs#select"
+      class="border-0 rounded p-3">Août</button>
+    <button id="septembre" data-tabs-target="btn" data-action="click->tabs#select"
+      class="border-0 rounded p-3">Septembre</button>
+    <button id="octobre" data-tabs-target="btn" data-action="click->tabs#select"
+      class="border-0 rounded p-3">Octobre</button>
+    <button id="novembre" data-tabs-target="btn" data-action="click->tabs#select"
+      class="border-0 rounded p-3">Novembre</button>
+    <button id="decembre" data-tabs-target="btn" data-action="click->tabs#select"
+      class="border-0 rounded p-3">Décembre</button>
   </div>
-  <div class="calendrier-content__d"><p><strong>POTAGER :</strong> 2e jour pour récolter les <a href="https://www.jardiner-malin.fr/fiche/groseillier-groseilles.html">groseilles</a>, <a href="https://www.jardiner-malin.fr/fiche/framboisier.html">framboises</a>, <a href="https://www.jardiner-malin.fr/fiche/fraisier.html">fraises</a>, <a href="https://www.jardiner-malin.fr/fiche/cerisier.html">cerises</a> / Si vous ne l'avez pas déjà fait, <a href="https://www.jardiner-malin.fr/fiche/courgette.html">semez des courgettes</a> pour la production d'arrière-saison, <a href="https://www.jardiner-malin.fr/fiche/culture-concombre.html">des concombres, des cornichons</a>, des <a href="https://www.jardiner-malin.fr/fiche/pasteque.html">pastèques</a>, des <a href="https://www.jardiner-malin.fr/fiche/culture-melon.html">melons</a>, des <a href="https://www.jardiner-malin.fr/tag/courge">courges</a>, à raison de 3-4 graines par poquet, dans un sol enrichi avec du <a href="https://www.jardiner-malin.fr/fiche/compost.html">compost</a> mûr, et que vous maintiendrez humide jusqu'à la levée ; vous éclaircirez ensuite en ne conservant que le plus beau plant de chaque poquet / De même, il est encore temps de semer le <a href="https://www.jardiner-malin.fr/fiche/mais-culture.html">maïs</a> doux et les <a href="https://www.jardiner-malin.fr/fiche/haricot.html">haricots</a> de toutes variétés, ainsi que des pois à grains ridés et des pois chiches, des fèves / Semez des <a href="https://www.jardiner-malin.fr/fiche/coloquinte.html">coloquintes</a> pour la décoration / Semez des variétés de <a href="https://www.jardiner-malin.fr/fiche/fraisier.html">fraisiers</a> anciens souvent impossibles à trouver en plants (semez clair, enterrez les graines sous 5 mm de <a href="https://www.jardiner-malin.fr/fiche/terreau.html">terreau</a> léger et tamisé ; comptez 2 mois pour la levée ; les jeunes plantules seront alors à repiquer en godets).</p> <p><strong>VERGER :</strong> 2e jour pour <a href="https://www.jardiner-malin.fr/fiche/greffage.html">greffer en écusson</a> <a href="https://www.jardiner-malin.fr/fiche/entretien-pommier.html">pommiers</a>, <a href="https://www.jardiner-malin.fr/fiche/poirier.html">poiriers</a>, <a href="https://www.jardiner-malin.fr/fiche/prunier.html">pruniers</a>.</p> </div></div><div class="calendrier-content__line"><div class="calendrier-content__j"><div class="calendrier-content__jn">02 juillet</div><div class="calendrier-content__jt"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E" width="35" height="40" data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-racines.pn<img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-racines.png" width="35" height="40Jour racines <span class="calendrier-content__jp">(à partir de 10h42)</span></div><div class="calendrier-content__jlm"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E" width="35" height="40" data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.pn<img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png" width="35" height="40Lune montante</div><div class="calendrier-content__jl"></div><div class="calendrier-content__je">Ephéméride : Martinien</div></div> <div class="calendrier-content__d"><p>Ce mardi 2 juillet 2024, avant 10h42, en jour fruits et graines :</p> <p><strong>POTAGER :</strong> 3e jour pour récolter les <a href="https://www.jardiner-malin.fr/fiche/groseillier-groseilles.html">groseilles</a>, <a href="https://www.jardiner-malin.fr/fiche/framboisier.html">framboises</a>, <a href="https://www.jardiner-malin.fr/fiche/fraisier.html">fraises</a>, <a href="https://www.jardiner-malin.fr/fiche/cerisier.html">cerises</a> / Si vous ne l'avez pas déjà fait, <a href="https://www.jardiner-malin.fr/fiche/courgette.html">semez des courgettes</a> pour la production d'arrière-saison, <a href="https://www.jardiner-malin.fr/fiche/culture-concombre.html">des concombres, des cornichons</a>, des <a href="https://www.jardiner-malin.fr/fiche/pasteque.html">pastèques</a>, des <a href="https://www.jardiner-malin.fr/fiche/culture-melon.html">melons</a>, des <a href="https://www.jardiner-malin.fr/tag/courge">courges</a>, à raison de 3-4 graines par poquet, dans un sol enrichi avec du <a href="https://www.jardiner-malin.fr/fiche/compost.html">compost</a> mûr, et que vous maintiendrez humide jusqu'à la levée ; vous éclaircirez ensuite en ne conservant que le plus beau plant de chaque poquet / De même, il est encore temps de semer le <a href="https://www.jardiner-malin.fr/fiche/mais-culture.html">maïs</a> doux et les <a href="https://www.jardiner-malin.fr/fiche/haricot.html">haricots</a> de toutes variétés, ainsi que des pois à grains ridés et des pois chiches, des fèves / Semez des <a href="https://www.jardiner-malin.fr/fiche/coloquinte.html">coloquintes</a> pour la décoration / Semez des variétés de <a href="https://www.jardiner-malin.fr/fiche/fraisier.html">fraisiers</a> anciens souvent impossibles à trouver en plants (semez clair, enterrez les graines sous 5 mm de <a href="https://www.jardiner-malin.fr/fiche/terreau.html">terreau</a> léger et tamisé ; comptez 2 mois pour la levée ; les jeunes plantules seront alors à repiquer en godets).</p> <p><strong>VERGER :</strong> 3e jour pour <a href="https://www.jardiner-malin.fr/fiche/greffage.html">greffer en écusson</a> <a href="https://www.jardiner-malin.fr/fiche/entretien-pommier.html">pommiers</a>, <a href="https://www.jardiner-malin.fr/fiche/poirier.html">poiriers</a>, <a href="https://www.jardiner-malin.fr/fiche/prunier.html">pruniers</a>.</p> <p>Après 10h42, passage en jour racines :</p> <p><strong>POTAGER :</strong> Semez des <a href="https://www.jardiner-malin.fr/fiche/panais.html">panais</a> et des <a href="https://www.jardiner-malin.fr/fiche/carotte.html">carottes</a> de conservation (récoltes d'automne et d'hiver) / Semez des <a href="https://www.jardiner-malin.fr/fiche/radis.html">radis de tous les mois</a> et des <a href="https://www.jardiner-malin.fr/fiche/radis-noir.html">radis d'hiver</a> (radis noirs, roses, violets, et les radis asiatiques) que vous éclaircirez à 15 cm après la levée / Semez des <a href="https://www.jardiner-malin.fr/fiche/navet.html">navets</a> ronds à récolter jeunes et des navets pour l'hiver, ainsi que des <a href="https://www.jardiner-malin.fr/fiche/betterave.html">betteraves</a> tardives / Semez des <a href="https://www.jardiner-malin.fr/fiche/rutabaga.html">rutabagas</a> ou <a href="https://www.jardiner-malin.fr/fiche/chou-navet.html">choux-navets</a>, vous éclaircirez à 30 cm / Semez des <a href="https://www.jardiner-malin.fr/fiche/oignon-blanc-ou-nouveau-culture.html">oignons blancs</a> primeurs et des oignons à confire (récolte 2 mois après le semis).</p> </div></div><div style="min-height:280px; margin: auto;"><div id="optidigital-adslot-Content_1" class="Content_1" style="display: none;"></div><div id="optidigital-adslot-Mobile_Pos1" class="Mobile_Pos1" style="display: none;"></div></div><div class="calendrier-content__line"><div class="calendrier-content__j"><div class="calendrier-content__jn">03 juillet</div><div class="calendrier-content__jt"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E" width="35" height="40" data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-racines.pn<img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-racines.png" width="35" height="40Jour racines</div><div class="calendrier-content__jlm"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E" width="35" height="40" data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.pn<img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png" width="35" height="40Lune montante</div><div class="calendrier-content__jl"></div><div class="calendrier-content__je">Ephéméride : Thomas</div></div> <div class="calendrier-content__d"><p><strong>POTAGER :</strong> 2e jour pour semer des <a href="https://www.jardiner-malin.fr/fiche/panais.html">panais</a> et des <a href="https://www.jardiner-malin.fr/fiche/carotte.html">carottes</a> de conservation (récoltes d'automne et d'hiver) / Semez des <a href="https://www.jardiner-malin.fr/fiche/radis.html">radis de tous les mois</a> et des <a href="https://www.jardiner-malin.fr/fiche/radis-noir.html">radis d'hiver</a> (radis noirs, roses, violets, et les radis asiatiques) que vous éclaircirez à 15 cm après la levée / Semez des <a href="https://www.jardiner-malin.fr/fiche/navet.html">navets</a> ronds à récolter jeunes et des navets pour l'hiver, ainsi que des <a href="https://www.jardiner-malin.fr/fiche/betterave.html">betteraves</a> tardives / Semez des <a href="https://www.jardiner-malin.fr/fiche/rutabaga.html">rutabagas</a> ou <a href="https://www.jardiner-malin.fr/fiche/chou-navet.html">choux-navets</a>, vous éclaircirez à 30 cm / Semez des <a href="https://www.jardiner-malin.fr/fiche/oignon-blanc-ou-nouveau-culture.html">oignons blancs</a> primeurs et des oignons à confire (récolte 2 mois après le semis).</p> </div></div><div class="calendrier-content__line"><div class="calendrier-content__j"><div class="calendrier-content__jn">04 juillet</div><div class="calendrier-content__jt"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E" width="35" height="40" data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-racines.pn<img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-racines.png" width="35" height="40Jour racines</div><div class="calendrier-content__jlm"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E" width="35" height="40" data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.pn<img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png" width="35" height="40Lune montante</div><div class="calendrier-content__jl"></div><div class="calendrier-content__je">Ephéméride : Florent</div></div> <div class="calendrier-content__d"><p><strong>POTAGER :</strong> 3e jour pour semer des <a href="https://www.jardiner-malin.fr/fiche/panais.html">panais</a> et des <a href="https://www.jardiner-malin.fr/fiche/carotte.html">carottes</a> de conservation (récoltes d'automne et d'hiver) / Semez des <a href="https://www.jardiner-malin.fr/fiche/radis.html">radis de tous les mois</a> et des <a href="https://www.jardiner-malin.fr/fiche/radis-noir.html">radis d'hiver</a> (radis noirs, roses, violets, et les radis asiatiques) que vous éclaircirez à 15 cm après la levée / Semez des <a href="https://www.jardiner-malin.fr/fiche/navet.html">navets</a> ronds à récolter jeunes et des navets pour l'hiver, ainsi que des <a href="https://www.jardiner-malin.fr/fiche/betterave.html">betteraves</a> tardives / Semez des <a href="https://www.jardiner-malin.fr/fiche/rutabaga.html">rutabagas</a> ou <a href="https://www.jardiner-malin.fr/fiche/chou-navet.html">choux-navets</a>, vous éclaircirez à 30 cm / Semez des <a href="https://www.jardiner-malin.fr/fiche/oignon-blanc-ou-nouveau-culture.html">oignons blancs</a> primeurs et des oignons à confire (récolte 2 mois après le semis).</p> <p>&nbsp;</p> </div></div><div class="calendrier-content__line"><div class="calendrier-content__j"><div class="calendrier-content__jn">05 juillet</div><div class="calendrier-content__jt"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E" width="35" height="40" data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-racines.pn<img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-racines.png" width="35" height="40Jour racines <span class="calendrier-content__jp">(jusqu'à 15h23)</span></div><div class="calendrier-content__jlm"><img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunedescendante.png" width="35" height="40">Lune descendante <span class="calendrier-content__jp">()</span></div><div class="calendrier-content__jl"></div><div class="calendrier-content__je">Ephéméride : Antoine</div></div> <div class="calendrier-content__d"><p>Ce vendredi 5 juillet 2024, avant 15h23, en jour racines :</p> <p><strong>POTAGER :</strong> Brève occasion (vous en aurez à nouveau la possibilité à partir du 11/07) de commencer à récolter les <a href="https://www.jardiner-malin.fr/fiche/pomme-de-terre.html">pommes de terre</a> précoces au fur et à mesure des besoins (elles se conservent mal) / Repiquez les <a href="https://www.jardiner-malin.fr/fiche/endive-culture-forcage.html">endives</a> / Eclaircissez vos semis de radis, de carottes et d'endives / Démarrez les récoltes d'oignon, d'échalotes grises et d'ail / Plantez les <a href="https://www.jardiner-malin.fr/fiche/poireau.html">poireaux</a> semés en mai / Plantez les <a href="https://www.jardiner-malin.fr/fiche/celeri.html">céleris-raves</a> semés en début de printemps / Plantez le <a href="https://www.jardiner-malin.fr/fiche/souchet-comestible.html">souchet</a> / Terminez la plantation des <a href="https://www.jardiner-malin.fr/fiche/patate-douce.html">patates douces</a>.</p> <p><strong>ORNEMENT :</strong> Divisez les <a href="https://www.jardiner-malin.fr/fiche/iris.html">iris</a> et les bulbes à fleurs.</p> <p>Après 15h23, passage en jour fleurs :</p> <p><strong>POTAGER :</strong> Plantez les <a href="https://www.jardiner-malin.fr/fiche/chou-brocoli.html">brocolis</a> et les <a href="https://www.jardiner-malin.fr/fiche/chou-fleur.html">choux-fleurs</a> (semés précédemment en pépinière), en veillant à prélever une motte de terre avec les racines pour favoriser la reprise ; enterrez un peu le collet et tassez / Cueillez les <a href="https://www.jardiner-malin.fr/fiche/artichaut.html">artichauts</a> / Cueillez les aromates juste avant la floraison (pour plus de saveurs).</p> <p><strong>ORNEMENT :</strong> Récoltez la <a href="https://www.jardiner-malin.fr/fiche/lavande.html">lavande</a> / C'est le moment de prélever des boutures herbacées de nombreux arbustes à fleurs (<a href="https://www.jardiner-malin.fr/fiche/laurier-rose.html">laurier-rose</a>, <a href="https://www.jardiner-malin.fr/fiche/althea.html">althéa</a>, <a href="https://www.jardiner-malin.fr/fiche/buddleia.html">buddléia</a>, azalées caduques, <a href="https://www.jardiner-malin.fr/fiche/caryopteris.html">caryoptéris</a>, <a href="https://www.jardiner-malin.fr/fiche/ceanothe.html">céanothe</a>, <a href="https://www.jardiner-malin.fr/fiche/ciste-cistus.html">ciste</a>, <a href="https://www.jardiner-malin.fr/fiche/fuchsia-planter-floraison.html">fuchsia</a>, <a href="https://www.jardiner-malin.fr/fiche/forsythia-entretien-taille.html">forsythia</a>...) ; à placer à l'étouffée pour de meilleures chances de succès / <a href="https://www.jardiner-malin.fr/fiche/taille-arbuste-a-fleurs.html">Taillez les arbustes qui ont terminé leur floraison</a> et les rosiers non remontants défleuris / Du côté des grimpantes, raccourcissez de moitié les tiges de la <a href="https://www.jardiner-malin.fr/fiche/glycine-taille-entretien.html">glycine</a> / Repiquez les semis de bisannuelles et de plantes vivaces réalisés en mai ou début juin.</p> </div></div><div class="calendrier-content__line"><div class="calendrier-content__j"><div class="calendrier-content__jn">06 juillet</div><div class="calendrier-content__jt"><img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fleurs.png" width="35" height="40">Jour fleurs</div><div class="calendrier-content__jlm"><img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunedescendante.png" width="35" height="40">Lune descendante</div><div class="calendrier-content__jl"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E" width="35" height="40" data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-nouvellelune.pn<img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-nouvellelune.png" width="35" height="40Nouvelle lune <span class="calendrier-content__jp">(0h57)</span></div><div class="calendrier-content__je">Ephéméride : Mariette</div></div> <div class="calendrier-content__d"><p><strong>POTAGER :</strong> 2e jour pour planter les <a href="https://www.jardiner-malin.fr/fiche/chou-brocoli.html">brocolis</a> et les <a href="https://www.jardiner-malin.fr/fiche/chou-fleur.html">choux-fleurs</a> (semés précédemment en pépinière), en veillant à prélever une motte de terre avec les racines pour favoriser la reprise ; enterrez un peu le collet et tassez / Cueillez les <a href="https://www.jardiner-malin.fr/fiche/artichaut.html">artichauts</a> / Cueillez les aromates juste avant la floraison (pour plus de saveurs).</p> <p><strong>ORNEMENT :</strong> 2e jour pour récolter la <a href="https://www.jardiner-malin.fr/fiche/lavande.html">lavande</a> / C'est le moment de prélever des boutures herbacées de nombreux arbustes à fleurs (<a href="https://www.jardiner-malin.fr/fiche/laurier-rose.html">laurier-rose</a>, <a href="https://www.jardiner-malin.fr/fiche/althea.html">althéa</a>, <a href="https://www.jardiner-malin.fr/fiche/buddleia.html">buddléia</a>, azalées caduques, <a href="https://www.jardiner-malin.fr/fiche/caryopteris.html">caryoptéris</a>, <a href="https://www.jardiner-malin.fr/fiche/ceanothe.html">céanothe</a>, <a href="https://www.jardiner-malin.fr/fiche/ciste-cistus.html">ciste</a>, <a href="https://www.jardiner-malin.fr/fiche/fuchsia-planter-floraison.html">fuchsia</a>, <a href="https://www.jardiner-malin.fr/fiche/forsythia-entretien-taille.html">forsythia</a>...) ; à placer à l'étouffée pour de meilleures chances de succès / <a href="https://www.jardiner-malin.fr/fiche/taille-arbuste-a-fleurs.html">Taillez les arbustes qui ont terminé leur floraison</a> et les rosiers non remontants défleuris / Du côté des grimpantes, raccourcissez de moitié les tiges de la <a href="https://www.jardiner-malin.fr/fiche/glycine-taille-entretien.html">glycine</a> / Repiquez les semis de bisannuelles et de plantes vivaces réalisés en mai ou début juin.</p> </div></div><div class="calendrier-content__line"><div class="calendrier-content__j"><div class="calendrier-content__jn">07 juillet</div><div class="calendrier-content__jt"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E" width="35" height="40" data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-feuilles.pn<img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-feuilles.png" width="35" height="40Jour feuilles <span class="calendrier-content__jp">(à partir de 1h03)</span></div><div class="calendrier-content__jlm"><img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunedescendante.png" width="35" height="40">Lune descendante</div><div class="calendrier-content__jl"></div><div class="calendrier-content__je">Ephéméride : Raoul</div></div> <div class="calendrier-content__d"><p><strong>ORNEMENT :</strong> Si vous avez un terrain en friche à nettoyer, c'est le moment de couper bien à ras ronces, chardons et arbustes sauvages.</p> <p><strong>POTAGER :</strong> Plantez du <a href="https://www.jardiner-malin.fr/fiche/chou-chinois.html">chou chinois</a>, ainsi que les <a href="https://www.jardiner-malin.fr/fiche/chou-pomme-frise.html">choux de Milan</a> et <a href="https://www.jardiner-malin.fr/fiche/chou-de-bruxelles.html">chou de Bruxelles</a> semés en mai-juin / Pensez à blanchir les salades qui en ont besoin (<a href="https://www.jardiner-malin.fr/fiche/scaroles-frisees-ete.html">frisées, scaroles</a>…) / Eclaircissez <a href="https://www.jardiner-malin.fr/fiche/frisee.html">chicorées</a> et <a href="https://www.jardiner-malin.fr/fiche/laitue.html">laitues</a> semées en juin / Repiquez des <a href="https://www.jardiner-malin.fr/fiche/celeri.html">céleris-branche</a>.</p> </div></div><div class="calendrier-content__line"><div class="calendrier-content__j"><div class="calendrier-content__jn">08 juillet</div><div class="calendrier-content__jt"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E" width="35" height="40" data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-feuilles.pn<img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-feuilles.png" width="35" height="40Jour feuilles <span class="calendrier-content__jp">(jusqu'à 14h34)</span></div><div class="calendrier-content__jlm"><img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunedescendante.png" width="35" height="40">Lune descendante</div><div class="calendrier-content__jl"></div><div class="calendrier-content__je">Ephéméride : Thibault</div></div> <div class="calendrier-content__d"><p>Avant 14h34, en jour feuilles :</p> <p><strong>ORNEMENT :</strong> Si vous avez un terrain en friche à nettoyer, c'est le moment de couper bien à ras ronces, chardons et arbustes sauvages.</p> <p><strong>POTAGER :</strong> Plantez du chou chinois, ainsi que les choux de Milan et chou de Bruxelles semés en mai-juin / Pensez à blanchir les salades qui en ont besoin (frisées, scaroles…) / Eclaircissez chicorées et laitues semées en juin / Repiquez des céleris-branche.</p> <p>Après 14h34, passage en jour fruits et graines :</p> <p><strong>POTAGER :</strong> Pincez les légumes qui demandent à l'être : courges, concombres, pastèques, piments, aubergines ; supprimez les gourmands des tomates / Repiquez les derniers concombres et cornichons.</p> <p><strong>VERGER :</strong> Taillez la vigne ainsi que les mûriers et framboisiers ayant fructifié / En juillet, c'est aussi le moment de la taille en vert pour les fruitiers tels que pommiers et poiriers palissés / Taillez légèrement le cerisier après sa production (en cette saison, il produira alors moins de gomme).</p> </div></div><div class="calendrier-content__line"><div class="calendrier-content__j"><div class="calendrier-content__jn">09 juillet</div><div class="calendrier-content__jt"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E" width="35" height="40" data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fruits.pn<img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fruits.png" width="35" height="40Jour fruits</div><div class="calendrier-content__jlm"><img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunedescendante.png" width="35" height="40">Lune descendante</div><div class="calendrier-content__jl"></div><div class="calendrier-content__je">Ephéméride : Amandine</div></div> <div class="calendrier-content__d"><p>Ce 9 juillet 2024 ressemble au jour précédent en matière de calendrier lunaire.</p> <p><strong>POTAGER :</strong> 2e jour pour pincer les légumes qui demandent à l'être : <a href="https://www.jardiner-malin.fr/tag/courge">courges</a>, <a href="https://www.jardiner-malin.fr/fiche/culture-concombre.html">concombres</a>, <a href="https://www.jardiner-malin.fr/fiche/pasteque.html">pastèques</a>, <a href="https://www.jardiner-malin.fr/fiche/poivron-piment.html">piments</a>, <a href="https://www.jardiner-malin.fr/fiche/aubergine.html">aubergines</a> ; supprimez les <a href="https://www.jardiner-malin.fr/fiche/gourmands-tomates-enlever-garder.html">gourmands des tomates</a> / Repiquez les derniers concombres et cornichons.</p> <p><strong>VERGER :</strong> 2e jour pour tailler la <a href="https://www.jardiner-malin.fr/fiche/vigne.html">vigne</a> ainsi que les <a href="https://www.jardiner-malin.fr/fiche/mures-murier.html">mûriers</a> et <a href="https://www.jardiner-malin.fr/fiche/framboisier.html">framboisiers</a> ayant fructifié / En juillet, c'est aussi le moment de la taille en vert pour les fruitiers tels que pommiers et poiriers palissés / Taillez légèrement le <a href="https://www.jardiner-malin.fr/fiche/cerisier.html">cerisier</a> après sa production (en cette saison, il produira alors moins de gomme).</p> </div></div><div class="calendrier-content__line"><div class="calendrier-content__j"><div class="calendrier-content__jn">10 juillet</div><div class="calendrier-content__jt"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E" width="35" height="40" data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fruits.pn<img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fruits.png" width="35" height="40Jour fruits</div><div class="calendrier-content__jlm"><img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunedescendante.png" width="35" height="40">Lune descendante</div><div class="calendrier-content__jl"></div><div class="calendrier-content__je">Ephéméride : Ulrich</div></div> <div class="calendrier-content__d"><p><strong>POTAGER :</strong> 3e jour pour pincer les légumes qui demandent à l'être : <a href="https://www.jardiner-malin.fr/tag/courge">courges</a>, <a href="https://www.jardiner-malin.fr/fiche/culture-concombre.html">concombres</a>, <a href="https://www.jardiner-malin.fr/fiche/pasteque.html">pastèques</a>, <a href="https://www.jardiner-malin.fr/fiche/poivron-piment.html">piments</a>, <a href="https://www.jardiner-malin.fr/fiche/aubergine.html">aubergines</a> ; supprimez les <a href="https://www.jardiner-malin.fr/fiche/gourmands-tomates-enlever-garder.html">gourmands des tomates</a> / Repiquez les derniers concombres et cornichons.</p> <p><strong>VERGER :</strong> 3e jour pour tailler la <a href="https://www.jardiner-malin.fr/fiche/vigne.html">vigne</a> ainsi que les <a href="https://www.jardiner-malin.fr/fiche/mures-murier.html">mûriers</a> et <a href="https://www.jardiner-malin.fr/fiche/framboisier.html">framboisiers</a> ayant fructifié / En juillet, c'est aussi le moment de la taille en vert pour les fruitiers tels que pommiers et poiriers palissés / Taillez légèrement le <a href="https://www.jardiner-malin.fr/fiche/cerisier.html">cerisier</a> après sa production (en cette saison, il produira alors moins de gomme).</p> </div></div><div class="calendrier-content__line"><div class="calendrier-content__j"><div class="calendrier-content__jn">11 juillet</div><div class="calendrier-content__jt"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E" width="35" height="40" data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fruits.pn<img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fruits.png" width="35" height="40Jour fruits <span class="calendrier-content__jp">(jusqu'à 15h03)</span></div><div class="calendrier-content__jlm"><img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunedescendante.png" width="35" height="40">Lune descendante</div><div class="calendrier-content__jl"></div><div class="calendrier-content__je">Ephéméride : Benoît</div></div> <div class="calendrier-content__d"><p>Ce jeudi 11 juillet 2024, avant 15h03, en jour fruits et graines :</p> <p><strong>POTAGER :</strong> 4e jour pour pincer les légumes qui demandent à l'être : <a href="https://www.jardiner-malin.fr/tag/courge">courges</a>, <a href="https://www.jardiner-malin.fr/fiche/culture-concombre.html">concombres</a>, <a href="https://www.jardiner-malin.fr/fiche/pasteque.html">pastèques</a>, <a href="https://www.jardiner-malin.fr/fiche/poivron-piment.html">piments</a>, <a href="https://www.jardiner-malin.fr/fiche/aubergine.html">aubergines</a> ; supprimez les <a href="https://www.jardiner-malin.fr/fiche/gourmands-tomates-enlever-garder.html">gourmands des tomates</a> / Repiquez les derniers concombres et cornichons.</p> <p><strong>VERGER :</strong> 4e jour pour tailler la <a href="https://www.jardiner-malin.fr/fiche/vigne.html">vigne</a> ainsi que les <a href="https://www.jardiner-malin.fr/fiche/mures-murier.html">mûriers</a> et <a href="https://www.jardiner-malin.fr/fiche/framboisier.html">framboisiers</a> ayant fructifié / En juillet, c'est aussi le moment de la taille en vert pour les fruitiers tels que pommiers et poiriers palissés / Taillez légèrement le <a href="https://www.jardiner-malin.fr/fiche/cerisier.html">cerisier</a> après sa production (en cette saison, il produira alors moins de gomme).</p> <p>Après 15h03, passage en jour racines :</p> <p><strong>POTAGER :</strong> Nouvelle occasion de <a href="https://www.jardiner-malin.fr/fiche/recolte-pommes-terre-quand-comment.html">récolter les pommes de terre</a> précoces au fur et à mesure des besoins (elles se conservent mal) / Repiquez les <a href="https://www.jardiner-malin.fr/fiche/endive-culture-forcage.html">endives</a> / Eclaircissez vos semis de <a href="https://www.jardiner-malin.fr/fiche/radis.html">radis</a>, de <a href="https://www.jardiner-malin.fr/fiche/carotte.html">carottes</a> et d'endives / Démarrez les récoltes d'<a href="https://www.jardiner-malin.fr/fiche/oignon.html">oignon</a>, d'<a href="https://www.jardiner-malin.fr/fiche/echalote.html">échalotes grises</a> et d'<a href="https://www.jardiner-malin.fr/fiche/ail-culture.html">ail</a> / Plantez les <a href="https://www.jardiner-malin.fr/fiche/poireau.html">poireaux</a> semés en mai / Plantez les céleris-raves semés en début de printemps / Plantez le <a href="https://www.jardiner-malin.fr/fiche/souchet-comestible.html">souchet</a> / Terminez la plantation des <a href="https://www.jardiner-malin.fr/fiche/patate-douce.html">patates douces</a>.</p> <p><strong>ORNEMENT :</strong> Divisez les <a href="https://www.jardiner-malin.fr/fiche/iris.html">iris</a> et les bulbes à fleurs.</p> <p>&nbsp;</p> </div></div><div class="calendrier-content__line"><div class="calendrier-content__j"><div class="calendrier-content__jn">12 juillet</div><div class="calendrier-content__jt"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E" width="35" height="40" data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-racines.pn<img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-racines.png" width="35" height="40Jour racines</div><div class="calendrier-content__jlm"><img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunedescendante.png" width="35" height="40">Lune descendante</div><div class="calendrier-content__jl"></div><div class="calendrier-content__je">Ephéméride : Olivier</div></div> <div class="calendrier-content__d"><p>Ce 12 juillet 2024, ne jardinez pas après 15h10 (lune à l'apogée à 10h10)</p> <p><strong>POTAGER :</strong> 2e jour pour <a href="https://www.jardiner-malin.fr/fiche/recolte-pommes-terre-quand-comment.html">récolter les pommes de terre</a> précoces au fur et à mesure des besoins (elles se conservent mal) / Repiquez les <a href="https://www.jardiner-malin.fr/fiche/endive-culture-forcage.html">endives</a> / Eclaircissez vos semis de <a href="https://www.jardiner-malin.fr/fiche/radis.html">radis</a>, de <a href="https://www.jardiner-malin.fr/fiche/carotte.html">carottes</a> et d'endives / Démarrez les récoltes d'<a href="https://www.jardiner-malin.fr/fiche/oignon.html">oignon</a>, d'<a href="https://www.jardiner-malin.fr/fiche/echalote.html">échalotes grises</a> et d'<a href="https://www.jardiner-malin.fr/fiche/ail-culture.html">ail</a> / Plantez les <a href="https://www.jardiner-malin.fr/fiche/poireau.html">poireaux</a> semés en mai / Plantez les céleris-raves semés en début de printemps / Plantez le <a href="https://www.jardiner-malin.fr/fiche/souchet-comestible.html">souchet</a> / Terminez la plantation des <a href="https://www.jardiner-malin.fr/fiche/patate-douce.html">patates douces</a>.</p> <p>&nbsp;</p> <p><strong>ORNEMENT :</strong> 2e jour pour diviser les <a href="https://www.jardiner-malin.fr/fiche/iris.html">iris</a> et les bulbes à fleurs.</p> </div></div><div style="min-height:280px; margin: auto;"><div id="optidigital-adslot-Content_2" class="Content_2" style="display: none;"></div><div id="optidigital-adslot-Mobile_Pos2" class="Mobile_Pos2" style="display: none;"></div></div><div class="calendrier-content__line"><div class="calendrier-content__j"><div class="calendrier-content__jn">13 juillet</div><div class="calendrier-content__jt"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E" width="35" height="40" data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-racines.pn<img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-racines.png" width="35" height="40Jour racines</div><div class="calendrier-content__jlm"><img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunedescendante.png" width="35" height="40">Lune descendante</div><div class="calendrier-content__jl"></div><div class="calendrier-content__je">Ephéméride : Henri, Joël</div></div> <div class="calendrier-content__d"><p>ce 13 juillet 2024, ne jardinez pas avant 5h50 (noeud lunaire à 0h26)</p> <p><strong>POTAGER :</strong> C'est le 3e jour pour <a href="https://www.jardiner-malin.fr/fiche/recolte-pommes-terre-quand-comment.html">récolter les pommes de terre</a> précoces au fur et à mesure des besoins (elles se conservent mal) / Repiquez les <a href="https://www.jardiner-malin.fr/fiche/endive-culture-forcage.html">endives</a> / Eclaircissez vos semis de <a href="https://www.jardiner-malin.fr/fiche/radis.html">radis</a>, de <a href="https://www.jardiner-malin.fr/fiche/carotte.html">carottes</a> et d'endives / Démarrez les récoltes d'<a href="https://www.jardiner-malin.fr/fiche/oignon.html">oignon</a>, d'<a href="https://www.jardiner-malin.fr/fiche/echalote.html">échalotes grises</a> et d'<a href="https://www.jardiner-malin.fr/fiche/ail-culture.html">ail</a> / Plantez les <a href="https://www.jardiner-malin.fr/fiche/poireau.html">poireaux</a> semés en mai / Plantez les céleris-raves semés en début de printemps / Plantez le <a href="https://www.jardiner-malin.fr/fiche/souchet-comestible.html">souchet</a> / Terminez la plantation des <a href="https://www.jardiner-malin.fr/fiche/patate-douce.html">patates douces</a>.</p> <p><strong>ORNEMENT :</strong> 3e jour &nbsp;également pour diviser les <a href="https://www.jardiner-malin.fr/fiche/iris.html">iris</a> et les bulbes à fleurs.</p> </div></div><div class="calendrier-content__line"><div class="calendrier-content__j"><div class="calendrier-content__jn">14 juillet</div><div class="calendrier-content__jt"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E" width="35" height="40" data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-racines.pn<img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-racines.png" width="35" height="40Jour racines</div><div class="calendrier-content__jlm"><img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunedescendante.png" width="35" height="40">Lune descendante</div><div class="calendrier-content__jl"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E" width="35" height="40" data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-premierquartier.pn<img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-premierquartier.png" width="35" height="40Premier quartier <span class="calendrier-content__jp">(0h48)</span></div><div class="calendrier-content__je">Ephéméride : Fête nationale</div></div> <div class="calendrier-content__d"><p>En ce jour de fête nationale en France, jour traditionnellement férié.</p> <p><strong>POTAGER :</strong> 4e jour pour <a href="https://www.jardiner-malin.fr/fiche/recolte-pommes-terre-quand-comment.html">récolter les pommes de terre</a> précoces au fur et à mesure des besoins (elles se conservent mal) / Repiquez les <a href="https://www.jardiner-malin.fr/fiche/endive-culture-forcage.html">endives</a> / Eclaircissez vos semis de <a href="https://www.jardiner-malin.fr/fiche/radis.html">radis</a>, de <a href="https://www.jardiner-malin.fr/fiche/carotte.html">carottes</a> et d'endives / Démarrez les récoltes d'<a href="https://www.jardiner-malin.fr/fiche/oignon.html">oignon</a>, d'<a href="https://www.jardiner-malin.fr/fiche/echalote.html">échalotes grises</a> et d'<a href="https://www.jardiner-malin.fr/fiche/ail-culture.html">ail</a> / Plantez les <a href="https://www.jardiner-malin.fr/fiche/poireau.html">poireaux</a> semés en mai / Plantez les céleris-raves semés en début de printemps / Plantez le <a href="https://www.jardiner-malin.fr/fiche/souchet-comestible.html">souchet</a> / Terminez la plantation des <a href="https://www.jardiner-malin.fr/fiche/patate-douce.html">patates douces</a>.</p> <p><strong>ORNEMENT :</strong> 4e jour pour diviser les <a href="https://www.jardiner-malin.fr/fiche/iris.html">iris</a> et les bulbes à fleurs.</p> <p><strong>lire :</strong>&nbsp;<a href="https://www.jardiner-malin.fr/fiche/tondre-pelouse-jour-ferie.html">Peut-on tondre sa pelouse un jour férié ?</a></p> </div></div><div class="calendrier-content__line"><div class="calendrier-content__j"><div class="calendrier-content__jn">15 juillet</div><div class="calendrier-content__jt"><img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fleurs.png" width="35" height="40">Jour fleurs <span class="calendrier-content__jp">(à partir de 10h48)</span></div><div class="calendrier-content__jlm"><img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunedescendante.png" width="35" height="40">Lune descendante</div><div class="calendrier-content__jl"></div><div class="calendrier-content__je">Ephéméride : Donald</div></div> <div class="calendrier-content__d"><p>Ce 15 juillet 2024, avant 10h48, en jour racines :</p> <p><strong>POTAGER :</strong> 5e et dernier jour pour <a href="https://www.jardiner-malin.fr/fiche/recolte-pommes-terre-quand-comment.html">récolter les pommes de terre</a> précoces au fur et à mesure des besoins (elles se conservent mal) / Repiquez les <a href="https://www.jardiner-malin.fr/fiche/endive-culture-forcage.html">endives</a> / Eclaircissez vos semis de <a href="https://www.jardiner-malin.fr/fiche/radis.html">radis</a>, de <a href="https://www.jardiner-malin.fr/fiche/carotte.html">carottes</a> et d'endives / Démarrez les récoltes d'<a href="https://www.jardiner-malin.fr/fiche/oignon.html">oignon</a>, d'<a href="https://www.jardiner-malin.fr/fiche/echalote.html">échalotes grises</a> et d'<a href="https://www.jardiner-malin.fr/fiche/ail-culture.html">ail</a> / Plantez les <a href="https://www.jardiner-malin.fr/fiche/poireau.html">poireaux</a> semés en mai / Plantez les céleris-raves semés en début de printemps / Plantez le <a href="https://www.jardiner-malin.fr/fiche/souchet-comestible.html">souchet</a> / Terminez la plantation des <a href="https://www.jardiner-malin.fr/fiche/patate-douce.html">patates douces</a>.</p> <p><strong>ORNEMENT :</strong> 5e et dernier jour également pour diviser les <a href="https://www.jardiner-malin.fr/fiche/iris.html">iris</a> et les bulbes à fleurs.</p> <p>Après 10h48, passage en jour fleurs :</p> <p><strong>POTAGER :</strong> Nouvelle occasion de planter les <a href="https://www.jardiner-malin.fr/fiche/chou-brocoli.html">brocolis</a> et les <a href="https://www.jardiner-malin.fr/fiche/chou-fleur.html">choux-fleurs</a> (semés en mai/juin en pépinière), en veillant à prélever une motte de terre avec les racines pour favoriser la reprise ; enterrez un peu le collet et tassez / Cueillez les <a href="https://www.jardiner-malin.fr/fiche/artichaut.html">artichauts</a> / Cueillez les aromates juste avant la floraison (pour plus de saveurs) ou coupez les fleurs des aromatiques afin de favoriser la production de feuilles : <a href="https://www.jardiner-malin.fr/fiche/ciboulette.html">ciboulette</a>, <a href="https://www.jardiner-malin.fr/fiche/ciboule-semis-culture-cive.html">ciboule</a>, <a href="https://www.jardiner-malin.fr/fiche/basilic.html">basilic</a>... Dégustez ces fleurs dans vos salades estivales.</p> <p><strong>ORNEMENT :</strong> Nouvelle occasion de récolter la <a href="https://www.jardiner-malin.fr/fiche/lavande.html">lavande</a> / C'est le moment de prélever des boutures herbacées de nombreux arbustes à fleurs (<a href="https://www.jardiner-malin.fr/fiche/laurier-rose.html">laurier-rose</a>, <a href="https://www.jardiner-malin.fr/fiche/althea.html">althéa</a>, <a href="https://www.jardiner-malin.fr/fiche/buddleia.html">buddléia</a>, azalées caduques, <a href="https://www.jardiner-malin.fr/fiche/caryopteris.html">caryoptéris</a>, <a href="https://www.jardiner-malin.fr/fiche/ceanothe.html">céanothe</a>, <a href="https://www.jardiner-malin.fr/fiche/ciste-cistus.html">ciste</a>, <a href="https://www.jardiner-malin.fr/fiche/fuchsia-planter-floraison.html">fuchsia</a>, <a href="https://www.jardiner-malin.fr/fiche/forsythia-entretien-taille.html">forsythia</a>...) ; à placer vos <a href="https://www.jardiner-malin.fr/fiche/bouturage-a-l-etouffee.html">boutures à l'étouffée</a> pour de meilleures chances de succès / <a href="https://www.jardiner-malin.fr/fiche/taille-arbuste-a-fleurs.html">Taillez les arbustes qui ont terminé leur floraison</a> et les rosiers non remontants défleuris / Du côté des grimpantes, raccourcissez de moitié les tiges de la <a href="https://www.jardiner-malin.fr/fiche/glycine-taille-entretien.html">glycine</a> et taillez les <a href="https://www.jardiner-malin.fr/fiche/clematite.html">clématites</a> / Repiquez les semis de bisannuelles et de plantes vivaces réalisés fin mai.</p> </div></div><div class="calendrier-content__line"><div class="calendrier-content__j"><div class="calendrier-content__jn">16 juillet</div><div class="calendrier-content__jt"><img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fleurs.png" width="35" height="40">Jour fleurs</div><div class="calendrier-content__jlm"><img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunedescendante.png" width="35" height="40">Lune descendante</div><div class="calendrier-content__jl"></div><div class="calendrier-content__je">Ephéméride : N-D. Mt-Carmel</div></div> <div class="calendrier-content__d"><p><strong>POTAGER :</strong> 2e jour pour planter les <a href="https://www.jardiner-malin.fr/fiche/chou-brocoli.html">brocolis</a> et les <a href="https://www.jardiner-malin.fr/fiche/chou-fleur.html">choux-fleurs</a> (semés en mai/juin en pépinière), en veillant à prélever une motte de terre avec les racines pour favoriser la reprise ; enterrez un peu le collet et tassez / Cueillez les <a href="https://www.jardiner-malin.fr/fiche/artichaut.html">artichauts</a> / Cueillez les aromates juste avant la floraison (pour plus de saveurs) ou coupez les fleurs des aromatiques afin de favoriser la production de feuilles : <a href="https://www.jardiner-malin.fr/fiche/ciboulette.html">ciboulette</a>, <a href="https://www.jardiner-malin.fr/fiche/ciboule-semis-culture-cive.html">ciboule</a>, <a href="https://www.jardiner-malin.fr/fiche/basilic.html">basilic</a>... Dégustez ces fleurs dans vos salades estivales.</p> <p><strong>ORNEMENT :</strong> 2e jour pour récolter la <a href="https://www.jardiner-malin.fr/fiche/lavande.html">lavande</a> / C'est le moment de prélever des boutures herbacées de nombreux arbustes à fleurs (<a href="https://www.jardiner-malin.fr/fiche/laurier-rose.html">laurier-rose</a>, <a href="https://www.jardiner-malin.fr/fiche/althea.html">althéa</a>, <a href="https://www.jardiner-malin.fr/fiche/buddleia.html">buddléia</a>, azalées caduques, <a href="https://www.jardiner-malin.fr/fiche/caryopteris.html">caryoptéris</a>, <a href="https://www.jardiner-malin.fr/fiche/ceanothe.html">céanothe</a>, <a href="https://www.jardiner-malin.fr/fiche/ciste-cistus.html">ciste</a>, <a href="https://www.jardiner-malin.fr/fiche/fuchsia-planter-floraison.html">fuchsia</a>, <a href="https://www.jardiner-malin.fr/fiche/forsythia-entretien-taille.html">forsythia</a>...) ; à placer vos <a href="https://www.jardiner-malin.fr/fiche/bouturage-a-l-etouffee.html">boutures à l'étouffée</a> pour de meilleures chances de succès / <a href="https://www.jardiner-malin.fr/fiche/taille-arbuste-a-fleurs.html">Taillez les arbustes qui ont terminé leur floraison</a> et les rosiers non remontants défleuris / Du côté des grimpantes, raccourcissez de moitié les tiges de la <a href="https://www.jardiner-malin.fr/fiche/glycine-taille-entretien.html">glycine</a> et taillez les <a href="https://www.jardiner-malin.fr/fiche/clematite.html">clématites</a> / Repiquez les semis de bisannuelles et de plantes vivaces réalisés fin mai.</p> <p>&nbsp;</p> <p>&nbsp;</p> <p>&nbsp;</p> </div></div><div class="calendrier-content__line"><div class="calendrier-content__j"><div class="calendrier-content__jn">17 juillet</div><div class="calendrier-content__jt"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E" width="35" height="40" data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-feuilles.pn<img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-feuilles.png" width="35" height="40Jour feuilles <span class="calendrier-content__jp">(à partir de 3h57)</span></div><div class="calendrier-content__jlm"><img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunedescendante.png" width="35" height="40">Lune descendante</div><div class="calendrier-content__jl"></div><div class="calendrier-content__je">Ephéméride : Charlotte</div></div> <div class="calendrier-content__d"><p><strong>POTAGER :</strong> Eclaircissez les semis de <a href="https://www.jardiner-malin.fr/fiche/chou.html">choux</a> et de <a href="https://www.jardiner-malin.fr/fiche/laitue-ete.html">salades réalisés fin juin ou début juillet</a> / Repiquez le <a href="https://www.jardiner-malin.fr/fiche/celeri.html">céleri-branche</a> / Repiquez les choux semés fin mai ou début juin / Plantez l'<a href="https://www.jardiner-malin.fr/fiche/oseille.html">oseille</a>.</p> <p><strong>ORNEMENT :</strong> <a href="https://www.jardiner-malin.fr/fiche/preparer-sol-avant-semis.html">Préparez le sol</a> dans les endroits du jardin où vous envisagez de semer du gazon en septembre.</p> </div></div><div class="calendrier-content__line"><div class="calendrier-content__j"><div class="calendrier-content__jn">18 juillet</div><div class="calendrier-content__jt"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E" width="35" height="40" data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-feuilles.pn<img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-feuilles.png" width="35" height="40Jour feuilles</div><div class="calendrier-content__jlm"><img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunedescendante.png" width="35" height="40">Lune descendante</div><div class="calendrier-content__jl"></div><div class="calendrier-content__je">Ephéméride : Frédéric</div></div> <div class="calendrier-content__d"><p><strong>POTAGER :</strong> 2e jour pour éclaircir les semis de <a href="https://www.jardiner-malin.fr/fiche/chou.html">choux</a> et de <a href="https://www.jardiner-malin.fr/fiche/laitue-ete.html">salades réalisés fin juin ou début juillet</a> / Repiquez le <a href="https://www.jardiner-malin.fr/fiche/celeri.html">céleri-branche</a> / Repiquez les choux semés fin mai ou début juin / Plantez l'<a href="https://www.jardiner-malin.fr/fiche/oseille.html">oseille</a>.</p> <p><strong>ORNEMENT :</strong> 2e jour pour <a href="https://www.jardiner-malin.fr/fiche/preparer-sol-avant-semis.html">préparer le sol</a> dans les endroits du jardin où vous envisagez de semer du gazon en septembre.</p> <p>&nbsp;</p> </div></div><div class="calendrier-content__line current"><div class="calendrier-content__j"><div class="calendrier-content__jn">19 juillet</div><div class="calendrier-content__jt"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E" width="35" height="40" data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fruits.pn<img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fruits.png" width="35" height="40Jour fruits <span class="calendrier-content__jp">(à partir de 4h32)</span></div><div class="calendrier-content__jlm"><img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunedescendante.png" width="35" height="40">Lune descendante <span class="calendrier-content__jp">()</span></div><div class="calendrier-content__jl"></div><div class="calendrier-content__je">Ephéméride : Arsène</div></div> <div class="calendrier-content__d"><p>Ce vendredi 19 juillet 2024, avant 12h57, en lune descendante :</p> <p><strong>VERGER :</strong> Brève occasion de <a href="https://www.jardiner-malin.fr/jardiner-tv/tailler-un-framboisier.html">tailler les framboisiers</a> non remontants, en coupant au ras du sol les cannes ayant donné des fruits / Pincez la <a href="https://www.jardiner-malin.fr/fiche/vigne.html">vigne</a> et effeuillez-la éventuellement pour que les grappes soient bien exposées au soleil / Il est encore temps de <a href="https://www.jardiner-malin.fr/fiche/taille-pommier-poirier-espalier.html">tailler en vert les pommiers et poiriers en espalier</a> trop vigoureux / Taillez le <a href="https://www.jardiner-malin.fr/fiche/kiwi.html">kiwi - actinidia</a>, afin de contenir sa végétation souvent très vigoureuse / En cette saison, vous pouvez aussi planter un <a href="https://www.jardiner-malin.fr/fiche/abricotier.html">abricotier</a> acheté en conteneur, à condition de bien arroser tout au long de l'été.</p> <p><strong>POTAGER :</strong> Taillez les <a href="https://www.jardiner-malin.fr/fiche/culture-concombre.html">concombres</a>, <a href="https://www.jardiner-malin.fr/fiche/poivron-piment.html">poivrons et piments</a>, <a href="https://www.jardiner-malin.fr/fiche/aubergine.html">aubergines</a>, <a href="https://www.jardiner-malin.fr/jardiner-tv/cultiver-des-courges-potiron-citrouille-autres-courges.html">courges</a> et <a href="https://www.jardiner-malin.fr/fiche/culture-potiron.html">potirons</a> (pour ces deux derniers, raccourcissez les tiges trop longues ou qui ne portent ni fleurs, ni fruits) / Supprimez les <a href="https://www.jardiner-malin.fr/fiche/gourmands-tomates-enlever-garder.html">gourmands des pieds de tomates</a> / Anticipez vos futures <a href="https://www.jardiner-malin.fr/fiche/planter-fraisier.html">plantations de fraisiers</a> : enrichissez le sol dès maintenant avec du compost.</p> <p>Après 12h57, passage en lune montante :</p> <p><strong>POTAGER :</strong> Dans le midi, semez encore des haricots nains / Récoltez les haricots à écosser.</p> <p><strong>VERGER :</strong> Greffez en écusson les fruitiers à pépins (<a href="https://www.jardiner-malin.fr/fiche/entretien-pommier.html">pommiers</a>, <a href="https://www.jardiner-malin.fr/fiche/poirier.html">poiriers</a>, <a href="https://www.jardiner-malin.fr/fiche/cognassier-coing.html">cognassiers</a>) et à noyaux (<a href="https://www.jardiner-malin.fr/fiche/prunier.html">pruniers</a>, <a href="https://www.jardiner-malin.fr/fiche/abricotier.html">abricotiers</a>, <a href="https://www.jardiner-malin.fr/fiche/pecher.html">pêchers</a>, <a href="https://www.jardiner-malin.fr/fiche/amandier-taille-plantation.html">amandiers</a>, <a href="https://www.jardiner-malin.fr/fiche/cerisier.html">cerisiers</a>) / Récoltez cerises, groseilles, abricots.</p> </div></div><div class="calendrier-content__line"><div class="calendrier-content__j"><div class="calendrier-content__jn">20 juillet</div><div class="calendrier-content__jt"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E" width="35" height="40" data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fruits.pn<img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fruits.png" width="35" height="40Jour fruits</div><div class="calendrier-content__jlm"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E" width="35" height="40" data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.pn<img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png" width="35" height="40Lune montante</div><div class="calendrier-content__jl"></div><div class="calendrier-content__je">Ephéméride : Marina</div></div> <div class="calendrier-content__d"><p><strong>POTAGER :</strong> 2e jour pour, dans le midi, semer encore des haricots nains / Récoltez les haricots à écosser.</p> <p><strong>VERGER :</strong> 2e jour pour greffer en écusson les fruitiers à pépins (<a href="https://www.jardiner-malin.fr/fiche/entretien-pommier.html">pommiers</a>, <a href="https://www.jardiner-malin.fr/fiche/poirier.html">poiriers</a>, <a href="https://www.jardiner-malin.fr/fiche/cognassier-coing.html">cognassiers</a>) et à noyaux (<a href="https://www.jardiner-malin.fr/fiche/prunier.html">pruniers</a>, <a href="https://www.jardiner-malin.fr/fiche/abricotier.html">abricotiers</a>, <a href="https://www.jardiner-malin.fr/fiche/pecher.html">pêchers</a>, <a href="https://www.jardiner-malin.fr/fiche/amandier-taille-plantation.html">amandiers</a>, <a href="https://www.jardiner-malin.fr/fiche/cerisier.html">cerisiers</a>) / Récoltez cerises, groseilles, abricots.</p> </div></div><div class="calendrier-content__line"><div class="calendrier-content__j"><div class="calendrier-content__jn">21 juillet</div><div class="calendrier-content__jt"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E" width="35" height="40" data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fruits.pn<img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fruits.png" width="35" height="40Jour fruits <span class="calendrier-content__jp">(jusqu'à 12h06)</span></div><div class="calendrier-content__jlm"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E" width="35" height="40" data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.pn<img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png" width="35" height="40Lune montante</div><div class="calendrier-content__jl"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E" width="35" height="40" data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-pleinelune.pn<img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-pleinelune.png" width="35" height="40Pleine lune <span class="calendrier-content__jp">(12h17)</span></div><div class="calendrier-content__je">Ephéméride : Victor</div></div> <div class="calendrier-content__d"><p>Ce dimanche 21 juillet 2024, avant 12h06, en jour fruits et graines :</p> <p><strong>POTAGER :</strong> 3e jour pour, dans le midi, semer encore des haricots nains / Récoltez les haricots à écosser.</p> <p><strong>VERGER :</strong> 3e jour pour greffer en écusson les fruitiers à pépins(<a href="https://www.jardiner-malin.fr/fiche/entretien-pommier.html">pommiers</a>, <a href="https://www.jardiner-malin.fr/fiche/poirier.html">poiriers</a>, <a href="https://www.jardiner-malin.fr/fiche/cognassier-coing.html">cognassiers</a>) et à noyaux (<a href="https://www.jardiner-malin.fr/fiche/prunier.html">pruniers</a>, <a href="https://www.jardiner-malin.fr/fiche/abricotier.html">abricotiers</a>, <a href="https://www.jardiner-malin.fr/fiche/pecher.html">pêchers</a>, <a href="https://www.jardiner-malin.fr/fiche/amandier-taille-plantation.html">amandiers</a>, <a href="https://www.jardiner-malin.fr/fiche/cerisier.html">cerisiers</a>) / Récoltez cerises, groseilles, abricots.</p> <p>Après 12h06, passage en jour racines :</p> <p><strong>POTAGER :</strong> Semez des <a href="https://www.jardiner-malin.fr/fiche/navet.html">navets</a> et des <a href="https://www.jardiner-malin.fr/fiche/carotte.html">carottes</a> pour l'hiver / Semez aussi le <a href="https://www.jardiner-malin.fr/fiche/chou-rave.html">chou-rave</a> et éventuellement des <a href="https://www.jardiner-malin.fr/fiche/radis.html">radis</a> de tous les mois / En principe, il est un peu tard pour semer des <a href="https://www.jardiner-malin.fr/fiche/betterave.html">betteraves</a>, mais les retardataires peuvent tenter un dernier semis, à condition de soigner les apports d'eau et de prévoir un paillage.</p> </div></div><div class="calendrier-content__line"><div class="calendrier-content__j"><div class="calendrier-content__jn">22 juillet</div><div class="calendrier-content__jt"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E" width="35" height="40" data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-racines.pn<img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-racines.png" width="35" height="40Jour racines</div><div class="calendrier-content__jlm"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E" width="35" height="40" data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.pn<img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png" width="35" height="40Lune montante</div><div class="calendrier-content__jl"></div><div class="calendrier-content__je">Ephéméride : Marie-Madeleine</div></div> <div class="calendrier-content__d"><p><strong>POTAGER :</strong> 2e jour pour semer des&nbsp;<a href="https://www.jardiner-malin.fr/fiche/navet.html">navets</a> et des <a href="https://www.jardiner-malin.fr/fiche/carotte.html">carottes</a> pour l'hiver / Semez aussi le <a href="https://www.jardiner-malin.fr/fiche/chou-rave.html">chou-rave</a> et éventuellement des <a href="https://www.jardiner-malin.fr/fiche/radis.html">radis</a> de tous les mois / En principe, il est un peu tard pour semer des <a href="https://www.jardiner-malin.fr/fiche/betterave.html">betteraves</a>, mais les retardataires peuvent tenter un dernier semis, à condition de soigner les apports d'eau et de prévoir un paillage.</p> </div></div><div style="min-height:280px; margin: auto;"><div id="optidigital-adslot-Content_3" class="Content_3" style="display: none;"></div><div id="optidigital-adslot-Mobile_Pos3" class="Mobile_Pos3" style="display: none;"></div></div><div class="calendrier-content__line"><div class="calendrier-content__j"><div class="calendrier-content__jn">23 juillet</div><div class="calendrier-content__jt"><img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fleurs.png" width="35" height="40">Jour fleurs <span class="calendrier-content__jp">(à partir de 9h48)</span></div><div class="calendrier-content__jlm"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E" width="35" height="40" data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.pn<img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png" width="35" height="40Lune montante</div><div class="calendrier-content__jl"></div><div class="calendrier-content__je">Ephéméride : Brigitte</div></div> <div class="calendrier-content__d"><p>Ce mardi 23 juillet 2024, avant 9h48, en jour racine :</p> <p><strong>POTAGER :</strong> 3e jour pour semer des <a href="https://www.jardiner-malin.fr/fiche/navet.html">navets</a> et des <a href="https://www.jardiner-malin.fr/fiche/carotte.html">carottes</a> pour l'hiver / Semez aussi le <a href="https://www.jardiner-malin.fr/fiche/chou-rave.html">chou-rave</a> et éventuellement des <a href="https://www.jardiner-malin.fr/fiche/radis.html">radis</a> de tous les mois / En principe, il est un peu tard pour semer des <a href="https://www.jardiner-malin.fr/fiche/betterave.html">betteraves</a>, mais les retardataires peuvent tenter un dernier semis, à condition de soigner les apports d'eau et de prévoir un paillage.</p> <p>Après 9h48, passage en jour fleurs :</p> <p><strong>ORNEMENT :</strong> Semez des <a href="https://www.jardiner-malin.fr/fiche/lupin.html">lupins</a> vivaces directement en place / Semez en pépinière les vivaces (<a href="https://www.jardiner-malin.fr/fiche/paillis-de-lin.html">lin</a>, <a href="https://www.jardiner-malin.fr/fiche/ancolie.html">ancolie</a>, <a href="https://www.jardiner-malin.fr/fiche/agastache.html">agastaches</a>) et les bisannuelles (pensées, pâquerettes, giroflée ravenelle, oeillets, myosotis, violas, pavots) / Récoltez le tilleul, équeutez-le et laissez-le sécher à l'ombre / C'est le moment de <a href="https://www.jardiner-malin.fr/fiche/greffage-du-rosier-greffer-en-ecusson.html">greffer en écusson</a> les <a href="https://www.jardiner-malin.fr/fiche/eglantier.html">églantiers</a>, afin de reproduire vos rosiers préférés.</p> <p><strong>POTAGER :</strong> Semez la <a href="https://www.jardiner-malin.fr/fiche/la-phacelie-un-formidable-engrais-vert.html">phacélie comme engrais vert</a> sur les parcelles nues du potager.</p> </div></div><div class="calendrier-content__line"><div class="calendrier-content__j"><div class="calendrier-content__jn">24 juillet</div><div class="calendrier-content__jt"><img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fleurs.png" width="35" height="40">Jour fleurs</div><div class="calendrier-content__jlm"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E" width="35" height="40" data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.pn<img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png" width="35" height="40Lune montante</div><div class="calendrier-content__jl"></div><div class="calendrier-content__je">Ephéméride : Christine</div></div> <div class="calendrier-content__d"><p>Ne jardinez pas avant 12h40 (lune en périgée à 7h40)</p> <p><strong>ORNEMENT :</strong> 2e jour pour semer des lupins vivaces directement en place / Semez en pépinière les vivaces (lin, ancolie, agastaches) et les bisannuelles (pensées, pâquerettes, giroflée ravenelle, oeillets, myosotis, violas, pavots) / Récoltez le tilleul, équeutez-le et laissez-le sécher à l'ombre / C'est le moment de greffer en écusson les églantiers, afin de reproduire vos rosiers préférés.</p> <p><strong>POTAGER :</strong> 2e jour pour semer la phacélie sur les parcelles nues du potager.</p> </div></div><div class="calendrier-content__line"><div class="calendrier-content__j"><div class="calendrier-content__jn">25 juillet</div><div class="calendrier-content__jt"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E" width="35" height="40" data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-feuilles.pn<img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-feuilles.png" width="35" height="40Jour feuilles <span class="calendrier-content__jp">(à partir de 8h20)</span></div><div class="calendrier-content__jlm"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E" width="35" height="40" data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.pn<img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png" width="35" height="40Lune montante</div><div class="calendrier-content__jl"></div><div class="calendrier-content__je">Ephéméride : Jacques</div></div> <div class="calendrier-content__d"><p>Ce jeudi 25 juillet 2024, avant 8h20, en jour fleurs :</p> <p><strong>ORNEMENT :</strong> 3e jour pour semer des <a href="https://www.jardiner-malin.fr/fiche/lupin.html">lupins</a> vivaces directement en place / Semez en pépinière les vivaces (<a href="https://www.jardiner-malin.fr/fiche/paillis-de-lin.html">lin</a>, <a href="https://www.jardiner-malin.fr/fiche/ancolie.html">ancolie</a>, <a href="https://www.jardiner-malin.fr/fiche/agastache.html">agastaches</a>) et les bisannuelles (pensées, pâquerettes, <a href="https://www.jardiner-malin.fr/fiche/giroflee-ravenelle-entretien-semis.html">giroflée ravenelle</a>, <a href="https://www.jardiner-malin.fr/fiche/oeillet.html">oeillets</a>, <a href="https://www.jardiner-malin.fr/fiche/myosotis-arrosage-planter-semer.html">myosotis</a>, <a href="https://www.jardiner-malin.fr/fiche/violette.html">violas</a>, <a href="https://www.jardiner-malin.fr/fiche/pavot-coquelicot-planter-semer.html">pavots</a>) / Récoltez le <a href="https://www.jardiner-malin.fr/fiche/tilleul.html">tilleul</a>, équeutez-le et laissez-le sécher à l'ombre / C'est le moment de <a href="https://www.jardiner-malin.fr/fiche/greffage-du-rosier-greffer-en-ecusson.html">greffer en écusson</a> les <a href="https://www.jardiner-malin.fr/fiche/eglantier.html">églantiers</a>, afin de reproduire vos rosiers préférés.</p> <p><strong>POTAGER :</strong> 3e jour pour semer la <a href="https://www.jardiner-malin.fr/fiche/la-phacelie-un-formidable-engrais-vert.html">phacélie comme engrais vert</a>&nbsp;sur les parcelles nues du potager.</p> <p>Après 8h20, passage en jour feuilles :</p> <p><strong>POTAGER :</strong> Semez des salades pour l'automne (<a href="https://www.jardiner-malin.fr/fiche/mache.html">mâche</a>, <a href="https://www.jardiner-malin.fr/fiche/laitue.html">laitues à couper</a>, laitues romaines et pommées d'automne, <a href="https://www.jardiner-malin.fr/fiche/scarole.html">scaroles</a> et <a href="https://www.jardiner-malin.fr/fiche/endive-culture-forcage.html">chicorées</a>), du pourpier doré, du pourpier d'hiver (moins connu, appelé aussi claytone de Cuba), du <a href="https://www.jardiner-malin.fr/fiche/chou-chinois.html">chou chinois</a> à récolter à l'automne, de l'arroche ou encore l'étonnant cresson de Para / Semez des <a href="https://www.jardiner-malin.fr/fiche/culture-epinard.html">épinards</a> / Semez les engrais verts tels que <a href="https://www.jardiner-malin.fr/fiche/trefle-engrais-vert.html">luzerne</a>, mélilot, <a href="https://www.jardiner-malin.fr/fiche/trefle-engrais-vert.html">trèfle</a>, <a href="https://www.jardiner-malin.fr/fiche/moutarde-blanche.html">moutarde</a>, <a href="https://www.jardiner-malin.fr/fiche/sarrasin.html">sarrasin</a>, fenugrec, colza fourrager…</p> </div></div><div class="calendrier-content__line"><div class="calendrier-content__j"><div class="calendrier-content__jn">26 juillet</div><div class="calendrier-content__jt"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E" width="35" height="40" data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-feuilles.pn<img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-feuilles.png" width="35" height="40Jour feuilles</div><div class="calendrier-content__jlm"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E" width="35" height="40" data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.pn<img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png" width="35" height="40Lune montante</div><div class="calendrier-content__jl"></div><div class="calendrier-content__je">Ephéméride : Anne, Joachim</div></div> <div class="calendrier-content__d"><p>Ne jardinez pas avant 12h35 (noeud lunaire à 7h32)</p> <p><strong>POTAGER :</strong> 2e jour pour semer des salades pour l'automne (<a href="https://www.jardiner-malin.fr/fiche/mache.html">mâche</a>, <a href="https://www.jardiner-malin.fr/fiche/laitue.html">laitues à couper</a>, laitues romaines et pommées d'automne, <a href="https://www.jardiner-malin.fr/fiche/scarole.html">scaroles</a> et <a href="https://www.jardiner-malin.fr/fiche/endive-culture-forcage.html">chicorées</a>), du pourpier doré, du pourpier d'hiver (moins connu, appelé aussi claytone de Cuba), du <a href="https://www.jardiner-malin.fr/fiche/chou-chinois.html">chou chinois</a> à récolter à l'automne, de l'arroche ou encore l'étonnant cresson de Para / Semez des <a href="https://www.jardiner-malin.fr/fiche/culture-epinard.html">épinards</a> / Semez les engrais verts tels que <a href="https://www.jardiner-malin.fr/fiche/trefle-engrais-vert.html">luzerne</a>, mélilot, <a href="https://www.jardiner-malin.fr/fiche/trefle-engrais-vert.html">trèfle</a>, <a href="https://www.jardiner-malin.fr/fiche/moutarde-blanche.html">moutarde</a>, <a href="https://www.jardiner-malin.fr/fiche/sarrasin.html">sarrasin</a>, fenugrec, colza fourrager…</p> </div></div><div class="calendrier-content__line"><div class="calendrier-content__j"><div class="calendrier-content__jn">27 juillet</div><div class="calendrier-content__jt"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E" width="35" height="40" data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-feuilles.pn<img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-feuilles.png" width="35" height="40Jour feuilles <span class="calendrier-content__jp">(jusqu'à 18h55)</span></div><div class="calendrier-content__jlm"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E" width="35" height="40" data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.pn<img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png" width="35" height="40Lune montante</div><div class="calendrier-content__jl"></div><div class="calendrier-content__je">Ephéméride : Nathalie</div></div> <div class="calendrier-content__d"><p>Avant 18h55, en jour feuilles :</p> <p><strong>POTAGER :</strong> 3e jour pour semer des salades pour l'automne (<a href="https://www.jardiner-malin.fr/fiche/mache.html">mâche</a>, <a href="https://www.jardiner-malin.fr/fiche/laitue.html">laitues à couper</a>, laitues romaines et pommées d'automne, <a href="https://www.jardiner-malin.fr/fiche/scarole.html">scaroles</a> et <a href="https://www.jardiner-malin.fr/fiche/endive-culture-forcage.html">chicorées</a>), du pourpier doré, du pourpier d'hiver (moins connu, appelé aussi claytone de Cuba), du <a href="https://www.jardiner-malin.fr/fiche/chou-chinois.html">chou chinois</a> à récolter à l'automne, de l'arroche ou encore l'étonnant cresson de Para / Semez des <a href="https://www.jardiner-malin.fr/fiche/culture-epinard.html">épinards</a> / Semez les engrais verts tels que <a href="https://www.jardiner-malin.fr/fiche/trefle-engrais-vert.html">luzerne</a>, mélilot, <a href="https://www.jardiner-malin.fr/fiche/trefle-engrais-vert.html">trèfle</a>, <a href="https://www.jardiner-malin.fr/fiche/moutarde-blanche.html">moutarde</a>, <a href="https://www.jardiner-malin.fr/fiche/sarrasin.html">sarrasin</a>, fenugrec, colza fourrager…</p> <p>Après 18h55, passage en jour fruits et graines :</p> <p><strong>VERGER :</strong> Continuez la <a href="https://www.jardiner-malin.fr/fiche/greffage.html">greffe en écusson des fruitiers à pépins</a> (pommiers, poiriers, cognassiers) et à noyaux (pruniers, abricotiers, pêchers, amandiers, cerisiers).</p> <p><strong>POTAGER :</strong> Récoltez les <a href="https://www.jardiner-malin.fr/fiche/culture-tomate.html">tomates</a>, <a href="https://www.jardiner-malin.fr/fiche/culture-melon.html">melons</a>, <a href="https://www.jardiner-malin.fr/fiche/pasteque.html">pastèques</a>, haricots grains et haricots <a href="https://www.jardiner-malin.fr/fiche/pois-gourmand-mangetout-culture.html">mangetout</a>, fraises et framboises / Dans le midi, semez encore des haricots nains / Récoltez les haricots à grains à consommer frais ou à faire sécher (attachez-les en bottes suspendues dans un lieu bien aéré) / <a href="https://www.jardiner-malin.fr/fiche/recolter-graines-conservation.html">Récoltez les graines de tomates pour vos semences</a>.</p> </div></div><div class="calendrier-content__line"><div class="calendrier-content__j"><div class="calendrier-content__jn">28 juillet</div><div class="calendrier-content__jt"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E" width="35" height="40" data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fruits.pn<img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fruits.png" width="35" height="40Jour fruits <span class="calendrier-content__jp">(à partir de 0h20)</span></div><div class="calendrier-content__jlm"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E" width="35" height="40" data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.pn<img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png" width="35" height="40Lune montante</div><div class="calendrier-content__jl"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E" width="35" height="40" data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-dernierquartier.pn<img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-dernierquartier.png" width="35" height="40Dernier quartier <span class="calendrier-content__jp">(4h51)</span></div><div class="calendrier-content__je">Ephéméride : Samson</div></div> <div class="calendrier-content__d"><p><strong>VERGER :</strong> 2e jour pour continuer la <a href="https://www.jardiner-malin.fr/fiche/greffage.html">greffe en écusson des fruitiers à pépins</a> (pommiers, poiriers, cognassiers) et à noyaux (pruniers, abricotiers, pêchers, amandiers, cerisiers).</p> <p><strong>POTAGER :</strong> 2e jour pour récolter les <a href="https://www.jardiner-malin.fr/fiche/culture-tomate.html">tomates</a>, <a href="https://www.jardiner-malin.fr/fiche/culture-melon.html">melons</a>, <a href="https://www.jardiner-malin.fr/fiche/pasteque.html">pastèques</a>, haricots grains et haricots <a href="https://www.jardiner-malin.fr/fiche/pois-gourmand-mangetout-culture.html">mangetout</a>, fraises et framboises / Dans le midi, semez encore des haricots nains / Récoltez les haricots à grains à consommer frais ou à faire sécher (attachez-les en bottes suspendues dans un lieu bien aéré) / <a href="https://www.jardiner-malin.fr/fiche/recolter-graines-conservation.html">Récoltez les graines de tomates pour vos semences</a>.</p> </div></div><div class="calendrier-content__line"><div class="calendrier-content__j"><div class="calendrier-content__jn">29 juillet</div><div class="calendrier-content__jt"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E" width="35" height="40" data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fruits.pn<img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fruits.png" width="35" height="40Jour fruits <span class="calendrier-content__jp">(jusqu'à 16h21)</span></div><div class="calendrier-content__jlm"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E" width="35" height="40" data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.pn<img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png" width="35" height="40Lune montante</div><div class="calendrier-content__jl"></div><div class="calendrier-content__je">Ephéméride : Marthe</div></div> <div class="calendrier-content__d"><p>Ce lundi 29 juillet 2024, avant 16h21, en jour fruits et graines :</p> <p><strong>VERGER :</strong> 3e jour pour continuer la <a href="https://www.jardiner-malin.fr/fiche/greffage.html">greffe en écusson des fruitiers à pépins</a> (pommiers, poiriers, cognassiers) et à noyaux (pruniers, abricotiers, pêchers, amandiers, cerisiers</p> <p><strong>POTAGER :</strong> 3e jour pour récolter les <a href="https://www.jardiner-malin.fr/fiche/culture-tomate.html">tomates</a>, <a href="https://www.jardiner-malin.fr/fiche/culture-melon.html">melons</a>, <a href="https://www.jardiner-malin.fr/fiche/pasteque.html">pastèques</a>, haricots grains et haricots <a href="https://www.jardiner-malin.fr/fiche/pois-gourmand-mangetout-culture.html">mangetout</a>, fraises et framboises / Dans le midi, semez encore des haricots nains / Récoltez les haricots à grains à consommer frais ou à faire sécher (attachez-les en bottes suspendues dans un lieu bien aéré) / <a href="https://www.jardiner-malin.fr/fiche/recolter-graines-conservation.html">Récoltez les graines de tomates pour vos semences</a>.</p> <p>Après 16h21, passage en jour racines :</p> <p><strong>POTAGER :</strong> En région douce et en pépinière, semez des <a href="https://www.jardiner-malin.fr/fiche/oignon-blanc-ou-nouveau-culture.html">oignons blancs</a> (à repiquer en octobre pour une récolte en mars-avril) et des <a href="https://www.jardiner-malin.fr/fiche/oignon.html">oignons de couleur</a> (notamment dans le Midi pour ceux-ci) / Il est encore temps de semer des radis asiatiques, et des radis-raves de couleur / Essayez un semis de <a href="https://www.jardiner-malin.fr/fiche/scorsonere.html">scorsonère</a> : en semant en ce moment, vous récolterez en fin d'été l'année prochaine (alors qu'en semant en mars-avril, on récolte d'octobre à mars).</p> <p>&nbsp;</p> <p>&nbsp;</p> <p>&nbsp;</p> </div></div><div class="calendrier-content__line"><div class="calendrier-content__j"><div class="calendrier-content__jn">30 juillet</div><div class="calendrier-content__jt"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E" width="35" height="40" data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-racines.pn<img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-racines.png" width="35" height="40Jour racines</div><div class="calendrier-content__jlm"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E" width="35" height="40" data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.pn<img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png" width="35" height="40Lune montante</div><div class="calendrier-content__jl"></div><div class="calendrier-content__je">Ephéméride : Juliette</div></div> <div class="calendrier-content__d"><p><strong>POTAGER :</strong> 2e jour pour, en région douce et en pépinière, semer des oignons blancs (à repiquer en octobre pour une récolte en mars-avril) et des oignons de couleur (notamment dans le Midi pour ceux-ci) / Il est encore temps de semer des radis asiatiques, et des radis-raves de couleur / Essayez un semis de scorsonère : en semant en ce moment, vous récolterez en fin d'été l'année prochaine (alors qu'en semant en mars-avril, on récolte d'octobre à mars).</p> </div></div><div class="calendrier-content__line"><div class="calendrier-content__j"><div class="calendrier-content__jn">31 juillet</div><div class="calendrier-content__jt"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E" width="35" height="40" data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-racines.pn<img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-racines.png" width="35" height="40Jour racines</div><div class="calendrier-content__jlm"><img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E" width="35" height="40" data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.pn<img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png" width="35" height="40Lune montante</div><div class="calendrier-content__jl"></div><div class="calendrier-content__je">Ephéméride : Ignace de L.</div></div> <div class="calendrier-content__d"><p>Ce mercredi, dernier jour de juillet 2024,</p> <p><strong>POTAGER :</strong> 3e jour pour, en région douce et en pépinière, semer des <a href="https://www.jardiner-malin.fr/fiche/oignon-blanc-ou-nouveau-culture.html">oignons blancs</a> (à repiquer en octobre pour une récolte en mars-avril) et des <a href="https://www.jardiner-malin.fr/fiche/oignon.html">oignons de couleur</a> (notamment dans le Midi pour ceux-ci) / Il est encore temps de semer des radis asiatiques, et des radis-raves de couleur / Essayez un semis de <a href="https://www.jardiner-malin.fr/fiche/scorsonere.html">scorsonère</a> : en semant en ce moment, vous récolterez en fin d'été l'année prochaine (alors qu'en semant en mars-avril, on récolte d'octobre à mars).</p> </div>
+  <div data-tabs-target="tab" id="janvier" class="bg-warning d-flex justify-content-center">
   </div>
+  <div data-tabs-target="tab" id="fevrier" class="bg-warning d-flex justify-content-center">
+  </div>
+  <div data-tabs-target="tab" id="mars" class="bg-warning d-flex justify-content-center">
+  </div>
+  <div data-tabs-target="tab" id="avril" class="bg-warning d-flex justify-content-center">
+  </div>
+  <div data-tabs-target="tab" id="mai" class="bg-warning d-flex justify-content-center">
+  </div>
+  <div data-tabs-target="tab" id="juin" class="bg-warning d-flex justify-content-center">
+  </div>
+  <div data-tabs-target="tab" id="juillet" class="p-3 bg-warning m-auto" style="width:80%;">
+    <div class="calendrier-content__line p-3 bg-danger m-3" style="border-radius:15px;">
+      <div class="calendrier-content__j">
+        <div class="calendrier-content__jn text-center">
+          <strong>Lundi 01 Juillet</strong>
+        </div>
+        <div class="calendrier-content__jt">
+          <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fruits.png" width="35"
+            height="40">
+          Jour fruits
+        </div>
+        <div class="calendrier-content__jlm">
+          <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png"
+            width="35" height="40">
+          Lune montante
+        </div>
+        <div class="calendrier-content__jl">
+        </div>
+        <div class="calendrier-content__je">
+          <%# Ephéméride : Thierry %>
+        </div>
+      </div>
+      <div class="calendrier-content__d">
+        <p><strong>POTAGER :</strong> 2e jour pour récolter les groseilles, framboises, fraises, cerises / Si vous ne l'avez pas déjà fait, semez des courgettes pour la production
+          d'arrière-saison, des concombres, des cornichons, des pastèques, des melons, des courges, à raison de 3-4 graines par poquet, dans un sol
+          enrichi avec du compost mûr, et que vous
+          maintiendrez humide jusqu'à la levée ; vous éclaircirez ensuite en ne conservant que le plus beau plant de
+          chaque poquet / De même, il est encore temps de semer le maïs doux et les haricots de toutes variétés, ainsi que des pois
+          à grains ridés et des pois chiches, des fèves / Semez des coloquintes pour la décoration / Semez des
+          variétés de fraisiers anciens souvent impossibles à trouver en plants (semez clair, enterrez les graines sous 5 mm de terreau léger et tamisé ; comptez 2 mois pour la levée ; les jeunes plantules seront alors à repiquer en godets).</p>
+        <p>
+          <strong>VERGER :</strong> 2e jour pour greffer en écusson : pommiers, poiriers, pruniers.
+        </p>
+      </div>
+      </div>
+      <div class="calendrier-content__line p-3 bg-danger m-3" style="border-radius:15px;">
+        <div class="calendrier-content__j">
+          <div class="calendrier-content__jn text-center"><strong>Mardi 02 juillet</strong></div>
+          <div class="calendrier-content__jt">
+            <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-racines.png" width="35"
+              height="40">Jour racines
+            <span class="calendrier-content__jp">(à partir de 10h42)</span>
+          </div>
+          <div class="calendrier-content__jlm">
+            <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png"
+              width="35" height="40">Lune montante
+          </div>
+          <div class="calendrier-content__jl"></div>
+        </div>
+        <div class="calendrier-content__d">
+          <p>Ce mardi 2 juillet 2024, avant 10h42, en jour fruits et graines :</p>
+          <p>
+            <strong>POTAGER :</strong> 3e jour pour récolter les
+            groseilles,
+            framboises,
+            fraises,
+            cerises /
+            Si vous ne l'avez pas déjà fait,
+            semez des courgettes pour la production
+            d'arrière-saison,
+            des concombres, des cornichons,
+            des pastèques,
+            des melons,
+            des courges, à raison de 3-4 graines par poquet, dans
+            un sol enrichi avec du
+            compost mûr, et que vous maintiendrez humide
+            jusqu'à la levée ;
+            vous éclaircirez ensuite en ne conservant que le plus beau plant de chaque poquet /
+            De même, il est encore temps de semer le
+            maïs doux et les
+            haricots de toutes variétés, ainsi que des
+            pois à grains ridés et des pois chiches, des fèves /
+            Semez des coloquintes pour la décoration /
+            Semez des variétés de fraisiers anciens
+            souvent impossibles à trouver en plants (semez clair, enterrez les graines sous 5 mm de
+            terreau léger et tamisé ; comptez 2 mois pour
+            la levée ; les jeunes plantules seront alors à repiquer en godets).
+          </p>
+          <p>
+            <strong>VERGER :</strong> 3e jour pour
+            greffer en écusson
+            pommiers,
+            poiriers,
+            pruniers.
+          </p>
+          <p>Après 10h42, passage en jour racines :</p>
+          <p><strong>POTAGER :</strong> Semez des panais
+            et des carottes de conservation (récoltes
+            d'automne et d'hiver) / Semez des radis de tous les
+              mois et des radis d'hiver (radis
+            noirs, roses, violets, et les radis asiatiques) que vous éclaircirez à 15 cm après la levée / Semez des navets ronds à récolter jeunes et des navets
+            pour l'hiver, ainsi que des betteraves
+            tardives / Semez des rutabagas ou choux-navets, vous éclaircirez à 30 cm /
+            Semez des oignons
+              blancs primeurs et des oignons à confire (récolte 2 mois après le semis).</p>
+        </div>
+      </div>
 
-<h5 class="text-center mb-3">Légende</h5>
-<table class="m-auto mb-5">
-  <thead class="text-center">
-    <tr>
-      <th>Jour</th>
-      <th>Lune</th>
-      <th>Disque Lunaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td class="">
-        <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-defavorables.png" width="35" height="40"/>
-        <label>Défavorables</label>
-      </td>
-      <td class="">
-        <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunedescendante.png" width="35" height="40">
-        <label>Descendante</label>
-      </td>
-      <td class="">
-        <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-nouvellelune.png" width="35" height="40"/>
-        <label>Nouvelle lune</label>
-      </td>
-    </tr>
-    <tr>
-      <td class="">
-        <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-feuilles.png" width="35" height="40"/>
-        <label>Feuilles</label>
-      </td>
-      <td class="">
-        <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png" width="35" height="40"/>
-        <label>Montante</label>
-      </td>
-      <td class="">
-        <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-pleinelune.png" width="35" height="40"/>
-        <label>Pleine lune</label>
-      </td>
-    </tr>
-    <tr>
-      <td class="">
-        <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fleurs.png" width="35" height="40">
-        <label>Fleurs</label>
-      </td>
-      <td></td>
-      <td class="">
-        <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-premierquartier.png" width="35" height="40"/>
-        <label>Premier quartier</label>
-      </td>
-    </tr>
-    <tr>
-      <td class="">
-        <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fruits.png" width="35" height="40"/>
-        <label>Fruits et légumes</label>
-      </td>
-      <td></td>
-      <td class="">
-        <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-dernierquartier.png" width="35" height="40"/>
-        <label>Dernier quartier</label>
-      </td>
-        </tr>
-        <tr>
-      <td class="">
-        <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-racines.png" width="35" height="40"/>
-        <label>Racines</label>
-      </td>
-      <td></td>
-      <td class=""></td>
-    </tr>
-  </tbody>
-</table>
-<div class="d-flex flex-column w-75 m-auto">
-      <p class="">
-          * Les horaires de ce calendrier ne concernent que l’hémisphère Nord. Ils sont donnés en temps universel (T. U.), c’est à dire calculés à partir du méridien de Greenwich.
-      </p>
-      <p class="">
-        Selon la région dans laquelle vous vous trouvez, il faut ajouter ou retirer des minutes à l’heure indiquée pour obtenir votre propre «heure locale». Plus à l’ouest de cet axe, il faut retirer des minutes (-16 minutes à Brest par exemple), plus à l’est, il faut en ajouter (+32 minutes à Strasbourg par exemple).
-      </p>
-      <p class="">
-        Par ailleurs, il faut ajuster l’horaire indiqué dans ce calendrier à l’heure d’été ou à l’heure d’hiver : du 26 mars au 28 octobre (heure d’été), il faut ajouter 2 heures à l’horaire indiqué. Le reste de l’année, soit d’octobre à mars (heure d’hiver), il faut ajouter seulement 1 heure à l’horaire indiqué.
-      </p>
-      <p class="">
-        ** On considère qu’il faut éviter de jardiner 5 à 6h avant et après un noeud lunaire, un apogée, un périgée.
-      </p>
-</div>
-</div>
-<div data-tabs-target="tab" id="aout">
-</div>
-<div data-tabs-target="tab" id="septembre">
-</div>
-<div data-tabs-target="tab" id="octobre">
-</div>
-<div data-tabs-target="tab" id="novembre">
-</div>
-<div data-tabs-target="tab" id="decembre">
-</div>
-</div>
+      <div class="calendrier-content__line p-3 bg-danger m-3" style="border-radius:15px;">
+        <div class="calendrier-content__j">
+          <div class="calendrier-content__jn">03 juillet</div>
+          <div class="calendrier-content__jt">
+            <img
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E"
+              width="35" height="40"
+              data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-racines.png">
+            <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-racines.png" width="35"
+              height="40">Jour racines
+          </div>
+          <div class="calendrier-content__jlm">
+            <img
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E"
+              width="35" height="40"
+              data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png">
+            <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png"
+              width="35" height="40">Lune montante
+          </div>
+          <div class="calendrier-content__jl"></div>
+          <div class="calendrier-content__je">Ephéméride : Thomas</div>
+        </div>
+        <div class="calendrier-content__d">
+          <p><strong>POTAGER :</strong> 2e jour pour semer des panais et des carottes de conservation (récoltes d'automne
+            et d'hiver) / Semez des radis de tous les mois
+            et des radis d'hiver (radis noirs, roses,
+            violets, et les radis asiatiques) que vous éclaircirez à 15 cm après la levée / Semez des navets ronds à récolter jeunes et des navets
+            pour l'hiver, ainsi que des betteraves
+            tardives / Semez des rutabagas ou choux-navets, vous éclaircirez à 30 cm /
+            Semez des oignons
+              blancs primeurs et des oignons à confire (récolte 2 mois après le semis).</p>
+        </div>
+      </div>
+      <div class="calendrier-content__line p-3 bg-danger m-3" style="border-radius:15px;">
+        <div class="calendrier-content__j">
+          <div class="calendrier-content__jn">04 juillet</div>
+          <div class="calendrier-content__jt">
+            <img
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E"
+              width="35" height="40"
+              data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-racines.png">
+            <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-racines.png" width="35"
+              height="40">Jour racines
+          </div>
+          <div class="calendrier-content__jlm">
+            <img
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E"
+              width="35" height="40"
+              data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png">
+            <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png"
+              width="35" height="40">Lune montante
+          </div>
+          <div class="calendrier-content__jl"></div>
+          <div class="calendrier-content__je">Ephéméride : Florent</div>
+        </div>
+        <div class="calendrier-content__d">
+          <p><strong>POTAGER :</strong> 3e jour pour semer des panais et des carottes de conservation (récoltes d'automne
+            et d'hiver) / Semez des radis de tous les mois
+            et des radis d'hiver (radis noirs, roses,
+            violets, et les radis asiatiques) que vous éclaircirez à 15 cm après la levée / Semez des navets ronds à récolter jeunes et des navets
+            pour l'hiver, ainsi que des betteraves
+            tardives / Semez des rutabagas ou choux-navets, vous éclaircirez à 30 cm /
+            Semez des oignons
+              blancs primeurs et des oignons à confire (récolte 2 mois après le semis).</p>
+        </div>
+      </div>
+      <div class="calendrier-content__line p-3 bg-danger m-3" style="border-radius:15px;">
+        <div class="calendrier-content__j">
+          <div class="calendrier-content__jn">
+            05 juillet
+          </div>
+          <div class="calendrier-content__jt">
+            <img
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E"
+              width="35" height="40"
+              data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-racines.png">
+            <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-racines.png" width="35"
+              height="40">
+            Jour racines
+            <span class="calendrier-content__jp">
+              (jusqu'à 15h23)
+            </span>
+          </div>
+          <div class="calendrier-content__jlm">
+            <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunedescendante.png"
+              width="35" height="40">
+            Lune descendante
+            <span class="calendrier-content__jp">
+              ()
+            </span>
+          </div>
+          <div class="calendrier-content__jl">
+          </div>
+          <div class="calendrier-content__je">
+            Ephéméride : Antoine
+          </div>
+        </div>
+        <div class="calendrier-content__d">
+          <p>Ce vendredi 5 juillet 2024, avant 15h23, en jour racines :</p>
+          <p><strong>POTAGER :</strong> Brève occasion (vous en aurez à nouveau la possibilité à partir du 11/07) de
+            commencer à récolter les pommes de
+              terre précoces au fur et à mesure des besoins (elles se conservent mal) / Repiquez les endives / Eclaircissez vos
+            semis de radis, de carottes et d'endives / Démarrez les récoltes d'oignon, d'échalotes grises et d'ail /
+            Plantez les poireaux semés en mai / Plantez
+            les céleris-raves semés en début de printemps
+            / Plantez le souchet / Terminez la
+            plantation des patates douces.</p>
+          <p><strong>ORNEMENT :</strong> Divisez les iris et
+            les bulbes à fleurs.</p>
+          <p>Après 15h23, passage en jour fleurs :</p>
+          <p><strong>POTAGER :</strong> Plantez les brocolis et les choux-fleurs (semés précédemment en
+            pépinière), en veillant à prélever une motte de terre avec les racines pour favoriser la reprise ; enterrez
+            un peu le collet et tassez / Cueillez les artichauts / Cueillez les aromates juste
+            avant la floraison (pour plus de saveurs).</p>
+          <p><strong>ORNEMENT :</strong> Récoltez la lavande / C'est le moment de prélever des
+            boutures herbacées de nombreux arbustes à fleurs (laurier-rose, althéa, buddléia, azalées caduques, caryoptéris, céanothe, ciste, fuchsia, forsythia...) ; à placer à
+            l'étouffée pour de meilleures chances de succès / Taillez les arbustes qui ont
+              terminé leur floraison et les rosiers non remontants défleuris / Du côté des grimpantes, raccourcissez
+            de moitié les tiges de la  / Repiquez les semis
+            de bisannuelles et de plantes vivaces réalisés en mai ou début juin.</p>
+        </div>
+      </div>
+      <div class="calendrier-content__line p-3 bg-danger m-3" style="border-radius:15px;">
+        <div class="calendrier-content__j">
+          <div class="calendrier-content__jn">
+            06 juillet
+          </div>
+          <div class="calendrier-content__jt">
+            <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fleurs.png" width="35"
+              height="40">
+            Jour fleurs
+          </div>
+          <div class="calendrier-content__jlm">
+            <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunedescendante.png"
+              width="35" height="40">
+            Lune descendante
+          </div>
+          <div class="calendrier-content__jl">
+            <img
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E"
+              width="35" height="40"
+              data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-nouvellelune.png">
+            <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-nouvellelune.png"
+              width="35" height="40">
+            Nouvelle lune
+            <span class="calendrier-content__jp">
+              (0h57)
+            </span>
+          </div>
+          <div class="calendrier-content__je">
+            Ephéméride : Mariette
+          </div>
+        </div>
+        <div class="calendrier-content__d">
+          <p><strong>POTAGER :</strong> 2e jour pour planter les brocolis et les choux-fleurs (semés précédemment en
+            pépinière), en veillant à prélever une motte de terre avec les racines pour favoriser la reprise ; enterrez
+            un peu le collet et tassez / Cueillez les artichauts / Cueillez les aromates juste
+            avant la floraison (pour plus de saveurs).</p>
+          <p><strong>ORNEMENT :</strong> 2e jour pour récolter la lavande / C'est le moment de prélever des
+            boutures herbacées de nombreux arbustes à fleurs (laurier-rose, althéa, buddléia, azalées caduques, caryoptéris, céanothe, ciste, fuchsia, forsythia...) ; à placer à
+            l'étouffée pour de meilleures chances de succès / Taillez les arbustes qui ont
+              terminé leur floraison et les rosiers non remontants défleuris / Du côté des grimpantes, raccourcissez
+            de moitié les tiges de la glycine / Repiquez les semis
+            de bisannuelles et de plantes vivaces réalisés en mai ou début juin.</p>
+        </div>
+      </div>
+      <div class="calendrier-content__line p-3 bg-danger m-3" style="border-radius:15px;">
+        <div class="calendrier-content__j">
+          <div class="calendrier-content__jn">
+            07 juillet
+          </div>
+          <div class="calendrier-content__jt">
+            <img
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E"
+              width="35" height="40"
+              data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-feuilles.png">
+            <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-feuilles.png" width="35"
+              height="40">
+            Jour feuilles
+            <span class="calendrier-content__jp">
+              (à partir de 1h03)
+            </span>
+          </div>
+          <div class="calendrier-content__jlm">
+            <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunedescendante.png"
+              width="35" height="40">
+            Lune descendante
+          </div>
+          <div class="calendrier-content__jl">
+          </div>
+          <div class="calendrier-content__je">
+            Ephéméride : Raoul
+          </div>
+        </div>
+        <div class="calendrier-content__d">
+          <p><strong>ORNEMENT :</strong> Si vous avez un terrain en friche à nettoyer, c'est le moment de couper bien à
+            ras ronces, chardons et arbustes sauvages.</p>
+          <p><strong>POTAGER :</strong> Plantez du chou
+              chinois, ainsi que les choux de
+              Milan et chou de Bruxelles
+            semés en mai-juin / Pensez à blanchir les salades qui en ont besoin (frisées, scaroles…) /
+            Eclaircissez chicorées et laitues semées en juin / Repiquez des céleris-branche.</p>
+        </div>
+      </div>
+      <div class="calendrier-content__line p-3 bg-danger m-3" style="border-radius:15px;">
+        <div class="calendrier-content__j">
+          <div class="calendrier-content__jn">
+            08 juillet
+          </div>
+          <div class="calendrier-content__jt">
+            <img
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E"
+              width="35" height="40"
+              data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-feuilles.png">
+            <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-feuilles.png" width="35"
+              height="40">
+            Jour feuilles
+            <span class="calendrier-content__jp">
+              (jusqu'à 14h34)
+            </span>
+          </div>
+          <div class="calendrier-content__jlm">
+            <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunedescendante.png"
+              width="35" height="40">
+            Lune descendante
+          </div>
+          <div class="calendrier-content__jl">
+          </div>
+          <div class="calendrier-content__je">
+            Ephéméride : Thibault
+          </div>
+        </div>
+        <div class="calendrier-content__d">
+          <p>Avant 14h34, en jour feuilles :</p>
+          <p><strong>ORNEMENT :</strong> Si vous avez un terrain en friche à nettoyer, c'est le moment de couper bien à
+            ras ronces, chardons et arbustes sauvages.</p>
+          <p><strong>POTAGER :</strong> Plantez du chou chinois, ainsi que les choux de Milan et chou de Bruxelles semés
+            en mai-juin / Pensez à blanchir les salades qui en ont besoin (frisées, scaroles…) / Eclaircissez chicorées
+            et laitues semées en juin / Repiquez des céleris-branche.</p>
+          <p>Après 14h34, passage en jour fruits et graines :</p>
+          <p><strong>POTAGER :</strong> Pincez les légumes qui demandent à l'être : courges, concombres, pastèques,
+            piments, aubergines ; supprimez les gourmands des tomates / Repiquez les derniers concombres et cornichons.
+          </p>
+          <p><strong>VERGER :</strong> Taillez la vigne ainsi que les mûriers et framboisiers ayant fructifié / En
+            juillet, c'est aussi le moment de la taille en vert pour les fruitiers tels que pommiers et poiriers
+            palissés / Taillez légèrement le cerisier après sa production (en cette saison, il produira alors moins de
+            gomme).</p>
+        </div>
+      </div>
+      <div class="calendrier-content__line p-3 bg-danger m-3" style="border-radius:15px;">
+        <div class="calendrier-content__j">
+          <div class="calendrier-content__jn">
+            09 juillet
+          </div>
+          <div class="calendrier-content__jt">
+            <img
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E"
+              width="35" height="40"
+              data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fruits.png">
+            <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fruits.png" width="35"
+              height="40">
+            Jour fruits
+          </div>
+          <div class="calendrier-content__jlm">
+            <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunedescendante.png"
+              width="35" height="40">
+            Lune descendante
+          </div>
+          <div class="calendrier-content__jl">
+          </div>
+          <div class="calendrier-content__je">
+            Ephéméride : Amandine
+          </div>
+        </div>
+        <div class="calendrier-content__d">
+          <p>Ce 9 juillet 2024 ressemble au jour précédent en matière de calendrier lunaire.</p>
+          <p><strong>POTAGER :</strong> 2e jour pour pincer les légumes qui demandent à l'être : courges, concombres, pastèques, piments, aubergines ; supprimez les gourmands des tomates
+            / Repiquez les derniers concombres et cornichons.</p>
+          <p><strong>VERGER :</strong> 2e jour pour tailler la vigne ainsi que les mûriers et framboisiers ayant fructifié / En juillet,
+            c'est aussi le moment de la taille en vert pour les fruitiers tels que pommiers et poiriers palissés /
+            Taillez légèrement le cerisier après sa
+            production (en cette saison, il produira alors moins de gomme).</p>
+        </div>
+      </div>
+      <div class="calendrier-content__line p-3 bg-danger m-3" style="border-radius:15px;">
+        <div class="calendrier-content__j">
+          <div class="calendrier-content__jn">
+            10 juillet
+          </div>
+          <div class="calendrier-content__jt">
+            <img
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E"
+              width="35" height="40"
+              data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fruits.png">
+            <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fruits.png" width="35"
+              height="40">
+            Jour fruits
+          </div>
+          <div class="calendrier-content__jlm">
+            <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunedescendante.png"
+              width="35" height="40">
+            Lune descendante
+          </div>
+          <div class="calendrier-content__jl">
+          </div>
+          <div class="calendrier-content__je">
+            Ephéméride : Ulrich
+          </div>
+        </div>
+        <div class="calendrier-content__d">
+          <p><strong>POTAGER :</strong> 3e jour pour pincer les légumes qui demandent à l'être : courges, concombres, pastèques, piments, aubergines ; supprimez les gourmands des tomates
+            / Repiquez les derniers concombres et cornichons.</p>
+          <p><strong>VERGER :</strong> 3e jour pour tailler la vigne ainsi que les mûriers et framboisiers ayant fructifié / En juillet,
+            c'est aussi le moment de la taille en vert pour les fruitiers tels que pommiers et poiriers palissés /
+            Taillez légèrement le cerisier après sa
+            production (en cette saison, il produira alors moins de gomme).</p>
+        </div>
+      </div>
+      <div class="calendrier-content__line p-3 bg-danger m-3" style="border-radius:15px;">
+        <div class="calendrier-content__j">
+          <div class="calendrier-content__jn">
+            11 juillet
+          </div>
+          <div class="calendrier-content__jt">
+            <img
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E"
+              width="35" height="40"
+              data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fruits.png">
+            <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fruits.png" width="35"
+              height="40">
+            Jour fruits
+            <span class="calendrier-content__jp">
+              (jusqu'à 15h03)</span>
+          </div>
+          <div class="calendrier-content__jlm">
+            <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunedescendante.png"
+              width="35" height="40">
+            Lune descendante
+          </div>
+          <div class="calendrier-content__jl">
+          </div>
+          <div class="calendrier-content__je">
+            Ephéméride : Benoît
+          </div>
+        </div>
+        <div class="calendrier-content__d">
+          <p>Ce jeudi 11 juillet 2024, avant 15h03, en jour fruits et graines :</p>
+          <p><strong>POTAGER :</strong> 4e jour pour pincer les légumes qui demandent à l'être : courges, concombres, pastèques, piments, aubergines ; supprimez les gourmands des tomates
+            / Repiquez les derniers concombres et cornichons.</p>
+          <p><strong>VERGER :</strong> 4e jour pour tailler la vigne ainsi que les mûriers et framboisiers ayant fructifié / En juillet,
+            c'est aussi le moment de la taille en vert pour les fruitiers tels que pommiers et poiriers palissés /
+            Taillez légèrement le cerisier après sa
+            production (en cette saison, il produira alors moins de gomme).</p>
+          <p>Après 15h03, passage en jour racines :</p>
+          <p><strong>POTAGER :</strong> Nouvelle occasion de récolter les pommes de
+              terre précoces au fur et à mesure des besoins (elles se conservent mal) / Repiquez les endives / Eclaircissez vos
+            semis de radis, de carottes et d'endives / Démarrez les récoltes
+            d'oignon, d'échalotes grises et d'ail / Plantez les poireaux semés en mai / Plantez les
+            céleris-raves semés en début de printemps / Plantez le souchet / Terminez la plantation
+            des patates douces.</p>
+          <p><strong>ORNEMENT :</strong> Divisez les iris et
+            les bulbes à fleurs.</p>
+        </div>
+      </div>
+      <div class="calendrier-content__line p-3 bg-danger m-3" style="border-radius:15px;">
+        <div class="calendrier-content__j">
+          <div class="calendrier-content__jn">12 juillet</div>
+          <div class="calendrier-content__jt">
+            <img
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E"
+              width="35" height="40"
+              data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-racines.png">
+            <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-racines.png" width="35"
+              height="40">
+            Jour racines
+          </div>
+          <div class="calendrier-content__jlm">
+            <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunedescendante.png"
+              width="35" height="40">
+            Lune descendante
+          </div>
+          <div class="calendrier-content__jl">
+          </div>
+          <div class="calendrier-content__je">
+            Ephéméride : Olivier
+          </div>
+        </div>
+        <div class="calendrier-content__d">
+          <p>Ce 12 juillet 2024, ne jardinez pas après 15h10 (lune à l'apogée à 10h10)</p>
+          <p><strong>POTAGER :</strong> 2e jour pour récolter les pommes de
+              terre précoces au fur et à mesure des besoins (elles se conservent mal) / Repiquez les endives / Eclaircissez vos
+            semis de radis, de carottes et d'endives / Démarrez les récoltes
+            d'oignon, d'échalotes grises et d'ail / Plantez les poireaux semés en mai / Plantez les
+            céleris-raves semés en début de printemps / Plantez le souchet / Terminez la plantation
+            des patates douces.</p>
+          <p><strong>ORNEMENT :</strong> 2e jour pour diviser les iris et les bulbes à fleurs.</p>
+        </div>
+      </div>
+
+      <div class="calendrier-content__line p-3 bg-danger m-3" style="border-radius:15px;">
+        <div class="calendrier-content__j">
+          <div class="calendrier-content__jn">
+            13 juillet
+          </div>
+          <div class="calendrier-content__jt">
+            <img
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E"
+              width="35" height="40"
+              data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-racines.png">
+            <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-racines.png" width="35"
+              height="40">
+            Jour racines
+          </div>
+          <div class="calendrier-content__jlm">
+            <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunedescendante.png"
+              width="35" height="40">
+            Lune descendante
+          </div>
+          <div class="calendrier-content__jl">
+          </div>
+          <div class="calendrier-content__je">
+            Ephéméride : Henri, Joël
+          </div>
+        </div>
+        <div class="calendrier-content__d">
+          <p>ce 13 juillet 2024, ne jardinez pas avant 5h50 (noeud lunaire à 0h26)</p>
+          <p><strong>POTAGER :</strong> C'est le 3e jour pour récolter les pommes de
+              terre précoces au fur et à mesure des besoins (elles se conservent mal) / Repiquez les endives / Eclaircissez vos
+            semis de radis, de carottes et d'endives / Démarrez les récoltes
+            d'oignon, d'échalotes grises et d'ail / Plantez les poireaux semés en mai / Plantez les
+            céleris-raves semés en début de printemps / Plantez le souchet / Terminez la plantation
+            des patates douces.</p>
+          <p><strong>ORNEMENT :</strong> 3e jour &nbsp;également pour diviser les iris et les bulbes à fleurs.</p>
+        </div>
+      </div>
+      <div class="calendrier-content__line p-3 bg-danger m-3" style="border-radius:15px;">
+        <div class="calendrier-content__j">
+          <div class="calendrier-content__jn">
+            14 juillet
+          </div>
+          <div class="calendrier-content__jt">
+            <img
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E"
+              width="35" height="40"
+              data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-racines.png">
+            <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-racines.png" width="35"
+              height="40">
+            Jour racines
+          </div>
+          <div class="calendrier-content__jlm">
+            <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunedescendante.png"
+              width="35" height="40">
+            Lune descendante
+          </div>
+          <div class="calendrier-content__jl">
+            <img
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E"
+              width="35" height="40"
+              data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-premierquartier.png">
+            <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-premierquartier.png"
+              width="35" height="40">
+            Premier quartier
+            <span class="calendrier-content__jp">
+              (0h48)
+            </span>
+          </div>
+          <div class="calendrier-content__je">
+            Ephéméride : Fête nationale
+          </div>
+        </div>
+        <div class="calendrier-content__d">
+          <p>En ce jour de fête nationale en France, jour traditionnellement férié.</p>
+          <p><strong>POTAGER :</strong> 4e jour pour récolter les pommes de
+              terre précoces au fur et à mesure des besoins (elles se conservent mal) / Repiquez les endives / Eclaircissez vos
+            semis de radis, de carottes et d'endives / Démarrez les récoltes
+            d'oignon, d'échalotes grises et d'ail / Plantez les poireaux semés en mai / Plantez les
+            céleris-raves semés en début de printemps / Plantez le souchet / Terminez la plantation
+            des patates douces.</p>
+          <p><strong>ORNEMENT :</strong> 4e jour pour diviser les iris et les bulbes à fleurs.</p>
+          <p><strong>lire :</strong>&nbsp;Peut-on tondre sa pelouse un
+              jour férié ?</p>
+        </div>
+      </div>
+      <div class="calendrier-content__line p-3 bg-danger m-3" style="border-radius:15px;">
+        <div class="calendrier-content__j">
+          <div class="calendrier-content__jn">
+            15 juillet
+          </div>
+          <div class="calendrier-content__jt">
+            <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fleurs.png" width="35"
+              height="40">
+            Jour fleurs
+            <span class="calendrier-content__jp">
+              (à partir de 10h48)
+            </span>
+          </div>
+          <div class="calendrier-content__jlm">
+            <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunedescendante.png"
+              width="35" height="40">
+            Lune descendante
+          </div>
+          <div class="calendrier-content__jl">
+          </div>
+          <div class="calendrier-content__je">
+            Ephéméride : Donald
+          </div>
+        </div>
+        <div class="calendrier-content__d">
+          <p>Ce 15 juillet 2024, avant 10h48, en jour racines :</p>
+          <p><strong>POTAGER :</strong> 5e et dernier jour pour récolter les pommes de
+              terre précoces au fur et à mesure des besoins (elles se conservent mal) / Repiquez les endives / Eclaircissez vos
+            semis de radis, de carottes et d'endives / Démarrez les récoltes
+            d'oignon, d'échalotes grises et d'ail / Plantez les poireaux semés en mai / Plantez les
+            céleris-raves semés en début de printemps / Plantez le souchet / Terminez la plantation
+            des patates douces.</p>
+          <p><strong>ORNEMENT :</strong> 5e et dernier jour également pour diviser les iris et les bulbes à fleurs.</p>
+          <p>Après 10h48, passage en jour fleurs :</p>
+          <p><strong>POTAGER :</strong> Nouvelle occasion de planter les brocolis et les choux-fleurs (semés en mai/juin en
+            pépinière), en veillant à prélever une motte de terre avec les racines pour favoriser la reprise ; enterrez
+            un peu le collet et tassez / Cueillez les artichauts / Cueillez les aromates juste
+            avant la floraison (pour plus de saveurs) ou coupez les fleurs des aromatiques afin de favoriser la
+            production de feuilles : ciboulette, ciboule, basilic... Dégustez ces fleurs dans vos
+            salades estivales.</p>
+          <p><strong>ORNEMENT :</strong> Nouvelle occasion de récolter la lavande / C'est le moment de prélever des
+            boutures herbacées de nombreux arbustes à fleurs (laurier-rose, althéa, buddléia, azalées caduques, caryoptéris, céanothe, ciste, fuchsia, forsythia...) ; à placer
+            vos boutures à l'étouffée pour
+            de meilleures chances de succès / Taillez les arbustes qui ont
+              terminé leur floraison et les rosiers non remontants défleuris / Du côté des grimpantes, raccourcissez
+            de moitié les tiges de la glycine et taillez les clématites / Repiquez les semis de
+            bisannuelles et de plantes vivaces réalisés fin mai.</p>
+        </div>
+      </div>
+      <div class="calendrier-content__line p-3 bg-danger m-3" style="border-radius:15px;">
+        <div class="calendrier-content__j">
+          <div class="calendrier-content__jn">
+            16 juillet
+          </div>
+          <div class="calendrier-content__jt">
+            <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fleurs.png" width="35"
+              height="40">
+            Jour fleurs
+          </div>
+          <div class="calendrier-content__jlm">
+            <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunedescendante.png"
+              width="35" height="40">
+            Lune descendante
+          </div>
+          <div class="calendrier-content__jl">
+          </div>
+          <div class="calendrier-content__je">
+            Ephéméride : N-D. Mt-Carmel
+          </div>
+        </div>
+        <div class="calendrier-content__d">
+          <p><strong>POTAGER :</strong> 2e jour pour planter les brocolis et les choux-fleurs (semés en mai/juin en
+            pépinière), en veillant à prélever une motte de terre avec les racines pour favoriser la reprise ; enterrez
+            un peu le collet et tassez / Cueillez les artichauts / Cueillez les aromates juste
+            avant la floraison (pour plus de saveurs) ou coupez les fleurs des aromatiques afin de favoriser la
+            production de feuilles : ciboulette, ciboule, basilic... Dégustez ces fleurs dans vos
+            salades estivales.</p>
+          <p><strong>ORNEMENT :</strong> 2e jour pour récolter la lavande / C'est le moment de prélever des
+            boutures herbacées de nombreux arbustes à fleurs (laurier-rose, althéa, buddléia, azalées caduques, caryoptéris, céanothe, ciste, fuchsia, forsythia...) ; à placer
+            vos boutures à l'étouffée pour
+            de meilleures chances de succès / Taillez les arbustes qui ont
+              terminé leur floraison et les rosiers non remontants défleuris / Du côté des grimpantes, raccourcissez
+            de moitié les tiges de la glycine et taillez les clématites / Repiquez les semis de
+            bisannuelles et de plantes vivaces réalisés fin mai.</p>
+        </div>
+      </div>
+      <div class="calendrier-content__line p-3 bg-danger m-3" style="border-radius:15px;">
+        <div class="calendrier-content__j">
+          <div class="calendrier-content__jn">
+            17 juillet
+          </div>
+          <div class="calendrier-content__jt">
+            <img
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E"
+              width="35" height="40"
+              data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-feuilles.png">
+            <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-feuilles.png" width="35"
+              height="40">
+            Jour feuilles
+            <span class="calendrier-content__jp">
+              (à partir de 3h57)
+            </span>
+          </div>
+          <div class="calendrier-content__jlm">
+            <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunedescendante.png"
+              width="35" height="40">
+            Lune descendante
+          </div>
+          <div class="calendrier-content__jl">
+          </div>
+          <div class="calendrier-content__je">
+            Ephéméride : Charlotte
+          </div>
+        </div>
+        <div class="calendrier-content__d">
+          <p><strong>POTAGER :</strong> Eclaircissez les semis de choux et de salades réalisés fin juin ou début juillet
+            / Repiquez le céleri-branche / Repiquez les
+            choux semés fin mai ou début juin / Plantez l'oseille.</p>
+          <p><strong>ORNEMENT :</strong> Préparez le sol dans les
+            endroits du jardin où vous envisagez de semer du gazon en septembre.</p>
+        </div>
+      </div>
+      <div class="calendrier-content__line p-3 bg-danger m-3" style="border-radius:15px;">
+        <div class="calendrier-content__j">
+          <div class="calendrier-content__jn">
+            18 juillet
+          </div>
+          <div class="calendrier-content__jt">
+            <img
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E"
+              width="35" height="40"
+              data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-feuilles.png">
+            <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-feuilles.png" width="35"
+              height="40">
+            Jour feuilles
+          </div>
+          <div class="calendrier-content__jlm">
+            <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunedescendante.png"
+              width="35" height="40">
+            Lune descendante
+          </div>
+          <div class="calendrier-content__jl">
+          </div>
+          <div class="calendrier-content__je">
+            Ephéméride : Frédéric
+          </div>
+        </div>
+        <div class="calendrier-content__d">
+          <p><strong>POTAGER :</strong> 2e jour pour éclaircir les semis de choux et de salades réalisés fin juin ou début juillet
+            / Repiquez le céleri-branche / Repiquez les
+            choux semés fin mai ou début juin / Plantez l'oseille.</p>
+          <p><strong>ORNEMENT :</strong> 2e jour pour préparer le sol dans les
+            endroits du jardin où vous envisagez de semer du gazon en septembre.</p>
+        </div>
+      </div>
+      <div class="calendrier-content__line p-3 bg-danger m-3" style="border-radius:15px;">
+        <div class="calendrier-content__j">
+          <div class="calendrier-content__jn">
+            19 juillet
+          </div>
+          <div class="calendrier-content__jt">
+            <img
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E"
+              width="35" height="40"
+              data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fruits.png">
+            <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fruits.png" width="35"
+              height="40">
+            Jour fruits
+            <span class="calendrier-content__jp">
+              (à partir de 4h32)
+            </span>
+          </div>
+          <div class="calendrier-content__jlm">
+            <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunedescendante.png"
+              width="35" height="40">
+            Lune descendante
+            <span class="calendrier-content__jp">
+              ()
+            </span>
+          </div>
+          <div class="calendrier-content__jl">
+          </div>
+          <div class="calendrier-content__je">
+            Ephéméride : Arsène
+          </div>
+        </div>
+        <div class="calendrier-content__d">
+          <p>Ce vendredi 19 juillet 2024, avant 12h57, en lune descendante :</p>
+          <p><strong>VERGER :</strong> Brève occasion de tailler les framboisiers
+            non remontants, en coupant au ras du sol les cannes ayant donné des fruits / Pincez la vigne et effeuillez-la éventuellement pour que
+            les grappes soient bien exposées au soleil / Il est encore temps de tailler en vert les
+              pommiers et poiriers en espalier trop vigoureux / Taillez le kiwi - actinidia, afin de contenir sa végétation
+            souvent très vigoureuse / En cette saison, vous pouvez aussi planter un abricotier acheté en conteneur, à condition
+            de bien arroser tout au long de l'été.</p>
+          <p><strong>POTAGER :</strong> Taillez les concombres, poivrons et piments, aubergines, courges
+            et potirons (pour ces deux derniers,
+            raccourcissez les tiges trop longues ou qui ne portent ni fleurs, ni fruits) / Supprimez les gourmands des pieds de
+              tomates / Anticipez vos futures plantations de fraisiers :
+            enrichissez le sol dès maintenant avec du compost.</p>
+          <p>Après 12h57, passage en lune montante :</p>
+          <p><strong>POTAGER :</strong> Dans le midi, semez encore des haricots nains / Récoltez les haricots à écosser.
+          </p>
+          <p><strong>VERGER :</strong> Greffez en écusson les fruitiers à pépins (pommiers, poiriers, cognassiers) et à noyaux (pruniers, abricotiers, pêchers, amandiers, cerisiers) / Récoltez cerises, groseilles,
+            abricots.</p>
+        </div>
+      </div>
+      <div class="calendrier-content__line p-3 bg-danger m-3" style="border-radius:15px;">
+        <div class="calendrier-content__j">
+          <div class="calendrier-content__jn">
+            20 juillet
+          </div>
+          <div class="calendrier-content__jt">
+            <img
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E"
+              width="35" height="40"
+              data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fruits.png">
+            <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fruits.png" width="35"
+              height="40">
+            Jour fruits
+          </div>
+          <div class="calendrier-content__jlm">
+            <img
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E"
+              width="35" height="40"
+              data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png">
+            <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png"
+              width="35" height="40">
+            Lune montante
+          </div>
+          <div class="calendrier-content__jl">
+          </div>
+          <div class="calendrier-content__je">
+            Ephéméride : Marina
+          </div>
+        </div>
+        <div class="calendrier-content__d">
+          <p><strong>POTAGER :</strong> 2e jour pour, dans le midi, semer encore des haricots nains / Récoltez les
+            haricots à écosser.</p>
+          <p><strong>VERGER :</strong> 2e jour pour greffer en écusson les fruitiers à pépins (pommiers, poiriers, cognassiers) et à noyaux (pruniers, abricotiers, pêchers, amandiers, cerisiers) / Récoltez cerises, groseilles,
+            abricots.</p>
+        </div>
+      </div>
+      <div class="calendrier-content__line p-3 bg-danger m-3" style="border-radius:15px;">
+        <div class="calendrier-content__j">
+          <div class="calendrier-content__jn">
+            21 juillet
+          </div>
+          <div class="calendrier-content__jt">
+            <img
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E"
+              width="35" height="40"
+              data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fruits.png">
+            <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fruits.png" width="35"
+              height="40">
+            Jour fruits
+            <span class="calendrier-content__jp">
+              (jusqu'à 12h06)
+            </span>
+          </div>
+          <div class="calendrier-content__jlm">
+            <img
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E"
+              width="35" height="40"
+              data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png">
+            <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png"
+              width="35" height="40">
+            Lune montante
+          </div>
+          <div class="calendrier-content__jl">
+            <img
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E"
+              width="35" height="40"
+              data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-pleinelune.png">
+            <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-pleinelune.png"
+              width="35" height="40">
+            Pleine lune
+            <span class="calendrier-content__jp">
+              (12h17)
+            </span>
+          </div>
+          <div class="calendrier-content__je">
+            Ephéméride : Victor
+          </div>
+        </div>
+        <div class="calendrier-content__d">
+          <p>Ce dimanche 21 juillet 2024, avant 12h06, en jour fruits et graines :</p>
+          <p><strong>POTAGER :</strong> 3e jour pour, dans le midi, semer encore des haricots nains / Récoltez les
+            haricots à écosser.</p>
+          <p><strong>VERGER :</strong> 3e jour pour greffer en écusson les fruitiers à pépins(pommiers, poiriers, cognassiers) et à noyaux (pruniers, abricotiers, pêchers, amandiers, cerisiers) / Récoltez cerises, groseilles,
+            abricots.</p>
+          <p>Après 12h06, passage en jour racines :</p>
+          <p><strong>POTAGER :</strong> Semez des navets et
+            des carottes pour l'hiver / Semez aussi le chou-rave et éventuellement des radis de tous les mois / En principe, il est un
+            peu tard pour semer des betteraves, mais
+            les retardataires peuvent tenter un dernier semis, à condition de soigner les apports d'eau et de prévoir un
+            paillage.</p>
+        </div>
+      </div>
+      <div class="calendrier-content__line p-3 bg-danger m-3" style="border-radius:15px;">
+        <div class="calendrier-content__j">
+          <div class="calendrier-content__jn">22 juillet</div>
+          <div class="calendrier-content__jt"><img
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E"
+              width="35" height="40"
+              data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-racines.png"><img
+              src="
+              https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-racines.png" width="35"
+              height="40">Jour racines</div>
+          <div class=" calendrier-content__jlm"><img
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E"
+              width="35" height="40"
+              data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png"><img
+              src="
+              https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png" width="35"
+              height="40">Lune montante</div>
+          <div class=" calendrier-content__jl"></div>
+          <div class="calendrier-content__je">Ephéméride : Marie-Madeleine</div>
+        </div>
+        <div class="calendrier-content__d">
+          <p><strong>POTAGER :</strong> 2e jour pour semer des&nbsp;navets et des carottes pour l'hiver / Semez aussi le chou-rave et éventuellement des radis de tous les mois / En principe, il est un
+            peu tard pour semer des betteraves, mais
+            les retardataires peuvent tenter un dernier semis, à condition de soigner les apports d'eau et de prévoir un
+            paillage.</p>
+        </div>
+      </div>
+      <div class="calendrier-content__line p-3 bg-danger m-3" style="border-radius:15px;">
+        <div class="calendrier-content__j">
+          <div class="calendrier-content__jn">23 juillet</div>
+          <div class="calendrier-content__jt"><img
+              src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fleurs.png" width="35"
+              height="40">Jour fleurs <span class="calendrier-content__jp">(à partir de 9h48)</span></div>
+          <div class="calendrier-content__jlm"><img
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E"
+              width="35" height="40"
+              data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png"><img
+              src="
+              https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png" width="35"
+              height="40">Lune montante</div>
+          <div class=" calendrier-content__jl"></div>
+          <div class="calendrier-content__je">Ephéméride : Brigitte</div>
+        </div>
+        <div class="calendrier-content__d">
+          <p>Ce mardi 23 juillet 2024, avant 9h48, en jour racine :</p>
+          <p><strong>POTAGER :</strong> 3e jour pour semer des navets et des carottes pour l'hiver / Semez aussi le chou-rave et éventuellement des radis de tous les mois / En principe, il est un
+            peu tard pour semer des betteraves, mais
+            les retardataires peuvent tenter un dernier semis, à condition de soigner les apports d'eau et de prévoir un
+            paillage.</p>
+          <p>Après 9h48, passage en jour fleurs :</p>
+          <p><strong>ORNEMENT :</strong> Semez des lupins
+            vivaces directement en place / Semez en pépinière les vivaces (lin, ancolie, agastaches) et les bisannuelles (pensées,
+            pâquerettes, giroflée ravenelle, oeillets, myosotis, violas, pavots) / Récoltez le tilleul, équeutez-le et
+            laissez-le sécher à l'ombre / C'est le moment de greffer en
+              écusson les églantiers, afin de
+            reproduire vos rosiers préférés.</p>
+          <p><strong>POTAGER :</strong> Semez la phacélie comme
+              engrais vert sur les parcelles nues du potager.</p>
+        </div>
+      </div>
+      <div class="calendrier-content__line p-3 bg-danger m-3" style="border-radius:15px;">
+        <div class="calendrier-content__j">
+          <div class="calendrier-content__jn">24 juillet</div>
+          <div class="calendrier-content__jt"><img
+              src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fleurs.png" width="35"
+              height="40">Jour fleurs</div>
+          <div class="calendrier-content__jlm"><img
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E"
+              width="35" height="40"
+              data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png"><img
+              src="
+              https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png" width="35"
+              height="40">Lune montante</div>
+          <div class=" calendrier-content__jl"></div>
+          <div class="calendrier-content__je">Ephéméride : Christine</div>
+        </div>
+        <div class="calendrier-content__d">
+          <p>Ne jardinez pas avant 12h40 (lune en périgée à 7h40)</p>
+          <p><strong>ORNEMENT :</strong> 2e jour pour semer des lupins vivaces directement en place / Semez en pépinière
+            les vivaces (lin, ancolie, agastaches) et les bisannuelles (pensées, pâquerettes, giroflée ravenelle,
+            oeillets, myosotis, violas, pavots) / Récoltez le tilleul, équeutez-le et laissez-le sécher à l'ombre /
+            C'est le moment de greffer en écusson les églantiers, afin de reproduire vos rosiers préférés.</p>
+          <p><strong>POTAGER :</strong> 2e jour pour semer la phacélie sur les parcelles nues du potager.</p>
+        </div>
+      </div>
+      <div class="calendrier-content__line p-3 bg-danger m-3" style="border-radius:15px;">
+        <div class="calendrier-content__j">
+          <div class="calendrier-content__jn">25 juillet</div>
+          <div class="calendrier-content__jt"><img
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E"
+              width="35" height="40"
+              data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-feuilles.png"><img
+              src="
+              https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-feuilles.png" width="35"
+              height="40">Jour feuilles <span class=" calendrier-content__jp">(à partir de 8h20)</span></div>
+          <div class="calendrier-content__jlm"><img
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E"
+              width="35" height="40"
+              data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png"><img
+              src="
+              https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png" width="35"
+              height="40">Lune montante</div>
+          <div class=" calendrier-content__jl"></div>
+          <div class="calendrier-content__je">Ephéméride : Jacques</div>
+        </div>
+        <div class="calendrier-content__d">
+          <p>Ce jeudi 25 juillet 2024, avant 8h20, en jour fleurs :</p>
+          <p><strong>ORNEMENT :</strong> 3e jour pour semer des lupins vivaces directement en place / Semez en
+            pépinière les vivaces (lin, ancolie, agastaches) et les bisannuelles (pensées,
+            pâquerettes, giroflée
+              ravenelle, oeillets, myosotis, violas, pavots) / Récoltez le
+            tilleul, équeutez-le et laissez-le sécher à
+            l'ombre / C'est le moment de greffer en
+              écusson les églantiers, afin de
+            reproduire vos rosiers préférés.
+          </p>
+          <p><strong>POTAGER :</strong> 3e jour pour semer la phacélie comme
+              engrais vert&nbsp;sur les parcelles nues du potager.</p>
+          <p>Après 8h20, passage en jour feuilles :</p>
+          <p><strong>POTAGER :</strong> Semez des salades pour l'automne (mâche, laitues à couper, laitues romaines et pommées
+            d'automne, scaroles et chicorées), du pourpier doré,
+            du pourpier d'hiver (moins connu, appelé aussi claytone de Cuba), du chou chinois à récolter à l'automne, de
+            l'arroche ou encore l'étonnant cresson de Para / Semez des épinards / Semez les engrais verts
+            tels que luzerne, mélilot, trèfle, moutarde, sarrasin, fenugrec, colza fourrager…</p>
+        </div>
+      </div>
+      <div class="calendrier-content__line p-3 bg-danger m-3" style="border-radius:15px;">
+        <div class="calendrier-content__j">
+          <div class="calendrier-content__jn">26 juillet</div>
+          <div class="calendrier-content__jt"><img
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E"
+              width="35" height="40"
+              data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-feuilles.png"><img
+              src="
+              https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-feuilles.png" width="35"
+              height="40">Jour feuilles</div>
+          <div class=" calendrier-content__jlm"><img
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E"
+              width="35" height="40"
+              data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png"><img
+              src="
+              https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png" width="35"
+              height="40">Lune montante</div>
+          <div class=" calendrier-content__jl"></div>
+          <div class="calendrier-content__je">Ephéméride : Anne, Joachim</div>
+        </div>
+        <div class="calendrier-content__d">
+          <p>Ne jardinez pas avant 12h35 (noeud lunaire à 7h32)</p>
+          <p><strong>POTAGER :</strong> 2e jour pour semer des salades pour l'automne (mâche, laitues à couper, laitues romaines et pommées
+            d'automne, scaroles et chicorées), du pourpier doré,
+            du pourpier d'hiver (moins connu, appelé aussi claytone de Cuba), du chou chinois à récolter à l'automne, de
+            l'arroche ou encore l'étonnant cresson de Para / Semez des épinards / Semez les engrais verts
+            tels que luzerne, mélilot, trèfle, moutarde, sarrasin, fenugrec, colza fourrager…</p>
+        </div>
+      </div>
+      <div class="calendrier-content__line p-3 bg-danger m-3" style="border-radius:15px;">
+        <div class="calendrier-content__j">
+          <div class="calendrier-content__jn">27 juillet</div>
+          <div class="calendrier-content__jt"><img
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E"
+              width="35" height="40"
+              data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-feuilles.png"><img
+              src="
+              https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-feuilles.png" width="35"
+              height="40">Jour feuilles <span class=" calendrier-content__jp">(jusqu'à 18h55)</span></div>
+          <div class="calendrier-content__jlm"><img
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E"
+              width="35" height="40"
+              data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png"><img
+              src="
+              https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png" width="35"
+              height="40">Lune montante</div>
+          <div class=" calendrier-content__jl"></div>
+          <div class="calendrier-content__je">Ephéméride : Nathalie</div>
+        </div>
+        <div class="calendrier-content__d">
+          <p>Avant 18h55, en jour feuilles :</p>
+          <p><strong>POTAGER :</strong> 3e jour pour semer des salades pour l'automne (mâche, laitues à couper, laitues romaines et pommées
+            d'automne, scaroles et chicorées), du pourpier doré,
+            du pourpier d'hiver (moins connu, appelé aussi claytone de Cuba), du chou chinois à récolter à l'automne, de
+            l'arroche ou encore l'étonnant cresson de Para / Semez des épinards / Semez les engrais verts
+            tels que luzerne, mélilot, trèfle, moutarde, sarrasin, fenugrec, colza fourrager…</p>
+          <p>Après 18h55, passage en jour fruits et graines :</p>
+          <p><strong>VERGER :</strong> Continuez la greffe
+              en écusson des fruitiers à pépins (pommiers, poiriers, cognassiers) et à noyaux (pruniers,
+            abricotiers, pêchers, amandiers, cerisiers).</p>
+          <p><strong>POTAGER :</strong> Récoltez les tomates, melons, pastèques, haricots grains et haricots mangetout, fraises et
+            framboises / Dans le midi, semez encore des haricots nains / Récoltez les haricots à grains à consommer
+            frais ou à faire sécher (attachez-les en bottes suspendues dans un lieu bien aéré) / Récoltez les graines de
+              tomates pour vos semences.</p>
+        </div>
+      </div>
+      <div class="calendrier-content__line p-3 bg-danger m-3" style="border-radius:15px;">
+        <div class="calendrier-content__j">
+          <div class="calendrier-content__jn">28 juillet</div>
+          <div class="calendrier-content__jt"><img
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E"
+              width="35" height="40"
+              data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fruits.png"><img
+              src="
+              https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fruits.png" width="35"
+              height="40">Jour fruits <span class=" calendrier-content__jp">(à partir de 0h20)</span></div>
+          <div class="calendrier-content__jlm"><img
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E"
+              width="35" height="40"
+              data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png"><img
+              src="
+              https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png" width="35"
+              height="40">Lune montante</div>
+          <div class=" calendrier-content__jl"><img
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E"
+              width="35" height="40"
+              data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-dernierquartier.png"><img
+              src="
+              https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-dernierquartier.png" width="35"
+              height="40">Dernier quartier <span class=" calendrier-content__jp">(4h51)</span></div>
+          <div class="calendrier-content__je">Ephéméride : Samson</div>
+        </div>
+        <div class="calendrier-content__d">
+          <p><strong>VERGER :</strong> 2e jour pour continuer la greffe en écusson des fruitiers à pépins
+            (pommiers, poiriers, cognassiers) et à noyaux (pruniers, abricotiers, pêchers, amandiers, cerisiers).</p>
+          <p><strong>POTAGER :</strong> 2e jour pour récolter les tomates, melons, pastèques, haricots grains et haricots mangetout, fraises et
+            framboises / Dans le midi, semez encore des haricots nains / Récoltez les haricots à grains à consommer
+            frais ou à faire sécher (attachez-les en bottes suspendues dans un lieu bien aéré) / Récoltez les graines de
+              tomates pour vos semences.</p>
+        </div>
+      </div>
+      <div class="calendrier-content__line p-3 bg-danger m-3" style="border-radius:15px;">
+        <div class="calendrier-content__j">
+          <div class="calendrier-content__jn">29 juillet</div>
+          <div class="calendrier-content__jt"><img
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E"
+              width="35" height="40"
+              data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fruits.png"><img
+              src="
+              https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fruits.png" width="35"
+              height="40">
+            Jour fruits
+            <span class=" calendrier-content__jp">(jusqu'à 16h21)
+
+            </span>
+          </div>
+          <div class="calendrier-content__jlm"><img
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E"
+              width="35" height="40"
+              data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png"><img
+              src="
+              https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png" width="35"
+              height="40">Lune montante
+          </div>
+          <div class=" calendrier-content__jl">
+
+          </div>
+          <div class="calendrier-content__je">Ephéméride : Marthe
+
+          </div>
+        </div>
+        <div class="calendrier-content__d">
+          <p>Ce lundi 29 juillet 2024, avant 16h21, en jour fruits et graines :</p>
+          <p><strong>VERGER :</strong> 3e jour pour continuer la greffe en écusson des fruitiers à pépins
+            (pommiers, poiriers, cognassiers) et à noyaux (pruniers, abricotiers, pêchers, amandiers, cerisiers)</p>
+          <p><strong>POTAGER :</strong> 3e jour pour récolter les tomates, melons, pastèques, haricots grains et haricots mangetout, fraises et
+            framboises / Dans le midi, semez encore des haricots nains / Récoltez les haricots à grains à consommer
+            frais ou à faire sécher (attachez-les en bottes suspendues dans un lieu bien aéré) / Récoltez les graines de
+              tomates pour vos semences.</p>
+          <p>Après 16h21, passage en jour racines :</p>
+          <p><strong>POTAGER :</strong> En région douce et en pépinière, semez des oignons blancs (à
+            repiquer en octobre pour une récolte en mars-avril) et des oignons de couleur (notamment dans le Midi pour
+            ceux-ci) / Il est encore temps de semer des radis asiatiques, et des radis-raves de couleur / Essayez un
+            semis de scorsonère : en semant en ce
+            moment, vous récolterez en fin d'été l'année prochaine (alors qu'en semant en mars-avril, on récolte
+            d'octobre à mars).</p>
+        </div>
+      </div>
+      <div class="calendrier-content__line p-3 bg-danger m-3" style="border-radius:15px;">
+        <div class="calendrier-content__j">
+          <div class="calendrier-content__jn">30 juillet</div>
+          <div class="calendrier-content__jt"><img
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E"
+              width="35" height="40"
+              data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-racines.png">
+            <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-racines.png" width="35"
+              height="40">Jour racines>
+          </div>
+          <div class="calendrier-content__jlm">
+            <img
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E"
+              width="35" height="40"
+              data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png">
+            <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png"
+              width="35" height="40">Lune montante
+          </div>
+          <div class="calendrier-content__jl">
+          </div>
+          <div class="calendrier-content__je">
+            Ephéméride : Juliette
+          </div>
+        </div>
+        <div class="calendrier-content__d">
+          <p><strong>POTAGER :</strong> 2e jour pour, en région douce et en pépinière, semer des oignons blancs (à
+            repiquer en octobre pour une récolte en mars-avril) et des oignons de couleur (notamment dans le Midi pour
+            ceux-ci) / Il est encore temps de semer des radis asiatiques, et des radis-raves de couleur / Essayez un
+            semis de scorsonère : en semant en ce moment, vous récolterez en fin d'été l'année prochaine (alors qu'en
+            semant en mars-avril, on récolte d'octobre à mars).</p>
+        </div>
+      </div>
+      <div class="calendrier-content__line p-3 bg-danger m-3" style="border-radius:15px;">
+        <div class="calendrier-content__j">
+          <div class="calendrier-content__jn">31 juillet</div>
+          <div class="calendrier-content__jt">
+            <img
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E"
+              width="35" height="40"
+              data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-racines.png">
+            <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-racines.png" width="35"
+              height="40">Jour racines
+          </div>
+          <div class="calendrier-content__jlm">
+            <img
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2035%2040'%3E%3C/svg%3E"
+              width="35" height="40"
+              data-lazy-src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png">
+            <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png"
+              width="35" height="40">Lune montante
+          </div>
+          <div class="calendrier-content__jl">
+          </div>
+          <div class="calendrier-content__je">
+            Ephéméride : Ignace de L.
+          </div>
+        </div>
+        <div class="calendrier-content__d">
+          <p>Ce mercredi, dernier jour de juillet 2024,</p>
+          <p><strong>POTAGER :</strong> 3e jour pour, en région douce et en pépinière, semer des oignons blancs
+            (à repiquer en octobre pour une récolte en mars-avril) et des
+              oignons de couleur (notamment dans le Midi pour ceux-ci) / Il est encore temps de semer des radis
+            asiatiques, et des radis-raves de couleur / Essayez un semis de scorsonère: en semant en ce moment, vous
+            récolterez en fin d'été l'année prochaine (alors qu'en semant en mars-avril, on récolte d'octobre à mars)
+          </p>
+        </div>
+      </div>
+      </div>
+    <div data-tabs-target="tab" id="aout" class="bg-warning d-flex justify-content-center">
+    </div>
+    <div data-tabs-target="tab" id="septembre" class="bg-warning d-flex justify-content-center">
+    </div>
+    <div data-tabs-target="tab" id="octobre" class="bg-warning d-flex justify-content-center">
+    </div>
+    <div data-tabs-target="tab" id="novembre" class="bg-warning d-flex justify-content-center">
+    </div>
+    <div data-tabs-target="tab" id="decembre" class="bg-warning d-flex justify-content-center">
+    </div>
+      <h5 class="text-center my-3">Légende</h5>
+      <table class="m-auto mb-5">
+        <thead class="text-center">
+          <tr>
+            <th>Jour</th>
+            <th>Lune</th>
+            <th>Disque Lunaire</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="">
+            <td class="px-5">
+              <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-defavorables.png"
+                width="35" height="40" />
+              <label>Défavorables</label>
+            </td>
+            <td class="px-5">
+              <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunedescendante.png"
+                width="35" height="40">
+              <label>Descendante</label>
+            </td>
+            <td class="px-5">
+              <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-nouvellelune.png"
+                width="35" height="40" />
+              <label>Nouvelle lune</label>
+            </td>
+          </tr>
+          <tr>
+            <td class="px-5">
+              <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-feuilles.png"
+                width="35" height="40" />
+              <label>Feuilles</label>
+            </td>
+            <td class="px-5">
+              <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png"
+                width="35" height="40" />
+              <label>Montante</label>
+            </td>
+            <td class="px-5">
+              <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-pleinelune.png"
+                width="35" height="40" />
+              <label>Pleine lune</label>
+            </td>
+          </tr>
+          <tr>
+            <td class="px-5">
+              <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fleurs.png" width="35"
+                height="40">
+              <label>Fleurs</label>
+            </td>
+            <td></td>
+            <td class="px-5">
+              <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-premierquartier.png"
+                width="35" height="40" />
+              <label>Premier quartier</label>
+            </td>
+          </tr>
+          <tr>
+            <td class="px-5">
+              <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-fruits.png" width="35"
+                height="40" />
+              <label>Fruits et légumes</label>
+            </td>
+            <td></td>
+            <td class="px-5">
+              <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-dernierquartier.png"
+                width="35" height="40" />
+              <label>Dernier quartier</label>
+            </td>
+          </tr>
+          <tr>
+            <td class="px-5">
+              <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-racines.png" width="35"
+                height="40" />
+              <label>Racines</label>
+            </td>
+            <td></td>
+            <td class="px-5"></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="d-flex flex-column w-75 m-auto">
+        <p class="">
+          * Les horaires de ce calendrier ne concernent que l’hémisphère Nord. Ils sont donnés en temps universel (T.
+          U.), c’est à dire calculés à partir du méridien de Greenwich.
+        </p>
+        <p class="">
+          Selon la région dans laquelle vous vous trouvez, il faut ajouter ou retirer des minutes à l’heure indiquée
+          pour obtenir votre propre «heure locale». Plus à l’ouest de cet axe, il faut retirer des minutes (-16 minutes
+          à Brest par exemple), plus à l’est, il faut en ajouter (+32 minutes à Strasbourg par exemple).
+        </p>
+        <p class="">
+          Par ailleurs, il faut ajuster l’horaire indiqué dans ce calendrier à l’heure d’été ou à l’heure d’hiver : du
+          26 mars au 28 octobre (heure d’été), il faut ajouter 2 heures à l’horaire indiqué. Le reste de l’année, soit
+          d’octobre à mars (heure d’hiver), il faut ajouter seulement 1 heure à l’horaire indiqué.
+        </p>
+        <p class="">
+          ** On considère qu’il faut éviter de jardiner 5 à 6h avant et après un noeud lunaire, un apogée, un périgée.
+        </p>
+      </div>
+    </div>
+  </div>
