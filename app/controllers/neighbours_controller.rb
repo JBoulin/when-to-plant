@@ -12,7 +12,7 @@ class NeighboursController < ApplicationController
     @plant = Plant.find(params[:plant_id])
     @neighbour = @plant.neighbours.build(neighbour_params)
     if @neighbour.save
-      redirect_to @plant, notice: 'Neighbour was successfully created.'
+      redirect_to @plant, notice: 'Le voisin a été ajouté'
     else
       render 'plants/show'
     end
@@ -20,7 +20,7 @@ class NeighboursController < ApplicationController
 
   def update
     if @neighbour.update(neighbour_params)
-      redirect_to @neighbour, notice: 'Neighbour was successfully updated.'
+      redirect_to @neighbour, notice: 'Le voisin a été modifié'
     else
       render :edit
     end
@@ -28,7 +28,7 @@ class NeighboursController < ApplicationController
 
   def destroy
     @neighbour.destroy
-    redirect_to neighbours_url, notice: 'Neighbour was successfully destroyed.'
+    redirect_to neighbours_url, notice: 'Le voisin a été supprimé'
   end
 
   private

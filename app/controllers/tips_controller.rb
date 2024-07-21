@@ -22,7 +22,7 @@ class TipsController < ApplicationController
 
   def update
     if @tip.update(tip_params)
-      redirect_to @tip, notice: 'Tip was successfully updated.'
+      redirect_to @tip, notice: 'Votre conseil a bien été modifié !'
     else
       render :edit
     end
@@ -30,7 +30,7 @@ class TipsController < ApplicationController
 
   def destroy
     @tip.destroy
-    redirect_to tips_url, notice: 'Tip was successfully destroyed.'
+    redirect_to tips_url, notice: 'Votre conseil a bien été supprimé !'
   end
 
   private

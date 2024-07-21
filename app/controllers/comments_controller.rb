@@ -31,7 +31,7 @@ class CommentsController < ApplicationController
 
   def update
     if @comment.update(comment_params)
-      redirect_to @comment, notice: 'Comment was successfully updated.'
+      redirect_to @comment, notice: 'Votre commentaire a été modifié !'
     else
       render :edit
     end
@@ -39,7 +39,7 @@ class CommentsController < ApplicationController
 
   def destroy
     @comment.destroy
-    redirect_to post_path(@comment.post), notice: 'Comment was successfully destroyed.'
+    redirect_to post_path(@comment.post), notice: 'Votre commentaire a été supprimé !'
   end
 
   def edit_comment
@@ -51,7 +51,7 @@ class CommentsController < ApplicationController
   def update_comment
     @post = Post.friendly.find(params[:post_id])
     if @comment.update(comment_params)
-      redirect_to @post, notice: 'Comment was successfully updated.'
+      redirect_to @post, notice: 'Votre commentaire a été modifié !'
     else
       @edit_comment_id = @comment.id
       render 'posts/show'

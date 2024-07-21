@@ -64,15 +64,15 @@
       </div>
     </div>
   </div>
-</body>
+  <%= link_to "Voir le calendrier", calendrier_path, class: "btn btn-success rounded-pill m-auto mb-3" %>
 
   <h1 class="py-4 text-center">Les dernières informations et tuto When To Plant</h1>
 
   <div class="cards d-flex justify-content-center">
 
       <% @posts.each do |post| %>
-        <div class="col-5 m-3">
-          <div class="card mb-3 rounded-3" style="background-color: #daf1df; box-shadow: 0 0 15px rgba(0,0,0,0.2);">
+        <div class="col-6">
+          <div class="card rounded-3" style="background-color: #daf1df; box-shadow: 0 0 15px rgba(0,0,0,0.2);">
            <%= cl_image_tag post.photos.first.key, :cloud_name => "dzhzzutmq", style:"height: 250px; width: 100%; object-fit: cover; padding: 16px 16px 0 16px;" %>
             <div class="card-body">
               <h5 class="card-title"><%= post.titre %></h5>
@@ -86,4 +86,5 @@
         </div>
       <% end %>
   </div>
+  <%= link_to "Voir tous les articles", posts_path, class: "btn btn-success rounded-pill m-auto mb-3" %>
 </div>
