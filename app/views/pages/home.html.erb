@@ -69,22 +69,26 @@
   <h1 class="py-4 text-center">Les dernières informations et tuto When To Plant</h1>
 
   <div class="cards d-flex justify-content-center">
-
-      <% @posts.each do |post| %>
-        <div class="col-6">
-          <div class="card rounded-3" style="background-color: #daf1df; box-shadow: 0 0 15px rgba(0,0,0,0.2);">
-           <%= cl_image_tag post.photo.key, :cloud_name => "dzhzzutmq", style:"height: 250px; width: 100%; object-fit: cover; padding: 16px 16px 0 16px;" %>
-            <div class="card-body">
-              <h5 class="card-title"><%= post.titre %></h5>
-              <p class="card-text text-muted"><%= post.rich_body.to_plain_text.truncate(200) %></p>
-              <div class="d-flex flex-row align-items-center justify-content-between">
-                <p class="card-text"><small class="text-muted"><%= post.date_publication %></small></p>
-                <%= link_to "Lire l'article", post_path(post), class: "btn btn-success rounded-pill" %>
-              </div>
+    <% @posts.each do |post| %>
+      <div class="col-6 mb-4">
+        <div class="card rounded-3" style="background-color: #daf1df; box-shadow: 0 0 15px rgba(0,0,0,0.2);">
+          <% if post.photo.present? && post.photo.key.present? %>
+            <%= cl_image_tag post.photo.key, cloud_name: "dzhzzutmq", style: "height: 250px; width: 100%; object-fit: cover; padding: 16px 16px 0 16px;" %>
+          <% else %>
+            <%= image_tag "default_image.png", style: "height: 250px; width: 100%; object-fit: cover; padding: 16px 16px 0 16px;" %>
+          <% end %>
+          <div class="card-body">
+            <h5 class="card-title"><%= post.titre %></h5>
+            <p class="card-text text-muted"><%= post.rich_body.to_plain_text.truncate(200) %></p>
+            <div class="d-flex flex-row align-items-center justify-content-between">
+              <p class="card-text"><small class="text-muted"><%= post.date_publication %></small></p>
+              <%= link_to "Lire l'article", post_path(post), class: "btn btn-success rounded-pill" %>
             </div>
           </div>
         </div>
-      <% end %>
+      </div>
+    <% end %>
   </div>
   <%= link_to "Voir tous les articles", posts_path, class: "btn btn-success rounded-pill m-auto mb-3" %>
+
 </div>
