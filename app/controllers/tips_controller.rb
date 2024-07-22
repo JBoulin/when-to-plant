@@ -1,5 +1,5 @@
 class TipsController < ApplicationController
-  before_action :set_tip, only: [:show, :update, :destroy]
+  before_action :set_tip, only: [:show, :update, :destroy, :edit_tip, :update_tip]
 
   def index
     @tips = Tip.all
@@ -13,7 +13,7 @@ class TipsController < ApplicationController
     @tip = @plant.tips.build(tip_params)
     @tip.user = current_user
     @tip.status = "En attente"
-    if @tip.save!
+    if @tip.save
       redirect_to @plant, notice: 'Votre conseil a bien été envoyé !'
     else
       render 'plants/show'
@@ -30,7 +30,23 @@ class TipsController < ApplicationController
 
   def destroy
     @tip.destroy
-    redirect_to tips_url, notice: 'Votre conseil a bien été supprimé !'
+    redirect_to plant_path(@tip.plant), notice: 'Votre conseil a bien été supprimé !'
+  end
+
+  def edit_tip
+    @plant = Plant.find(params[:plant_id])
+    @edit_tip_id = @tip.id
+    render 'plants/show'
+  end
+
+  def update_tip
+    @plant = Plant.find(params[:plant_id])
+    if @tip.update(tip_params)
+      redirect_to @plant, notice: 'Votre conseil a bien été modifié !'
+    else
+      @edit_tip_id = @tip.id
+      render 'plants/show'
+    end
   end
 
   private
