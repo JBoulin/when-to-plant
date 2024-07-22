@@ -283,7 +283,7 @@ Persil, ciboulette, thym, sauge, romarin, menthe sont les aromatiques les plus s
 La bonne quantité
 Pour une famille « classique », il est bien entendu inutile de planter 30 plants de concombres ou de semer l’ensemble des graines d’un sachet de carotte ! Mais il n’est pas toujours évident de connaître la bonne quantité à semer et planter, d’autant plus que les années se suivent et ne se ressemblent pas. Par ailleurs, une culture très généreuse une année, sera peut être bien moins productive l’année suivante. C’est les aléas du jardinage ! Notre conseil : diversifiez vos cultures tout en tenant compte de la surface disponible. Pour ce faire, établir un rapide schéma peut être utile ! "
 )
-article_1.photos.attach(io: file_10, filename: "article-1.jpg", content_type: "image/jpg")
+article_1.photo.attach(io: file_10, filename: "article-1.jpg", content_type: "image/jpg")
 article_1.save!
 
 file_11 = URI.open("https://static.aujardin.info/cache/th/adb/outils-jardinage-500x375.jpg")
@@ -309,7 +309,7 @@ Le couteau est toujours très utile, pour récolter divers légumes, couper du f
 L’arrosoir est indispensable, il permet d’arroser soit au goulot sur des plants déjà bien implantés soit à la pomme pour des semis, afin d’arroser en douceur.
 "
 )
-article_2.photos.attach(io: file_11, filename: "article-2.jpg", content_type: "image/jpg")
+article_2.photo.attach(io: file_11, filename: "article-2.jpg", content_type: "image/jpg")
 article_2.save!
 
 file_12 = URI.open("https://images.ctfassets.net/b85ozb2q358o/f5004387e9df45449f551fc8304decd3935884ec0b1fab511011db081908e541/4d745112ed48aea797e8ccd81a33ab87/image.png")
@@ -350,7 +350,7 @@ Attention, il s’agit bien de décompacter et non de retourner la terre. Même 
 La dernière étape est de fertiliser la parcelle afin de nourrir le sol pour nourrir les légumes. Pour cela vous allez ajouter du compost. Comptez environ 3 kg de compost par m². Épandez-le sur la terre puis intégrez-le à la couche superficielle de la terre à l’aide d’une griffe. Vous pouvez utiliser également du fumier en granulés, très pratique et facile d’utilisation. Découvrez notre vidéo pour bien utiliser le fumier au jardin ou au potager. Finissez l’opération en nivelant et en cassant les plus petites mottes à l’aide de la griffe puis du râteau.
 Votre parcelle est maintenant prête à recevoir vos semis et plantations !"
 )
-article_3.photos.attach(io: file_12, filename: "article-2.jpg", content_type: "image/jpg")
+article_3.photo.attach(io: file_12, filename: "article-2.jpg", content_type: "image/jpg")
 article_3.save!
 
 file_13 = URI.open("https://www.cultiver-responsable.com/wp-content/uploads/sites/3/2020/06/zone-permaculture-connaissance.jpg")
@@ -370,7 +370,7 @@ Il s’agit ensuite, pour nos jardins, d’adapter ces principes à des parcelle
 Une nouvelle conception du jardin… nourricier
 « Cette approche donne des résultats étonnants dans les jardins, se réjouit Carine Mayo. Idéale pour ceux qui veulent produire eux-mêmes leur nourriture, la permaculture est bien plus qu’une méthode de culture, c’est une philosophie, une démarche globale qui s’appuie sur une éthique reposant sur trois piliers : prendre soin de la Terre, prendre soin des humains, partager équitablement les ressources et les récoltes ». Sepp & Margit Brunner, auteurs de La permaculture pour tous, assurent qu’elle correspond même à « une nouvelle vision du monde »"
 )
-article_4.photos.attach(io: file_13, filename: "article-4.jpg", content_type: "image/jpg")
+article_4.photo.attach(io: file_13, filename: "article-4.jpg", content_type: "image/jpg")
 article_4.save!
 
 puts "Creating lists..."
