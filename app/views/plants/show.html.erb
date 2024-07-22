@@ -2,11 +2,13 @@
   <div>
     <%= link_to "< Retour", plants_path, class: "text-decoration-none text-black mb-3 mt-2" %>
   </div>
+
   <div class="d-flex justify-content-between align-items-center">
     <div class="left-part">
       <h2><%= @plant.name %></h2>
       <p><%= @plant.categorie %></p>
     </div>
+
     <div class="btn-group rounded h-25">
       <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button">
         Ajouter à ma liste
@@ -19,6 +21,7 @@
               <h5 class="modal-title text-center" id="exampleModalLabel">Mes listes</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
+
             <% if user_signed_in? %>
               <div class="modal-body">
                 <div class="d-flex flex-column p-2">
@@ -29,6 +32,7 @@
                     </div>
                   <% end %>
                 </div>
+
                 <h4 class="text-center">Créer une liste</h4>
                 <%= simple_form_for @list do |f| %>
                   <div class="mb-3">
@@ -43,7 +47,9 @@
             <% else %>
               <div class="d-flex justify-content-center align-items-center flex-column py-5">
                 <p>Connectez-vous pour ajouter ou créer votre liste</p>
-                <button class="btn btn-primary"><a class="text-decoration-none text-white" href="/users/sign_in">Se connecter</a></button>
+                <button class="btn btn-primary">
+                  <a class="text-decoration-none text-white" href="/users/sign_in">Se connecter</a>
+                </button>
               </div>
             <% end %>
           </div>
@@ -138,47 +144,52 @@
       <i class="fa-regular fa-pen-to-square"></i>
       <span class="text-decoration-underline ms-2">Conseils des jardiniers :</span>
     </h5>
-    <% if @tips.present? %>
-      <% @tips.each do |tip| %>
-        <div class="p-3 rounded mb-5" style="background-color: #f0fff4;">
-          <div>
-            <strong>Par <%= tip.user.prenom %> <%= tip.user.nom %> :</strong>
-          </div>
-          <p class="text-decoration-underline fst-italic">
-            <strong><%= tip.titre %></strong>
-          </p>
-          <p><%= tip.contenu %></p>
+    <div class="row">
+  <!-- Section pour les conseils -->
+      <div class="col-md-12">
+        <% if @plant.tips.present? %>
+          <% @plant.tips.each do |tip| %>
+            <div class="card mb-3 p-3" style="background-color: #f0fff4;" id="tip-<%= tip.id %>">
+              <div class="card-body">
+                <div class="tip-content" data-controller="edit-tip">
+                  <div>
+                    <strong>Par <%= tip.user.prenom %> <%= tip.user.nom %> :</strong>
+                  </div>
+                  <p class="text-decoration-underline fst-italic"><%= tip.titre %></p>
+                  <p><%= tip.contenu %></p>
+                  <% if tip.user == current_user %>
 
-          <% if tip.user == current_user %>
-            <div class="d-flex justify-content-end">
-              <button class="btn btn-success text-white rounded-pill mr-2 edit-tip-btn me-2" data-tip-id="<%= tip.id %>">
-                <i class="fa-solid fa-pen"></i>
-              </button>
-              <%= link_to plant_path(tip), data: { turbo_method: :delete, confirm: "Êtes-vous sûr ?" }, class: 'btn btn-info text-white rounded-pill' do %>
-                <i class="fa-solid fa-trash-can"></i>
-              <% end %>
-            </div>
-
-            <div class="tip-edit-form d-none">
-              <%= simple_form_for [@plant, tip], url: update_tip_plant_tip_path(@plant, tip), method: :patch, html: { class: 'edit-tip-form' } do |f| %>
-                <%= f.input :titre %>
-                <%= f.input :contenu %>
-                <div class="d-flex justify-content-end">
-                  <%= f.submit "Mettre à jour", class: 'btn btn-secondary text-white rounded-pill mx-auto' %>
+                    <div class="d-flex justify-content-end">
+                    <%#= button_to  %>
+                    <%# <button class="btn btn-succss text-white rounded-pill mr-2 edit-tip-btn me-2" data-tip-id="<%= tip.id %>
+                      <%= link_to  edit_tip_plant_tip_path(plant_id: @plant, tip: tip), data: {action: "click->edit-tip#toggle"}, class: 'btn btn-warning text-white rounded-pill me-2 edit-tip-btn' do %>
+                        <i class="fa-solid fa-pen"></i>
+                      <% end %>
+                      <%= link_to tip_path(tip), data: { turbo_method: :delete, confirm: "Êtes-vous sûr ?" }, class: 'btn btn-warning text-white rounded-pill' do %>
+                        <i class="fa-solid fa-trash"></i>
+                      <% end %>
+                    </div>
+                    <div class="tip-edit-form d-none" data-edit-tip-target="form">
+                      <%= simple_form_for [@plant, tip], url: update_tip_plant_tip_path(plant_id: @plant, tip_id: tip, id:tip.id), method: :patch, html: { class: 'edit-tip-form' } do |f| %>
+                        <%= f.input :titre, input_html: { value: tip.titre } %>
+                        <%= f.input :contenu, input_html: { value: tip.contenu } %>
+                        <div class="d-flex justify-content-end">
+                          <%= f.submit "Mettre à jour", class: 'btn btn-secondary text-white rounded-pill mx-auto' %>
+                        </div>
+                    <% end %>
                 </div>
-              <% end %>
+                  <% end %>
+                </div>
+              </div>
             </div>
           <% end %>
-        </div>
-      <% end %>
-    <% else %>
-      <div class="test-2">
-        <p class="fst-italic p-3 d-flex flex-column align-items-center justify-content-center rounded mb-3" style="background-color: #f0fff4;">
-          Pas de conseils sur cette plante.. Soyez le premier à donner vos trucs et astuces pour aider les jardiniers de When To Plant !
-        </p>
+        <% else %>
+          <p class="fst-italic p-3 d-flex flex-column align-items-center justify-content-center rounded mb-3" style="background-color: #f0fff4;">Aucun conseil pour le moment.</p>
+        <% end %>
       </div>
-    <% end %>
+    </div>
   </div>
+
 
   <% if user_signed_in? %>
     <div class="card mb-5 p-3 w-75 m-auto" style="background-color: #f0fff4;">
@@ -194,7 +205,9 @@
   <% else %>
     <div class="p-3 d-flex flex-column align-items-center justify-content-center rounded mb-5" style="background-color: #daf1df;">
       <p>Connectez-vous pour ajouter vos conseils !</p>
-      <button class="btn btn-primary"><a class="text-decoration-none text-white" href="/users/sign_in">Se connecter</a></button>
+      <button class="btn btn-primary">
+        <a class="text-decoration-none text-white" href="/users/sign_in">Se connecter</a>
+      </button>
     </div>
   <% end %>
 
