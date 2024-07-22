@@ -22,3 +22,4 @@ Rails.application.config.assets.precompile += %w( controllers/modals_controller.
 Rails.application.config.assets.precompile += %w( @hotwired--stimulus.js )
 Rails.application.config.assets.precompile += %w( @stimulus-components--reveal.js )
 Rails.application.config.assets.precompile += %w( comments.js )
+Rails.application.config.assets.precompile += %w( controllers/edit_tip_controller.js )

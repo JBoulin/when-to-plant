@@ -1,5 +1,6 @@
 class TipsController < ApplicationController
-  before_action :set_tip, only: [:show, :update, :destroy, :edit_tip, :update_tip]
+  before_action :set_tip, only: [:show, :edit, :update, :destroy, :update_tip]
+  before_action :set_plant, only: [:create, :update_tip]
 
   def index
     @tips = Tip.all
@@ -8,15 +9,17 @@ class TipsController < ApplicationController
   def show
   end
 
+  def edit
+  end
+
   def create
-    @plant = Plant.find(params[:plant_id])
     @tip = @plant.tips.build(tip_params)
     @tip.user = current_user
     @tip.status = "En attente"
     if @tip.save
       redirect_to @plant, notice: 'Votre conseil a bien été envoyé !'
     else
-      render 'plants/show'
+      render 'plants/show', status: :unprocessable_entity
     end
   end
 
@@ -34,13 +37,18 @@ class TipsController < ApplicationController
   end
 
   def edit_tip
-    @plant = Plant.find(params[:plant_id])
+    @tip = Tip.find(params[:tip])
     @edit_tip_id = @tip.id
+    @plant = Plant.find(params[:plant_id])
+    @tip = Tip.new
+    @tips = Tip.where(plant: @plant)
+    @list = List.new
+    @lists = List.where(user: current_user)
+    @bon_voisin = Neighbour.where(plant_1: @plant)
     render 'plants/show'
   end
 
   def update_tip
-    @plant = Plant.find(params[:plant_id])
     if @tip.update(tip_params)
       redirect_to @plant, notice: 'Votre conseil a bien été modifié !'
     else
@@ -55,7 +63,11 @@ class TipsController < ApplicationController
     @tip = Tip.find(params[:id])
   end
 
+  def set_plant
+    @plant = Plant.find(params[:plant_id])
+  end
+
   def tip_params
-    params.require(:tip).permit(:titre, :contenu, :user_id, :plant_id, :status)
+    params.require(:tip).permit(:titre, :contenu)
   end
 end
