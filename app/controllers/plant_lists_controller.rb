@@ -11,13 +11,17 @@ class PlantListsController < ApplicationController
   def create
     @plant = Plant.find(params[:plant_id])
     @list = List.find(params[:list_id])
+    @lists = List.where(user: current_user)
+    @tip = Tip.new
+    @tips = Tip.where(plant: @plant)
+    @bon_voisin = Neighbour.where(plant_1: @plant)
     @plant_list = PlantList.new
     @plant_list.plant = @plant
     @plant_list.list = @list
     if @plant_list.save
       redirect_to @plant, notice: 'La plante a été ajoutée à votre liste'
     else
-      render 'plants/show'
+      render 'plants/show', notice: "La plante est déjà dans votre liste"
     end
   end
 

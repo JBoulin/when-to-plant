@@ -9,8 +9,9 @@
         <i class="fa-solid fa-caret-down" style="color: #ffffff;"></i>
     </div>
 
-      <div class="cards mt-3 d-none" data-reveal-target="item">
+
         <% list.plant_lists.each do | plant_list | %>
+        <div class="cards mt-3 d-none" data-reveal-target="item">
           <div class="card rounded-3" style="box-shadow: 0 0 15px rgba(0,0,0,0.2); background-color: #daf1df; border-radius:12px;">
             <%= cl_image_tag plant_list.plant.photos.first.key, :cloud_name => "dzhzzutmq", style: 'height: 250px; width: 100%; object-fit: cover; padding: 16px 16px 0 16px;' %>
             <div class="card-body ">
@@ -22,8 +23,9 @@
               </div>
             </div>
           </div>
+           </div>
         <% end %>
-    </div>
+
   <% end %>
 </div>
 </div>
