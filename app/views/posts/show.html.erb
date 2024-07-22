@@ -4,11 +4,8 @@
     <div class="col-md-12">
       <div class="card mb-5" style="background-color: #f0fff4;">
         <div class="card-body">
-          <%# <% if @post.photos.any? %>
-            <%# <%= cl_image_tag @post.photos.last.key, alt: @post.titre, style: "height: 300px; width: 100%; object-fit: cover; border-radius:10px;" %>
-          <%# <% end %>
-          <% @post.photos.each do |photo| %>
-            <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+          <% if @post.photos.any? %>
+            <%= cl_image_tag @post.photos.first.key, alt: @post.titre, style: "height: 300px; width: 100%; object-fit: cover; border-radius:10px;" %>
           <% end %>
           <h1 class="card-title mt-1"><%= @post.titre %></h1>
           <h5 class="card-subtitle mb-2 text-muted"><%= @post.categorie %></h5>
