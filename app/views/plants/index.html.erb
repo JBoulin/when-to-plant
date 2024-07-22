@@ -1,4 +1,9 @@
 <div class="w-75 main-container m-auto">
+<% if params[:query].present? %>
+<h2 class="text-center">Résultats</h2>
+<% else %>
+<h2 class="text-center">Toutes les plantes</h2>
+<% end %>
     <div class="cards mt-3">
       <% @plants.each do | plant | %>
         <div class="card rounded-3" style="box-shadow: 0 0 15px rgba(0,0,0,0.2); background-color: #daf1df; border-radius:12px;">

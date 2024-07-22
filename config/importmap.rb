@@ -9,5 +9,5 @@ pin "bootstrap", to: "bootstrap.min.js", preload: true
 pin "@popperjs/core", to: "popper.js", preload: true
 pin "sweetalert2", to: "https://ga.jspm.io/npm:sweetalert2@11.7.2/dist/sweetalert2.all.js"
 pin "@stimulus-components/reveal", to: "@stimulus-components--reveal.js" # @5.0.0
-pin "trix"
 pin "@rails/actiontext", to: "actiontext.esm.js"
+pin "trix", to: "https://ga.jspm.io/npm:trix@2.0.10/dist/trix.esm.min.js"

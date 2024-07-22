@@ -4,7 +4,6 @@ class Post < ApplicationRecord
   has_many_attached :photos
 
   validates :titre, presence: true
-  validates :contenu, presence: true
   validates :titre, length: { maximum: 255 }
   validates :contenu, length: { maximum: 100000 }
 

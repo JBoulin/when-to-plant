@@ -265,7 +265,7 @@ article_1 = Post.new(
   titre: "Les légumes faciles pour bien débuter",
   categorie: "Tuto",
   date_publication: "15/07/2024",
-  contenu: "Certaines légumes sont réputés difficiles pour diverses raisons : semis délicat, ravageurs fréquents, montée en graines rapide… Évitez-les dans un premier temps, vous risquez de perdre votre temps ! Pour débuter, rien de mieux que des légumes faciles à cultiver. Voici notre sélection :
+  rich_body: "Certaines légumes sont réputés difficiles pour diverses raisons : semis délicat, ravageurs fréquents, montée en graines rapide… Évitez-les dans un premier temps, vous risquez de perdre votre temps ! Pour débuter, rien de mieux que des légumes faciles à cultiver. Voici notre sélection :
 La côte de blette est un légume robuste qui pousse sans difficulté.
 Les salades : laitues et chicorées poussent rapidement (voir notre fiche Les salades faciles à cultiver pour débutants)
 Le chou Kale est presque… inratable !
@@ -291,7 +291,7 @@ article_2 = Post.new(
   titre: "Les outils pour commencer son potager",
   categorie: "Matériel",
   date_publication: "16/07/2024",
-  contenu: "Les jardiniers débutants sont souvent assez démunis face aux nombreux outils proposés en jardinerie. Voici quelques outils utiles pour commencer votre potager :
+  rich_body: "Les jardiniers débutants sont souvent assez démunis face aux nombreux outils proposés en jardinerie. Voici quelques outils utiles pour commencer votre potager :
 Les outils d’aération en profondeur
 La fourche bêche et la grelinette sont deux outils que l’on va utiliser pour décompacter et ameublir la terre sur les 30 premiers centimètres. Afin de préserver les couches du sol, ces outils sont simplement enfoncés dans la terre puis, par un mouvement de bascule en arrière sur le manche, ils permettent de soulever la terre. La grelinette permet de travailler une plus grande surface, la présence de deux manches permet aussi de faciliter le travail.
 Les outils de travail superficiel
@@ -317,7 +317,7 @@ article_3 = Post.new(
   titre: "Potager - Par où commencer ?",
   categorie: "Tuto",
   date_publication: "17/07/2024",
-  contenu: "Quand on débute un potager, sans connaissance de la terre, sans savoir manier les outils, il est préférable de commencer petit ! Je vous conseille pour une première année une surface qui ne dépassera pas 10 m² si vous pensez avoir peu de temps, vous l’agrandirez selon vos résultats l’année suivante. Il est toujours plus encourageant de bien s’occuper de cette petite surface et des quelques plants de légumes, de leur entretien et de l’ensemble des travaux (semis, plantations mais aussi sarclages pour désherber, arrosages…) que de ne pas réussir à gérer une grande parcelle.
+  rich_body: "Quand on débute un potager, sans connaissance de la terre, sans savoir manier les outils, il est préférable de commencer petit ! Je vous conseille pour une première année une surface qui ne dépassera pas 10 m² si vous pensez avoir peu de temps, vous l’agrandirez selon vos résultats l’année suivante. Il est toujours plus encourageant de bien s’occuper de cette petite surface et des quelques plants de légumes, de leur entretien et de l’ensemble des travaux (semis, plantations mais aussi sarclages pour désherber, arrosages…) que de ne pas réussir à gérer une grande parcelle.
 Si, à terme, produire vos légumes devient une passion ou une nécessite, sachez qu’un potager de 300 m² (ajoutez 200 m² de verger) bien géré fournit largement assez de petits fruits et de légumes variés pour une famille de 4 personnes, bocaux et conserves compris !
 L'emplacement et exposition du potager
 Lors de l’aménagement de votre potager il est particulièrement important de rechercher le meilleur ensoleillement possible. La plupart des légumes ont besoin d’être exposés au soleil au moins une bonne partie de la journée. Dans la mesure du possible le potager doit donc être orienté au Sud.
@@ -358,7 +358,7 @@ article_4 = Post.new(
   titre: "Tout savoir sur la permaculture",
   categorie: "Tuto",
   date_publication: "15/07/2024",
-  contenu: "La permaculture, c’est quoi exactement ?
+  rich_body: "La permaculture, c’est quoi exactement ?
 À la fois ancestrale et innovante, la permaculture reprend et améliore les enseignements de la nature pour viser l’abondance et l’autonomie alimentaire. Ce principe de culture permanente, créé par le biologiste Bill Mollison dans les années 1970 en Australie, fait grand bruit actuellement. Principalement parce qu’il est utilisé dans les potagers urbains se développant dans le monde entier, en lien avec le mouvement des Incroyables Comestibles.
 Son but ultime : nourrir tous les hommes de la planète, et de manière durable. Quel pari ! « C’est un mouvement qui a gagné de l’ampleur en quelques années, explique Carine Mayo, auteur du Guide de la Permaculture. Il apporte des réponses à ceux qui veulent inventer une société moins dépendante du pétrole ou simplement retrouver un lien avec la nature en cultivant leur jardin ».
 À contre-courant de l’agriculture moderne
