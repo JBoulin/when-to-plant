@@ -43,8 +43,8 @@
                 <p><%= comment.contenu %></p>
                 <% if comment.user == current_user %>
                   <div class="d-flex justify-content-end">
-                    <button class="btn btn-succss text-white rounded-pill mr-2 edit-comment-btn me-2" data-comment-id="<%= comment.id %>">Modifier</button>
-                    <%= link_to 'Supprimer', comment_path(comment), data: { turbo_method: :delete, confirm: "Êtes vous sur ?" }, class: 'btn btn-info text-white rounded-pill' %>
+                    <button class="btn btn-success text-white rounded-pill mr-2 edit-comment-btn me-2" data-comment-id="<%= comment.id %>">Modifier</button>
+                    <%= link_to 'Supprimer', comment_path(comment), data: { turbo_method: :delete, confirm: "Êtes vous sur ?" }, class: 'btn btn-success text-white rounded-pill' %>
                   </div>
                 <% end %>
               </div>
