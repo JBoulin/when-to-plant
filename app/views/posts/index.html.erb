@@ -39,8 +39,11 @@
             <% post_pair.each do |post| %>
               <div class="card mb-3 article-card" style="background-color: #f0fff4; width: 48%;">
                 <div class="card-body">
-                    <%= cl_image_tag post.photo.key, alt: post.titre, style: "height: 200px; width: 100%; object-fit: cover; border-radius:10px;" %>
-
+                  <% if post.photo.present? && post.photo.key.present? %>
+                      <%= cl_image_tag post.photo.key, alt: post.titre, style: "height: 200px; width: 100%; object-fit: cover; border-radius:10px;" %>
+                  <% else %>
+                      <%= image_tag "default_image.png", style: "height: 250px; width: 100%; object-fit: cover; padding: 16px 16px 0 16px;" %>
+                  <% end %>
                   <h3 class="card-title"><%= post.titre %></h3>
                   <h5 class="card-subtitle mb-2 text-muted"><%= post.categorie %></h5>
                   <p class="card-text"><%= post.rich_body.to_plain_text.truncate(200) %></p>

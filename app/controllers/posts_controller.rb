@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :authorize_admin, only: [:edit, :update, :destroy]
 
   def index
     if params[:query].present?
@@ -49,6 +50,10 @@ class PostsController < ApplicationController
     redirect_to posts_url, alert: 'Post not found.' # Gérer le cas où le post n'existe pas
   rescue ArgumentError
     redirect_to posts_url, alert: 'Invalid post ID.' # Gérer le cas où l'ID est invalide
+  end
+
+  def authorize_admin
+    redirect_to posts_url, alert: 'Access denied.' unless current_user&.admin?
   end
 
   def post_params

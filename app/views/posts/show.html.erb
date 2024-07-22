@@ -2,14 +2,25 @@
   <div class="row">
     <!-- Colonne pour l'article -->
     <div class="col-md-12">
+        <% if current_user&.admin? %>
+            <div class="d-flex justify-content-end">
+              <%= link_to 'Modifier', edit_post_path(@post), class: 'btn btn-primary text-white rounded-pill mr-2' %>
+              <%= link_to 'Supprimer', post_path(@post), method: :delete, data: { confirm: 'Êtes-vous sûr de vouloir supprimer cet article ?' }, class: 'btn btn-danger text-white rounded-pill' %>
+            </div>
+          <% end %>
       <div class="card mb-5" style="background-color: #f0fff4;">
         <div class="card-body">
+          <% if @post.photo.present? && @post.photo.key.present? %>
             <%= cl_image_tag @post.photo.key, alt: @post.titre, style: "height: 300px; width: 100%; object-fit: cover; border-radius:10px;" %>
+          <% else %>
+            <%= image_tag "default_image.png", alt: @post.titre, style: "height: 300px; width: 100%; object-fit: cover; border-radius:10px;" %>
+          <% end %>
           <h1 class="card-title mt-1"><%= @post.titre %></h1>
           <h5 class="card-subtitle mb-2 text-muted"><%= @post.categorie %></h5>
           <p class="card-text"><small class="text-muted"><%= @post.date_publication %></small></p>
           <p class="card-text"><%= @post.rich_body %></p>
-          <div class="d-flex justify-content-end">
+
+          <div class="d-flex justify-content-end mt-3">
             <%= link_to 'Retour', posts_path, class: 'btn btn-success text-white rounded-pill' %>
           </div>
         </div>
