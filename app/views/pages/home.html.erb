@@ -76,7 +76,7 @@
            <%= cl_image_tag post.photos.first.key, :cloud_name => "dzhzzutmq", style:"height: 250px; width: 100%; object-fit: cover; padding: 16px 16px 0 16px;" %>
             <div class="card-body">
               <h5 class="card-title"><%= post.titre %></h5>
-              <p class="card-text text-muted"><%= post.contenu.truncate(200) %></p>
+              <p class="card-text text-muted"><%= post.rich_body.to_plain_text.truncate(200) %></p>
               <div class="d-flex flex-row align-items-center justify-content-between">
                 <p class="card-text"><small class="text-muted"><%= post.date_publication %></small></p>
                 <%= link_to "Lire l'article", post_path(post), class: "btn btn-success rounded-pill" %>
