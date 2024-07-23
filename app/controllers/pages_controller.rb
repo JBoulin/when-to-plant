@@ -20,4 +20,8 @@ class PagesController < ApplicationController
 
   def recrutement
   end
+
+  def plant_finder
+    @plants = Plant.all
+  end
 end
