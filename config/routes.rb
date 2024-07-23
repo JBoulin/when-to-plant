@@ -14,13 +14,6 @@ Rails.application.routes.draw do
 
   resources :comments, only: :destroy
 
-  # resources :tips, only: [:update] do
-  #   member do
-  #     get 'edit_tip'
-  #     patch 'update_tip'
-  #   end
-  # end
-
   # Routes for Plants
   resources :plants do
     # Nested routes for Tips under Plant

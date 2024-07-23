@@ -1,0 +1,12 @@
+<h2 class="text-center"> Modification de post ici</h2>
+<div class="container">
+  <%= simple_form_for @post, html: { id: 'post-form' } do |f| %>
+    <%= f.input :titre, label: "Titre", placeholder: "Les légumes faciles pour bien débuter" %>
+    <%= f.input :categorie, label: "Catégorie", placeholder: "Tuto" %>
+    <%= f.input :date_publication, label: "Date de publication" %>
+    <%= f.rich_text_area :rich_body, class:" trix-content" %>
+    <div class="d-flex justify-content-end">
+      <%= f.submit "Soumettre", class: 'btn btn-success text-white rounded-pill' %>
+    </div>
+  <% end %>
+</div>
