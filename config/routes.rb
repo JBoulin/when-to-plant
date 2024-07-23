@@ -46,4 +46,5 @@ Rails.application.routes.draw do
   get 'recrutement', to: 'pages#recrutement'
   get 'calendrier', to: 'pages#calendrier'
   get 'mentions-legales', to: 'pages#mentions_legales'
+  get 'plant-finder', to: 'pages#plant_finder'
 end

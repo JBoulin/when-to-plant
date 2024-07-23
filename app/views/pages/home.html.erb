@@ -38,30 +38,33 @@
   <h1 class="py-4 text-center">Le calendrier</h1>
 
   <div class="cards">
-    <div class="card-trip d-flex flex-column align-items-center justify-content-center">
+    <div class="card-trip d-flex flex-column align-items-center justify-content-center" style="max-height:300px;">
           <h2 class="fs-2 pb-3">Jeudi 25 Juillet</h2>
           <p class="fs-5 pb-3">Hier</p>
-      <div class="btn btn-success w-25 rounded-pill">
-        Lune
+      <div class="d-flex p-3 bg-warning" style="border-radius:10px;">
+      <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-feuilles.png" title="Jour feuilles" width="35" height="40" class="mx-3"/>
+      <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png" title="Lune montante" width="35" height="40" class="mx-3"/>
       </div>
     </div>
 
 
-    <div class="card-trip d-flex flex-column align-items-center justify-content-center">
+    <div class="card-trip d-flex flex-column align-items-center justify-content-center" style="max-height:300px;">
           <h2 class="fs-2 pb-3">Vendredi 26 Juillet</h2>
           <p class="fs-5 pb-3">Aujourd'hui</p>
-      <div class="btn btn-success w-25 rounded-pill">
-        Lune
-      </div>
+    <div class="d-flex p-3 bg-warning" style="border-radius:10px;">
+      <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-feuilles.png" title="Jour feuilles" width="35" height="40" class="mx-3"/>
+      <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png" title="Lune montante" width="35" height="40" class="mx-3"/>
+    </div>
     </div>
 
 
-    <div class="card-trip d-flex flex-column align-items-center justify-content-center">
+    <div class="card-trip d-flex flex-column align-items-center justify-content-center" style="max-height:300px;">
           <h2 class="fs-2 pb-3">Samedi 27 Juillet</h2>
           <p class="fs-5 pb-3">Demain</p>
-      <div class="btn btn-success w-25 rounded-pill">
-        Lune
-      </div>
+      <div class="d-flex p-3 bg-warning" style="border-radius:10px;">
+      <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-feuilles.png" title="Jour feuilles" width="35" height="40" class="mx-3"/>
+      <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-lunemontante.png" title="Lune montante" width="35" height="40" class="mx-3"/>
+    </div>
     </div>
   </div>
   <%= link_to "Voir le calendrier", "/calendrier##{Date.today.day}", class: "btn btn-success rounded-pill m-auto mb-3" %>

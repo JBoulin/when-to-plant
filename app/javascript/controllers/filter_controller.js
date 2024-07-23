@@ -15,4 +15,13 @@ export default class extends Controller {
     Turbo.visit(newUrl, { frame: "plants" });
     history.pushState({}, "", newUrl);
   }
+
+  resetForm() {
+    // const form = this.element;
+    // const url = `/plants`;
+    // // window.location.reload()
+    // console.log(newUrl)
+    // Turbo.visit(newUrl, { frame: "plants" });
+    // history.pushState({}, "", newUrl);
+  }
 }
