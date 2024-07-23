@@ -1,0 +1,20 @@
+<%= simple_form_for @contact, url: contact_path, method: :post, html: { class: 'mt-4' } do |f| %>
+  <div class="mb-3">
+    <%= f.input :first_name, input_html: { class: 'form-control' } %>
+  </div>
+  <div class="mb-3">
+    <%= f.input :last_name, input_html: { class: 'form-control' } %>
+  </div>
+  <div class="mb-3">
+    <%= f.input :email, input_html: { class: 'form-control' } %>
+  </div>
+  <div class="mb-3">
+    <%= f.input :address, input_html: { class: 'form-control' } %>
+  </div>
+  <div class="mb-3">
+    <%= f.input :message, as: :text, input_html: { class: 'form-control', rows: 5 } %>
+  </div>
+  <div class="d-grid">
+    <%= f.button :submit, 'Envoyer', class: 'btn btn-primary' %>
+  </div>
+<% end %>

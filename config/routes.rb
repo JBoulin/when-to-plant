@@ -45,6 +45,7 @@ Rails.application.routes.draw do
 
   get 'a-propos', to: 'pages#about'
   get 'contact', to: 'pages#contact'
+  post 'contact', to: 'pages#create_contact'
   get 'recrutement', to: 'pages#recrutement'
   get 'calendrier', to: 'pages#calendrier'
   get 'mentions-legales', to: 'pages#mentions_legales'
