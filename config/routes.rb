@@ -29,7 +29,11 @@ Rails.application.routes.draw do
   # Routes for Lists
   resources :lists do
     # Nested routes for PlantLists under Lists
-    resources :plant_lists, only: [:create]
+    resources :plant_lists, only: [:create] do
+      member do
+        delete 'remove_plant'
+      end
+    end
   end
 
   # Routes for Tips (outside the nested context if needed)

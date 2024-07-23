@@ -29,15 +29,22 @@ class ListsController < ApplicationController
 
   def update
     if @list.update(list_params)
-      redirect_to @list, notice: 'Votre liste a été modifiée !'
+      redirect_to lists_path, notice: 'Votre liste a été renommée !'
     else
-      render :edit
+      render  '/lists'
     end
   end
 
   def destroy
+    @list = List.find(params[:id])
     @list.destroy
     redirect_to lists_url, notice: 'Votre liste a été supprimée !'
+  end
+
+  def remove_plant
+    @plant_list = PlantList.find(params[:id])
+    @plant_list.destroy
+    redirect_to lists_path, notice: 'Plante retirée de la liste avec succès.'
   end
 
   private
