@@ -139,7 +139,7 @@
     </div>
   </div>
 
-  <div class="test-1">
+  <div class="test-1" data-edit-tip-target="messages" >
     <h5 class="d-flex flex-row">
       <i class="fa-regular fa-pen-to-square"></i>
       <span class="text-decoration-underline ms-2">Conseils des jardiniers :</span>
@@ -162,7 +162,7 @@
                     <div class="d-flex justify-content-end">
                     <%#= button_to  %>
                     <%# <button class="btn btn-succss text-white rounded-pill mr-2 edit-tip-btn me-2" data-tip-id="<%= tip.id %>
-                      <%= link_to  edit_tip_plant_tip_path(plant_id: @plant, tip: tip), data: {action: "click->edit-tip#toggle"}, class: 'btn btn-warning text-white rounded-pill me-2 edit-tip-btn' do %>
+                      <%= link_to  edit_tip_plant_tip_path(plant_id: @plant, tip: tip),  data: {action: "click->edit-tip#toggle"}, class: 'btn btn-warning text-white rounded-pill me-2 edit-tip-btn' do %>
                         <i class="fa-solid fa-pen"></i>
                       <% end %>
                       <%= link_to tip_path(tip), data: { turbo_method: :delete, confirm: "Êtes-vous sûr ?" }, class: 'btn btn-warning text-white rounded-pill' do %>
@@ -170,7 +170,7 @@
                       <% end %>
                     </div>
                     <div class="tip-edit-form d-none" data-edit-tip-target="form">
-                      <%= simple_form_for [@plant, tip], url: update_tip_plant_tip_path(plant_id: @plant, tip_id: tip, id:tip.id), method: :patch, html: { class: 'edit-tip-form' } do |f| %>
+                      <%= simple_form_for [@plant, tip], url: update_tip_plant_tip_path(plant_id: @plant, tip_id: tip, id:tip.id), method: :patch,  html: { class: 'edit-tip-form' } do |f| %>
                         <%= f.input :titre, input_html: { value: tip.titre } %>
                         <%= f.input :contenu, input_html: { value: tip.contenu } %>
                         <div class="d-flex justify-content-end">
@@ -194,7 +194,7 @@
   <% if user_signed_in? %>
   <div class="card mb-5 p-3 w-75 m-auto" style="background-color: #f0fff4;">
     <h4 class="text-center">Ajouter votre conseil</h4>
-    <%= simple_form_for([@plant, @tip], html: { id: 'new-comment-form', data: { controller: "alert",
+    <%= simple_form_for([@plant, @tip],   html: { id: 'new-comment-form', data: { controller: "alert",
       alert_icon_value: "success",
       alert_title_value: "Astuce ajouté avec succès",
       confirm_button_text: "All good!",

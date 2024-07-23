@@ -2,12 +2,12 @@
   <div class="row">
     <!-- Colonne pour l'article -->
     <div class="col-md-12">
-        <% if current_user&.admin? %>
-            <div class="d-flex justify-content-end  mb-3">
-              <%= link_to 'Modifier', edit_post_path(@post), class: 'btn btn-primary text-white rounded-pill mr-2 me-3' %>
-              <%= link_to 'Supprimer', post_path(@post), method: :delete, data: { confirm: 'Êtes-vous sûr de vouloir supprimer cet article ?' }, class: 'btn btn-success text-white rounded-pill me-3' %>
-            </div>
-          <% end %>
+      <% if current_user&.admin? %>
+        <div class="d-flex justify-content-end mb-3">
+          <%= link_to 'Modifier', edit_post_path(@post), class: 'btn btn-primary text-white rounded-pill mr-2 me-3' %>
+          <%= link_to 'Supprimer', post_path(@post), method: :delete, data: { confirm: 'Êtes-vous sûr de vouloir supprimer cet article ?' }, class: 'btn btn-success text-white rounded-pill me-3' %>
+        </div>
+      <% end %>
       <div class="card mb-5" style="background-color: #f0fff4;">
         <div class="card-body">
           <% if @post.photo.present? && @post.photo.key.present? %>
@@ -73,13 +73,12 @@
         <div class="card-body">
           <h2>Ajouter un Commentaire</h2>
           <%= simple_form_for [@post, Comment.new], html: { id: 'new-comment-form', data: { controller: "alert",
-        alert_icon_value: "success",
-        alert_title_value: "Commentaire ajouter avec succès",
-        confirm_button_text: "All good!",
-        confirmButtonColor: "#0c4b36",
-        show_cancel_button: true,
-        action: "submit->alert#initSweetalert",
-        turbo: false} } do |f| %>
+            alert_icon_value: "success",
+            alert_title_value: "Commentaire ajouté avec succès",
+            confirm_button_text: "All good!",
+            confirmButtonColor: "#0c4b36",
+            show_cancel_button: true,
+            action: "submit->alert#initSweetalert" } } do |f| %>
             <%= f.input :titre, placeholder: "Votre titre" %>
             <%= f.input :contenu, placeholder: "Votre commentaire" %>
             <div class="d-flex justify-content-end">
