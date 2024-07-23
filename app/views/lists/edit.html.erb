@@ -1,0 +1,25 @@
+<div class="container mb-3 mt-5">
+  <div class="w-75 d-flex flex-column m-auto">
+    <%= form_with(model: @list, local: true) do |form| %>
+      <% if @list.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@list.errors.count, "error") %> prohibited this list from being saved:</h2>
+          <ul>
+            <% @list.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="field">
+        <%= form.label :nom %>
+        <%= form.text_field :nom %>
+      </div>
+
+      <div class="actions">
+        <%= form.submit "Sauvegarder les changements", class: 'btn btn-success rounded-pill mt-3 ' %>
+      </div>
+    <% end %>
+  </div>
+</div>
