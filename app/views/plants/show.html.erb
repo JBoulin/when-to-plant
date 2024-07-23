@@ -2,7 +2,7 @@
   <div>
     <%= link_to "< Retour", plants_path, class: "text-decoration-none text-black mb-3 mt-2" %>
   </div>
-
+  <%= turbo_page_requires_reload %>
   <div class="d-flex justify-content-between align-items-center">
     <div class="left-part">
       <h2><%= @plant.name %></h2>

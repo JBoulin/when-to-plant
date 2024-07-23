@@ -3,10 +3,19 @@ class PlantsController < ApplicationController
 
   def index
     @plants = Plant.all
+    @plants = @plants.where(categorie: params[:categorie]) if params[:categorie].present?
+    @plants = @plants.where(type_semis: params[:type_semis]) if params[:type_semis].present?
+    @plants = @plants.where("periode_semis ILIKE ?", "%#{params[:periode_semis]}%") if params[:periode_semis].present?
+    @plants = @plants.where("periode_recoltes ILIKE ?", "%#{params[:periode_recoltes]}%") if params[:periode_recoltes].present?
+    @plants = @plants.where(culture: params[:culture]) if params[:culture].present?
+    @plants = @plants.where(besoin_eau: params[:besoin_eau]) if params[:besoin_eau].present?
+    @plants = @plants.where("qualite_sol ILIKE ?", "%#{params[:periode_recoltes]}%") if params[:qualite_sol].present?
+    @plants = @plants.where("nature_sol ILIKE ?", "%#{params[:periode_semis]}%") if params[:nature_sol].present?
+    @plants = @plants.where(hauteur: params[:hauteur]) if params[:hauteur].present?
+    @plants = @plants.where(temperature: params[:temperature]) if params[:temperature].present?
+    @plants = @plants.where(difficulte: params[:difficulte]) if params[:difficulte].present?
     if params[:query].present?
       @plants = Plant.search_by_name_and_description(params[:query])
-    else
-      @plants = Plant.all
     end
   end
 

@@ -24,7 +24,7 @@
             <%= plant.categorie%>
           </p>
           <p>
-            <%= plant.description.truncate(127, separator: ' ') %>
+            <%= plant.description.truncate(85, separator: ' ') %>
           </p>
         </div>
       </div>
@@ -64,7 +64,7 @@
       </div>
     </div>
   </div>
-  <%= link_to "Voir le calendrier", calendrier_path, class: "btn btn-success rounded-pill m-auto mb-3" %>
+  <%= link_to "Voir le calendrier", "/calendrier##{Date.today.day}", class: "btn btn-success rounded-pill m-auto mb-3" %>
 
   <h1 class="py-4 text-center">Les dernières informations et tuto When To Plant</h1>
 
