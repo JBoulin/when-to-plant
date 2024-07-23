@@ -34,10 +34,8 @@ Rails.application.routes.draw do
 
   # Routes for Tips (outside the nested context if needed)
   resources :tips, only: [:index, :show, :update, :destroy]
-
   # Routes for PlantLists (outside the nested context if needed)
   resources :plant_lists, only: [:index, :show, :update, :destroy]
-
   # Routes for Neighbours
   resources :neighbours, only: [:index, :show, :update, :destroy]
 
