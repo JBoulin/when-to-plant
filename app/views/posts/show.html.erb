@@ -2,14 +2,25 @@
   <div class="row">
     <!-- Colonne pour l'article -->
     <div class="col-md-12">
+      <% if current_user&.admin? %>
+        <div class="d-flex justify-content-end mb-3">
+          <%= link_to 'Modifier', edit_post_path(@post), class: 'btn btn-primary text-white rounded-pill mr-2 me-3' %>
+          <%= link_to 'Supprimer', post_path(@post), method: :delete, data: { confirm: 'Êtes-vous sûr de vouloir supprimer cet article ?' }, class: 'btn btn-success text-white rounded-pill me-3' %>
+        </div>
+      <% end %>
       <div class="card mb-5" style="background-color: #f0fff4;">
         <div class="card-body">
+          <% if @post.photo.present? && @post.photo.key.present? %>
             <%= cl_image_tag @post.photo.key, alt: @post.titre, style: "height: 300px; width: 100%; object-fit: cover; border-radius:10px;" %>
+          <% else %>
+            <%= image_tag "default_image.png", alt: @post.titre, style: "height: 300px; width: 100%; object-fit: cover; border-radius:10px;" %>
+          <% end %>
           <h1 class="card-title mt-1"><%= @post.titre %></h1>
           <h5 class="card-subtitle mb-2 text-muted"><%= @post.categorie %></h5>
           <p class="card-text"><small class="text-muted"><%= @post.date_publication %></small></p>
           <p class="card-text"><%= @post.rich_body %></p>
-          <div class="d-flex justify-content-end">
+
+          <div class="d-flex justify-content-end mt-3">
             <%= link_to 'Retour', posts_path, class: 'btn btn-success text-white rounded-pill' %>
           </div>
         </div>
@@ -32,8 +43,8 @@
                 <p><%= comment.contenu %></p>
                 <% if comment.user == current_user %>
                   <div class="d-flex justify-content-end">
-                    <button class="btn btn-succss text-white rounded-pill mr-2 edit-comment-btn me-2" data-comment-id="<%= comment.id %>">Modifier</button>
-                    <%= link_to 'Supprimer', comment_path(comment), data: { turbo_method: :delete, confirm: "Êtes vous sur ?" }, class: 'btn btn-info text-white rounded-pill' %>
+                    <button class="btn btn-success text-white rounded-pill mr-2 edit-comment-btn me-2" data-comment-id="<%= comment.id %>">Modifier</button>
+                    <%= link_to 'Supprimer', comment_path(comment), data: { turbo_method: :delete, confirm: "Êtes vous sur ?" }, class: 'btn btn-success text-white rounded-pill' %>
                   </div>
                 <% end %>
               </div>
@@ -62,12 +73,12 @@
         <div class="card-body">
           <h2>Ajouter un Commentaire</h2>
           <%= simple_form_for [@post, Comment.new], html: { id: 'new-comment-form', data: { controller: "alert",
-        alert_icon_value: "success",
-        alert_title_value: "Commentaire ajouter avec succès",
-        confirm_button_text: "All good!",
-        show_cancel_button: true,
-        action: "submit->alert#initSweetalert",
-        turbo: false} } do |f| %>
+            alert_icon_value: "success",
+            alert_title_value: "Commentaire ajouté avec succès",
+            confirm_button_text: "All good!",
+            confirmButtonColor: "#0c4b36",
+            show_cancel_button: true,
+            action: "submit->alert#initSweetalert" } } do |f| %>
             <%= f.input :titre, placeholder: "Votre titre" %>
             <%= f.input :contenu, placeholder: "Votre commentaire" %>
             <div class="d-flex justify-content-end">

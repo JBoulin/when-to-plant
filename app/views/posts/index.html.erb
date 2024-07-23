@@ -1,4 +1,4 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://36vine.com/wp-content/uploads/2023/12/aa83f2ab7561ac20f6a4b07ac336eaa8.webp);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://st.hzcdn.com/simgs/pictures/jardins/bac-pour-jardins-cote-jardin-et-clotures-img~8161e8c40659c718_14-1284-1-8ca4e4f.jpg); padding-bottom: 64px; background-size: cover; background-position: center">
   <div class="container">
     <h1 style="text-align: center;">When To Plant 🌱</h1>
     <h3 style="text-align: center;">Le Blog</h3>
@@ -39,8 +39,11 @@
             <% post_pair.each do |post| %>
               <div class="card mb-3 article-card" style="background-color: #f0fff4; width: 48%;">
                 <div class="card-body">
-                    <%= cl_image_tag post.photo.key, alt: post.titre, style: "height: 200px; width: 100%; object-fit: cover; border-radius:10px;" %>
-
+                  <% if post.photo.present? && post.photo.key.present? %>
+                      <%= cl_image_tag post.photo.key, alt: post.titre, style: "height: 200px; width: 100%; object-fit: cover; border-radius:10px;" %>
+                  <% else %>
+                      <%= image_tag "default_image.png", style: "height: 250px; width: 100%; object-fit: cover; padding: 16px 16px 0 16px;" %>
+                  <% end %>
                   <h3 class="card-title"><%= post.titre %></h3>
                   <h5 class="card-subtitle mb-2 text-muted"><%= post.categorie %></h5>
                   <p class="card-text"><%= post.rich_body.to_plain_text.truncate(200) %></p>

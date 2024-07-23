@@ -4,20 +4,32 @@ Rails.application.routes.draw do
   # Routes for Posts
   resources :posts do
     # Nested routes for Comments under Posts
-    resources :comments, only: [:create,:update] do
+    resources :comments, only: [:create, :update] do
       member do
         get 'edit_comment'
         patch 'update_comment'
       end
     end
   end
+
   resources :comments, only: :destroy
-  # Routes for Comments (outside the nested context if needed)
-  resources :comments, only: [:index,:edit, :show,:update, :destroy]
+
+  # resources :tips, only: [:update] do
+  #   member do
+  #     get 'edit_tip'
+  #     patch 'update_tip'
+  #   end
+  # end
 
   # Routes for Plants
-  resources :plants, only: [:index, :show] do
-    resources :tips, only: [:create]
+  resources :plants do
+    # Nested routes for Tips under Plant
+    resources :tips, only: [:create] do
+      member do
+        get 'edit_tip'
+        patch 'update_tip'
+      end
+    end
     resources :neighbours, only: [:create]
   end
 
@@ -27,14 +39,15 @@ Rails.application.routes.draw do
     resources :plant_lists, only: [:create]
   end
 
-  # Routes for Tips
-  resources :tips, except: [:create]
+  # Routes for Tips (outside the nested context if needed)
+  resources :tips, only: [:index, :show, :update, :destroy]
 
   # Routes for PlantLists (outside the nested context if needed)
-  resources :plant_lists, only: [:index, :show,:update,:destroy]
+  resources :plant_lists, only: [:index, :show, :update, :destroy]
 
   # Routes for Neighbours
   resources :neighbours, only: [:index, :show, :update, :destroy]
+
   root to: "pages#home"
 
   get 'a-propos', to: 'pages#about'
