@@ -5,10 +5,10 @@
     <div data-controller="reveal" data-reveal-hidden-class="d-none">
       <% @lists.each do |list| %>
           <div class="d-flex justify-content-end">
-            <%= link_to edit_list_path(list), class: 'btn btn-warning text-white ms-2 rounded-pill me-2 mb-3' do %>
+            <%= link_to edit_list_path(list), class: 'btn btn-success text-white ms-2 rounded-pill me-2 mb-3' do %>
               <i class="fa-solid fa-pen"></i>
             <% end %>
-            <%= link_to list_path(list), method: :delete, data: { turbo_confirm: 'Are you sure?' }, class: 'btn btn-danger text-white ms-2 rounded-pill me-2 mb-3' do %>
+            <%= link_to list_path(list), method: :delete, data: { turbo_confirm: 'Are you sure?' }, class: 'btn btn-success text-white ms-2 rounded-pill me-2 mb-3' do %>
               <i class="fa-solid fa-trash"></i>
             <% end %>
           </div>
@@ -29,7 +29,7 @@
               <h6 class="card-title"><%= plant_list.plant.categorie %></h6>
               <p class="card-text text-muted fs-6"><%= plant_list.plant.description.truncate(200) %></p>
               <div class="d-flex justify-content-center">
-                <%= link_to "Voir détails", plant_path(plant_list.plant), class:"btn btn-success text-white" %>
+                <%= link_to "Voir détails", plant_path(plant_list.plant), class:"btn btn-success text-white rounded-pill" %>
                 <%#= link_to 'Supprimer de ma liste', remove_plant_path(list_id: list.id, plant_list_id: plant_list.id), data: { turbo_method: :delete, turbo_confirm: 'Êtes-vous sûr?' }, class: "btn btn-danger text-white" %>
               </div>
             </div>
