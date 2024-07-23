@@ -24,15 +24,18 @@
 
       <%= f.input :password,
                   hint: "Laisser vide si vous ne souhaitez pas le modifier",
+                  label: "Mot de passe",
                   required: false,
                   input_html: { autocomplete: "new-password" } %>
 
       <%= f.input :password_confirmation,
+                  label: "Confirmer le mot de passe",
                   required: false,
                   input_html: { autocomplete: "new-password" } %>
 
       <%= f.input :current_password,
                   hint: "Nous avons besoin de votre mot de passe pour confirmer les changements",
+                  label: "Mot de passe actuel",
                   required: true,
                   input_html: { autocomplete: "current-password" } %>
     </div>
