@@ -30,7 +30,7 @@
               <p class="card-text text-muted fs-6"><%= plant_list.plant.description.truncate(200) %></p>
               <div class="d-flex justify-content-center">
                 <%= link_to "Voir détails", plant_path(plant_list.plant), class:"btn btn-success text-white" %>
-                <%#= link_to 'Supprimer de ma liste', remove_plant_list_path(plant_list), data: { turbo_method: :delete, turbo_confirm: 'Êtes-vous sûr?' }, class: "btn btn-danger text-white" %>
+                <%#= link_to 'Supprimer de ma liste', remove_plant_path(list_id: list.id, plant_list_id: plant_list.id), data: { turbo_method: :delete, turbo_confirm: 'Êtes-vous sûr?' }, class: "btn btn-danger text-white" %>
               </div>
             </div>
           </div>

@@ -14,6 +14,7 @@ Rails.application.routes.draw do
 
   resources :comments, only: :destroy
 
+
   # Routes for Plants
   resources :plants do
     # Nested routes for Tips under Plant
@@ -29,11 +30,7 @@ Rails.application.routes.draw do
   # Routes for Lists
   resources :lists do
     # Nested routes for PlantLists under Lists
-    resources :plant_lists, only: [:create] do
-      member do
-        delete 'remove_plant'
-      end
-    end
+    resources :plant_lists, only: [:create]
   end
 
   # Routes for Tips (outside the nested context if needed)
@@ -49,7 +46,6 @@ Rails.application.routes.draw do
 
   get 'a-propos', to: 'pages#about'
   get 'contact', to: 'pages#contact'
-  post 'contact', to: 'pages#create_contact'
   get 'recrutement', to: 'pages#recrutement'
   get 'calendrier', to: 'pages#calendrier'
   get 'mentions-legales', to: 'pages#mentions_legales'
