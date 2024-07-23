@@ -1,4 +1,5 @@
 require "open-uri"
+require 'csv'
 # This file should ensure the existence of records required to run the application in every environment (production,
 # development, test). The code here should be idempotent so that it can be executed at any point in every environment.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
@@ -61,202 +62,22 @@ User.create!(
 
 puts "Creating plants..."
 
-file_1 = URI.open("https://kokopelli-semences.fr/media/cache/resolve/shop_product_large_thumbnail/l0171-1.jpg")
-file_2 = URI.open("https://www.jardiner-malin.fr/wp-content/uploads/2014/04/1314777481artichaut.jpg")
-file_3 = URI.open("https://www.jardiner-malin.fr/wp-content/uploads/2020/01/Artichaut-culture.jpg")
-artichaut = Plant.new(
-  name: "Artichaut",
-  nom_scientifique: "Cynara scolymus",
-  description: "Cette variété, vivace dans les régions tempérées, produit une tige presque sans épines. Elle offre 7 à 8
-   gros capitules verts teintés de violet, d'environ 12 cm de diamètre, appréciés pour leur texture tendre.",
-  famille: "Asteracées",
-  categorie: "Légumes",
-  type_semis: "En godet",
-  conseil_semis: "Semer en godets sous abri lumineux, en poquets de 2 à 3 graines. Repiquer le meilleur plant au stade
-  de 2 feuilles, environ 2 mois plus tard, à 1 m en tous sens.",
-  conseil_culture: "Du semis à l’obtention du plant, il faut compter 8 à 10 semaines.",
-  periode_semis: "Janvier, Février, Mars",
-  periode_recoltes: "Mai, Juin, Juillet, Aout",
-  culture: "Pleine terre",
-  exposition: "Plein soleil",
-  besoin_eau: "Moyen",
-  nature_sol: "Tout types",
-  qualite_sol: "Léger, riche, drainé",
-  hauteur: "100 à 150 cm",
-  ecart_rang: "100 à 150 cm",
-  temperature: "20 à 22°C",
-  difficulte: "Facile",
-  maladie: "Le mildiou, l’oïdium, les chenilles, les pucerons, la ramulariose"
-)
-artichaut.photos.attach(io: file_1, filename: "artichaut-1.jpg", content_type: "image/jpg")
-artichaut.photos.attach(io: file_2, filename: "artichaut-2.jpg", content_type: "image/jpg")
-artichaut.photos.attach(io: file_3, filename: "artichaut-3.jpg", content_type: "image/jpg")
-artichaut.save!
+filepath = 'plantes.csv'
 
-file_4 = URI.open("https://www.jardiner-malin.fr/wp-content/uploads/2021/05/Abricotier-1024x911.jpg")
-file_5 = URI.open("https://images.ctfassets.net/b85ozb2q358o/b54e0b14fb8245aae00bdc0a3994b144348beea773ae4017ca32e6e215422f81/828bedd235093c349f91da76d2aaa3ab/image.png")
-file_6 = URI.open("https://www.rustica.fr/images/abricotier-l790-h526.jpg.webp")
-abricot = Plant.create(
-  name: "Abricot",
-  nom_scientifique: "Prunus armeniaca",
-  description: "Arbre fruitier du soleil par excellence, l’abricotier offre dès le début de l’été ses fruits délicieux
-  et sucrés, avec d’autant plus de générosité s’il est installé en plein soleil, dans un sol léger, bien abrité des
-   vents froids et des gelées printanières. Les variétés à floraison tardive seront parfaites pour la moitié Nord de la
-   France.",
-  famille: "Rosacées",
-  categorie: "Fruits",
-  type_semis: "Pleine terre",
-  conseil_semis: "Semer en automne dans un sol bien drainé. Protéger les jeunes plants du gel.",
-  conseil_culture: "Planter en plein soleil, à l'abri des vents forts. Tailler régulièrement pour aérer la couronne.
-   Fertiliser annuellement avec du compost.",
-  periode_semis: "Octobre, Avril",
-  periode_recoltes: "Juin, Juillet, Août",
-  culture: "Pleine terre",
-  exposition: "Plein soleil",
-  besoin_eau: "Moyen",
-  nature_sol: "Tout types",
-  qualite_sol: "Léger, Riche, drainé",
-  hauteur: "3 à 6 m",
-  ecart_rang: "5 à 6 m",
-  temperature: "15 à 25°C",
-  difficulte: "Facile",
-  maladie: "Moniliose, tavelure, oïdium, pucerons, cochenilles, chancre bactérien"
-)
-abricot.photos.attach(io: file_4, filename: "abricot-1.jpg", content_type: "image/jpg")
-abricot.photos.attach(io: file_5, filename: "abricot-2.jpg", content_type: "image/jpg")
-abricot.photos.attach(io: file_6, filename: "abricot-3.jpg", content_type: "image/jpg")
-abricot.save!
-
-file_7 = URI.open("https://static.cotemaison.fr/medias_11272/w_2048,h_1146,c_crop,x_0,y_328/w_640,h_360,c_fill,g_north/v1482857843/ail_5771291.jpg")
-file_8 = URI.open("https://pause-maison.ouest-france.fr/wp-content/uploads/2024/01/planter-de-lail.jpg")
-file_9 = URI.open("https://lepotagerpermacole.fr/wp-content/uploads/2022/10/portr-3.jpg")
-ail = Plant.create(
-  name: "Ail",
-  nom_scientifique: "Allium sativum",
-  description: "L’ail est une culture assez simple à réaliser. La plantation est facile, et l’ail en soi ne nécessite
-   que très peu d’entretien. Dans un sol qui retient un minimum l’eau et qui est vivant, vous n’aurez pas grand-chose à
-    faire : planter à l’automne ou au printemps, et venir récolter en été. Les têtes se conservent bien, et sont faciles
-     à stocker. Il est donc très facile de devenir autonome en ail.",
-  famille: "Alliacées",
-  categorie: "Aromates",
-  type_semis: "Pleine terre",
-  conseil_semis: "Arroser modérément. Biner et désherber régulièrement. Pailler pour maintenir l'humidité.",
-  conseil_culture: "Planter en plein soleil, à l'abri des vents forts. Tailler régulièrement pour aérer la couronne.
-   Fertiliser annuellement avec du compost.",
-  periode_semis: "Octobre, Novembre, Février, Mars",
-  periode_recoltes: "Juin, Juillet",
-  culture: "Pleine terre",
-  exposition: "Plein soleil",
-  besoin_eau: "Faible",
-  nature_sol: "Tout types",
-  qualite_sol: "Léger, Riche, drainé",
-  hauteur: "30 à 60cm",
-  ecart_rang: "15 à 20cm",
-  temperature: "10 à 20°C",
-  difficulte: "Facile",
-  maladie: "Rouille, Mildiou, Nématodes"
-)
-ail.photos.attach(io: file_7, filename: "ail-1.jpg", content_type: "image/jpg")
-ail.photos.attach(io: file_8, filename: "ail-2.jpg", content_type: "image/jpg")
-ail.photos.attach(io: file_9, filename: "ail-3.jpg", content_type: "image/jpg")
-ail.save!
-
-file_14 = URI.open("https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcRTRYgxLTPW7gRmilwmUexEKrqI7E9slCTfOo4w-2YluX3tKhWL2HJkIS-M-O2h-PnHjylfYbAVih3mUx4")
-file_15 = URI.open("https://stephanedecotterd.com/wp-content/uploads/2012/03/2008-05-05-aildesours04.jpg")
-file_16 = URI.open("https://www.plantes-et-sante.fr/images/istock-1249808560.jpg_720_1000_2")
-ail_des_ours = Plant.create(
-  name: "Ail des ours",
-  nom_scientifique: "Allium ursinum",
-  description: "L'ail des ours est une plante rustique, condimentaire et aromatique qui pousse à l'état sauvage dans la
-   fraîcheur des sous-bois. Elle est très reconnaissable à son odeur d'ail.",
-  famille: "Alliacées",
-  categorie: "Aromates",
-  type_semis: "Pleine terre",
-  conseil_semis: "Semez les graines à plus ou moins 2 cm de profondeur. Arrosez et tenez le sol humide et frais.",
-  conseil_culture: "Le sol doit être régulièrement humide et meuble, et avoir de préférence une épaisse couche d'humus
-   nutritive,",
-  periode_semis: "Juillet, Août, Septembre",
-  periode_recoltes: "Mars, Avril, Mai",
-  culture: "Pleine terre",
-  exposition: "Ombre",
-  besoin_eau: "Faible",
-  nature_sol: "Humide, Meuble",
-  qualite_sol: "Lourd, Riche",
-  hauteur: "30 à 40cm",
-  ecart_rang: "10 à 15cm",
-  temperature: "15 à 20°C",
-  difficulte: "Intermédiaire",
-  maladie: "Pourriture blanche, Teigne du poireau"
-)
-ail_des_ours.photos.attach(io: file_14, filename: "Ail_des_ours-1.jpg", content_type: "image/jpg")
-ail_des_ours.photos.attach(io: file_15, filename: "Ail_des_ours-2.jpg", content_type: "image/jpg")
-ail_des_ours.photos.attach(io: file_16, filename: "Ail_des_ours-3.jpg", content_type: "image/jpg")
-ail_des_ours.save!
-
-file_17 = URI.open("https://img.passeportsante.net/1200x675/2021-05-03/i101962-aneth-nu.webp")
-file_18 = URI.open("https://media.gerbeaud.net/2023/03/640/anethum-graveolens-potager.jpg")
-file_19 = URI.open("https://carnoy-chanson.fr/wp-content/uploads/2019/02/Aneth.jpg")
-aneth = Plant.create(
-  name: "Aneth",
-  nom_scientifique: "Anethum graveolens",
-  description: "L'aneth est une plante à tige lisse, possédant des feuilles très découpées, de couleur vert bleuté et des
-   fleurs jaunes verdâtres. Elle produit de petites graines, de couleur brune, qui se scindent en deux au séchage.
-  Elle fut produite dans la majorité des pays européens et d'Orient que ce soit en tant que plante aromatique ou médicinale.",
-  famille: "Apiacées",
-  categorie: "Aromates",
-  type_semis: "En ligne",
-  conseil_semis: "Semez dans des sillons peu profonds (espacés de 30cm), vous les éclaircirez tous les 10-15cm. Refermez
-   le sillon au râteau. Et arrosez une première fois pour assurer le démarrage.",
-  conseil_culture: "Arroser régulièrement, surtout lors de la levée des semis et en période de sécheresse. Un désherbage
-  autour du plant peut également être effectué de temps en temps,",
-  periode_semis: "Toute l'année",
-  periode_recoltes: "Toute l'année",
-  culture: "Pleine terre, Grand pot",
-  exposition: "Plein soleil",
-  besoin_eau: "Régulierement en période de sécheresse",
-  nature_sol: "Bien drainé",
-  qualite_sol: "Sec, Riche",
-  hauteur: "60 à 80 cm",
-  ecart_rang: "25 à 30cm",
-  temperature: "-5°C à 20°C",
-  difficulte: "Facile",
-  maladie: "Pourriture blanche, Teigne du poireau"
-)
-aneth.photos.attach(io: file_17, filename: "Aneth-1.jpg", content_type: "image/jpg")
-aneth.photos.attach(io: file_18, filename: "Aneth-2.jpg", content_type: "image/jpg")
-aneth.photos.attach(io: file_19, filename: "Aneth-3.jpg", content_type: "image/jpg")
-aneth.save!
-
-
-file_23 = URI.open("https://res.cloudinary.com/hv9ssmzrz/image/fetch/c_fill,f_auto,h_630,q_auto,dpr_2.0,w_1200/https://images-ca-1-0-1-eu.s3-eu-west-1.amazonaws.com/photos/original/735/produit-cerises-AdobeStock_161826394.jpg")
-file_24 = URI.open("https://www.shutterstock.com/image-photo/background-filled-closeup-details-ripe-260nw-2471973715.jpg")
-file_25 = URI.open("https://www.paysanssuisses.ch/app/uploads/2023/02/schweizer-baeuerinnen-und-bauern_kirschen-1200x800.jpg")
-Cerise = Plant.create(
-  name: "Cerise",
-  nom_scientifique: "Prunus avium, Prunus cerasus",
-  description: "Arbuste fruitier à noyau, les cerisiers sont appréciés pour leurs fruits juteux et sucrés, disponibles en différentes variétés comme la cerise douce (Prunus avium) ou la cerise acide (Prunus cerasus). Ils sont cultivés principalement pour leurs fruits frais, en conserve, en confiture ou en pâtisserie.",
-  famille: "Rosacées",
-  categorie: "Fruits",
-  type_semis: "Pépinière pour jeunes plants, greffage pour les variétés cultivées",
-  conseil_semis: "Les jeunes plants doivent être protégés du gel et plantés dans un sol bien drainé. Taillez pour encourager la croissance.",
-  conseil_culture: "Plantez en plein soleil dans un sol riche et bien drainé. Les cerisiers sont auto-fertiles mais peuvent nécessiter une pollinisation croisée pour une meilleure production.",
-  periode_semis: "Novembre, Mars",
-  periode_recoltes: "Mai, Juin",
-  culture: "Arbre fruitier",
-  exposition: "Plein soleil",
-  besoin_eau: "Moyen",
-  nature_sol: "Acide à neutre",
-  qualite_sol: "Bien drainé",
-  hauteur: "4 à 10 m",
-  ecart_rang: "4 à 6 m",
-  temperature: "18 à 30°C",
-  difficulte: "Moyen",
-  maladie: "Moniliose, tavelure, oïdium, pourriture des racines"
-)
-Cerise.photos.attach(io: file_23, filename: "cerise-1.jpg", content_type: "image/jpg")
-Cerise.photos.attach(io: file_24, filename: "cerise-2.jpg", content_type: "image/jpg")
-Cerise.photos.attach(io: file_25, filename: "cerise-3.jpg", content_type: "image/jpg")
-Cerise.save!
+CSV.foreach(File.open(filepath), col_sep: ',', headers: :first_row, encoding: "utf-8") do |row|
+p = Plant.new(name: "#{row['name']}", nom_scientifique: "#{row['nom_scientifique']}", description: "#{row['description']}", famille: "#{row['famille']}", categorie: "#{row['categorie']}", type_semis: "#{row['type_semis']}", conseil_semis: "#{row['conseil_semis']}", conseil_culture: "#{row['conseil_culture']}", periode_semis: "#{row['periode_semis']}", periode_recoltes: "#{row['periode_recoltes']}", culture: "#{row['culture']}", exposition: "#{row['exposition']}", besoin_eau: "#{row['besoin_eau']}", nature_sol: "#{row['nature_sol']}", qualite_sol: "#{row['qualite_sol']}", hauteur: "#{row['hauteur']}", ecart_rang: "#{row['ecart_rang']}", temperature: "#{row['temperature']}", difficulte: "#{row['difficulte']}", maladie: "#{row['maladie']}")
+file_1 = URI.open("#{row['photo_1']}")
+file_2 = URI.open("#{row['photo_2']}")
+file_3 = URI.open("#{row['photo_3']}")
+p.photos.attach(io: file_1, filename: "p-1.jpg", content_type: "image/jpg")
+puts "#{file_1} photo 1"
+p.photos.attach(io: file_2, filename: "p-2.jpg", content_type: "image/jpg")
+puts "#{file_2} photo 2"
+p.photos.attach(io: file_3, filename: "p-3.jpg", content_type: "image/jpg")
+puts "#{file_3} photo 3"
+p.save!
+puts "#{p.name} saved"
+end
 
 puts "Creating posts..."
 
@@ -380,18 +201,18 @@ List.create(
   user: User.fifth
 )
 
-puts "Creating neighbours..."
+# puts "Creating neighbours..."
 
-Neighbour.create(
-  voisin: "Bon voisin",
-  plant_1: Plant.where(name: "Ail").first,
-  plant_2: Plant.where(name: "Artichaut").first
-)
+# Neighbour.create(
+#   voisin: "Bon voisin",
+#   plant_1: Plant.where(name: "Ail").first,
+#   plant_2: Plant.where(name: "Artichaut").first
+# )
 
-Neighbour.create(
-  voisin: "Mauvais voisin",
-  plant_1: Plant.last,
-  plant_2: Plant.second
-)
+# Neighbour.create(
+#   voisin: "Mauvais voisin",
+#   plant_1: Plant.last,
+#   plant_2: Plant.second
+# )
 
 puts "Done !"

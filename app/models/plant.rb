@@ -7,7 +7,7 @@ class Plant < ApplicationRecord
   include PgSearch::Model
 
   pg_search_scope :search_by_name_and_description,
-                  against: [:name, :description, :categorie],
+                  against: [:name, :categorie],
                   using: {
                     tsearch: { prefix: true }
                   }

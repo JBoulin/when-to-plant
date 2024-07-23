@@ -13,11 +13,12 @@ class ListsController < ApplicationController
   end
 
   def create
+    @plant = Plant.find(params[:list][:plant])
     @list = List.new(list_params)
     @list.user = current_user
     if @list.save
-      redirect_to "/lists", notice: 'Votre liste a été créée !'
-      # a remplacer par list show
+      PlantList.create!(list: @list, plant: @plant)
+      redirect_to @plant, notice: 'Votre liste a été créée !'
     else
       render :new
     end
