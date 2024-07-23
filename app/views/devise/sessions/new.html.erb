@@ -1,4 +1,4 @@
-<div class="container mb-3 mt-3 p-3 border bg-light rounded">
+<div class="container mb-3 mt-3 p-3 border bg-light rounded w-50 m-auto">
   <h2>Se connecter</h2>
 
   <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: {
@@ -6,8 +6,8 @@
       controller: "alert",
       alert_icon_value: "success",
       alert_title_value: "Bienvenue",
-      alert_html_value: "Create new post.",
-      confirm_button_text_value: "All good!",
+      alert_html_value: "Créer un nouveau post.",
+      confirm_button_text_value: "Tout est bon!",
       action: "submit->alert#initSweetalert",
       turbo: false
     }
@@ -19,14 +19,16 @@
                   input_html: { autocomplete: "email" } %>
       <%= f.input :password,
                   required: false,
+                  label: "Mot de passe",
                   input_html: { autocomplete: "current-password" } %>
-      <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+      <%= f.input :remember_me,
+                  as: :boolean,
+                  label: "Souviens-toi de moi" if devise_mapping.rememberable? %>
     </div>
 
     <div class="form-actions d-flex justify-content-evenly">
-      <%= f.button :submit, "Connexion", class: "btn btn-success mt-3 mb-3" %>
+      <%= f.button :submit, "Se connecter", class: "btn btn-success mt-3 mb-3" %>
     </div>
   <% end %>
   <%= render "devise/shared/links" %>
-
 </div>
