@@ -2,50 +2,69 @@
 <html>
 <head>
   <title>Le potager que vous cherchez n'a pas été trouvé (404)</title>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
-    .rails-default-error-page {
+    body {
       background-color: #EFEFEF;
       color: #2E2F30;
       text-align: center;
-      font-family: arial, sans-serif;
+      font-family: Arial, sans-serif;
       margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
       padding: 2em 1em;
     }
 
-    .rails-default-error-page .dialog {
+    .dialog {
       width: 95%;
       max-width: 33em;
       margin: 0 auto;
     }
 
-    .rails-default-error-page h1 {
+    h1 {
       font-size: 1.5em;
       color: #730E15;
       line-height: 1.5em;
     }
 
-    .rails-default-error-page p {
+    p {
       margin: 1em 0;
       color: #666;
     }
 
-    .rails-default-error-page img {
+    img {
       max-width: 100%;
       height: auto;
       margin-top: 1em;
     }
+
+    a {
+      text-decoration: none;
+      color: #2E2F30;
+      border: 1px solid #2E2F30;
+      padding: 0.5em 1em;
+      border-radius: 5px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    a:hover {
+      background-color: #2E2F30;
+      color: white;
+    }
   </style>
 </head>
 
-<body class="rails-default-error-page">
-  <!-- This file lives in public/404.html -->
+<body>
   <div class="dialog">
     <div>
       <h1>Oups ! Ce n'est pas le potager que vous cherchiez !</h1>
       <p>Enfilez vos bottes et prenez votre rateau pour retrouver votre chemin !</p>
       <p>Pour info, c'est une erreur 404...</p>
-      <img src="https://cdn-icons-png.flaticon.com/512/1628/1628744.png" title="Page non trouvée" width="300" height="300"/>
+      <img src="https://cdn-icons-png.flaticon.com/512/1628/1628744.png" title="Page non trouvée" width="300" height="300" alt="Erreur 404" />
     </div>
     <p><a href="/">Cliquez-ici pour retourner sur la page d'accueil</a></p>
   </div>
