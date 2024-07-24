@@ -5,7 +5,13 @@ export default class extends Controller {
   static values = {
     icon: String,
     title: String,
-    confirmButtonText: String
+    confirmButtonText: String,
+    html: String // Ajout de la définition pour `html`
+  }
+
+  connect() {
+    // Si vous avez besoin de lier des événements au chargement du contrôleur
+    this.element.addEventListener('submit', this.sure.bind(this));
   }
 
   initSweetalert(event) {
@@ -14,15 +20,34 @@ export default class extends Controller {
     Swal.fire({
       icon: this.iconValue,
       title: this.titleValue,
-      html: this.htmlValue,
+      html: this.htmlValue, // Utilisation de `htmlValue`
       confirmButtonColor: "#0c4b36",
       showConfirmButton: true,
-      showCancelButton: false, // Assuming you don't need a cancel button for login
+      showCancelButton: false, // Suppression du bouton Annuler
       animation: true
     }).then((result) => {
       if (result.isConfirmed) {
-        // Submit the form manually
-        this.element.submit();
+        this.element.submit(); // Soumettre le formulaire manuellement
+      }
+    });
+  }
+
+  sure(event) {
+    event.preventDefault(); // Empêche l'action par défaut du lien
+
+    Swal.fire({
+      icon: this.iconValue,
+      title: this.titleValue,
+      html: this.htmlValue,
+      confirmButtonColor: "#0c4b36",
+      confirmButtonText: this.confirmButtonTextValue,
+      showCancelButton: true,
+      cancelButtonText: this.cancelButtonTextValue,
+      animation: true
+    }).then((result) => {
+      if (result.isConfirmed) {
+        // Si l'utilisateur confirme, déclenche la navigation
+        window.location.href = this.element.href;
       }
     });
   }
