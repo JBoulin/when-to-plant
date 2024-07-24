@@ -1,6 +1,6 @@
 <div class="main-container m-auto">
 <% if params[:query].present? %>
-<h2 class="text-center mt-5 mb-3">Résultats</h2>
+<h2 class="text-center mt-5 mb-3">Résultats(<%= @plants.count %>)</h2>
 <% else %>
 <h2 class="text-center my-5">Toutes les plantes</h2>
 <% end %>
@@ -9,7 +9,7 @@
   <%= form_with(url: plants_path, method: :get, class: "d-flex", data: {controller: "filter", turbo_frame: "_top"}) do %>
     <div class="ps-3">
       <div class="text-muted">
-        <%= label_tag :categorie %>
+        <%= label_tag "Catégorie" %>
         <%= select_tag :categorie,
               options_for_select(['Fruits', 'Légumes', 'Aromates'],
               selected: params[:categorie]),
@@ -42,7 +42,7 @@
     </div>
     <div class="ps-3">
       <div class="text-muted">
-        <%= label_tag :periode_semis %>
+        <%= label_tag "Plantation" %>
         <%= select_tag :periode_semis,
               options_for_select(['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
               selected: params[:periode_semis]),
@@ -53,7 +53,7 @@
     </div>
      <div class="ps-3" style="min-width: 150px;">
       <div class="text-muted">
-        <%= label_tag :periode_recoltes %>
+        <%= label_tag "Récolte" %>
         <%= select_tag :periode_recoltes,
               options_for_select(['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'],
               selected: params[:periode_recoltes]),
@@ -64,7 +64,7 @@
     </div>
     <div class="ps-3">
       <div class="text-muted">
-        <%= label_tag :difficulte %>
+        <%= label_tag "Difficulté" %>
         <%= select_tag :difficulte,
               options_for_select(['Facile', 'Moyen', 'Difficile'],
               selected: params[:difficulte]),
@@ -108,7 +108,7 @@
     </div>
     <div class="ps-3">
       <div class="text-muted">
-          <%= label_tag :temperature %>
+          <%= label_tag "Température" %>
           <%= select_tag :temperature,
                 options_for_select(['-10-35°C', '-5°C-20°C', '0-20°C', '10°C', '10-15°C', '10-25°C', '10-30°C', '15°C', '15-20°C', '15-25°C', '15-30°C', '20°C', '20-25°C', '20-30°C', '25-35°C'],
                 selected: params[:temperature]),
