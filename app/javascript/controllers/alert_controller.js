@@ -32,23 +32,23 @@ export default class extends Controller {
     });
   }
 
-  sure(event) {
-    event.preventDefault(); // Empêche l'action par défaut du lien
+  // sure(event) {
+  //   event.preventDefault(); // Empêche l'action par défaut du lien
 
-    Swal.fire({
-      icon: this.iconValue,
-      title: this.titleValue,
-      html: this.htmlValue,
-      confirmButtonColor: "#0c4b36",
-      confirmButtonText: this.confirmButtonTextValue,
-      showCancelButton: true,
-      cancelButtonText: this.cancelButtonTextValue,
-      animation: true
-    }).then((result) => {
-      if (result.isConfirmed) {
-        // Si l'utilisateur confirme, déclenche la navigation
-        window.location.href = this.element.href;
-      }
-    });
-  }
+  //   Swal.fire({
+  //     icon: this.iconValue,
+  //     title: this.titleValue,
+  //     html: this.htmlValue,
+  //     confirmButtonColor: "#0c4b36",
+  //     confirmButtonText: this.confirmButtonTextValue,
+  //     showCancelButton: true,
+  //     cancelButtonText: this.cancelButtonTextValue,
+  //     animation: true
+  //   }).then((result) => {
+  //     if (result.isConfirmed) {
+  //       // Si l'utilisateur confirme, déclenche la navigation
+  //       window.location.href = this.element.href;
+  //     }
+  //   });
+  // }
 }
