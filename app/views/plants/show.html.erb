@@ -229,7 +229,7 @@
         <div class="card-body">
           <h5 class="card-title"><%= bon_voisin.plant_2.name %></h5>
           <h6 class="card-title"><%= bon_voisin.plant_2.categorie %></h6>
-          <p class="card-text text-muted fs-6"><%= bon_voisin.plant_2.description.truncate(200) %></p>
+          <p class="card-text text-muted fs-6"><%= bon_voisin.plant_2.description.truncate(65) %></p>
           <div class="d-flex justify-content-center">
             <%= link_to "Voir détails", plant_path(bon_voisin.plant_2), class: "btn btn-success text-white rounded-pill" %>
           </div>
