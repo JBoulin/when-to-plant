@@ -9,7 +9,7 @@
             <img src="https://cdn-icons-png.freepik.com/512/7910/7910224.png" alt="Fruits" style="max-width:100px;">
             <div>
               <%= check_box_tag :categorie,
-                    params[:categorie].present?,
+                    "Fruits",
                     class:"me-2" %>
               <%= label_tag "Fruits" %>
             </div>
@@ -18,7 +18,7 @@
             <img src="https://cdn-icons-png.freepik.com/512/7910/7910612.png?ga=GA1.1.692665051.1720597619" alt="Fruits" style="max-width:100px;">
             <div>
               <%= check_box_tag :categorie,
-                    params[:categorie].present?,
+                    "Légumes",
                     class:"me-2" %>
               <%= label_tag "Légumes" %>
             </div>
@@ -27,7 +27,7 @@
             <img src="https://www.freeiconspng.com/thumbs/herbs-icon/herbs-png-icon-6.png" alt="Fruits" style="max-height:100px;">
             <div>
               <%= check_box_tag :categorie,
-                    params[:categorie].present?,
+                    "Aromates",
                     class:"me-2" %>
               <%= label_tag "Aromates" %>
             </div>
@@ -41,7 +41,7 @@
             <img src="https://cdn-icons-png.flaticon.com/512/5769/5769492.png" alt="Jardinier débutant" style="max-height:100px;">
             <div>
               <%= check_box_tag :difficulte,
-                    params[:difficulte].present?,
+                    "Facile",
                     class:"me-2" %>
               <%= label_tag "Jardinier débutant" %>
             </div>
@@ -50,7 +50,7 @@
             <img src="https://cdn-icons-png.flaticon.com/512/8411/8411112.png" alt="Jardinier amateur" style="max-height:100px;">
             <div>
               <%= check_box_tag :difficulte,
-                    params[:difficulte].present?,
+                    "Moyen",
                     class:"me-2" %>
               <%= label_tag "Jardinier amateur" %>
             </div>
@@ -59,7 +59,7 @@
             <img src="https://cdn-icons-png.flaticon.com/512/5346/5346481.png" alt="Jardinier expérimenté" style="max-height:100px;">
             <div>
               <%= check_box_tag :difficulte,
-                    params[:difficulte].present?,
+                    "Fort",
                     class:"me-2" %>
               <%= label_tag "Jardinier expérimenté" %>
             </div>
@@ -70,43 +70,43 @@
     <div class="d-flex m-auto">
         <div class="d-flex align-items-center justify-content-center mx-3">
               <%= check_box_tag :periode_semis,
-                    params[:periode_semis].present?,
+                    "Janvier",
                     class:"me-2" %>
               <%= label_tag "Janvier" %>
         </div>
         <div class="d-flex align-items-center justify-content-center mx-3">
               <%= check_box_tag :periode_semis,
-                    params[:periode_semis].present?,
+                    "Février",
                     class:"me-2" %>
               <%= label_tag "Février" %>
         </div>
         <div class="d-flex align-items-center justify-content-center mx-3">
               <%= check_box_tag :periode_semis,
-                    params[:periode_semis].present?,
+                    "Mars",
                     class:"me-2" %>
               <%= label_tag "Mars" %>
         </div>
         <div class="d-flex align-items-center justify-content-center mx-3">
               <%= check_box_tag :periode_semis,
-                    params[:periode_semis].present?,
+                    "Avril",
                     class:"me-2" %>
               <%= label_tag "Avril" %>
         </div>
         <div class="d-flex align-items-center justify-content-center mx-3">
               <%= check_box_tag :periode_semis,
-                    params[:periode_semis].present?,
+                    "Mai",
                     class:"me-2" %>
               <%= label_tag "Mai" %>
         </div>
         <div class="d-flex align-items-center justify-content-center mx-3">
               <%= check_box_tag :periode_semis,
-                    params[:periode_semis].present?,
+                    "Juin",
                     class:"me-2" %>
               <%= label_tag "Juin" %>
         </div>
         <div class="d-flex align-items-center justify-content-center mx-3">
               <%= check_box_tag :periode_semis,
-                    params[:periode_semis].present?,
+                    "Juillet",
                     class:"me-2" %>
               <%= label_tag "Juillet" %>
         </div>
@@ -114,31 +114,31 @@
         <div class="d-flex m-auto">
         <div class="d-flex align-items-center justify-content-center mx-3">
               <%= check_box_tag :periode_semis,
-                    params[:periode_semis].present?,
+                    "Août",
                     class:"me-2" %>
               <%= label_tag "Août" %>
         </div>
         <div class="d-flex align-items-center justify-content-center mx-3">
               <%= check_box_tag :periode_semis,
-                    params[:periode_semis].present?,
+                    "Septembre",
                     class:"me-2" %>
               <%= label_tag "Septembre" %>
         </div>
         <div class="d-flex align-items-center justify-content-center mx-3">
               <%= check_box_tag :periode_semis,
-                    params[:periode_semis].present?,
+                    "Octobre",
                     class:"me-2" %>
               <%= label_tag "Octobre" %>
         </div>
         <div class="d-flex align-items-center justify-content-center mx-3">
               <%= check_box_tag :periode_semis,
-                    params[:periode_semis].present?,
+                    "Novembre",
                     class:"me-2" %>
               <%= label_tag "Novembre" %>
         </div>
         <div class="d-flex align-items-center justify-content-center mx-3">
               <%= check_box_tag :periode_semis,
-                    params[:periode_semis].present?,
+                    "Décembre",
                     class:"me-2" %>
               <%= label_tag "Décembre" %>
         </div>
@@ -150,7 +150,7 @@
             <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt="Plein soleil" style="max-height:100px;">
             <div>
               <%= check_box_tag :exposition,
-                    params[:exposition].present?,
+                    "Plein soleil",
                     class:"me-2" %>
               <%= label_tag "Plein soleil" %>
             </div>
@@ -159,7 +159,7 @@
             <img src="https://cdn-icons-png.flaticon.com/512/9586/9586736.png" alt="Mi-ombragée" style="max-height:100px;">
             <div>
               <%= check_box_tag :exposition,
-                    params[:exposition].present?,
+                    "Mi-ombragée",
                     class:"me-2" %>
               <%= label_tag "Mi-ombragée" %>
             </div>
@@ -168,7 +168,7 @@
             <img src="https://cdn-icons-png.flaticon.com/512/414/414927.png" alt="Ombragée" style="max-height:100px;">
             <div>
               <%= check_box_tag :exposition,
-                    params[:exposition].present?,
+                    "Ombragée",
                     class:"me-2" %>
               <%= label_tag "Ombragée" %>
             </div>
@@ -180,43 +180,43 @@
   <div class="d-flex m-auto">
         <div class="d-flex align-items-center justify-content-center mx-3">
               <%= check_box_tag :temperature,
-                    params[:temperature].present?,
+                    "-5°C-20°C",
                     class:"me-2" %>
               <%= label_tag "-5°C-20°C" %>
         </div>
         <div class="d-flex align-items-center justify-content-center mx-3">
               <%= check_box_tag :temperature,
-                    params[:temperature].present?,
+                    "0-20°C",
                     class:"me-2" %>
               <%= label_tag "0-20°C" %>
         </div>
         <div class="d-flex align-items-center justify-content-center mx-3">
               <%= check_box_tag :temperature,
-                    params[:temperature].present?,
+                    "10°C" ,
                     class:"me-2" %>
               <%= label_tag "10°C" %>
         </div>
         <div class="d-flex align-items-center justify-content-center mx-3">
               <%= check_box_tag :temperature,
-                    params[:temperature].present?,
+                    "10-15°C",
                     class:"me-2" %>
               <%= label_tag "10-15°C" %>
         </div>
         <div class="d-flex align-items-center justify-content-center mx-3">
               <%= check_box_tag :temperature,
-                    params[:temperature].present?,
+                    "10-25°C",
                     class:"me-2" %>
               <%= label_tag "10-25°C" %>
         </div>
         <div class="d-flex align-items-center justify-content-center mx-3">
               <%= check_box_tag :temperature,
-                    params[:temperature].present?,
+                    "10-30°C",
                     class:"me-2" %>
               <%= label_tag "10-30°C" %>
         </div>
         <div class="d-flex align-items-center justify-content-center mx-3">
               <%= check_box_tag :temperature,
-                    params[:temperature].present?,
+                    "15°C",
                     class:"me-2" %>
               <%= label_tag "15°C" %>
         </div>
@@ -224,43 +224,43 @@
         <div class="d-flex m-auto">
         <div class="d-flex align-items-center justify-content-center mx-3">
               <%= check_box_tag :temperature,
-                    params[:temperature].present?,
+                    "15-20°C",
                     class:"me-2" %>
               <%= label_tag "15-20°C" %>
         </div>
         <div class="d-flex align-items-center justify-content-center mx-3">
               <%= check_box_tag :temperature,
-                    params[:temperature].present?,
+                    "15-25°C",
                     class:"me-2" %>
               <%= label_tag "15-25°C" %>
         </div>
         <div class="d-flex align-items-center justify-content-center mx-3">
               <%= check_box_tag :temperature,
-                    params[:temperature].present?,
+                    "15-30°C",
                     class:"me-2" %>
               <%= label_tag "15-30°C" %>
         </div>
         <div class="d-flex align-items-center justify-content-center mx-3">
               <%= check_box_tag :temperature,
-                    params[:temperature].present?,
+                    "20°C",
                     class:"me-2" %>
               <%= label_tag "20°C" %>
         </div>
         <div class="d-flex align-items-center justify-content-center mx-3">
               <%= check_box_tag :temperature,
-                    params[:temperature].present?,
+                    "20-25°C",
                     class:"me-2" %>
               <%= label_tag "20-25°C" %>
         </div>
         <div class="d-flex align-items-center justify-content-center mx-3">
               <%= check_box_tag :temperature,
-                    params[:temperature].present?,
+                    "20-30°C",
                     class:"me-2" %>
               <%= label_tag "20-30°C" %>
         </div>
         <div class="d-flex align-items-center justify-content-center mx-3">
               <%= check_box_tag :temperature,
-                    params[:temperature].present?,
+                    "25-35°C",
                     class:"me-2" %>
               <%= label_tag "25-35°C" %>
         </div>
@@ -271,49 +271,49 @@
   <div class="d-flex m-auto">
         <div class="d-flex align-items-center justify-content-center mx-3">
               <%= check_box_tag :nature_sol,
-                    params[:nature_sol].present?,
+                    "Tout types",
                     class:"me-2" %>
               <%= label_tag "Tout types" %>
         </div>
         <div class="d-flex align-items-center justify-content-center mx-3">
               <%= check_box_tag :nature_sol,
-                    params[:nature_sol].present?,
+                    "Drainé",
                     class:"me-2" %>
               <%= label_tag "Drainé" %>
         </div>
         <div class="d-flex align-items-center justify-content-center mx-3">
               <%= check_box_tag :nature_sol,
-                    params[:nature_sol].present?,
+                    "Acide",
                     class:"me-2" %>
               <%= label_tag "Acide" %>
         </div>
         <div class="d-flex align-items-center justify-content-center mx-3">
               <%= check_box_tag :nature_sol,
-                    params[:nature_sol].present?,
+                    "Ameubli",
                     class:"me-2" %>
               <%= label_tag "Ameubli" %>
         </div>
         <div class="d-flex align-items-center justify-content-center mx-3">
               <%= check_box_tag :nature_sol,
-                    params[:nature_sol].present?,
+                    "Riche en humus",
                     class:"me-2" %>
               <%= label_tag "Riche en humus" %>
         </div>
         <div class="d-flex align-items-center justify-content-center mx-3">
               <%= check_box_tag :nature_sol,
-                    params[:nature_sol].present?,
+                    "Argileux",
                     class:"me-2" %>
               <%= label_tag "Argileux" %>
         </div>
         <div class="d-flex align-items-center justify-content-center mx-3">
               <%= check_box_tag :nature_sol,
-                    params[:nature_sol].present?,
+                    "Léger",
                     class:"me-2" %>
               <%= label_tag "Léger" %>
         </div>
         <div class="d-flex align-items-center justify-content-center mx-3">
               <%= check_box_tag :nature_sol,
-                    params[:nature_sol].present?,
+                    "Profond",
                     class:"me-2" %>
               <%= label_tag "Profond" %>
         </div>
@@ -321,43 +321,43 @@
         <div class="d-flex m-auto">
         <div class="d-flex align-items-center justify-content-center mx-3">
               <%= check_box_tag :nature_sol,
-                    params[:nature_sol].present?,
+                    "Riche",
                     class:"me-2" %>
               <%= label_tag "Riche" %>
         </div>
         <div class="d-flex align-items-center justify-content-center mx-3">
               <%= check_box_tag :nature_sol,
-                    params[:nature_sol].present?,
+                    "Neutre",
                     class:"me-2" %>
               <%= label_tag "Neutre" %>
         </div>
         <div class="d-flex align-items-center justify-content-center mx-3">
               <%= check_box_tag :nature_sol,
-                    params[:nature_sol].present?,
+                    "Moyen",
                     class:"me-2" %>
               <%= label_tag "Moyen" %>
         </div>
         <div class="d-flex align-items-center justify-content-center mx-3">
               <%= check_box_tag :nature_sol,
-                    params[:nature_sol].present?,
+                    "Frais",
                     class:"me-2" %>
               <%= label_tag "Frais" %>
         </div>
         <div class="d-flex align-items-center justify-content-center mx-3">
               <%= check_box_tag :nature_sol,
-                    params[:nature_sol].present?,
+                    "Humifère",
                     class:"me-2" %>
               <%= label_tag "Humifère" %>
         </div>
         <div class="d-flex align-items-center justify-content-center mx-3">
               <%= check_box_tag :nature_sol,
-                    params[:nature_sol].present?,
+                    "Sableuse",
                     class:"me-2" %>
               <%= label_tag "Sableuse" %>
         </div>
         <div class="d-flex align-items-center justify-content-center mx-3">
               <%= check_box_tag :nature_sol,
-                    params[:nature_sol].present?,
+                    "Calcaire",
                     class:"me-2" %>
               <%= label_tag "Calcaire" %>
         </div>
@@ -373,28 +373,28 @@
   <p class="text-center fst-italic fw-lighter mb-3">Choix multiple</p>
     <div class="d-flex justify-content-center">
    <div class="d-flex flex-column align-items-center justify-content-center mx-3">
-            <img src="https://cdn-icons-png.flaticon.com/512/15200/15200487.png" alt="Plein soleil" style="max-height:100px;">
+            <img src="https://cdn-icons-png.flaticon.com/512/15200/15200487.png" alt="Faible" style="max-height:100px;">
             <div>
               <%= check_box_tag :besoin_eau,
-                    params[:besoin_eau].present?,
+                    "Faible",
                     class:"me-2" %>
               <%= label_tag "Faible (tous les 3-5 jours)" %>
             </div>
         </div>
         <div class="d-flex flex-column align-items-center justify-content-center mx-3">
-            <img src="https://cdn-icons-png.flaticon.com/512/16775/16775777.png" alt="Mi-ombragée" style="max-height:100px;">
+            <img src="https://cdn-icons-png.flaticon.com/512/16775/16775777.png" alt="Moyen" style="max-height:100px;">
             <div>
               <%= check_box_tag :besoin_eau,
-                    params[:besoin_eau].present?,
+                    "Moyen",
                     class:"me-2" %>
               <%= label_tag "Moyen (tous les 2-3 jours)" %>
             </div>
         </div>
         <div class="d-flex flex-column align-items-center justify-content-center mx-3">
-            <img src="https://cdn-icons-png.flaticon.com/512/15439/15439860.png" alt="Ombragée" style="max-height:100px;">
+            <img src="https://cdn-icons-png.flaticon.com/512/15439/15439860.png" alt="Fort" style="max-height:100px;">
             <div>
               <%= check_box_tag :besoin_eau,
-                    params[:besoin_eau].present?,
+                    "Fort",
                     class:"me-2" %>
               <%= label_tag "Fort (tous les jours)" %>
             </div>
@@ -402,7 +402,7 @@
 </div>
 
   <div class="d-flex justify-content-center">
-      <%= link_to "Trouver des plantes !", plants_path, class:"text-white text-decoration-none btn btn-success rounded-pill my-5", style:"max-width: 200px;" %>
+      <%= button_to "Trouver des plantes !", class:"text-white text-decoration-none btn btn-success rounded-pill my-5", style:"max-width: 200px;", data: {action: "click->filter#submit"} %>
   </div>
   <% end %>
 
