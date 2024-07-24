@@ -58,9 +58,12 @@ filepath = 'plantes.csv'
 
 CSV.foreach(File.open(filepath), col_sep: ',', headers: :first_row, encoding: "utf-8") do |row|
 p = Plant.new(name: "#{row['name']}", nom_scientifique: "#{row['nom_scientifique']}", description: "#{row['description']}", famille: "#{row['famille']}", categorie: "#{row['categorie']}", type_semis: "#{row['type_semis']}", conseil_semis: "#{row['conseil_semis']}", conseil_culture: "#{row['conseil_culture']}", periode_semis: "#{row['periode_semis']}", periode_recoltes: "#{row['periode_recoltes']}", culture: "#{row['culture']}", exposition: "#{row['exposition']}", besoin_eau: "#{row['besoin_eau']}", nature_sol: "#{row['nature_sol']}", qualite_sol: "#{row['qualite_sol']}", hauteur: "#{row['hauteur']}", ecart_rang: "#{row['ecart_rang']}", temperature: "#{row['temperature']}", difficulte: "#{row['difficulte']}", maladie: "#{row['maladie']}")
-file_1 = URI.open("#{row['photo_1']}")
-file_2 = URI.open("#{row['photo_2']}")
-file_3 = URI.open("#{row['photo_3']}")
+file_1 = URI.open("#{row['photo_1']}",
+  "User-Agent" => "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36")
+file_2 = URI.open("#{row['photo_2']}",
+  "User-Agent" => "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36")
+file_3 = URI.open("#{row['photo_3']}",
+  "User-Agent" => "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36")
 p.photos.attach(io: file_1, filename: "p-1.jpg", content_type: "image/jpg")
 puts "#{file_1} photo 1"
 p.photos.attach(io: file_2, filename: "p-2.jpg", content_type: "image/jpg")
