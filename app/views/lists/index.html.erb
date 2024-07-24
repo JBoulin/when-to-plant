@@ -13,10 +13,10 @@
         <% end %>
       </div>
       <div class="d-flex justify-content-between border px-5 py-3 rounded align-items-center bg-success mb-3" data-action="click->reveal#toggle">
-        <h3 class="text-white d-flex align-items-center">
+        <h3 class="text-white d-flex align-items-center p1 m-0">
           <span><%= list.nom %></span>
-          <div class="tip-edit-form d-none ms-3 rounded" data-edit-list-target="form">
-            <%= simple_form_for list, method: :patch, html: { class: 'edit-tip-form d-flex align-items-center' } do |f| %>
+          <div class="tip-edit-form d-none ms-3 rounded p-0" data-edit-list-target="form">
+            <%= simple_form_for list, method: :patch, html: { class: 'edit-tip-form d-flex align-items-center m-0' } do |f| %>
               <%= f.input :nom, input_html: { value: list.nom }, label: false, wrapper_html: { class: 'align-items-center justify-content-center mt-3' } %>
               <%= f.submit "Mettre à jour", class: 'btn btn-secondary text-white rounded-pill ms-2' %>
             <% end %>
