@@ -11,7 +11,7 @@
     </div>
   </div>
 <div class="w-75 d-flex flex-column m-auto">
-  <h1 class="py-4 text-center">Les plantes du mois</h1>
+  <h1 class="py-4 text-center">Les plantes du moment</h1>
 
   <div class="cards">
    <% @plants.each do |plant| %>
@@ -34,6 +34,7 @@
     </div>
     <% end %>
   </div>
+  <%= link_to "Voir toutes les plantes", "/plants", class: "btn btn-success rounded-pill m-auto mb-3" %>
 
   <h1 class="py-4 text-center">Le calendrier</h1>
 
