@@ -41,7 +41,7 @@ User.create!(
   prenom: "Olena",
   email: "olena@test.fr",
   password: "123456",
-  role: "user"
+  role: "admin"
 )
 
 User.create!(
