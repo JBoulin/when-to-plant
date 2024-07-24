@@ -1,5 +1,5 @@
 <div class="w-75 m-auto">
-<h1 class="text-center">Trouvez votre plante !</h1>
+<h1 class="text-center pt-3">Trouvez votre plante !</h1>
 <p class="text-center">Trouvez la ou les plantes qu'il vous faut, pour votre terrain et votre niveau de jardinage</p>
 <%= form_with(url: plants_path, method: :get, class: "d-flex flex-column", data: {controller: "filter", turbo_frame: "_top"}) do %>
   <h2 class="text-center mt-5">Quel(s) type(s) de plante(s) ?</h2>
@@ -177,7 +177,6 @@
 
   <h2 class="text-center mt-5">Quelles sont les températures moyennes ?</h2>
   <p class="text-center fst-italic fw-lighter mb-3">Choisir toutes les bonnes températures</p>
-  <%#(choix multiples) => %>
   <div class="d-flex m-auto">
         <div class="d-flex align-items-center justify-content-center mx-3">
               <%= check_box_tag :temperature,
@@ -269,7 +268,6 @@
 
   <h2 class="text-center mt-5">Quelle est la nature du sol ?</h2>
   <p class="text-center fst-italic fw-lighter mb-3">Choix multiple</p>
-  <%# Valeurs + je sais pas = (choix multiple) = (nature_sol) %>
   <div class="d-flex m-auto">
         <div class="d-flex align-items-center justify-content-center mx-3">
               <%= check_box_tag :nature_sol,
@@ -407,4 +405,5 @@
       <%= link_to "Trouver des plantes !", plants_path, class:"text-white text-decoration-none btn btn-success rounded-pill my-5", style:"max-width: 200px;" %>
   </div>
   <% end %>
+
 </div>
