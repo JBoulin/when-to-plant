@@ -24,3 +24,4 @@ Rails.application.config.assets.precompile += %w( @stimulus-components--reveal.j
 Rails.application.config.assets.precompile += %w( comments.js )
 Rails.application.config.assets.precompile += %w( controllers/edit_tip_controller.js )
 Rails.application.config.assets.precompile += %w( controllers/filter_controller.js )
+Rails.application.config.assets.precompile += %w( controllers/edit_list_controller.js )
