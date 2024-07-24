@@ -49,7 +49,8 @@ Rails.application.routes.draw do
   get 'a-propos', to: 'pages#about'
   get 'contact', to: 'pages#contact'
   get 'recrutement', to: 'pages#recrutement'
-  get 'calendrier', to: 'pages#calendrier'
+  get 'calendrier', to: 'calendriers#index'
+  get 'telecharger', to: 'calendriers#download'
   get 'mentions-legales', to: 'pages#mentions_legales'
   get 'plant-finder', to: 'pages#plant_finder'
 

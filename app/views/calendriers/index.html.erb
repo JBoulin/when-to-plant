@@ -9,7 +9,10 @@
   </div>
 </div>
 
-<h1 class="text-center my-5">Calendrier</h1>
+<h1 class="text-center mt-5">Calendrier</h1>
+<div class="btn-calendrier d-flex justify-content-center fs-6 fw-lighter">
+  <%= button_to '<i class="fa-solid fa-cloud-arrow-down" style="color: #ffffff;"></i> Télécharger le calendrier'.html_safe, telecharger_path %>
+</div>
 <div data-controller="tabs" data-tabs-active-class="bg-warning" data-tabs-default-tab-value="juillet" class="mt-3">
   <div class="m-auto d-flex justify-content-center gap-2" style="width:80%;">
     <button id="janvier" data-tabs-target="btn" data-action="click->tabs#select"
@@ -10189,5 +10192,4 @@
       ** On considère qu’il faut éviter de jardiner 5 à 6h avant et après un noeud lunaire, un apogée, un périgée.
     </p>
   </div>
-</div>
 </div>
