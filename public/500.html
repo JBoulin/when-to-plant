@@ -2,51 +2,68 @@
 <html>
 <head>
   <title>Désolé, mais les racines ne sont pas bonnes (500)</title>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
-    .rails-default-error-page {
+    body {
       background-color: #EFEFEF;
       color: #2E2F30;
       text-align: center;
       font-family: Arial, sans-serif;
       margin: 0;
-      padding: 2em 1em;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .rails-default-error-page .dialog {
+    .dialog {
       width: 95%;
       max-width: 33em;
       margin: 0 auto;
     }
 
-    .rails-default-error-page h1 {
+    h1 {
       font-size: 1.5em;
       color: #730E15;
       line-height: 1.5em;
     }
 
-    .rails-default-error-page p {
+    p {
       margin: 1em 0;
       color: #666;
     }
 
-    .rails-default-error-page img {
+    img {
       max-width: 100%;
       height: auto;
       margin-top: 1em;
     }
+
+    a {
+      text-decoration: none;
+      color: #2E2F30;
+      border: 1px solid #2E2F30;
+      padding: 0.5em 1em;
+      border-radius: 5px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    a:hover {
+      background-color: #2E2F30;
+      color: white;
+    }
   </style>
 </head>
 
-<body class="rails-default-error-page">
-  <!-- This file lives in public/500.html -->
+<body>
   <div class="dialog">
     <div>
-      <h1>Desole, mais les racines ne sont pas bonnes...</h1>
-      <p>C'est un probleme de serveur, independant de notre volonte.</p>
+      <h1>Désolé, mais les racines ne sont pas bonnes...</h1>
+      <p>C'est un problème de serveur, indépendant de notre volonté.</p>
       <p>On fait au plus vite pour retourner au potager !</p>
       <p>Les personnes dans les bureaux parlent d'une erreur 500...</p>
-      <img src="https://cdn-icons-png.flaticon.com/512/4856/4856946.png" title="Page non trouvée" width="300" height="300"/>
+      <img src="https://cdn-icons-png.flaticon.com/512/4856/4856946.png" title="Page non trouvée" width="300" height="300" alt="Erreur 500" />
     </div>
     <p><a href="/">Cliquez-ici pour retourner sur la page d'accueil</a></p>
   </div>
