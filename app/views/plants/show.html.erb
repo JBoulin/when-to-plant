@@ -191,7 +191,7 @@
 
 
   <% if user_signed_in? %>
-  <div class="card mb-5 p-3 w-75 m-auto" style="background-color: #f0fff4;">
+  <div class="card mb-5 p-3 m-auto" style="background-color: #f0fff4;">
     <h4 class="text-center">Ajouter votre conseil</h4>
     <%= simple_form_for([@plant, @tip],   html: { id: 'new-comment-form', data: { controller: "alert",
       alert_icon_value: "success",

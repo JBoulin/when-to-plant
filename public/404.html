@@ -6,8 +6,6 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
     body {
-      background-color: #EFEFEF;
-      color: #2E2F30;
       text-align: center;
       font-family: Arial, sans-serif;
       margin: 0;
@@ -19,15 +17,8 @@
       padding: 2em 1em;
     }
 
-    .dialog {
-      width: 95%;
-      max-width: 33em;
-      margin: 0 auto;
-    }
-
     h1 {
       font-size: 1.5em;
-      color: #730E15;
       line-height: 1.5em;
     }
 
@@ -44,29 +35,36 @@
 
     a {
       text-decoration: none;
-      color: #2E2F30;
-      border: 1px solid #2E2F30;
       padding: 0.5em 1em;
       border-radius: 5px;
       transition: background-color 0.3s, color 0.3s;
     }
+    .btn-plant-finder button {
+      margin-top: 20px!important;
+      background-color: #0c4b36!important;
+      border: none!important;
+      border-radius: 25px!important;
+      padding: 15px!important;
+    }
 
-    a:hover {
-      background-color: #2E2F30;
-      color: white;
+    .btn-plant-finder button a {
+      color: white!important;
+      font-size: 16px;
     }
   </style>
 </head>
 
 <body>
-  <div class="dialog">
+  <div class="">
     <div>
       <h1>Oups ! Ce n'est pas le potager que vous cherchiez !</h1>
       <p>Enfilez vos bottes et prenez votre rateau pour retrouver votre chemin !</p>
       <p>Pour info, c'est une erreur 404...</p>
       <img src="https://cdn-icons-png.flaticon.com/512/1628/1628744.png" title="Page non trouvée" width="300" height="300" alt="Erreur 404" />
     </div>
-    <p><a href="/">Cliquez-ici pour retourner sur la page d'accueil</a></p>
+    <div class="btn-plant-finder">
+      <button><a href="/">Cliquez-ici pour retourner sur la page d'accueil</a></button>
+    </div>
   </div>
 </body>
 </html>

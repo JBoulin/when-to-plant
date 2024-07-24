@@ -24,8 +24,8 @@
         </h3>
         <i class="fa-solid fa-caret-down" style="color: #ffffff;"></i>
       </div>
+      <div class="cards mt-3 d-none" data-reveal-target="item">
       <% list.plant_lists.each do |plant_list| %>
-        <div class="cards mt-3 d-none" data-reveal-target="item">
           <div class="card rounded-3" style="box-shadow: 0 0 15px rgba(0,0,0,0.2); background-color: #daf1df; border-radius:12px;">
             <%= cl_image_tag plant_list.plant.photos.first.key, :cloud_name => "dzhzzutmq", style: 'height: 250px; width: 100%; object-fit: cover; padding: 16px 16px 0 16px;' %>
             <div class="card-body">
@@ -36,7 +36,7 @@
                 <%= plant_list.plant.categorie %>
               </h6>
               <p class="card-text text-muted fs-6">
-                <%= plant_list.plant.description.truncate(200) %>
+                <%= plant_list.plant.description.truncate(75) %>
               </p>
               <div class="d-flex justify-content-center">
                 <%= link_to "Voir détails", plant_path(plant_list.plant), class: "btn btn-success text-white rounded-pill me-3" %>
@@ -46,8 +46,8 @@
               </div>
             </div>
           </div>
-        </div>
       <% end %>
+      </div>
     <% end %>
   </div>
 </div>
