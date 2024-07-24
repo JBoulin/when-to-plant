@@ -43,7 +43,7 @@
         <% if user_signed_in? %>
           <li class="nav-item dropdown">
             <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <%= image_tag "https://ca.slack-edge.com/T02NE0241-U074NB54AAE-1c335b578897-512", class: "avatar", alt: "dropdown menu" %>
+              <%= image_tag "https://www.tomlejardinier.com/img/tomlejardinier-pres-3.jpg", class: "avatar",style:"width:40px; height:40px; object-fit:cover;", alt: "dropdown menu" %>
             </a>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <% if current_user.role == "admin" %>
