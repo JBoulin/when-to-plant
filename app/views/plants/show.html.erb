@@ -161,12 +161,10 @@
                   <% if tip.user == current_user %>
 
                     <div class="d-flex justify-content-end">
-                    <%#= button_to  %>
-                    <%# <button class="btn btn-succss text-white rounded-pill mr-2 edit-tip-btn me-2" data-tip-id="<%= tip.id %>
                       <%= link_to  edit_tip_plant_tip_path(plant_id: @plant, tip: tip),  data: {action: "click->edit-tip#toggle"}, class: 'btn btn-warning text-white rounded-pill me-2 edit-tip-btn' do %>
                         <i class="fa-solid fa-pen"></i>
                       <% end %>
-                      <%= link_to tip_path(tip), data: { turbo_method: :delete, confirm: "Êtes-vous sûr ?" }, class: 'btn btn-warning text-white rounded-pill' do %>
+                      <%= link_to tip_path(tip), data: { turbo_method: :delete, turbo_confirm: "Êtes-vous sûr ?" }, class: 'btn btn-warning text-white rounded-pill' do %>
                         <i class="fa-solid fa-trash"></i>
                       <% end %>
                     </div>
