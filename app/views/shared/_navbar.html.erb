@@ -22,7 +22,7 @@
           </div>
         </li>
         <li class="nav-item active">
-          <%= link_to "Calendrier", calendrier_path, class: 'nav-link text-white' %>
+          <%= link_to "Calendrier", "/calendrier##{Date.today.day}", class: 'nav-link text-white' %>
         </li>
         <li class="nav-item active">
           <%= link_to "À propos", a_propos_path, class: 'nav-link text-white' %>
@@ -31,7 +31,7 @@
           <%= link_to "Blog", posts_path, class: 'nav-link text-white' %>
         </li>
         <li class="nav-item">
-          <%= link_to "Plant Finder", "plant-finder", class: 'nav-link text-white' %>
+          <%= link_to "Plant Finder", plant_finder_path, class: 'nav-link text-white' %>
         </li>
       </ul>
 

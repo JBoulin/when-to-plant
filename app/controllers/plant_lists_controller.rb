@@ -35,7 +35,7 @@ class PlantListsController < ApplicationController
 
   def destroy
     @plant_list.destroy
-    redirect_to plant_lists_path, notice: 'La plante a été supprimée de votre liste'
+    redirect_to lists_path, notice: 'La plante a été supprimée de votre liste'
   end
 
   private
