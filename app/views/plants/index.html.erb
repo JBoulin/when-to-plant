@@ -1,10 +1,6 @@
+ <%= turbo_page_requires_reload %>
 <div class="main-container m-auto">
-<% if params[:query].present? %>
-<h2 class="text-center mt-5 mb-3">Résultats(<%= @plants.count %>)</h2>
-<% else %>
-<h2 class="text-center my-5">Toutes les plantes</h2>
-<% end %>
-<div id="filtres" class="text-center py-3 m-auto" style="background-color: #DAF1DF; border-radius: 10px 10px 10px 10px; max-width:76%;">
+<div id="filtres" class="text-center py-3 m-auto mt-5" style="background-color: #DAF1DF; border-radius: 10px 10px 10px 10px; max-width:76%;">
 <div class="w-75">
   <%= form_with(url: plants_path, method: :get, class: "d-flex", data: {controller: "filter", turbo_frame: "_top"}) do %>
     <div class="ps-3">
