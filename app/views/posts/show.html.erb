@@ -81,8 +81,8 @@
             confirmButtonColor: "#0c4b36",
             show_cancel_button: true,
             action: "submit->alert#initSweetalert" } } do |f| %>
-            <%= f.input :titre, placeholder: "Votre titre" %>
-            <%= f.input :contenu, placeholder: "Votre commentaire" %>
+            <%= f.input :titre, label: false, placeholder: "Entrez le titre ici" %>
+            <%= f.input :contenu, label: false, placeholder: "Entrez le contenu ici" %>
             <div class="d-flex justify-content-end">
               <%= f.submit "Soumettre", class: 'btn btn-success text-white rounded-pill' %>
             </div>
