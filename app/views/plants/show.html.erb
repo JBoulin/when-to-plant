@@ -161,10 +161,10 @@
                   <% if tip.user == current_user %>
 
                     <div class="d-flex justify-content-end">
-                      <%= link_to  edit_tip_plant_tip_path(plant_id: @plant, tip: tip),  data: {action: "click->edit-tip#toggle"}, class: 'btn btn-success text-white rounded-pill me-2 edit-tip-btn' do %>
+                      <%= link_to  edit_tip_plant_tip_path(plant_id: @plant, tip: tip),  data: {action: "click->edit-tip#toggle"}, class: 'btn btn-success text-white rounded-pill me-2 edit-tip-btn', title: "Modifier" do %>
                         <i class="fa-solid fa-pen"></i>
                       <% end %>
-                      <%= link_to tip_path(tip), data: { turbo_method: :delete, turbo_confirm: "Êtes-vous sûr ?" }, class: 'btn btn-success text-white rounded-pill' do %>
+                      <%= link_to tip_path(tip), data: { turbo_method: :delete, turbo_confirm: "Êtes-vous sûr ?" }, class: 'btn btn-success text-white rounded-pill', title: "Supprimer" do %>
                         <i class="fa-solid fa-trash"></i>
                       <% end %>
                     </div>
