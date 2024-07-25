@@ -2,7 +2,7 @@
 <h1 class="text-center pt-3">Trouvez votre plante !</h1>
 <p class="text-center">Trouvez la ou les plantes qu'il vous faut, pour votre terrain et votre niveau de jardinage</p>
 <%= form_with(url: plants_path, method: :get, class: "d-flex flex-column", data: {controller: "filter", turbo_frame: "_top"}) do |f|%>
-  <h2 class="text-center my-5">Quel(s) type(s) de plante(s) ?</h2>
+  <h2 class="text-center my-5">Quel type de plantes ?</h2>
 <div class="d-flex justify-content-center">
         <div class="d-flex flex-column align-items-center justify-content-center mx-4">
             <img src="https://cdn-icons-png.freepik.com/512/7910/7910224.png" alt="Fruits" style="max-width:100px;" class="mb-3">
@@ -64,7 +64,7 @@
         </div>
 </div>
   <h2 class="text-center my-5">Quand est-ce que je veux planter ?  <img src="https://cdn-icons-png.flaticon.com/512/4769/4769691.png" width="40px" height="40px" class="mb-2 ms-2"></h2>
-    <div class="d-flex m-auto">
+    <div class="d-flex m-auto flex-wrap">
       <% ["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre"].each do |month| %>
           <div class="tag-item">
             <%= radio_button_tag :periode_semis,
