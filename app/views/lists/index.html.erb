@@ -15,8 +15,8 @@
           delete_alert_icon_value: "warning",
           delete_alert_title_value: "Êtes vous sur ?",
           delete_alert_html_value: "Supprimer.",
-          delete_alert_confirm_button_text_value: "oui!",
-          delete_alert_cancel_button_text_value: "non",
+          delete_alert_confirm_button_text_value: "Oui",
+          delete_alert_cancel_button_text_value: "Non",
           action: "click->delete-alert#confirmDelete",
           turbo: false
         }, class: 'btn btn-success text-white ms-2 rounded-pill me-2 mb-3' do %>
@@ -51,7 +51,18 @@
               </p>
               <div class="d-flex justify-content-center">
                 <%= link_to "Voir détails", plant_path(plant_list.plant), class: "btn btn-success text-white rounded-pill me-3" %>
-                <%= link_to plant_list_path(plant_list), data: { turbo_method: :delete, turbo_confirm: 'Êtes-vous sûr?' }, class: "btn btn-success text-white rounded-pill" do %>
+                <%= link_to plant_list_path(plant_list), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: 'Are you sure?',
+                    controller: "delete-alert",
+                    delete_alert_icon_value: "warning",
+                    delete_alert_title_value: "Êtes vous sur ?",
+                    delete_alert_html_value: "Supprimer.",
+                    delete_alert_confirm_button_text_value: "Oui",
+                    delete_alert_cancel_button_text_value: "Non",
+                    action: "click->delete-alert#confirmDelete",
+                    turbo: false
+                  }, class: "btn btn-success text-white rounded-pill" do %>
                   <i class="fa fa-trash"></i>
                 <% end %>
               </div>
