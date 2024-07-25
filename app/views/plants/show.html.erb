@@ -161,10 +161,10 @@
                   <% if tip.user == current_user %>
 
                     <div class="d-flex justify-content-end">
-                      <%= link_to  edit_tip_plant_tip_path(plant_id: @plant, tip: tip),  data: {action: "click->edit-tip#toggle"}, class: 'btn btn-warning text-white rounded-pill me-2 edit-tip-btn' do %>
+                      <%= link_to  edit_tip_plant_tip_path(plant_id: @plant, tip: tip),  data: {action: "click->edit-tip#toggle"}, class: 'btn btn-success text-white rounded-pill me-2 edit-tip-btn' do %>
                         <i class="fa-solid fa-pen"></i>
                       <% end %>
-                      <%= link_to tip_path(tip), data: { turbo_method: :delete, turbo_confirm: "Êtes-vous sûr ?" }, class: 'btn btn-warning text-white rounded-pill' do %>
+                      <%= link_to tip_path(tip), data: { turbo_method: :delete, turbo_confirm: "Êtes-vous sûr ?" }, class: 'btn btn-success text-white rounded-pill' do %>
                         <i class="fa-solid fa-trash"></i>
                       <% end %>
                     </div>
@@ -193,7 +193,7 @@
   <% if user_signed_in? %>
   <div class="card mb-5 p-3 m-auto" style="background-color: #f0fff4;">
     <h4 class="text-center">Ajouter votre conseil</h4>
-    <%= simple_form_for([@plant, @tip],   html: { id: 'new-comment-form', data: { controller: "alert",
+    <%= simple_form_for([@plant, @tip],   html: { id: 'new-comment-form', label: false, data: { controller: "alert",
       alert_icon_value: "success",
       alert_title_value: "Astuce ajouté avec succès",
       confirm_button_text: "All good!",
@@ -201,8 +201,8 @@
       show_cancel_button: true,
       action: "submit->alert#initSweetalert",
       turbo: false }}) do |f| %>
-      <%= f.input :titre %>
-      <%= f.input :contenu %>
+      <%= f.input :titre, label: false, placeholder: "Entrez le titre ici" %>
+      <%= f.input :contenu, label: false, placeholder: "Entrez le contenu ici" %>
       <div class="d-flex justify-content-end">
         <%= f.submit "Publier", class: "btn btn-success text-white w-25 rounded-pill" %>
       </div>
