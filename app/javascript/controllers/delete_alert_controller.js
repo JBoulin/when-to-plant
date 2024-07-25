@@ -19,8 +19,8 @@ export default class extends Controller {
       title: this.titleValue || "Êtes vous sur ?",
       html: this.htmlValue || "Supprimer.",
       showCancelButton: true,
-      confirmButtonText: this.confirmButtonTextValue || "oui!",
-      cancelButtonText: this.cancelButtonTextValue || "non",
+      confirmButtonText: this.confirmButtonTextValue || "Oui",
+      cancelButtonText: this.cancelButtonTextValue || "Non",
       confirmButtonColor: "#0c4b36"
     }).then((result) => {
       if (result.isConfirmed) {
