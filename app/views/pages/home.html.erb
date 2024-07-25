@@ -10,10 +10,10 @@
       </p>
     </div>
   </div>
-<div class="w-75 d-flex flex-column m-auto">
+<div class="d-flex flex-column m-auto mb-5" style="width:80%">
   <h1 class="py-4 text-center">Les plantes du moment</h1>
 
-  <div class="cards">
+  <div class="cards mb-3">
    <% @plants.each do |plant| %>
     <div class="card-trip">
       <div class="card-trip-infos">
@@ -34,13 +34,13 @@
     </div>
     <% end %>
   </div>
-  <%= link_to "Voir toutes les plantes", "/plants", class: "btn btn-success rounded-pill m-auto mb-3" %>
+  <%= link_to "Voir toutes les plantes", "/plants", class: "btn btn-success rounded-pill m-auto my-3" %>
 
   <h1 class="py-4 text-center">Le calendrier</h1>
 
-  <div class="cards">
+  <div class="cards mb-3">
     <div class="card-trip d-flex flex-column align-items-center justify-content-center" style="max-height:300px;">
-          <h2 class="fs-2 pb-3">Jeudi 25 Juillet</h2>
+          <h2 class="fs-3 pb-3">Jeudi 25 Juillet</h2>
           <p class="fs-5 pb-3">Hier</p>
       <div class="d-flex p-3 bg-warning" style="border-radius:10px;">
       <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-feuilles.png" title="Jour feuilles" width="35" height="40" class="mx-3"/>
@@ -50,7 +50,7 @@
 
 
     <div class="card-trip d-flex flex-column align-items-center justify-content-center" style="max-height:300px;">
-          <h2 class="fs-2 pb-3">Vendredi 26 Juillet</h2>
+          <h2 class="fs-3 pb-3">Vendredi 26 Juillet</h2>
           <p class="fs-5 pb-3">Aujourd'hui</p>
     <div class="d-flex p-3 bg-warning" style="border-radius:10px;">
       <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-feuilles.png" title="Jour feuilles" width="35" height="40" class="mx-3"/>
@@ -60,7 +60,7 @@
 
 
     <div class="card-trip d-flex flex-column align-items-center justify-content-center" style="max-height:300px;">
-          <h2 class="fs-2 pb-3">Samedi 27 Juillet</h2>
+          <h2 class="fs-3 pb-3">Samedi 27 Juillet</h2>
           <p class="fs-5 pb-3">Demain</p>
       <div class="d-flex p-3 bg-warning" style="border-radius:10px;">
       <img src="https://www.jardiner-malin.fr/wp-content/themes/jm24/assets/img/picto/cl-feuilles.png" title="Jour feuilles" width="35" height="40" class="mx-3"/>
@@ -68,13 +68,13 @@
     </div>
     </div>
   </div>
-  <%= link_to "Voir le calendrier", "/calendrier##{Date.today.day}", class: "btn btn-success rounded-pill m-auto mb-3" %>
+  <%= link_to "Voir le calendrier", "/calendrier##{Date.today.day}", class: "btn btn-success rounded-pill m-auto my-3" %>
 
   <h1 class="py-4 text-center">Les dernières informations et tuto When To Plant</h1>
 
-  <div class="cards d-flex justify-content-center">
+  <div class="d-flex gap-3 justify-content-center flex-lg-nowrap flex-wrap" >
     <% @posts.each do |post| %>
-      <div class="col-6 mb-4">
+      <div class="mb-4">
         <div class="card rounded-3" style="background-color: #daf1df; box-shadow: 0 0 15px rgba(0,0,0,0.2);">
           <% if post.photo.present? && post.photo.key.present? %>
             <%= cl_image_tag post.photo.key, cloud_name: "dzhzzutmq", style: "height: 250px; width: 100%; object-fit: cover; padding: 16px 16px 0 16px;" %>
