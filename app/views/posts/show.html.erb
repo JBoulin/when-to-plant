@@ -17,10 +17,20 @@
         <% if current_user&.admin? %>
           <div class="d-flex justify-content-end mt-5 mb-3">
             <%= link_to 'Modifier', edit_post_path(@post), class: 'btn btn-primary text-white rounded-pill mr-2 me-3', title: "Modifier" %>
-            <%= link_to 'Supprimer', post_path(@post),  data: { turbo_method: :delete, turbo_confirm: 'Êtes-vous sûr de vouloir supprimer cet article ?' }, class: 'btn btn-success text-white rounded-pill mr-2 me-3', title: "Supprimer" %>
+            <%= link_to 'Supprimer', post_path(@post), data: {
+                        turbo_method: :delete,
+                        turbo_confirm: 'Are you sure?',
+                        controller: "delete-alert",
+                        delete_alert_icon_value: "warning",
+                        delete_alert_title_value: "Êtes vous sur ?",
+                        delete_alert_html_value: "Supprimer.",
+                        delete_alert_confirm_button_text_value: "oui!",
+                        delete_alert_cancel_button_text_value: "non",
+                        action: "click->delete-alert#confirmDelete",
+                        turbo: false
+                      }, class: 'btn btn-success text-white rounded-pill mr-2 me-3', title: "Supprimer" %>
           </div>
         <% end %>
-
         <div class="d-flex justify-content-end mt-5 mb-3">
           <%= link_to 'Retour', posts_path, class: 'btn btn-success text-white rounded-pill me-3' %>
         </div>
@@ -46,7 +56,18 @@
                 <% if comment.user == current_user %>
                   <div class="d-flex justify-content-end">
                     <button class="btn btn-success text-white rounded-pill mr-2 edit-comment-btn me-2" data-comment-id="<%= comment.id %>">Modifier</button>
-                    <%= link_to 'Supprimer', comment_path(comment), data: { turbo_method: :delete, confirm: "Êtes vous sur ?" }, class: 'btn btn-success text-white rounded-pill' %>
+                    <%= link_to 'Supprimer', comment_path(comment), data: {
+                        turbo_method: :delete,
+                        turbo_confirm: 'Are you sure?',
+                        controller: "delete-alert",
+                        delete_alert_icon_value: "warning",
+                        delete_alert_title_value: "Êtes vous sur ?",
+                        delete_alert_html_value: "Supprimer.",
+                        delete_alert_confirm_button_text_value: "oui!",
+                        delete_alert_cancel_button_text_value: "non",
+                        action: "click->delete-alert#confirmDelete",
+                        turbo: false
+                      }, class: 'btn btn-success text-white rounded-pill' %>
                   </div>
                 <% end %>
               </div>

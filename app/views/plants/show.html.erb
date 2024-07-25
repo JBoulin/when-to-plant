@@ -164,10 +164,21 @@
                       <%= link_to  edit_tip_plant_tip_path(plant_id: @plant, tip: tip),  data: {action: "click->edit-tip#toggle"}, class: 'btn btn-success text-white rounded-pill me-2 edit-tip-btn', title: "Modifier" do %>
                         <i class="fa-solid fa-pen"></i>
                       <% end %>
-                      <%= link_to tip_path(tip), data: { turbo_method: :delete, turbo_confirm: "Êtes-vous sûr ?" }, class: 'btn btn-success text-white rounded-pill', title: "Supprimer" do %>
+                      <%= link_to tip_path(tip), data: {
+                        turbo_method: :delete,
+                        turbo_confirm: 'Are you sure?',
+                        controller: "delete-alert",
+                        delete_alert_icon_value: "warning",
+                        delete_alert_title_value: "Êtes vous sur ?",
+                        delete_alert_html_value: "Supprimer.",
+                        delete_alert_confirm_button_text_value: "oui!",
+                        delete_alert_cancel_button_text_value: "non",
+                        action: "click->delete-alert#confirmDelete",
+                        turbo: false
+                      }, class: 'btn btn-success text-white rounded-pill', title: "Supprimer" do %>
                         <i class="fa-solid fa-trash"></i>
-                      <% end %>
-                    </div>
+                        <% end %>
+                      </div>
                     <div class="tip-edit-form d-none" data-edit-tip-target="form">
                       <%= simple_form_for [@plant, tip], url: update_tip_plant_tip_path(plant_id: @plant, tip_id: tip, id:tip.id), method: :patch,  html: { class: 'edit-tip-form' } do |f| %>
                         <%= f.input :titre, input_html: { value: tip.titre } %>
