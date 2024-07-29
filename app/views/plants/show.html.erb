@@ -59,24 +59,24 @@
     </div>
   </div>
 
-  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="height: 400px;">
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
-    <div class="carousel-inner" style="height: 400px;">
+    <div class="carousel-inner">
       <div class="carousel-item active">
-        <%= cl_image_tag @plant.photos.first.key, cloud_name: "dzhzzutmq", class: "w-100 rounded-3 mb-3 d-flex m-auto" %>
+        <%= cl_image_tag @plant.photos.first.key, cloud_name: "dzhzzutmq", class: "w-100 rounded-3 mb-3 m-1 object-fit-cover d-block" %>
       </div>
       <% if @plant.photos.second.present? %>
         <div class="carousel-item">
-          <%= cl_image_tag @plant.photos.second.key, cloud_name: "dzhzzutmq", class: "w-100 rounded-3 mb-3 m-1 object-fit-cover" %>
+          <%= cl_image_tag @plant.photos.second.key, cloud_name: "dzhzzutmq", class: "w-100 rounded-3 mb-3 m-1 object-fit-cover d-block" %>
         </div>
       <% end %>
       <% if @plant.photos.third.present? %>
         <div class="carousel-item">
-          <%= cl_image_tag @plant.photos.third.key, cloud_name: "dzhzzutmq", class: "w-100 rounded-3 mb-3 m-1 object-fit-cover" %>
+            <%= cl_image_tag @plant.photos.third.key, cloud_name: "dzhzzutmq", class: "w-100 rounded-3 mb-3 m-1 object-fit-cover d-block" %>
         </div>
       <% end %>
     </div>
@@ -113,7 +113,7 @@
       </div>
     </div>
     <div data-tabs-target="tab" id="tab2">
-      <div class="card mb-3 bg-warning border-0" style="height: 300px;">
+      <div class="card mb-3 bg-warning border-0" style="height: 400px;">
         <div class="card-body mb-3 lh-base">
           <p>
             <i class="fa-solid fa-seedling me-3" title="Types de semis" style="width: 20px; text-align: center;"></i><%= @plant.type_semis %><br>
@@ -202,7 +202,7 @@
 
 
   <% if user_signed_in? %>
-  <div class="card mb-5 p-3 m-auto" style="background-color: #f0fff4;">
+  <div class="card p-3 m-auto mb-5" style="background-color: #f0fff4;">
     <h4 class="text-center">Ajouter votre conseil</h4>
     <%= simple_form_for([@plant, @tip],   html: { id: 'new-comment-form', label: false, data: { controller: "alert",
       alert_icon_value: "success",
@@ -233,7 +233,7 @@
     <h3 class="text-center">Bon voisins</h3>
   </div>
 
-  <div class="cards mt-3">
+  <div class="cards mt-3" style="margin-bottom:300px;">
     <% @bon_voisin.each do |bon_voisin| %>
       <div class="card rounded-3" style="box-shadow: 0 0 15px rgba(0,0,0,0.2); background-color: #daf1df; border-radius: 12px;">
         <%= cl_image_tag bon_voisin.plant_2.photos.first.key, cloud_name: "dzhzzutmq", style: 'height: 250px; width: 100%; object-fit: cover; padding: 16px 16px 0 16px;' %>
