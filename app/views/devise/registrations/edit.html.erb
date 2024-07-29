@@ -1,7 +1,7 @@
 <div class="container mb-3 mt-3 border rounded bg-light">
   <h2>Modifier <%= resource_name.to_s.humanize %></h2>
 
-  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, multipart: true }) do |f| %>
     <%= f.error_notification %>
 
     <div class="form-inputs">
@@ -38,17 +38,16 @@
                   label: "Mot de passe actuel",
                   required: true,
                   input_html: { autocomplete: "current-password" } %>
-    </div>
 
+      <%= f.input :avatar, as: :file, label: "Nouvelle image" %> <!-- Ajout du champ de téléchargement -->
+    </div>
 
     <div class="form-actions btn btn-success rounded">
       <%= f.button :submit, "Modifier" %>
     </div>
   <% end %>
-<br>
-  <h3>Supprimer mon compte</h3>
 
+  <h3>Supprimer mon compte</h3>
   <%= button_to "Supprimer mon compte", registration_path(resource_name), data: { confirm: "Êtes-vous sûr?", turbo_confirm: "Êtes-vous sûr?" }, method: :delete %>
-<br>
   <%= link_to "Retour", :back, class: "btn btn-primary mb-3 rounded" %>
 </div>
