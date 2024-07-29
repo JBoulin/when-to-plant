@@ -14,7 +14,7 @@
   <%= link_to '<i class="fa-solid fa-cloud-arrow-down" style="color: #ffffff;"></i>  Télécharger'.html_safe, telecharger_path, method: 'get' %>
 </div>
 <div data-controller="tabs" data-tabs-active-class="bg-warning" data-tabs-default-tab-value="juillet" class="mt-3" style="margin-bottom:250px;">
-  <div class="m-auto d-flex justify-content-center gap-2 flex-wrap">
+  <div class="text-center gap-2 flex-wrap d-none d-sm-block">
     <button id="janvier" data-tabs-target="btn" data-action="click->tabs#select"
       class="border-0 rounded p-3">Janvier</button>
     <button id="fevrier" data-tabs-target="btn" data-action="click->tabs#select"
@@ -36,6 +36,25 @@
     <button id="decembre" data-tabs-target="btn" data-action="click->tabs#select"
       class="border-0 rounded p-3">Décembre</button>
   </div>
+  <div class="dropdown text-center my-3 rounded d-block d-sm-none">
+  <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Choisir un mois
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" id="janvier" data-action="click->tabs#select">Janvier</a>
+    <a class="dropdown-item" id="fevrier" data-action="click->tabs#select">Février</a>
+    <a class="dropdown-item" id="mars" data-action="click->tabs#select">Mars</a>
+    <a class="dropdown-item" id="avril" data-action="click->tabs#select">Avril</a>
+    <a class="dropdown-item" id="mai" data-action="click->tabs#select">Mai</a>
+    <a class="dropdown-item" id="juin" data-action="click->tabs#select">Juin</a>
+    <a class="dropdown-item" id="juillet" data-action="click->tabs#select">Juillet</a>
+    <a class="dropdown-item" id="aout" data-action="click->tabs#select">Août</a>
+    <a class="dropdown-item" id="septembre" data-action="click->tabs#select">Septembre</a>
+    <a class="dropdown-item" id="octobre" data-action="click->tabs#select">Octobre</a>
+    <a class="dropdown-item" id="novembre" data-action="click->tabs#select">Novembre</a>
+    <a class="dropdown-item" id="decembre" data-action="click->tabs#select">Décembre</a>
+  </div>
+</div>
   <div data-tabs-target="tab" id="janvier" class="py-3 bg-warning m-auto" style="width:80%;">
     <div class="calendrier-content__line p-3 bg-danger mx-3 mb-3" style="border-radius:15px;">
       <div class="calendrier-content__j">
