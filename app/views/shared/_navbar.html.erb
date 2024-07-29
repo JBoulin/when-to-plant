@@ -8,10 +8,10 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse justify-content-center  bg-success" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
       <ul class="navbar-nav">
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Catégories
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -21,10 +21,10 @@
             <a class="dropdown-item" href="/plants">Voir tout</a>
           </div>
         </li>
-        <li class="nav-item active">
+        <li class="nav-item">
           <%= link_to "Calendrier", "/calendrier##{Date.today.day}", class: 'nav-link text-white' %>
         </li>
-        <li class="nav-item active">
+        <li class="nav-item">
           <%= link_to "À propos", a_propos_path, class: 'nav-link text-white' %>
         </li>
         <li class="nav-item">
@@ -35,15 +35,11 @@
         </li>
       </ul>
 
-
-    </div>
-
-    <div class="collapse navbar-collapse justify-content-center  bg-success" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto d-flex flex-row-reverse" style="width: 350px;">
+      <ul class="navbar-nav ms-auto">
         <% if user_signed_in? %>
           <li class="nav-item dropdown">
-            <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <%= image_tag "https://www.tomlejardinier.com/img/tomlejardinier-pres-3.jpg", class: "avatar",style:"width:40px; height:40px; object-fit:cover;", alt: "dropdown menu" %>
+            <a href="#" class="avatar nav-link" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <%= image_tag "https://www.tomlejardinier.com/img/tomlejardinier-pres-3.jpg", class: "avatar", style:"width:40px; height:40px; object-fit:cover;", alt: "dropdown menu" %>
             </a>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <% if current_user.role == "admin" %>
@@ -51,43 +47,29 @@
                 <%= link_to "Mes listes", lists_path, class: "dropdown-item" %>
                 <%= link_to "Mon profil", edit_user_registration_path, class: "dropdown-item" %>
                 <%= link_to "Déconnexion", destroy_user_session_path, data: { turbo_method: :delete }, class: "dropdown-item" %>
-              <%else%>
+              <% else %>
                 <%= link_to "Mes listes", lists_path, class: "dropdown-item" %>
                 <%= link_to "Mon profil", edit_user_registration_path, class: "dropdown-item" %>
                 <%= link_to "Déconnexion", destroy_user_session_path, data: { turbo_method: :delete }, class: "dropdown-item" %>
               <% end %>
             </div>
           </li>
-          <div class="me-2">
-            <%= form_with url: plants_path, method: :get, class: "search-form" do %>
-              <div class="form-group has-feedback ">
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "Se connecter", new_user_session_path, class: "nav-link text-white" %>
+          </li>
+        <% end %>
+        <li class="nav-item me-2">
+          <%= form_with url: plants_path, method: :get, class: "search-form d-flex" do %>
+            <div class="form-group has-feedback me-2">
               <%= text_field_tag :query,
                 params[:query],
                 class: "form-control",
                 placeholder: "Rechercher"
               %>
               <%= '<span class="form-control-feedback"><i class="fa-solid fa-magnifying-glass" style="color: #0c4b36; background-color: white;"></i></span>'.html_safe %>
-              </div>
-            <% end %>
-          </div>
-        <% else %>
-          <li class="nav-item">
-            <%= link_to "Se connecter", new_user_session_path, class: "nav-link text-white" %>
-          </li>
-          <div class="me-2">
-            <%= form_with url: plants_path, method: :get, class: "search-form" do %>
-              <div class="form-group has-feedback ">
-              <%= text_field_tag :query,
-                params[:query],
-                class: "form-control",
-                placeholder: "Rechercher"
-              %>
-              <%= '<span class="form-control-feedback" style="position: absolute; right: 141px; top: 18px;"><i class="fa-solid fa-magnifying-glass" style="color: #0c4b36; background-color: white;"></i></span>'.html_safe %>
-              </div>
-            <% end %>
-          </div>
-        <% end %>
-            <li>
+            </div>
+          <% end %>
         </li>
       </ul>
     </div>
