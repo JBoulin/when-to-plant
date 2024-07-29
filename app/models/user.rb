@@ -5,7 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_one_attached :avatar
-  validate :correct_avatar_mime_type, :acceptable_avatar_size
+  validate :correct_avatar_mime_type
+  validate :acceptable_avatar_size
 
 
   has_many :tips
