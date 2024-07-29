@@ -1,7 +1,7 @@
 <footer class="">
   <div class="container">
     <div class="d-flex flex-column flex-md-row justify-content-between align-items-center py-2 mb-3" style="background-color: #DAF1DF; border-radius: 10px;">
-      <div class="text-center text-md-left text-dark mb-2 mb-md-0">
+      <div class="text-center text-dark p-3">
         Inscrivez-vous à notre lettre d'information
       </div>
 
@@ -10,7 +10,7 @@
         <button class="btn btn-success text-white" type="button" style="border-radius:20px;">S'inscrire</button>
       </div>
 
-      <div class="d-flex justify-content-center align-items-center mt-2 mt-md-0">
+      <div class="d-flex justify-content-center align-items-center p-3">
         <a href="https://www.instagram.com/when_toplant/" class="mx-2"><i class="fab fa-instagram fa-xl"></i></a>
         <a href="https://www.facebook.com/profile.php?id=61562363171250" class="mx-2"><i class="fab fa-facebook fa-xl"></i></a>
         <a href="https://www.youtube.com/@WhenToPlant" class="mx-2"><i class="fab fa-youtube fa-xl"></i></a>
@@ -23,17 +23,17 @@
     <%= image_tag "when to plant blanc.png", style: "width:189px; height:50px;" %>
   </div>
 
-  <div class="d-flex justify-content-center bg-success">
-    <ul class="nav pb-1 mb-1">
-      <li class="nav-item">
-        <%= link_to "Contact", contact_path, class: "nav-link text-white" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Recrutement", recrutement_path, class: "nav-link text-white" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Mentions légales", mentions_legales_path, class: "nav-link text-white" %>
-      </li>
-    </ul>
+  <div class="bg-success pb-1 mb-1">
+    <div class="w-75 d-flex justify-content-center m-auto flex-wrap">
+      <div class="p-3 text-center">
+        <%= link_to "Contact", contact_path, class: "text-white text-decoration-none" %>
+      </div>
+      <div class="p-3 text-center">
+        <%= link_to "Recrutement", recrutement_path, class: "text-white text-decoration-none" %>
+      </div>
+      <div class="p-3 text-center">
+        <%= link_to "Mentions légales", mentions_legales_path, class: "text-white text-decoration-none" %>
+      </div>
+    </div>
   </div>
 </footer>
