@@ -1,7 +1,10 @@
  <%= turbo_page_requires_reload %>
 <div class="main-container m-auto">
-<div id="filtres" class="text-center py-3 m-auto mt-5" style="background-color: #DAF1DF; border-radius: 10px 10px 10px 10px; max-width:76%;">
-<div class="">
+<div id="filtres" class="text-center py-3 m-auto mt-5" style="background-color: #DAF1DF; border-radius: 10px 10px 10px 10px; max-width:76%;" data-controller="reveal" data-reveal-hidden-class="d-none">
+<div data-action="click->reveal#toggle">
+<h3 class="mb-0">Filtres <i class="fa-solid fa-caret-down"></i></h3>
+</div>
+<div class="d-none" data-reveal-target="item">
   <%= form_with(url: plants_path, method: :get, class: "d-flex flex-wrap justify-content-center", data: {controller: "filter", turbo_frame: "_top"}, style:"max-width: 75%;") do %>
     <div class="">
       <div class="text-muted d-flex flex-column">
