@@ -9,35 +9,29 @@
   </div>
 </div>
 
-<div class="container mb-5">
+<div class="container mb-5" style="margin-bottom:200px!important">
   <div class="row justify-content-center">
-    <div class="col-md-12">
       <h2 class="mb-4 text-center">Articles récents</h2>
 
       <!-- Search Bar -->
-      <div class="mb-4">
-        <div class="container mt-4 py-3", style="background-color: #DAF1DF; border-radius:10px;">
-          <div class="row justify-content-center">
-            <div class="col-6">
+      <div class="mb-4 container mt-4 py-3 d-flex justify-content-center" style="background-color: #DAF1DF; border-radius:10px;width:80%;">
+            <div class="" style='min-width:200px;'>
               <%= form_with url: posts_path, method: :get, class: "d-flex" do %>
                 <%= text_field_tag :query,
                   params[:query],
                   class: "form-control me-1 rounded-pill",
-                  placeholder: "Recherche un article"
+                  placeholder: "Rechercher un article"
                 %>
-                <%= submit_tag "Rechercher", class: "btn btn-success text-white rounded-pill" %>
-              <% end %>
             </div>
-          </div>
-        </div>
+            <div>
+                <%= submit_tag "Rechercher", class: "btn btn-success text-white rounded-pill" %>
+            </div>
+              <% end %>
       </div>
 
-      <!-- Articles show -->
-      <div id="articles">
-        <% @posts.each_slice(2) do |post_pair| %>
-          <div class="d-flex flex-wrap justify-content-between mb-3">
-            <% post_pair.each do |post| %>
-              <div class="card mb-3 article-card" style="background-color: #f0fff4; width: 48%;">
+          <div class="d-flex mb-3 flex-wrap gap-3 justify-content-center">
+            <% @posts.each do |post| %>
+              <div class="card mb-3 article-card" style="background-color: #f0fff4;max-width:500px">
                 <div class="card-body">
                   <% if post.photo.present? && post.photo.key.present? %>
                       <%= cl_image_tag post.photo.key, alt: post.titre, style: "height: 200px; width: 100%; object-fit: cover; border-radius:10px;" %>
@@ -54,8 +48,5 @@
               </div>
             <% end %>
           </div>
-        <% end %>
-      </div>
-    </div>
   </div>
 </div>
