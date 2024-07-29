@@ -1,10 +1,10 @@
-<div class="w-75 m-auto">
+<div class="w-75 m-auto" style="padding-bottom:200px;">
 <h1 class="text-center pt-3">Trouvez votre plante !</h1>
 <p class="text-center">Trouvez la ou les plantes qu'il vous faut, pour votre terrain et votre niveau de jardinage</p>
 <%= form_with(url: plants_path, method: :get, class: "d-flex flex-column", data: {controller: "filter", turbo_frame: "_top"}) do |f|%>
-  <h2 class="text-center my-5">Quel type de plantes ?</h2>
-<div class="d-flex justify-content-center">
-        <div class="d-flex flex-column align-items-center justify-content-center mx-4">
+  <h2 class="text-center mt-5 mb-3">Quel type de plantes ?</h2>
+<div class="d-flex justify-content-center w-50 m-auto flex-wrap">
+        <div class="d-flex flex-column align-items-center justify-content-center mx-3">
             <img src="https://cdn-icons-png.freepik.com/512/7910/7910224.png" alt="Fruits" style="max-width:100px;" class="mb-3">
             <div>
               <%= radio_button_tag :categorie,
@@ -13,7 +13,7 @@
               <%= label_tag "Fruits" %>
             </div>
         </div>
-        <div class="d-flex flex-column align-items-center justify-content-center mx-4">
+        <div class="d-flex flex-column align-items-center justify-content-center mx-3">
             <img src="https://cdn-icons-png.freepik.com/512/7910/7910612.png?ga=GA1.1.692665051.1720597619" alt="Fruits" style="max-width:100px;" class="mb-3">
             <div>
               <%= radio_button_tag :categorie,
@@ -22,8 +22,8 @@
               <%= label_tag "Légumes" %>
             </div>
         </div>
-       <div class="d-flex flex-column align-items-center justify-content-center mx-4">
-            <img src="https://www.freeiconspng.com/thumbs/herbs-icon/herbs-png-icon-6.png" alt="Fruits" style="max-height:100px;" class="mb-3">
+       <div class="d-flex flex-column align-items-center justify-content-center mx-3">
+            <img src="https://cdn-icons-png.freepik.com/512/8809/8809458.png?ga=GA1.1.692665051.1720597619" alt="Aromates" style="max-width:100px;" class="mb-3">
             <div>
               <%= radio_button_tag :categorie,
                     "Aromates",
@@ -33,8 +33,8 @@
         </div>
 </div>
 
-  <h2 class="text-center my-5">Quel jardinier je suis ?</h2>
-<div class="d-flex justify-content-center">
+  <h2 class="text-center mt-5 mb-3">Quel jardinier je suis ?</h2>
+<div class="d-flex justify-content-center flex-wrap">
    <div class="d-flex flex-column align-items-center justify-content-center mx-3">
             <img src="https://cdn-icons-png.flaticon.com/512/5769/5769492.png" alt="Jardinier débutant" style="max-height:100px;" class="mb-3">
             <div>
@@ -63,8 +63,8 @@
             </div>
         </div>
 </div>
-  <h2 class="text-center my-5">Quand est-ce que je veux planter ?  <img src="https://cdn-icons-png.flaticon.com/512/4769/4769691.png" width="40px" height="40px" class="mb-2 ms-2"></h2>
-    <div class="d-flex m-auto flex-wrap">
+  <h2 class="text-center mt-5 mb-3">Quand est-ce que je veux planter ?  <img src="https://cdn-icons-png.flaticon.com/512/4769/4769691.png" width="40px" height="40px" class="mb-2 ms-2"></h2>
+    <div class="d-flex m-auto flex-wrap justify-content-center">
       <% ["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre"].each do |month| %>
           <div class="tag-item">
             <%= radio_button_tag :periode_semis,
@@ -75,8 +75,8 @@
         </div>
       <% end %>
     </div>
-  <h2 class="text-center my-5">Quelle est mon exposition ?</h2>
-  <div class="d-flex justify-content-center">
+  <h2 class="text-center mt-5 mb-3">Quelle est mon exposition ?</h2>
+  <div class="d-flex justify-content-center flex-wrap">
    <div class="d-flex flex-column align-items-center justify-content-center mx-3">
             <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" alt="Plein soleil" style="max-height:100px;" class="mb-3">
             <div>
@@ -106,8 +106,8 @@
         </div>
 </div>
 
-  <h2 class="text-center my-5">Quelles sont les températures moyennes ?  <img src="https://cdn-icons-png.flaticon.com/512/1684/1684375.png" width="40px" height="40px"></h2>
-  <div class="d-flex m-auto flex-wrap col-6 justify-content-center">
+  <h2 class="text-center mt-5 mb-3">Quelles sont les températures moyennes ?  <img src="https://cdn-icons-png.flaticon.com/512/1684/1684375.png" width="40px" height="40px"></h2>
+  <div class="d-flex m-auto flex-wrap justify-content-center">
         <% ['-10-35°C', '-5°C-20°C', '0-20°C', '10°C', '10-15°C', '10-25°C', '10-30°C', '15°C', '15-20°C', '15-25°C', '15-30°C', '20°C', '20-25°C', '20-30°C', '25-35°C'].each do |temp| %>
           <div class="tag-item">
             <%= radio_button_tag :temperature,
@@ -118,11 +118,8 @@
         </div>
       <% end %>
     </div>
-  <div class="d-flex align-items-center m-auto">
-  <h2 class="text-center my-5">Quelle est la nature du sol ?</h2>
-  <img src="https://cdn-icons-png.flaticon.com/512/7515/7515003.png" width="40px" height="40px" class="mb-2 ms-2">
-  </div>
-  <div class="d-flex m-auto flex-wrap col-6 justify-content-center">
+  <h2 class="text-center mt-5 mb-3">Quelle est la nature du sol ?  <img src="https://cdn-icons-png.flaticon.com/512/7515/7515003.png" width="40px" height="40px" class="mb-2"></h2>
+  <div class="d-flex m-auto flex-wrap justify-content-center">
         <% ['Tout types', 'Drainé', 'Acide', 'Ameubli', 'Riche en humus', 'Argileux', 'Léger', 'Profond', 'Riche', 'Neutre', 'Moyen', 'Frais', 'Humifère', 'Sableuse', 'Calcaire'].each do |natsol| %>
           <div class="tag-item">
             <%= radio_button_tag :nature_sol,
@@ -134,8 +131,8 @@
       <% end %>
     </div>
 
-  <h2 class="text-center my-5">Besoin d’arrosage</h2>
-    <div class="d-flex justify-content-center">
+  <h2 class="text-center mt-5 mb-3">Besoin d’arrosage</h2>
+    <div class="d-flex justify-content-center flex-wrap">
    <div class="d-flex flex-column align-items-center justify-content-center mx-3">
             <img src="https://cdn-icons-png.flaticon.com/512/15200/15200487.png" alt="Faible" style="max-height:100px;" class="mb-3">
             <div>
