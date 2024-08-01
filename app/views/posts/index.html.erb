@@ -38,7 +38,7 @@
           <div class="row justify-content-between mb-3">
             <% post_pair.each do |post| %>
               <div class="col-12 col-md-5 mb-3">
-                <div class="card article-card" style="background-color: #f0fff4; width: 100%;">
+                <div class="card article-card mb-3" style="background-color: #f0fff4; width: 100%;">
                   <div class="card-body">
                     <% if post.photo.present? && post.photo.key.present? %>
                       <%= cl_image_tag post.photo.key, alt: post.titre, style: "height: 200px; width: 100%; object-fit: cover; border-radius:10px;" %>
@@ -49,7 +49,7 @@
                     <h5 class="card-subtitle mb-2 text-muted"><%= post.categorie %></h5>
                     <p class="card-text"><%= post.rich_body.to_plain_text.truncate(200) %></p>
                     <div class="d-flex justify-content-end">
-                      <%= link_to "Lire l'article", post_path(post), class: 'btn btn-success text-white rounded-pill', style: 'background-color: #0C4B36;' %>
+                      <%= link_to "Lire l'article", post_path(post), class: 'btn btn-success text-white rounded-pill mb-3', style: 'background-color: #0C4B36;' %>
                     </div>
                   </div>
                 </div>
