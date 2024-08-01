@@ -24,13 +24,13 @@
                   params[:query],
                   class: "form-control flex-grow-1 me-2 rounded-pill",
                   placeholder: "Recherche un article" %>
-            </div>
-            <div>
                 <%= submit_tag "Rechercher", class: "btn btn-success text-white rounded-pill" %>
-            </div>
               <% end %>
+            </div>
+          </div>
+        </div>
       </div>
-          
+
       <!-- Articles show -->
       <div id="articles">
         <% @posts.each_slice(2).with_index do |post_pair, row_index| %>
@@ -55,5 +55,8 @@
               </div>
             <% end %>
           </div>
+        <% end %> <!-- Fermer le bloc each_slice -->
+      </div> <!-- Fermer la div #articles -->
+    </div>
   </div>
 </div>
