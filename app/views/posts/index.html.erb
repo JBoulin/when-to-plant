@@ -16,13 +16,13 @@
 
       <!-- Search Bar -->
       <div class="mb-4">
-        <div class="container mt-4 py-3", style="background-color: #DAF1DF; border-radius:10px;">
+        <div class="container mt-4 py-3" style="background-color: #DAF1DF; border-radius:10px;">
           <div class="row justify-content-center">
-            <div class="col-6">
-              <%= form_with url: posts_path, method: :get, class: "d-flex" do %>
+            <div class="col-12 col-md-8">
+              <%= form_with url: posts_path, method: :get, class: "d-flex w-100" do %>
                 <%= text_field_tag :query,
                   params[:query],
-                  class: "form-control me-1 rounded-pill",
+                  class: "form-control flex-grow-1 me-2 rounded-pill",
                   placeholder: "Recherche un article"
                 %>
                 <%= submit_tag "Rechercher", class: "btn btn-success text-white rounded-pill" %>
@@ -35,20 +35,22 @@
       <!-- Articles show -->
       <div id="articles">
         <% @posts.each_slice(2) do |post_pair| %>
-          <div class="d-flex flex-wrap justify-content-between mb-3">
+          <div class="row justify-content-between mb-3">
             <% post_pair.each do |post| %>
-              <div class="card mb-3 article-card" style="background-color: #f0fff4; width: 48%;">
-                <div class="card-body">
-                  <% if post.photo.present? && post.photo.key.present? %>
+              <div class="col-12 col-md-5 mb-3">
+                <div class="card article-card" style="background-color: #f0fff4; width: 100%;">
+                  <div class="card-body">
+                    <% if post.photo.present? && post.photo.key.present? %>
                       <%= cl_image_tag post.photo.key, alt: post.titre, style: "height: 200px; width: 100%; object-fit: cover; border-radius:10px;" %>
-                  <% else %>
+                    <% else %>
                       <%= image_tag "default_image.png", style: "height: 250px; width: 100%; object-fit: cover; padding: 16px 16px 0 16px;" %>
-                  <% end %>
-                  <h3 class="card-title"><%= post.titre %></h3>
-                  <h5 class="card-subtitle mb-2 text-muted"><%= post.categorie %></h5>
-                  <p class="card-text"><%= post.rich_body.to_plain_text.truncate(200) %></p>
-                  <div class="d-flex justify-content-end">
-                    <%= link_to "Lire l'article", post_path(post), class: 'btn btn-success text-white rounded-pill', style: 'background-color: #0C4B36;' %>
+                    <% end %>
+                    <h3 class="card-title"><%= post.titre %></h3>
+                    <h5 class="card-subtitle mb-2 text-muted"><%= post.categorie %></h5>
+                    <p class="card-text"><%= post.rich_body.to_plain_text.truncate(200) %></p>
+                    <div class="d-flex justify-content-end">
+                      <%= link_to "Lire l'article", post_path(post), class: 'btn btn-success text-white rounded-pill', style: 'background-color: #0C4B36;' %>
+                    </div>
                   </div>
                 </div>
               </div>
