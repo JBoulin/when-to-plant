@@ -95,18 +95,19 @@
               <% end %>
             </div>
           </li>
-          <div class="me-2">
+          <div class="me-2 search-container">
             <%= form_with url: plants_path, method: :get, class: "search-form d-none d-xl-block" do %>
-              <div class="form-group has-feedback ">
-              <%= text_field_tag :query,
-                params[:query],
-                class: "form-control",
-                placeholder: "Rechercher"
-              %>
-              <%= '<span class="form-control-feedback"><i class="fa-solid fa-magnifying-glass" style="color: #0c4b36; background-color: white;"></i></span>'.html_safe %>
+              <div class="form-group has-feedback">
+                <%= text_field_tag :query,
+                  params[:query],
+                  class: "form-control",
+                  placeholder: "Rechercher"
+                %>
+                <%= '<span class="form-control-feedback search-icon"><i class="fa-solid fa-magnifying-glass" style="color: #0c4b36; background-color: white;"></i></span>'.html_safe %>
               </div>
             <% end %>
           </div>
+
         <% else %>
           <li class="nav-item">
             <%= link_to "Se connecter", new_user_session_path, class: "nav-link text-white d-none d-xl-block" %>
