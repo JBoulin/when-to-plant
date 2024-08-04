@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
   resources :comments, only: :destroy
 
+  resources :contact, only: [:new, :create]
+
   # Routes for Plants
   resources :plants do
     # Nested routes for Tips under Plant
@@ -47,7 +49,7 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
   get 'a-propos', to: 'pages#about'
-  get 'contact', to: 'pages#contact'
+  # get 'contact', to: 'pages#contact'
   get 'recrutement', to: 'pages#recrutement'
   get 'calendrier', to: 'calendriers#index'
   get 'telecharger', to: 'calendriers#download'
